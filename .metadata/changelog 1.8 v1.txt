@@ -4,4 +4,4 @@ Mods:
 
 
 Changes:
-- Character interaction cooldown reduced from 5 to 2 years-
+- Character interaction cooldown reduced from 5 to 2 years.
