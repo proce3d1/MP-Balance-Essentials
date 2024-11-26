@@ -1,0 +1,102 @@
+japan_military_reward = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_military_tech_research_speed_mult = 0.15
+	country_diplomatic_play_maneuvers_add = 30
+}
+
+canada_growth_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	state_construction_mult = 0.2
+	building_group_bg_logging_throughput_add = 0.1
+}
+
+australia_growth_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	state_construction_mult = 0.2
+	country_resource_discovery_chance_mult = 0.3
+	building_group_bg_ranching_throughput_add = 0.2
+}
+
+can_unified_canada_new = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.2
+	building_railway_throughput_add = 0.2
+	building_group_bg_fishing_throughput_add = 0.2
+}
+
+aus_unified_australia_new = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.2
+	building_group_bg_mining_throughput_add = 0.2
+	building_group_bg_manufacturing_throughput_add = 0.1
+}
+
+#italian_idea_modifier = {
+#	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+#	country_prestige_mult = 0.1
+#	state_education_access_add = 0.1
+#	building_group_bg_technology_throughput_add = 0.2
+#}
+
+#italian_unifier_prestige_new = {
+#	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+#	country_prestige_mult = 0.20
+#	state_birth_rate_mult = 0.025
+#	country_authority_mult = 0.10
+#	building_group_bg_manufacturing_throughput_add = 0.1
+#}
+
+#italian_unifiers_ig_new = {
+#	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+#	interest_group_pop_attraction_mult = 0.35
+#	state_birth_rate_mult = 0.025
+#	country_authority_mult = 0.10
+#	building_group_bg_manufacturing_throughput_add = 0.1
+#}
+
+modifier_ottoman_reclaimed_syria = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+	country_prestige_mult = 0.25
+	country_authority_mult = 0.20	
+}
+
+modifier_ottoman_egypt = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_prestige_mult = 0.25
+	country_influence_add = 400
+	# country_authority_mult = 0.20	
+}
+
+modifier_ottoman_urbanization = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	building_government_administration_throughput_add = 0.2
+	building_construction_sector_throughput_add = 0.15
+	country_economy_tech_research_speed_mult = 0.25	
+}
+
+modifier_ottoman_education = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	building_university_throughput_add = 0.25
+	state_education_access_add = 0.1
+}
+
+modifier_ottoman_separatism = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	country_authority_add = 100
+	state_radicals_from_sol_change_mult = -0.2
+	state_loyalists_from_sol_change_mult = 0.2
+}
+
+modifier_ottoman_army_modernization = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_military_tech_research_speed_mult = 0.25
+	country_military_goods_cost_mult = -0.2
+}
+
+modifier_ottoman_bureaucratic_reform = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	country_legitimacy_base_add = 15
+	country_bureaucracy_mult = 0.10
+	country_society_tech_research_speed_mult = 0.25
+}
+

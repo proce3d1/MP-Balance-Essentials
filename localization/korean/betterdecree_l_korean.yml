@@ -1,0 +1,38 @@
+﻿l_korean:
+
+decree_road_maintenance:0 "효율적인 관리"
+decree_road_maintenance_desc:0 "효율적인 국정 운영 장려"
+ decree_greener_grass_campaign:0 "푸른 잔디 캠페인"
+ decree_greener_grass_campaign_desc:0 "이주하기 좋은 곳으로 주를 홍보하십시오."
+ decree_promote_social_mobility:0 "혁신 및 교육 프로그램"
+ decree_promote_social_mobility_desc:0 "인구가 더 높은 직업 자격을 위해 노력하고 새로운 기술과 예술적 추구를 혁신하도록 장려하십시오."
+ decree_promote_national_values:0 "국가적 가치 선전"
+ decree_promote_national_values_desc:0 "선전 캠페인을 통해 문화 동화 및 종교 전환율을 높입니다."
+ decree_encourage_construction:0 "건설 부문 장려"
+ decree_encourage_construction_desc:0 "건설 부문 처리량 증가"
+decree_emergency_relief:0 "복지 및 구호"
+decree_emergency_relief_desc:0 "주에서 가장 불행한 사람들을 위한 자선 지원 및 돌봄 촉진"
+ decree_encourage_manufacturing_industry:0 "제조업 장려"
+ decree_encourage_manufacturing_industry_desc:0 "제조 부문 처리량 증가"
+ decree_encourage_agricultural_industry:0 "농업 산업 장려"
+ decree_encourage_agricultural_industry_desc:0 "농업 및 플랜테이션 부문 처리량 증가"
+ decree_encourage_resource_industry:0 "자원산업 육성"
+ decree_encourage_resource_industry_desc:0 "리소스 섹터 처리량 증가"
+ decree_encourage_urban_services:0 "도시 서비스 장려"
+ decree_encourage_urban_services_desc:0 "도시 서비스 처리량을 늘립니다. 무역, 도심, 항구, 철도, 기념물, 운하 및 발전소 포함"
+ decree_enlistment_efforts:1 "군사 훈련 프로그램"
+ decree_enlistment_efforts_desc:1 "엘리트 군대를 만들기 위한 재정적 인센티브와 고품질 훈련을 통해 현지 군대의 모집 및 훈련에 인센티브를 제공합니다."
+ decree_violent_suppression:0 "폭력 진압"
+ decree_violent_suppression_desc:0 "화난 군중을 통제하기 위해 국가의 방위군을 사용하십시오."
+ decree_promote_health:0 "공중 보건 프로그램"
+ decree_promote_health_desc:0 "가족과 약자를 대상으로 한 공중 보건 프로그램 시작"
+ decree_worker_exploitation:0 "노동자 착취"
+ decree_worker_exploitation_desc:0 "산업 생산성 향상을 위해 현지 근로자 착취"
+ decree_penal_colony:0 "형벌 식민지 이전"
+ decree_penal_colony_desc:0 "성장하는 식민지를 채우기 위해 문제를 일으키는 사람과 불만을 품는 사람을 보내십시오."
+
+
+building_group_bg_monuments_throughput_add:0 "기념물 처리량"
+
+building_group_bg_canals_throughput_add:0 "운하 처리량"
+

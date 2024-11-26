@@ -1,0 +1,9 @@
+﻿l_korean:
+  pmg_base_building_synthetic_oil_plants:0 "합성유"
+ pmg_base_building_synthetic_rubber_plants:0 "인조 고무"
+ pm_synth_oil_production:0 "합성유 생산"
+ pm_improved_synth_oil_production:0 "합성유 생산 향상"
+ pm_synth_rubber_production:0 "인조 고무"
+
+ pmg_ownership_capital_building_synthetic_oil_plants:0 "소유권"
+ pmg_ownership_capital_building_synthetic_rubber_plants:0 "소유권"

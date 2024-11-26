@@ -1,0 +1,46 @@
+﻿# AI-only decision to secretly initialize mid-game; cannot use a journal entry for this purpose because apparently JEs
+# don't show up if they weren't there when the given AI country is first created, so I'm going to use a decision instead
+
+# Also catches newly-formed (i.e., released) countries, although the Canonically Correct way of doing that would be via
+# appropriate on actions
+
+GDPGR_de_initialize = {
+    is_shown = {
+        is_ai = yes
+        any_country = {
+            NAND = {
+                has_variable = before_gdp # Check if it doesn't exist
+                var:before_gdp >= 0 # Check if it's a number
+                has_variable = GDPGR_rolling_difference
+                var:GDPGR_rolling_difference >= 0
+            }
+        }
+    }
+    
+    when_taken = {
+        if = {
+            limit = {
+                NOR = {
+                    has_global_variable = GDPGR_year
+                    has_global_variable = GDPGR_month
+                }
+            }
+            GDPGR_initialize_all = yes
+        }
+        else = {
+            every_country = {
+                limit = {
+                    NAND = {
+                        has_variable = before_gdp
+                        var:before_gdp >= 0
+                    }
+                }
+                GDPGR_initialize_country = yes
+            }
+        }
+    }
+    
+    ai_chance = {
+        base = 1000000
+    }
+}

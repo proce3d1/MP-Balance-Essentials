@@ -1,0 +1,44 @@
+﻿GLOBAL = {
+    # Set up JE bypasses
+    every_country = {
+        # Uniforms
+        if = {
+            limit = {
+                has_technology_researched = line_infantry
+            }
+            set_variable = {
+                name  = GGGG_has_uniforms_2
+                value = yes
+            }
+        }
+        if = {
+            limit = {
+                has_technology_researched = trench_works
+            }
+            set_variable = {
+                name  = GGGG_has_uniforms_3
+                value = yes
+            }
+        }
+        
+        # Rations
+        if = {
+            limit = {
+                has_technology_researched = canneries
+            }
+            set_variable = {
+                name  = GGGG_has_rations_2
+                value = yes
+            }
+        }
+        if = {
+            limit = {
+                has_technology_researched = pasteurization
+            }
+            set_variable = {
+                name  = GGGG_has_rations_3
+                value = yes
+            }
+        }
+    }
+}

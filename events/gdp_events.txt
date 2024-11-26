@@ -1,0 +1,80 @@
+﻿namespace = gdp
+
+# Annual logic
+gdp.1 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {}
+
+    immediate = {
+        # Don't need helper variables (especially not one for EACH YEAR 😰)
+        set_variable = {
+            name  = before_gdp
+            value = var:current_gdp
+        }
+        set_variable = {
+            name  = current_gdp
+            value = gdp 
+        }
+        
+        # Do calculation once and set to a variable to save on performance; loc will read from the variable directly
+        set_variable = {
+            name  = gdp_growth_rate
+            value = {
+                add      = var:current_gdp
+                subtract = var:before_gdp
+                divide   = var:before_gdp
+            }
+        }
+        
+        # Used as a part of the tooltip, not for any meaningful logic
+        set_variable = {
+            name  = GDPGR_year
+            value = year
+        }
+    }
+}
+
+# Initialization
+gdp.2 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {}
+
+    # Need to set with 1 day of delay; if we do it during history execution then the GDP will just be 0
+    immediate = {
+        set_variable = {
+            name  = before_gdp
+            value = gdp
+        }
+        set_variable = {
+            name  = current_gdp
+            value = gdp 
+        }
+        
+        GDPGR_initialize_monthly_records = yes
+        GDPGR_calculate_past_year_averages = yes
+    }
+}
+
+# Monthly logic
+gdp.3 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {}
+
+    immediate = {
+        GDPGR_update_rolling_gdp_growth = yes # THIS MUST BE CALLED FIRST
+        GDPGR_update_monthly_record = yes
+        
+        # These must run after the record update
+        GDPGR_update_past_month_stats = yes
+        GDPGR_calculate_past_year_averages = yes
+    }
+}
+
+# Everything else is not needed
+# ¡Afuera!

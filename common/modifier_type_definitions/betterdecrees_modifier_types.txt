@@ -1,0 +1,72 @@
+﻿#state_mortality_accepted_mult = {
+#	good = no
+#	percent = yes
+#	num_decimals = 0
+#}
+
+#state_mortality_discrimination_mult = {
+#	good = no
+#	percent = yes
+#}
+
+#state_mortality_turmoil_mult = {
+#	good = no
+#	percent = yes
+#}
+
+#state_non_accepted_birth_rate_mult = {
+#	good = yes
+#	percent = yes
+#}
+
+#state_discriminated_mortality_mult = {
+#	good = no
+#	percent = yes
+#}
+
+#state_non_accepted_mortality_mult = {
+#	good = no
+#	percent = yes
+#}
+
+#state_pollution_generation_mult = {
+#	good = no
+#	percent = yes
+#}
+
+
+building_group_bg_monuments_throughput_add={ 
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+building_group_bg_canals_throughput_add={ 
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_radicals_from_sol_change_mult={
+	decimals=0
+	color=bad
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}
+
+state_loyalists_from_sol_change_mult={
+	decimals=0
+	color=good
+	percent=yes
+	game_data={
+		ai_value=0
+	}
+}

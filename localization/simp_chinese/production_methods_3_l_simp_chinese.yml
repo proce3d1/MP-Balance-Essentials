@@ -1,0 +1,9 @@
+﻿l_simp_chinese:
+  pmg_base_building_synthetic_oil_plants:0 "合成油"
+ pmg_base_building_synthetic_rubber_plants:0 "合成橡胶"
+ pm_synth_oil_production:0 "合成油生产"
+ pm_improved_synth_oil_production:0 "进阶合成油生产"
+ pm_synth_rubber_production:0 "合成橡胶"
+
+ pmg_ownership_capital_building_synthetic_oil_plants:0 "所有制"
+ pmg_ownership_capital_building_synthetic_rubber_plants:0 "所有制"

@@ -1,0 +1,46 @@
+﻿# the flotilla size for each side in a naval battle
+# root = country
+# enemy_country = the other country
+# own_commander = the commander leading this side in battle (if any; could be garrison)
+# military_formation = the military formation in this side of the battle
+# enemy_commander = the commander leading this side in battle (if any; could be garrison)
+naval_battle_size = {
+	if = {
+		limit = {
+			exists = scope:own_commander
+		}
+		if = {
+			limit = {
+				scope:own_commander.num_units_share <= scope:military_formation.num_units
+				scope:military_formation.num_units <= 20
+			}
+			value =  scope:military_formation.num_units
+			desc = "NAVAL_BATTLE_SIZE_ADMIRAL_SHARE"
+		}
+		else_if = {
+			limit = {
+				scope:own_commander.num_units_share <= 20
+				scope:military_formation.num_units >= 20
+			}
+			value = 20
+			desc = "NAVAL_BATTLE_SIZE_ADMIRAL_SHARE"
+		}
+		else = {
+			value = {
+				value = scope:own_commander.num_units_share
+				desc = "NAVAL_BATTLE_SIZE_ADMIRAL_SHARE"
+			}
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				exists = scope:military_formation
+			}
+			value = {
+				value = scope:military_formation.num_commanderless_units
+				desc = "NAVAL_BATTLE_SIZE_NUM_COMMANDERLESS_UNITS"
+			}
+		}
+	}
+}

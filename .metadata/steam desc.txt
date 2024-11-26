@@ -1,0 +1,65 @@
+[h1]About[/h1]
+
+MPBE, or Multiplayer Balance & Essentials Mod, focusses on multiplayer balancing with campaigns up to 1900 and beyond. It also includes a number of useful tools specifically for multiplayer. 
+Constant feedback and collaboration with several other players from multiplayer servers helps to further develop the modpack and also to fix or improve weaknesses in vanilla.
+
+[h1]Features[/h1]
+[*][B]UI & QoL Improvements:[/B] Population growth as a whole has been revamped. You will reach your highest growth at a much lower SoL and then drop off much faster. Pop growth worldwide should be closer to historical numbers.
+[*][B]Balanced Laws & Better Character Interactions:[/B] Great Powers gain claims in Africa, Oceania and Indonesia when their colony has grown large enough to limit other powers from competing in the same state region. A claim is granted when one Great Power controls 50% of a state region - Great Powers with colonies in that state region that own at least 20% of it also get a claim.
+[*][B]Educations Access & Tech Spread:[/B]
+[*][B]Better Population Growth & Migration:[/B]
+[*][B]MAPI:[/B]
+[*][B]Better Decrees:[/B]
+[*][B]Colonial Claims:[/B] Great Powers gain claims in Africa, Oceania and Indonesia when their colony has grown large enough to limit other powers from competing in the same state region. A claim is granted when one Great Power controls 50% of a state region - Great Powers with colonies in that state region that own at least 20% of it also get a claim.
+[*][B]Cold Water Ports:[/B] [/B][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997299912][B]Cold Water Ports by jobarin has been integrated into VTM![/B][/url]
+[*][B]Springtime of the Peoples, Cornlaws and other Journal Entries:[/B] Springtime of the Peoples is easier to trigger, clearly communicates when it spreads and is generally more impactful, leading to real unrest all over Europe. The Strike JE has been fixed. Romania has its own JE and can unify. Austria can form an SGF vassal should it be influential enough in South Germany.
+[*][B]Infamy Changes:[/B]
+[*][B]Improved Diplomacy:[/B]
+[*][B]Country Balancing:[/B]
+[*][B]Leader Ideologies:[/B]
+[*][B]Better Agriculture:[/B]
+[*][B]Trading & Convoys:[/B]
+[*][B]Military:[/B]
+[*][B]Perfomance Improvements:[/B]
+[*][B]Many minor changes:[/B] Country Rank modifiers, modifiers for low and very low taxes, better hiring process, job satisfaction, 
+
+[h1]Detailled description[/h1]
+Used mods, changes and features can be found here:
+
+The latest changes are available here on the workshop page in the "Change Notes" tab.
+
+[h1]Feedback and suggestions[/h1]
+
+
+If you liked the mod, feel free to favorite and rate it up! 
+
+[img]http://i.imgur.com/FaFtOmm.gif[/img]
+
+[img]https://i.imgur.com/BwwFvvW.png[/img]
+
+[B]VTM is unlikely to be compatible with any similar mods as its changes are fluid and touch many aspects of the game[/B]. The [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2888391145][B]Extra Topbar Info Mod[/B][/url] is compatible with this mod. VTM comes first in the load order, then ETI.
+
+[img]https://i.imgur.com/jr3D9n7.png[/img]
+
+[h1]VTM currently touches on many major and minor issues. This is a short list of major features:[/h1]
+[*][B]Population Growth Revamp:[/B] Population growth as a whole has been revamped. You will reach your highest growth at a much lower SoL and then drop off much faster. Pop growth worldwide should be closer to historical numbers.
+[*][B]Colonial Claims:[/B] Great Powers gain claims in Africa, Oceania and Indonesia when their colony has grown large enough to limit other powers from competing in the same state region. A claim is granted when one Great Power controls 50% of a state region - Great Powers with colonies in that state region that own at least 20% of it also get a claim.
+[*][B]Colonial Gameplay:[/B] Imperialist AI countries now eliminate native countries, challenge one another over colonies more reliably and utilise the new colonisation system seamlessly. Colonial Exploitation is now more exploitative. The overlord of the British India Company can now transfer regional possessions to the BIC similar to what the overlord of the DEI can do. 
+[*][B]French Internal Gameplay:[/B] Various changes have been made to French content. The French Monarchists will form their own parties, cementing your dynasty will take longer and some things have been changed such as the effect of the Natural Borders JE. 
+[*][B]National Unifications:[/B] Scandinavia is no longer a major unification, Austria has more options when winning the Brothers War, the requirements to form Germany have been changed and Italy has some unique strats (WIP however)
+[*][B]Ideologies & Laws:[/B]Various changes have been made to ideologies and laws to make them more aligned. Radicals are now primarily pushing for civil rights, different IGs are getting slightly different and often more stances.
+[*][B]Light Economy Changes:[/B] Urban centres are now likely to be profitable as services are much less overproduced, which ultimately leads to the consumer economy and the Petite Bourgeoisie functioning better.
+[*][B]Light Economy Changes:[/B] Two new game rules have been introduced that are both off by default - 1.) Whether France has a reduced birth rate and 2.) Whether AI Prussia can form the NGF should it lose the Brothers War to create a more dynamic world.
+[*][B]Springtime of the Peoples other Flavour:[/B] Springtime of the Peoples is easier to trigger, clearly communicates when it spreads and is generally more impactful, leading to real unrest all over Europe. The Strike JE has been fixed. Romania has its own JE and can unify. Austria can form an SGF vassal should it be influential enough in South Germany.
+[*][B]Japanese Chaos Theory:[/B] I live in Japan's walls.
+[*][B]Cold Water Ports:[/B] [/B][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2997299912][B]Cold Water Ports by jobarin has been integrated into VTM![/B][/url]
+[*][B]Many minor changes:[/B] Many other minor changes have been made. Legitimacy levels have different impacts, the AI generally behaves differently and various smaller things have been fixed, altered or expanded. 
+
+
+[B]While this mod aims to enhance the gameplay experience, please be aware that odd behaviour, weird things, bugs or imbalances could always happen. Please let us know about these in the comments so that we can see whether it is a mod or a vanilla issue.[/B]
+
+[img]https://i.imgur.com/xmZNf8J.png[/img]
+
+Are you a modder that would like to use VTM's colonial mechanics?
+[/B][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2960898319][B]They have been uploaded separately right here![/B][/url]
+Please feel free to implement it or parts of it!

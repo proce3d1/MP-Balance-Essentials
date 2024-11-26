@@ -1,0 +1,22 @@
+﻿##############################
+# BETTER DECREES CHECK SCRPITED TRIGGERS #
+##############################
+
+# You can use this trigger to see if Better Decrees is active for in a playset.
+# This is useful if you want your mod to interact with Better Decrees.
+
+# You can use it by adding a scripted_trigger_file in your mod.
+# The File name should start with "00_", so that it gets loaded before this file.
+# Add this to your file (without the "#"):
+
+#betterdecrees_is_active = {
+#	always = yes
+#}
+
+# Now you can use the trigger like this: "betterdecrees_is_active = yes".
+# If Better Decrees is active the Trigger here will take priority and it will result in a "yes".
+# If Better Decrees is not active your Trigger will be used and the Trigger will return "no".
+
+betterdecrees_is_active = {
+	always = yes
+}

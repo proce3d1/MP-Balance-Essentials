@@ -1,0 +1,248 @@
+
+NPolitics = {
+
+	# For a movement with a cultural/religious identity to spawn, the culture/religion must meet at least one of the two thresholds below:
+	MOVEMENT_IDENTITY_MIN_INDIVIDUALS_ABSOLUTE_THRESHOLD = 1000000	# 200000 # Absolute number of individuals
+	MOVEMENT_IDENTITY_MIN_INDIVIDUALS_RELATIVE_THRESHOLD = 0.2 # Number of individuals relative to country population
+
+	LAW_ENACTMENT_MIN_TOTAL_DAYS = 14			# Vanilla = 1, Minimum number of total days that an enactment checkpoint can take [>=1]
+	LAW_ENACTMENT_DEFAULT_BASE_DAYS = 90		# Vanilla = 100, Default number of base days required to reach an enactment checkpoint [>=1]
+	LAW_ENACTMENT_COOLDOWN_DAYS = 456			# Vanilla = 730, When an enactment fails, or is manually stopped after at least one checkpoint, that law can't be tried to be enacted for this many days [>=0]
+	
+}
+
+NEconomy = {
+	MIN_CONSTRUCTION_EFFICIENCY = 0.15			# Vanilla = 0.05; Construction efficiency cannot go below this amount
+	
+	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 5	# 10		# How many years does it take for penalties from declaring bankruptcy to fully decay
+
+	GOODS_LEADERBOARD_SIZE = 20					# How many spots there are on each goods leaderboard, default: 10
+
+	
+	REINVESTMENT_EFFICIENCY_MAX = 2	# 3.0						# Maximum conversion of reinvestment to investment pool
+	REINVESTMENT_BASE_EFFICIENCY_THRESHOLD = 30000000	# 10000000	# Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0	
+	BUILDING_RAISE_WAGES_MIN_RELEVANT_POP_SIZE = 50 # Pops with less workforce than this are ignored when checking whether a profitable building should raise wages because of radicalizing workers
+	BUILDING_RAISE_WAGES_DISCRIMINATION_FACTOR = 0.75	# 0.66 # Profitable buildings only care to raise wages for discriminated pops if their wealth to expected SoL ratio is less than this
+	BUILDING_LOWER_WAGES_TARGET_WEALTH_MULT = 1.5	# 1.33 # Buildings will consider lowering wages if all significant pops working in them have this * the target wealth to expected SoL ratio
+	BUILDING_DEFAULT_MIN_EARNINGS_TO_HIRE_EMPLOYEES = 3  # Non-subsidized buildings will not hire if it would result in their annual earnings/employee falling below this threshold
+	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.25	# 0.3		# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
+	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.1	# 0.15	# If profit margin is this or below, consider lowering wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
+	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_RAISE_WAGES = 0.9	# 0.5 # If the employment fraction of a building is above this, don't raise wages just to try and snipe employees from other buildings
+
+}
+
+NMilitary = {
+	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.0025	# 0.04	# The minimum percentage of manpower a unit can lose each week due to attrition
+	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.06	# 0.12 	# The maximum percentage of manpower a unit can lose each week due to attrition
+}	
+
+NDiplomacy = {
+
+
+	DEFAULT_TRUCE_MONTHS = 60
+	PEACE_DEAL_DURATION_IN_DAYS = 30
+	PEACE_DEAL_COOLDOWN_IN_DAYS = 60	# 120
+	PACT_REQUIRES_APPROVAL_MIN_FORCED_MONTHS = 1 		# Diplomatic pacts that require approval always have at least this cooldown period before they can be broken
+	OBLIGATION_FORCED_PACT_MONTHS = 60	# 120
+	SWAY_FORCED_PACT_MONTHS = 120
+	EXPEL_DIPLOMATS_MONTHS = 24			# 60
+	OBLIGATION_MONTHS = 60				# 120
+
+	MAKE_WARGOAL_PRIMARY_DEMAND_MANEUVERS_COST = 0.2 			#0.5 Fraction of the wargoal's base maneuver cost that it costs to turn it into a primary demand
+	MAKE_WARGOAL_PRIMARY_DEMAND_INFAMY_AMOUNT = 0.2				#0.5 Fraction of the wargoal's base infamy that is accured when you turn it into a primary demand
+		
+	PRESTIGE_FROM_COUNTRY_GDP_DIVISOR = 1000000
+	PRESTIGE_FROM_COUNTRY_GDP = 6							# 3 # Per PRESTIGE_FROM_COUNTRY_GDP_DIVISOR GDP
+	PRESTIGE_FROM_SUBJECT_GDP = 0.5							# 1.5 # Per PRESTIGE_FROM_COUNTRY_GDP_DIVISOR GDP in subjects
+	PRESTIGE_FROM_ARMY_POWER_PROJECTION = 0.03 				# Per point of power projection from army combat power
+	PRESTIGE_FROM_NAVY_POWER_PROJECTION = 0.066				# 0.10 # Per point of power projection from navy combat power
+	PRESTIGE_FROM_SUBJECT_ARMY_POWER_PROJECTION = 0.0005 	# Per point of power projection from army combat power in subjects
+	PRESTIGE_FROM_SUBJECT_NAVY_POWER_PROJECTION = 0.005 	# 0.01 # Per point of power projection from navy combat power in subjects
+	PRESTIGE_MIN_NUM_COUNTRIES = 100 # If there's less countries using prestige than this in the game, we add some filler countries to adjust average prestige levels
+	FILLER_COUNTRY_PRESTIGE = 15
+	
+}
+
+NPowerBlocs = {
+	MAX_PRINCIPLES = 6	# 4		# Max number of principles that a Power Bloc can have
+	INITIAL_PRINCIPLE_LEVELS = 1		# Max total levels of principles that a Power Bloc can have during formation
+	FORMATION_COOLDOWN_MONTHS = 24		# Cooldown in months between the attempts to form Power Blocs
+	JOIN_COOLDOWN_MONTHS = 6			# If a Country leaves a Power Bloc they cannot re-join before X months
+	LEAVE_COOLDOWN_MONTHS = 6			# If a Country joins a Power Bloc they cannot leave within X months
+	MIN_MEMBERS = 2 					# This is the minimum number of members that the bloc needs to have to be considered active. Members include the leader.
+	LEVERAGE_LOBBY_CLOUT_FACTOR = 500 	# Leverage gain is increased or decreased by the Lobby's total Clout * this factor
+	INVITE_ACTION_NAME = "invite_to_power_bloc"
+
+	JOIN_ACTION_NAME = "join_power_bloc"
+	MAX_MANDATE_PROGRESS = 2000			# When mandate progress reaches this value, the power bloc gains one mandate
+	MAX_MANDATES = 3					# This is the maximum number of mandates that can be accumulated at once
+	PRINCIPLE_SELECTION_COOLDOWN_DAYS = 90	# Once a principle is selected, it cannot be changed for this many days. Upgrading is unaffected by the cooldown, but resets it.
+	POWER_STRUGGLE_PRESTIGE_THRESHOLD_START = 1.2 	# If a power bloc member has more prestige than leader's prestige X this - power struggle starts with the member becoming contender
+	POWER_STRUGGLE_PRESTIGE_THRESHOLD_FAIL = 1.15 	# If a contender has less prestige than leader's prestige X this - power struggle fails
+	POWER_STRUGGLE_DURATION_SUCCESS_MONTHS = 12 	# Power struggle succeeds after this months
+	POWER_STRUGGLE_DURATION_FACTOR_FOR_FOUNDER = 0.75 	# Power struggle succeeds after this X POWER_STRUGGLE_DURATION_SUCCESS_MONTHS if the contender is the founder of the power bloc
+	COHESION_WEEKLY_DRIFT_MAX = 1		# At most, Cohesion will drift by +/- this value each week
+	COHESION_TARGET_MAX = 100			# The highest value Cohesion can reach
+	POWER_BLOC_INFLUENCE_COST = 200 #500		# Cost in Influence to form / be the leader of a Power Bloc
+	MAX_LEVERAGE = 1000					# How much "raw" Leverage can be split between parties (the country itself + each Power Bloc)
+	LEVERAGE_WEEKLY_DRIFT_FACTOR = 0.02	# The delta between current Leverage and Target Leverage will be multiplied by this to determine the weekly Leverage drift
+	LEVERAGE_WEEKLY_DRIFT_MIN = 1		# At minimum, Leverage will drift by +/- this value each week, up/down to the target
+	LEVERAGE_INIT_STARTING_POWER_BLOC_UNCLAIMED_LEVERAGE_FACTOR = 0.5	# During initialization, a Power Bloc claims this fraction of a member's unclaimed leverage resulting from Leverage Resistance and 'lost leverage' in other Power Blocs' multipliers below 
+	LEVERAGE_INIT_OTHER_BLOC_MEMBER_FACTOR = 0.3	# During initialization, multiply calculated target leverage by this if country is member of another bloc
+	LEVERAGE_INIT_NO_BLOC_FACTOR = 0.5				# During initialization, multiply calculated target leverage by this if country is not a member of any power bloc
+	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_DIVISOR = 1000000 		# Population divided by this is multiplied by country_leverage_resistance_per_population to give a certain amount of leverage per million people
+	COUNTRY_POPULATION_LEVERAGE_RESISTANCE_MODIFIER_MAX_MULTIPLIER = 100	# Max multiplier given by population. With the value above at 1 000 000, this means the cap for leverage resistance is at 100 000 000.
+}
+
+NPops = {
+
+	JOB_SATISFACTION_BASE = -130							# Base job satisfaction
+	JOB_SATISFACTION_FOR_NEWLY_HIRED = 1000					# Job satisfaction gained due to having been newly hired, this state lasts until the pop's next wealth calculation
+	JOB_SATISFACTION_PER_SOL_ABOVE_EXPECTED_SOL = 3			# Job satisfaction gained per level of SoL above your expected SoL
+	JOB_SATISFACTION_PER_SOL_ABOVE_STATE_STRATA_SOL = 2		# Job satisfaction gained per level of SoL above the state average for your strata
+	JOB_SATISFACTION_PER_SOL_ABOVE_COUNTRY_STRATA_SOL = 1	# Job satisfaction gained per level of SoL above the country average for your strata
+	JOB_SATISFACTION_PER_PERCENT_WAGE_RATE_ABOVE_NORMAL = 1	# Job satisfaction gained per pound of workplace wage rate (weekly wage of 10k laborers) above country normal
+	JOB_SATISFACTION_FROM_CAN_AFFORD_EXPENSES = 1000		# Job satisfaction gained from being able to afford your bug package (and taxes)
+	JOB_SATISFACTION_FROM_CANNOT_AFFORD_EXPENSES = -100		# Job satisfaction gained from not being able to afford your bug package (and taxes)
+	JOB_SATISFACTION_PER_PERCENT_HIGHER_STRATA_QUALIFICATION = -2	# -1 # Job satisfaction gained per percent of workforce qualified for a higher strata. Note that qualifications are assumed to overlap and the largest qualification is used in this calculation
+	JOB_SATISFACTION_FROM_EMPLOYMENT = 100					# Job satisfaction gained from having a job
+	JOB_SATISFACTION_DIVIDENDS_MAX_MULT = 2.5	# 5					# Max multiplier from the ratio between pop dividends and wages
+	JOB_SATISFACTION_DIVIDENDS_BASE = 20	# 50					# Base value to be multiplied by the ratio between dividends and wages
+	JOB_SATISFACTION_LOSSES_MIN_MULT = -5					# Min multiplier from the ratio between pop losses and wages (or if you will, max magnitude)
+	JOB_SATISFACTION_LOSSES_BASE = 50						# Base value to be multiplied by the ratio between losses and wages 
+
+}
+
+
+### Pop Growth Constants
+## Base Values per month
+@min_birthrate = 0.00150 #was 0.00055			# Minimum base birthrate per month (at POP_GROWTH_STABLE_SOL)
+@max_birthrate = 0.00400 #was 0.00450			# Maximum base birthrate per month (at SOL = 0 if not modified by malnourishment)
+@min_mortality = 0.00130		# 0.00120 #was 0.00045			# Minimum base mortality per month (at POP_GROWTH_STABLE_SOL)
+@max_mortality = 0.00600		# 0.00600 #was 0.00600			# Maximum base mortality per month (at SOL = 0 if not modified by malnourishment)
+
+## SoL Thresholds
+@pop_growth_equilibrium_sol = 5		# Equilibrium is pops stop starving and where growth first becomes positive
+@pop_growth_transition_sol = 11 	# 10     # Transition determines how long birthrate "lags" behind mortality before starting to drop. Setting to same as equilibrium leads to no "lag" (only matters for birthrate)
+@pop_growth_max_sol = 25			# 20			# Growth Max is where net growth generally is at it's highest (only matters for mortality)
+@pop_growth_stable_sol = 35			# 30			# Stable is where birthrate and mortality stop changing and hit their minimum values
+
+## Others
+@transition_birthrate_mult = 1.1	# vtm = 0.95 #1.0		# If you want the birthrate "lag" to go to a higher or lower value than max_birthrate. (you can also just change it directly below)
+@max_growth_mortality_mult = 0.465	# vtm = 0.40 #0.35	# What proportion of birthrate_at_growth_max mortality should be at. Higher means lower growth
+
+### Pop Growth Derived values
+# Generally, for each one of these derived values below we're really just doing one of three operations (or combination of them):
+# - Calculate a Point: sol * slope + start_value   					(x_at_y)
+# - Calculate a Slope: (start_value - end_value) / number_of_steps	(x_slope)
+# - Calculate an Intercept: -slope*sol + end_value					(x_intercept)
+# Intercepts are only needed for line segments that don't start at 0 SoL
+
+@birthrate_at_transition = @[max_birthrate*transition_birthrate_mult]
+@rate_at_equilibrium = @[pop_growth_equilibrium_sol*((birthrate_at_transition-max_birthrate)/pop_growth_transition_sol)+max_birthrate] # determines both mortality and birthrate
+
+## Mortality from 0 to pop_growth_equilibrium_sol
+@mortality_starving_slope = @[(rate_at_equilibrium-max_mortality)/pop_growth_equilibrium_sol]
+
+## Birthrate from 0 to pop_growth_transition_sol
+@birthrate_pretransition_slope = @[(birthrate_at_transition-max_birthrate)/pop_growth_transition_sol]
+
+## Mortality from pop_growth_equilibrium_sol to pop_growth_max_sol
+@birthrate_at_growth_max = @[(pop_growth_max_sol-pop_growth_transition_sol)*((min_birthrate-birthrate_at_transition)/(pop_growth_stable_sol-pop_growth_transition_sol))+birthrate_at_transition]
+@mortality_at_growth_max = @[birthrate_at_growth_max*max_growth_mortality_mult]
+@mortality_equilibrium_to_growth_max_slope = @[(mortality_at_growth_max-rate_at_equilibrium)/(pop_growth_max_sol-pop_growth_equilibrium_sol)]
+@mortality_equilibrium_to_growth_max_intercept = @[-mortality_equilibrium_to_growth_max_slope*pop_growth_equilibrium_sol+rate_at_equilibrium]
+
+## Birthrate from pop_growth_transition_sol to pop_growth_stable_sol
+@birthrate_transition_slope = @[(min_birthrate-birthrate_at_transition)/(pop_growth_stable_sol-pop_growth_transition_sol)]
+@birthrate_transition_intercept = @[-birthrate_transition_slope*pop_growth_stable_sol+min_birthrate]
+
+## Mortality from pop_growth_max_sol to pop_growth_stable_sol
+@mortality_growth_max_to_stable_slope = @[(min_mortality-mortality_at_growth_max)/(pop_growth_stable_sol-pop_growth_max_sol)]
+@mortality_growth_max_to_stable_intercept = @[-mortality_growth_max_to_stable_slope*pop_growth_stable_sol+min_mortality]
+
+### Pseudo algorithm to determine base Mortality / Birthrate
+## Mortality
+# if (sol < POP_GROWTH_EQUILIBRIUM_SOL)
+# { mortality = sol * POP_GROWTH_MORTALITY_STARVING_SLOPE + POP_GROWTH_MAX_MORTALITY }
+# else if (sol < POP_GROWTH_MAX_SOL)
+# { mortality = sol * POP_GROWTH_MORTALITY_EQUILIBRIUM_TO_GROWTH_MAX_SLOPE + POP_GROWTH_MORTALITY_EQUILIBRIUM_TO_GROWTH_MAX_INTERCEPT }
+# else if (sol < POP_GROWTH_STABLE_SOL)
+# { mortality = sol * POP_GROWTH_MORTALITY_GROWTH_MAX_TO_STABLE_SLOPE + POP_GROWTH_MORTALITY_GROWTH_MAX_TO_STABLE_INTERCEPT }
+# else { mortality = POP_GROWTH_MIN_MORTALITY }
+
+## Birthrate
+# if (sol < POP_GROWTH_EQUILIBRIUM_SOL)
+# { birthrate = (sol * POP_GROWTH_BIRTHRATE_PRETRANSITION_SLOPE + POP_GROWTH_MAX_BIRTHRATE) * (1 - malnourishment * (POP_GROWTH_EQUILIBRIUM_SOL - sol)) }
+# else if (sol < POP_GROWTH_TRANSITION_SOL)
+# { birthrate = sol * POP_GROWTH_BIRTHRATE_PRETRANSITION_SLOPE + POP_GROWTH_MAX_BIRTHRATE }
+# else if (sol < POP_GROWTH_STABLE_SOL)
+# { birthrate = sol * POP_GROWTH_BIRTHRATE_TRANSITION_SLOPE + POP_GROWTH_BIRTHRATE_TRANSITION_INTERCEPT }
+# else { birthrate = POP_GROWTH_MIN_BIRTHRATE } 
+
+NPops = {
+	## Birthrate
+	POP_GROWTH_BIRTHRATE_PRETRANSITION_SLOPE = @birthrate_pretransition_slope
+	POP_GROWTH_BIRTHRATE_TRANSITION_SLOPE = @birthrate_transition_slope
+	POP_GROWTH_BIRTHRATE_TRANSITION_INTERCEPT = @birthrate_transition_intercept
+
+	## Mortality
+	POP_GROWTH_MORTALITY_STARVING_SLOPE = @mortality_starving_slope
+	POP_GROWTH_MORTALITY_EQUILIBRIUM_TO_GROWTH_MAX_SLOPE = @mortality_equilibrium_to_growth_max_slope
+	POP_GROWTH_MORTALITY_EQUILIBRIUM_TO_GROWTH_MAX_INTERCEPT = @mortality_equilibrium_to_growth_max_intercept
+	POP_GROWTH_MORTALITY_GROWTH_MAX_TO_STABLE_SLOPE = @mortality_growth_max_to_stable_slope
+	POP_GROWTH_MORTALITY_GROWTH_MAX_TO_STABLE_INTERCEPT = @mortality_growth_max_to_stable_intercept
+
+	## Base Values
+	POP_GROWTH_MIN_BIRTHRATE = @min_birthrate					# Minimum base birthrate per month (at POP_GROWTH_STABLE_SOL)
+	POP_GROWTH_MAX_BIRTHRATE = @max_birthrate					# Maximum base birthrate per month (at SOL = 0 if not modified by malnourishment)
+	POP_GROWTH_MIN_MORTALITY = @min_mortality					# Minimum base mortality per month (at POP_GROWTH_STABLE_SOL)
+	POP_GROWTH_MAX_MORTALITY = @max_mortality					# Maximum base mortality per month (at SOL = 0 if not modified by malnourishment)
+
+	## SoL Thresholds
+	POP_GROWTH_EQUILIBRIUM_SOL = @pop_growth_equilibrium_sol	# Equilibrium is pops stop starving and where growth first becomes positive
+	POP_GROWTH_TRANSITION_SOL = @pop_growth_transition_sol		# Transition determines how long birthrate "lags" behind mortality before starting to drop. Setting to same as equilibrium leads to no "lag" (only matters for birthrate)
+	POP_GROWTH_MAX_SOL = @pop_growth_max_sol					# Growth Max is where net growth generally is at it's highest (only matters for mortality)
+	POP_GROWTH_STABLE_SOL = @pop_growth_stable_sol				# Stable is where birthrate and mortality stop changing and hit their minimum values
+}
+
+### End Pop Growth Constant defines
+
+NTechnology = {
+	TECH_AHEAD_OF_TIME_PENALTY_FACTOR = 0.3	# 0.25	# For every tech in a previous era not already researched in this category, take this multiple of the cost as an additional penalty (multiplied by number of eras between the techs)
+}
+
+NBattle = {	
+	CHANCE_OF_POPULARITY_NARROW_VICTORY = 0.75 #0.5	# The chance (0-1) to be affected by popularity for a narrow victory (start with numeric advantage, end with numeric disadvantage)
+	CHANCE_OF_POPULARITY_NORMAL_VICTORY	= 0.33 #0.1	# The chance (0-1) to be affected by popularity for a normal victory (any victory that's not narrow or heroic)
+	CHANCE_OF_POPULARITY_HEROIC_VICTORY	= 1.0		# The chance (0-1) to be affected by popularity for a heroic victory (start with numeric disadvantage against a more prestigious nation)
+	POPULARITY_GAIN_NARROW_VICTORY = 3 			# Multiple of commander_battle_end_victory modifier the winner should get for a narrow victory if the random chance roll is true
+	POPULARITY_GAIN_NORMAL_VICTORY = 2			# Multiple of commander_battle_end_victory modifier the winner should get for a normal victory if the random chance roll is true
+	POPULARITY_GAIN_HEROIC_VICTORY = 5 			# Multiple of commander_battle_end_victory modifier the winner should get for a heroic victory if the random chance roll is true
+	POPULARITY_GAIN_NARROW_LOSS	= -3			# Multiple of commander_battle_end_loss modifier the loser should get for a narrow victory for the other side if the random chance roll is true
+	POPULARITY_GAIN_NORMAL_LOSS	= -2			# Multiple of commander_battle_end_loss modifier the loser should get for a normal victory for the other side if the random chance roll is true
+	POPULARITY_GAIN_HEROIC_LOSS = -5			# Multiple of commander_battle_end_loss modifier the loser should get for a heroic victory for the other side if the random chance roll is true
+	POPULARITY_DECAY_MONTHS = 120	#600 #60				# The number of months battle popularity modifiers decay over
+}
+
+NWar = {
+	OCCUPATION_STATE_DEFENSIVE_BATTLE_VICTORY_SCORE = 25	# 100 	# How many occupation "points" each country receives after winning a defensive battle
+	OCCUPATION_STATE_CLEAR_OCCUPATION_FRACTION = 0.5 # Fraction of occupation score dedicated to clear occupation from your own States (if any).
+																																				 
+	STATE_CONQUEST_DEFAULT_RADICALIZATION = 0.4			# 0.5
+	STATE_CONQUEST_DEFAULT_DEMILITARIZATION = 0.6			# 0.75
+	
+	WAR_EXHAUSTION_ANTI_WAR_LOBBY_CLOUT_FACTOR = 0.5	# 1.0 # At 100% lobby clout opposed to the war
+	WAR_EXHAUSTION_PRO_WAR_LOBBY_CLOUT_FACTOR = -0.5	# -1.0 # At 100% lobby clout supporting to the war
+
+}
+
+
+
+
+
+
+
+
+
+

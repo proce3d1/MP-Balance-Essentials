@@ -1,0 +1,1092 @@
+﻿on_acquired_technology = {
+	on_actions = {
+		headlines_tech
+	}
+}
+
+headlines_tech = {
+	effect = {
+		set_global_variable = {
+			name = headlines_tech_acquired
+			value = scope:technology
+		}
+		##Production Techs
+		#Bessemer Process
+		if = {
+			limit = {
+				has_global_variable = headlines_tech_acquired 
+				has_technology_researched = bessemer_process
+				NOT = {
+					has_global_variable = headlines_bessemer_process_researched
+				}
+			}
+			set_global_variable = headlines_bessemer_process_researched
+			save_scope_as = headlines_bessemer_process_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_bessemer_process
+			}
+		}
+		#Crystal Glass
+		if = {
+			limit = { 
+				has_technology_researched = crystal_glass
+				NOT = {
+					has_global_variable = headlines_crystal_glass_researched
+				}
+			}
+			set_global_variable = headlines_crystal_glass_researched
+			save_scope_as = headlines_crystal_glass_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_crystal_glass
+			}
+		}		
+		#Baking Powder
+		if = {
+			limit = { 
+				has_technology_researched = baking_powder
+				NOT = {
+					has_global_variable = headlines_baking_powder_researched
+				}
+			}
+			set_global_variable = headlines_baking_powder_researched
+			save_scope_as = headlines_baking_powder_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_baking_powder
+			}
+		}
+		#Nitroglycerin
+		if = {
+			limit = { 
+				has_technology_researched = nitroglycerin
+				NOT = {
+					has_global_variable = headlines_nitroglycerin_researched
+				}
+			}
+			set_global_variable = headlines_nitroglycerin_researched
+			save_scope_as = headlines_nitroglycerin_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_nitroglycerin
+			}
+		}
+		
+		#Improved Fertilizer
+		if = {
+			limit = { 
+				has_technology_researched = improved_fertilizer
+				NOT = {
+					has_global_variable = headlines_improved_fertilizer_researched
+				}
+			}
+			set_global_variable = headlines_improved_fertilizer_researched
+			save_scope_as = headlines_improved_fertilizer_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_improved_fertilizer
+			}
+		}
+		
+		#Steam Donkey
+		if = {
+			limit = { 
+				has_technology_researched = steam_donkey
+				NOT = {
+					has_global_variable = headlines_steam_donkey_researched
+				}
+			}
+			set_global_variable = headlines_steam_donkey_researched
+			save_scope_as = headlines_steam_donkey_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_steam_donkey
+			}
+		}
+		
+		#Dynamite
+		if = {
+			limit = { 
+				has_technology_researched = dynamite
+				NOT = {
+					has_global_variable = headlines_dynamite_researched
+				}
+			}
+			set_global_variable = headlines_dynamite_researched
+			save_scope_as = headlines_dynamite_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_dynamite
+			}
+		}
+		
+		#Steel Railway Cars
+		if = {
+			limit = { 
+				has_technology_researched = steel_railway_cars
+				NOT = {
+					has_global_variable = headlines_steel_railway_cars_researched
+				}
+			}
+			set_global_variable = headlines_steel_railway_cars_researched
+			save_scope_as = headlines_steel_railway_cars_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_steel_railway_cars
+			}
+		}
+		
+		#Rubber Mastication*
+		if = {
+			limit = { 
+				has_technology_researched = rubber_mastication
+				NOT = {
+					has_global_variable = headlines_rubber_mastication_researched
+				}
+			}
+			set_global_variable = headlines_rubber_mastication_researched
+			save_scope_as = headlines_rubber_mastication_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_rubber_mastication
+			}
+		}
+		
+		#Pumpjacks*
+		if = {
+			limit = { 
+				has_technology_researched = pumpjacks
+				NOT = {
+					has_global_variable = headlines_pumpjacks_researched
+				}
+			}
+			set_global_variable = headlines_pumpjacks_researched
+			save_scope_as = headlines_pumpjacks_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_pumpjacks
+			}
+		}
+		
+		#Electrical Generation*
+		if = {
+			limit = { 
+				has_technology_researched = electrical_generation
+				NOT = {
+					has_global_variable = headlines_electrical_generation_researched
+				}
+			}
+			set_global_variable = headlines_electrical_generation_researched
+			save_scope_as = headlines_electrical_generation_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_electrical_generation
+			}
+		}
+		
+		#Aniline
+		if = {
+			limit = { 
+				has_technology_researched = aniline
+				NOT = {
+					has_global_variable = headlines_aniline_researched
+				}
+			}
+			set_global_variable = headlines_aniline_researched
+			save_scope_as = headlines_aniline_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_aniline
+			}
+		}
+		
+		#Vulcanization
+		if = {
+			limit = { 
+				has_technology_researched = vulcanization
+				NOT = {
+					has_global_variable = headlines_vulcanization_researched
+				}
+			}
+			set_global_variable = headlines_vulcanization_researched
+			save_scope_as = headlines_vulcanization_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_vulcanization
+			}
+		}
+		
+		#Nitrogen Fixation
+		if = {
+			limit = { 
+				has_technology_researched = nitrogen_fixation
+				NOT = {
+					has_global_variable = headlines_nitrogen_fixation_researched
+				}
+			}
+			set_global_variable = headlines_nitrogen_fixation_researched
+			save_scope_as = headlines_nitrogen_fixation_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_nitrogen_fixation
+			}
+		}
+		
+		#Mechanized Farming
+		if = {
+			limit = { 
+				has_technology_researched = mechanized_farming
+				NOT = {
+					has_global_variable = headlines_mechanized_farming_researched
+				}
+			}
+			set_global_variable = headlines_mechanized_farming_researched
+			save_scope_as = headlines_mechanized_farming_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_mechanized_farming
+			}
+		}
+		
+		#Plastics*
+		if = {
+			limit = { 
+				has_technology_researched = plastics
+				NOT = {
+					has_global_variable = headlines_plastics_researched
+				}
+			}
+			set_global_variable = headlines_plastics_researched
+			save_scope_as = headlines_plastics_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_plastics
+			}
+		}
+		
+		#Steam Turbine
+		if = {
+			limit = { 
+				has_technology_researched = steam_turbine
+				NOT = {
+					has_global_variable = headlines_steam_turbine_researched
+				}
+			}
+			set_global_variable = headlines_steam_turbine_researched
+			save_scope_as = headlines_steam_turbine_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_steam_turbine
+			}
+		}
+		
+		#Combustion Engine*
+		if = {
+			limit = { 
+				has_technology_researched = combustion_engine
+				NOT = {
+					has_global_variable = headlines_combustion_engine_researched
+				}
+			}
+			set_global_variable = headlines_combustion_engine_researched
+			save_scope_as = headlines_combustion_engine_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_combustion_engine
+			}
+		}
+		
+		#Telephone*
+		if = {
+			limit = { 
+				has_technology_researched = telephone
+				NOT = {
+					has_global_variable = headlines_telephone_researched
+				}
+			}
+			set_global_variable = headlines_telephone_researched
+			save_scope_as = headlines_telephone_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_telephone
+			}
+		}
+		
+		#Art Silk
+		if = {
+			limit = { 
+				has_technology_researched = art_silk
+				NOT = {
+					has_global_variable = headlines_art_silk_researched
+				}
+			}
+			set_global_variable = headlines_art_silk_researched
+			save_scope_as = headlines_art_silk_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_art_silk
+			}
+		}
+		
+		#Electric Railways*
+		if = {
+			limit = { 
+				has_technology_researched = electric_railway
+				NOT = {
+					has_global_variable = headlines_electric_railway_researched
+				}
+			}
+			set_global_variable = headlines_electric_railway_researched
+			save_scope_as = headlines_electric_railway_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_electric_railway
+			}
+		}
+		
+		#Radio*
+		if = {
+			limit = { 
+				has_technology_researched = radio
+				NOT = {
+					has_global_variable = headlines_radio_researched
+				}
+			}
+			set_global_variable = headlines_radio_researched
+			save_scope_as = headlines_radio_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_radio
+			}
+		}
+		#Pasteurization
+		if = {
+			limit = { 
+				has_technology_researched = pasteurization
+				NOT = {
+					has_global_variable = headlines_pasteurization_researched
+				}
+			}
+			set_global_variable = headlines_pasteurization_researched
+			save_scope_as = headlines_pasteurization_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_pasteurization
+			}
+		}
+		#Arc Welding*
+		if = {
+			limit = { 
+				has_technology_researched = arc_welding
+				NOT = {
+					has_global_variable = headlines_arc_welding_researched
+				}
+			}
+			set_global_variable = headlines_arc_welding_researched
+			save_scope_as = headlines_arc_welding_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_arc_welding
+			}
+		}
+		#Oil Turbine
+		if = {
+			limit = { 
+				has_technology_researched = oil_turbine
+				NOT = {
+					has_global_variable = headlines_oil_turbine_researched
+				}
+			}
+			set_global_variable = headlines_oil_turbine_researched
+			save_scope_as = headlines_oil_turbine_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_oil_turbine
+			}
+		}
+		#Compression Ignition
+		if = {
+			limit = { 
+				has_technology_researched = compression_ignition
+				NOT = {
+					has_global_variable = headlines_compression_ignition_researched
+				}
+			}
+			set_global_variable = headlines_compression_ignition_researched
+			save_scope_as = headlines_compression_ignition_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_compression_ignition
+			}
+		}
+		#Dough Rollers
+		if = {
+			limit = { 
+				has_technology_researched = dough_rollers
+				NOT = {
+					has_global_variable = headlines_dough_rollers_researched
+				}
+			}
+			set_global_variable = headlines_dough_rollers_researched
+			save_scope_as = headlines_dough_rollers_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_dough_rollers
+			}
+		}
+
+		##Military Techs
+		#Rifles
+		# if = {
+		# 	limit = { 
+		# 		has_technology_researched = rifling
+		# 		NOT = {
+		# 			has_global_variable = headlines_rifling_researched
+		# 		}
+		# 	}
+		# 	set_global_variable = headlines_rifling_researched
+		# 	save_scope_as = headlines_rifling_researcher
+		# 	every_country = {
+		# 		limit = {
+		# 			is_ai = no
+		# 		}
+		# 		post_notification = headlines_tech_rifling
+		# 	}
+		# }
+		#Breech-Loading Artillery
+		if = {
+			limit = { 
+				has_technology_researched = breech_loading_artillery
+				NOT = {
+					has_global_variable = headlines_breech_loading_artillery_researched
+				}
+			}
+			set_global_variable = headlines_breech_loading_artillery_researched
+			save_scope_as = headlines_breech_loading_artillery_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_breech_loading_artillery
+			}
+		}
+		#Repeaters
+		if = {
+			limit = { 
+				has_technology_researched = repeaters
+				NOT = {
+					has_global_variable = headlines_repeaters_researched
+				}
+			}
+			set_global_variable = headlines_repeaters_researched
+			save_scope_as = headlines_repeaters_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_repeaters
+			}
+		}
+		#Modern Nursing
+		if = {
+			limit = { 
+				has_technology_researched = modern_nursing
+				NOT = {
+					has_global_variable = headlines_modern_nursing_researched
+				}
+			}
+			set_global_variable = headlines_modern_nursing_researched
+			save_scope_as = headlines_modern_nursing_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_modern_nursing
+			}
+		}
+		#Gantry Cranes
+		if = {
+			limit = { 
+				has_technology_researched = gantry_cranes
+				NOT = {
+					has_global_variable = headlines_gantry_cranes_researched
+				}
+			}
+			set_global_variable = headlines_gantry_cranes_researched
+			save_scope_as = headlines_gantry_cranes_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_gantry_cranes
+			}
+		}
+		#Ironclad*
+		if = {
+			limit = { 
+				has_technology_researched = ironclad_tech
+				NOT = {
+					has_global_variable = headlines_ironclad_tech_researched
+				}
+			}
+			set_global_variable = headlines_ironclad_tech_researched
+			save_scope_as = headlines_ironclad_tech_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_ironclad_tech
+			}
+		}
+		#Handcranked Machine Gun*
+		if = {
+			limit = { 
+				has_technology_researched = handcranked_machine_gun
+				NOT = {
+					has_global_variable = headlines_handcranked_machine_gun_researched
+				}
+			}
+			set_global_variable = headlines_handcranked_machine_gun_researched
+			save_scope_as = headlines_handcranked_machine_gun_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_handcranked_machine_gun
+			}
+		}
+		#Bolt-Action Rifle
+		if = {
+			limit = { 
+				has_technology_researched = bolt_action_rifles
+				NOT = {
+					has_global_variable = headlines_bolt_action_rifles_researched
+				}
+			}
+			set_global_variable = headlines_bolt_action_rifles_researched
+			save_scope_as = headlines_bolt_action_rifles_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_bolt_action_rifles
+			}
+		}
+		#Trench Works*
+		if = {
+			limit = { 
+				has_technology_researched = trench_works
+				NOT = {
+					has_global_variable = headlines_trench_works_researched
+				}
+			}
+			set_global_variable = headlines_trench_works_researched
+			save_scope_as = headlines_trench_works_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_trench_works
+			}
+		}
+		#Destroyer*
+		if = {
+			limit = { 
+				has_technology_researched = destroyer
+				NOT = {
+					has_global_variable = headlines_destroyer_researched
+				}
+			}
+			set_global_variable = headlines_destroyer_researched
+			save_scope_as = headlines_destroyer_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_destroyer
+			}
+		}
+		#Submarine*
+		if = {
+			limit = { 
+				has_technology_researched = submarine
+				NOT = {
+					has_global_variable = headlines_submarine_researched
+				}
+			}
+			set_global_variable = headlines_submarine_researched
+			save_scope_as = headlines_submarine_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_submarine
+			}
+		}
+		#Sea Lane Strategy*
+		if = {
+			limit = { 
+				has_technology_researched = sea_lane_strategies
+				NOT = {
+					has_global_variable = headlines_sea_lane_strategies_researched
+				}
+			}
+			set_global_variable = headlines_sea_lane_strategies_researched
+			save_scope_as = headlines_sea_lane_strategies_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_sea_lane_strategies
+			}
+		}
+		#Automatic Machine Guns*
+		if = {
+			limit = { 
+				has_technology_researched = automatic_machine_guns
+				NOT = {
+					has_global_variable = headlines_automatic_machine_guns_researched
+				}
+			}
+			set_global_variable = headlines_automatic_machine_guns_researched
+			save_scope_as = headlines_automatic_machine_guns_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_automatic_machine_guns
+			}
+		}
+		#Dreadnought*
+		if = {
+			limit = { 
+				has_technology_researched = dreadnought
+				NOT = {
+					has_global_variable = headlines_dreadnought_researched
+				}
+			}
+			set_global_variable = headlines_dreadnought_researched
+			save_scope_as = headlines_dreadnought_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_dreadnought
+			}
+		}
+		#Chemical Warfare*
+		if = {
+			limit = { 
+				has_technology_researched = chemical_warfare
+				NOT = {
+					has_global_variable = headlines_chemical_warfare_researched
+				}
+			}
+			set_global_variable = headlines_chemical_warfare_researched
+			save_scope_as = headlines_chemical_warfare_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_chemical_warfare
+			}
+		}
+		#Military Aviation*
+		if = {
+			limit = { 
+				has_technology_researched = military_aviation
+				NOT = {
+					has_global_variable = headlines_military_aviation_researched
+				}
+			}
+			set_global_variable = headlines_military_aviation_researched
+			save_scope_as = headlines_military_aviation_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_military_aviation
+			}
+		}
+		#Flamethrowers
+		if = {
+			limit = { 
+				has_technology_researched = flamethrowers
+				NOT = {
+					has_global_variable = headlines_flamethrowers_researched
+				}
+			}
+			set_global_variable = headlines_flamethrowers_researched
+			save_scope_as = headlines_flamethrowers_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_flamethrowers
+			}
+		}
+		#NCO Training*
+		if = {
+			limit = { 
+				has_technology_researched = nco_training
+				NOT = {
+					has_global_variable = headlines_nco_training_researched
+				}
+			}
+			set_global_variable = headlines_nco_training_researched
+			save_scope_as = headlines_nco_training_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_nco_training
+			}
+		}
+		#Aircraft Carrier*
+		if = {
+			limit = { 
+				has_technology_researched = carrier_tech
+				NOT = {
+					has_global_variable = headlines_carrier_tech_researched
+				}
+			}
+			set_global_variable = headlines_carrier_tech_researched
+			save_scope_as = headlines_carrier_tech_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_carrier_tech
+			}
+		}
+		#Battleship*
+		if = {
+			limit = { 
+				has_technology_researched = battleship_tech
+				NOT = {
+					has_global_variable = headlines_battleship_tech_researched
+				}
+			}
+			set_global_variable = headlines_battleship_tech_researched
+			save_scope_as = headlines_battleship_tech_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_battleship_tech
+			}
+		}
+		#Mobile Armor*
+		if = {
+			limit = { 
+				has_technology_researched = mobile_armor
+				NOT = {
+					has_global_variable = headlines_mobile_armor_researched
+				}
+			}
+			set_global_variable = headlines_mobile_armor_researched
+			save_scope_as = headlines_mobile_armor_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_mobile_armor
+			}
+		}
+
+		##Society Techs
+		#Pharmaceuticals
+		if = {
+			limit = { 
+				has_technology_researched = pharmaceuticals
+				NOT = {
+					has_global_variable = headlines_pharmaceuticals_researched
+				}
+			}
+			set_global_variable = headlines_pharmaceuticals_researched
+			save_scope_as = headlines_pharmaceuticals_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_pharmaceuticals
+			}
+		}
+		#Realism
+		if = {
+			limit = { 
+				has_technology_researched = realism
+				NOT = {
+					has_global_variable = headlines_realism_researched
+				}
+			}
+			set_global_variable = headlines_realism_researched
+			save_scope_as = headlines_realism_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_realism
+			}
+		}
+		#Organized Sports
+		if = {
+			limit = { 
+				has_technology_researched = organized_sports
+				NOT = {
+					has_global_variable = headlines_organized_sports_researched
+				}
+			}
+			set_global_variable = headlines_organized_sports_researched
+			save_scope_as = headlines_organized_sports_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_organized_sports
+			}
+		}
+		#Quinine*
+		if = {
+			limit = { 
+				has_technology_researched = quinine
+				NOT = {
+					has_global_variable = headlines_quinine_researched
+				}
+			}
+			set_global_variable = headlines_quinine_researched
+			save_scope_as = headlines_quinine_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_quinine
+			}
+		}
+		#Steel-Frame Buildings*
+		if = {
+			limit = { 
+				has_technology_researched = steel_frame_buildings
+				NOT = {
+					has_global_variable = headlines_steel_frame_buildings_researched
+				}
+			}
+			set_global_variable = headlines_steel_frame_buildings_researched
+			save_scope_as = headlines_steel_frame_buildings_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_steel_frame_buildings
+			}
+		}
+		#Mutual Funds
+		if = {
+			limit = { 
+				has_technology_researched = mutual_funds
+				NOT = {
+					has_global_variable = headlines_mutual_funds_researched
+				}
+			}
+			set_global_variable = headlines_mutual_funds_researched
+			save_scope_as = headlines_mutual_funds_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_mutual_funds
+			}
+		}
+		#Camera
+		if = {
+			limit = { 
+				has_technology_researched = camera
+				NOT = {
+					has_global_variable = headlines_camera_researched
+				}
+			}
+			set_global_variable = headlines_camera_researched
+			save_scope_as = headlines_camera_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_camera
+			}
+		}
+		#Socialism*
+		if = {
+			limit = { 
+				has_technology_researched = socialism
+				NOT = {
+					has_global_variable = headlines_socialism_researched
+				}
+			}
+			set_global_variable = headlines_socialism_researched
+			save_scope_as = headlines_socialism_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_socialism
+			}
+		}
+		#Elevators
+		if = {
+			limit = { 
+				has_technology_researched = elevator
+				NOT = {
+					has_global_variable = headlines_elevator_researched
+				}
+			}
+			set_global_variable = headlines_elevator_researched
+			save_scope_as = headlines_elevator_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_elevator
+			}
+		}
+		#Zeppelins
+		if = {
+			limit = { 
+				has_technology_researched = zeppelins
+				NOT = {
+					has_global_variable = headlines_zeppelins_researched
+				}
+			}
+			set_global_variable = headlines_zeppelins_researched
+			save_scope_as = headlines_zeppelins_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_zeppelins
+			}
+		}
+		#Malaria Prevention*
+		if = {
+			limit = { 
+				has_technology_researched = malaria_prevention
+				NOT = {
+					has_global_variable = headlines_malaria_prevention_researched
+				}
+			}
+			set_global_variable = headlines_malaria_prevention_researched
+			save_scope_as = headlines_malaria_prevention_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_malaria_prevention
+			}
+		}
+		#Film
+		if = {
+			limit = { 
+				has_technology_researched = film
+				NOT = {
+					has_global_variable = headlines_film_researched
+				}
+			}
+			set_global_variable = headlines_film_researched
+			save_scope_as = headlines_film_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_film
+			}
+		}
+		#Paved Roads
+		if = {
+			limit = { 
+				has_technology_researched = paved_roads
+				NOT = {
+					has_global_variable = headlines_paved_roads_researched
+				}
+			}
+			set_global_variable = headlines_paved_roads_researched
+			save_scope_as = headlines_paved_roads_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_paved_roads
+			}
+		}
+		#Antibiotics
+		if = {
+			limit = { 
+				has_technology_researched = antibiotics
+				NOT = {
+					has_global_variable = headlines_antibiotics_researched
+				}
+			}
+			set_global_variable = headlines_antibiotics_researched
+			save_scope_as = headlines_antibiotics_researcher
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_tech_antibiotics
+			}
+		}
+	}
+}

@@ -1,0 +1,9 @@
+﻿l_french:
+  pmg_base_building_synthetic_oil_plants:0 "Pétrole synthétique"
+ pmg_base_building_synthetic_rubber_plants:0 "Caoutchouc synthétique"
+ pm_synth_oil_production:0 "Production de pétrole synthétique"
+ pm_improved_synth_oil_production:0 "Production améliorée de pétrole synthétique"
+ pm_synth_rubber_production:0 "Production de caoutchouc synthétique"
+
+ pmg_ownership_capital_building_synthetic_oil_plants:0 "La possession"
+ pmg_ownership_capital_building_synthetic_rubber_plants:0 "La possession"

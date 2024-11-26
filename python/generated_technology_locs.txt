@@ -1,0 +1,310 @@
+notification_headlines_tech_bessemer_process_tooltip:0 "#header $notification_headlines_tech_bessemer_process_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_bessemer_process_desc$"
+ notification_headlines_tech_bessemer_process_name:0 "#b bessemer_process researched #!"
+ notification_headlines_tech_bessemer_process_desc:1 " [SCOPE.sCountry('headlines_bessemer_process_researcher').GetName] has invented #bold bessemer_process #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_crystal_glass_tooltip:0 "#header $notification_headlines_tech_crystal_glass_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_crystal_glass_desc$"
+ notification_headlines_tech_crystal_glass_name:0 "#b crystal_glass researched #!"
+ notification_headlines_tech_crystal_glass_desc:1 " [SCOPE.sCountry('headlines_crystal_glass_researcher').GetName] has invented #bold crystal_glass #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_baking_powder_tooltip:0 "#header $notification_headlines_tech_baking_powder_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_baking_powder_desc$"
+ notification_headlines_tech_baking_powder_name:0 "#b baking_powder researched #!"
+ notification_headlines_tech_baking_powder_desc:1 " [SCOPE.sCountry('headlines_baking_powder_researcher').GetName] has invented #bold baking_powder #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_nitroglycerin_tooltip:0 "#header $notification_headlines_tech_nitroglycerin_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_nitroglycerin_desc$"
+ notification_headlines_tech_nitroglycerin_name:0 "#b nitroglycerin researched #!"
+ notification_headlines_tech_nitroglycerin_desc:1 " [SCOPE.sCountry('headlines_nitroglycerin_researcher').GetName] has invented #bold nitroglycerin #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_improved_fertilizer_tooltip:0 "#header $notification_headlines_tech_improved_fertilizer_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_improved_fertilizer_desc$"
+ notification_headlines_tech_improved_fertilizer_name:0 "#b improved_fertilizer researched #!"
+ notification_headlines_tech_improved_fertilizer_desc:1 " [SCOPE.sCountry('headlines_improved_fertilizer_researcher').GetName] has invented #bold improved_fertilizer #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_steam_donkey_tooltip:0 "#header $notification_headlines_tech_steam_donkey_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_steam_donkey_desc$"
+ notification_headlines_tech_steam_donkey_name:0 "#b steam_donkey researched #!"
+ notification_headlines_tech_steam_donkey_desc:1 " [SCOPE.sCountry('headlines_steam_donkey_researcher').GetName] has invented #bold steam_donkey #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_dynamite_tooltip:0 "#header $notification_headlines_tech_dynamite_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_dynamite_desc$"
+ notification_headlines_tech_dynamite_name:0 "#b dynamite researched #!"
+ notification_headlines_tech_dynamite_desc:1 " [SCOPE.sCountry('headlines_dynamite_researcher').GetName] has invented #bold dynamite #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_steel_railway_cars_tooltip:0 "#header $notification_headlines_tech_steel_railway_cars_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_steel_railway_cars_desc$"
+ notification_headlines_tech_steel_railway_cars_name:0 "#b steel_railway_cars researched #!"
+ notification_headlines_tech_steel_railway_cars_desc:1 " [SCOPE.sCountry('headlines_steel_railway_cars_researcher').GetName] has invented #bold steel_railway_cars #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_rubber_mastication_tooltip:0 "#header $notification_headlines_tech_rubber_mastication_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_rubber_mastication_desc$"
+ notification_headlines_tech_rubber_mastication_name:0 "#b rubber_mastication researched #!"
+ notification_headlines_tech_rubber_mastication_desc:1 " [SCOPE.sCountry('headlines_rubber_mastication_researcher').GetName] has invented #bold rubber_mastication #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_pumpjacks_tooltip:0 "#header $notification_headlines_tech_pumpjacks_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_pumpjacks_desc$"
+ notification_headlines_tech_pumpjacks_name:0 "#b pumpjacks researched #!"
+ notification_headlines_tech_pumpjacks_desc:1 " [SCOPE.sCountry('headlines_pumpjacks_researcher').GetName] has invented #bold pumpjacks #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_electrical_generation_tooltip:0 "#header $notification_headlines_tech_electrical_generation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_electrical_generation_desc$"
+ notification_headlines_tech_electrical_generation_name:0 "#b electrical_generation researched #!"
+ notification_headlines_tech_electrical_generation_desc:1 " [SCOPE.sCountry('headlines_electrical_generation_researcher').GetName] has invented #bold electrical_generation #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_aniline_tooltip:0 "#header $notification_headlines_tech_aniline_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_aniline_desc$"
+ notification_headlines_tech_aniline_name:0 "#b aniline researched #!"
+ notification_headlines_tech_aniline_desc:1 " [SCOPE.sCountry('headlines_aniline_researcher').GetName] has invented #bold aniline #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_vulcanization_tooltip:0 "#header $notification_headlines_tech_vulcanization_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_vulcanization_desc$"
+ notification_headlines_tech_vulcanization_name:0 "#b vulcanization researched #!"
+ notification_headlines_tech_vulcanization_desc:1 " [SCOPE.sCountry('headlines_vulcanization_researcher').GetName] has invented #bold vulcanization #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_nitrogen_fixation_tooltip:0 "#header $notification_headlines_tech_nitrogen_fixation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_nitrogen_fixation_desc$"
+ notification_headlines_tech_nitrogen_fixation_name:0 "#b nitrogen_fixation researched #!"
+ notification_headlines_tech_nitrogen_fixation_desc:1 " [SCOPE.sCountry('headlines_nitrogen_fixation_researcher').GetName] has invented #bold nitrogen_fixation #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_mechanized_farming_tooltip:0 "#header $notification_headlines_tech_mechanized_farming_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_mechanized_farming_desc$"
+ notification_headlines_tech_mechanized_farming_name:0 "#b mechanized_farming researched #!"
+ notification_headlines_tech_mechanized_farming_desc:1 " [SCOPE.sCountry('headlines_mechanized_farming_researcher').GetName] has invented #bold mechanized_farming #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_plastics_tooltip:0 "#header $notification_headlines_tech_plastics_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_plastics_desc$"
+ notification_headlines_tech_plastics_name:0 "#b plastics researched #!"
+ notification_headlines_tech_plastics_desc:1 " [SCOPE.sCountry('headlines_plastics_researcher').GetName] has invented #bold plastics #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_steam_turbine_tooltip:0 "#header $notification_headlines_tech_steam_turbine_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_steam_turbine_desc$"
+ notification_headlines_tech_steam_turbine_name:0 "#b steam_turbine researched #!"
+ notification_headlines_tech_steam_turbine_desc:1 " [SCOPE.sCountry('headlines_steam_turbine_researcher').GetName] has invented #bold steam_turbine #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_combustion_engine_tooltip:0 "#header $notification_headlines_tech_combustion_engine_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_combustion_engine_desc$"
+ notification_headlines_tech_combustion_engine_name:0 "#b combustion_engine researched #!"
+ notification_headlines_tech_combustion_engine_desc:1 " [SCOPE.sCountry('headlines_combustion_engine_researcher').GetName] has invented #bold combustion_engine #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_telephone_tooltip:0 "#header $notification_headlines_tech_telephone_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_telephone_desc$"
+ notification_headlines_tech_telephone_name:0 "#b telephone researched #!"
+ notification_headlines_tech_telephone_desc:1 " [SCOPE.sCountry('headlines_telephone_researcher').GetName] has invented #bold telephone #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_art_silk_tooltip:0 "#header $notification_headlines_tech_art_silk_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_art_silk_desc$"
+ notification_headlines_tech_art_silk_name:0 "#b art_silk researched #!"
+ notification_headlines_tech_art_silk_desc:1 " [SCOPE.sCountry('headlines_art_silk_researcher').GetName] has invented #bold art_silk #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_electric_railway_tooltip:0 "#header $notification_headlines_tech_electric_railway_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_electric_railway_desc$"
+ notification_headlines_tech_electric_railway_name:0 "#b electric_railway researched #!"
+ notification_headlines_tech_electric_railway_desc:1 " [SCOPE.sCountry('headlines_electric_railway_researcher').GetName] has invented #bold electric_railway #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_radio_tooltip:0 "#header $notification_headlines_tech_radio_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_radio_desc$"
+ notification_headlines_tech_radio_name:0 "#b radio researched #!"
+ notification_headlines_tech_radio_desc:1 " [SCOPE.sCountry('headlines_radio_researcher').GetName] has invented #bold radio #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_pasteurization_tooltip:0 "#header $notification_headlines_tech_pasteurization_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_pasteurization_desc$"
+ notification_headlines_tech_pasteurization_name:0 "#b pasteurization researched #!"
+ notification_headlines_tech_pasteurization_desc:1 " [SCOPE.sCountry('headlines_pasteurization_researcher').GetName] has invented #bold pasteurization #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_arc_welding_tooltip:0 "#header $notification_headlines_tech_arc_welding_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_arc_welding_desc$"
+ notification_headlines_tech_arc_welding_name:0 "#b arc_welding researched #!"
+ notification_headlines_tech_arc_welding_desc:1 " [SCOPE.sCountry('headlines_arc_welding_researcher').GetName] has invented #bold arc_welding #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_oil_turbine_tooltip:0 "#header $notification_headlines_tech_oil_turbine_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_oil_turbine_desc$"
+ notification_headlines_tech_oil_turbine_name:0 "#b oil_turbine researched #!"
+ notification_headlines_tech_oil_turbine_desc:1 " [SCOPE.sCountry('headlines_oil_turbine_researcher').GetName] has invented #bold oil_turbine #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_compression_ignition_tooltip:0 "#header $notification_headlines_tech_compression_ignition_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_compression_ignition_desc$"
+ notification_headlines_tech_compression_ignition_name:0 "#b compression_ignition researched #!"
+ notification_headlines_tech_compression_ignition_desc:1 " [SCOPE.sCountry('headlines_compression_ignition_researcher').GetName] has invented #bold compression_ignition #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_dough_rollers_tooltip:0 "#header $notification_headlines_tech_dough_rollers_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_dough_rollers_desc$"
+ notification_headlines_tech_dough_rollers_name:0 "#b dough_rollers researched #!"
+ notification_headlines_tech_dough_rollers_desc:1 " [SCOPE.sCountry('headlines_dough_rollers_researcher').GetName] has invented #bold dough_rollers #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_rifling_tooltip:0 "#header $notification_headlines_tech_rifling_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_rifling_desc$"
+ notification_headlines_tech_rifling_name:0 "#b rifling researched #!"
+ notification_headlines_tech_rifling_desc:1 " [SCOPE.sCountry('headlines_rifling_researcher').GetName] has invented #bold rifling #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_breech_loading_artillery_tooltip:0 "#header $notification_headlines_tech_breech_loading_artillery_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_breech_loading_artillery_desc$"
+ notification_headlines_tech_breech_loading_artillery_name:0 "#b breech_loading_artillery researched #!"
+ notification_headlines_tech_breech_loading_artillery_desc:1 " [SCOPE.sCountry('headlines_breech_loading_artillery_researcher').GetName] has invented #bold breech_loading_artillery #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_repeaters_tooltip:0 "#header $notification_headlines_tech_repeaters_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_repeaters_desc$"
+ notification_headlines_tech_repeaters_name:0 "#b repeaters researched #!"
+ notification_headlines_tech_repeaters_desc:1 " [SCOPE.sCountry('headlines_repeaters_researcher').GetName] has invented #bold repeaters #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_modern_nursing_tooltip:0 "#header $notification_headlines_tech_modern_nursing_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_modern_nursing_desc$"
+ notification_headlines_tech_modern_nursing_name:0 "#b modern_nursing researched #!"
+ notification_headlines_tech_modern_nursing_desc:1 " [SCOPE.sCountry('headlines_modern_nursing_researcher').GetName] has invented #bold modern_nursing #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_gantry_cranes_tooltip:0 "#header $notification_headlines_tech_gantry_cranes_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_gantry_cranes_desc$"
+ notification_headlines_tech_gantry_cranes_name:0 "#b gantry_cranes researched #!"
+ notification_headlines_tech_gantry_cranes_desc:1 " [SCOPE.sCountry('headlines_gantry_cranes_researcher').GetName] has invented #bold gantry_cranes #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_ironclad_tech_tooltip:0 "#header $notification_headlines_tech_ironclad_tech_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_ironclad_tech_desc$"
+ notification_headlines_tech_ironclad_tech_name:0 "#b ironclad_tech researched #!"
+ notification_headlines_tech_ironclad_tech_desc:1 " [SCOPE.sCountry('headlines_ironclad_tech_researcher').GetName] has invented #bold ironclad_tech #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_handcranked_machine_gun_tooltip:0 "#header $notification_headlines_tech_handcranked_machine_gun_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_handcranked_machine_gun_desc$"
+ notification_headlines_tech_handcranked_machine_gun_name:0 "#b handcranked_machine_gun researched #!"
+ notification_headlines_tech_handcranked_machine_gun_desc:1 " [SCOPE.sCountry('headlines_handcranked_machine_gun_researcher').GetName] has invented #bold handcranked_machine_gun #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_bolt_action_rifles_tooltip:0 "#header $notification_headlines_tech_bolt_action_rifles_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_bolt_action_rifles_desc$"
+ notification_headlines_tech_bolt_action_rifles_name:0 "#b bolt_action_rifles researched #!"
+ notification_headlines_tech_bolt_action_rifles_desc:1 " [SCOPE.sCountry('headlines_bolt_action_rifles_researcher').GetName] has invented #bold bolt_action_rifles #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_trench_works_tooltip:0 "#header $notification_headlines_tech_trench_works_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_trench_works_desc$"
+ notification_headlines_tech_trench_works_name:0 "#b trench_works researched #!"
+ notification_headlines_tech_trench_works_desc:1 " [SCOPE.sCountry('headlines_trench_works_researcher').GetName] has invented #bold trench_works #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_destroyer_tooltip:0 "#header $notification_headlines_tech_destroyer_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_destroyer_desc$"
+ notification_headlines_tech_destroyer_name:0 "#b destroyer researched #!"
+ notification_headlines_tech_destroyer_desc:1 " [SCOPE.sCountry('headlines_destroyer_researcher').GetName] has invented #bold destroyer #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_submarine_tooltip:0 "#header $notification_headlines_tech_submarine_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_submarine_desc$"
+ notification_headlines_tech_submarine_name:0 "#b submarine researched #!"
+ notification_headlines_tech_submarine_desc:1 " [SCOPE.sCountry('headlines_submarine_researcher').GetName] has invented #bold submarine #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_sea_lane_strategies_tooltip:0 "#header $notification_headlines_tech_sea_lane_strategies_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_sea_lane_strategies_desc$"
+ notification_headlines_tech_sea_lane_strategies_name:0 "#b sea_lane_strategies researched #!"
+ notification_headlines_tech_sea_lane_strategies_desc:1 " [SCOPE.sCountry('headlines_sea_lane_strategies_researcher').GetName] has invented #bold sea_lane_strategies #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_automatic_machine_guns_tooltip:0 "#header $notification_headlines_tech_automatic_machine_guns_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_automatic_machine_guns_desc$"
+ notification_headlines_tech_automatic_machine_guns_name:0 "#b automatic_machine_guns researched #!"
+ notification_headlines_tech_automatic_machine_guns_desc:1 " [SCOPE.sCountry('headlines_automatic_machine_guns_researcher').GetName] has invented #bold automatic_machine_guns #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_dreadnought_tooltip:0 "#header $notification_headlines_tech_dreadnought_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_dreadnought_desc$"
+ notification_headlines_tech_dreadnought_name:0 "#b dreadnought researched #!"
+ notification_headlines_tech_dreadnought_desc:1 " [SCOPE.sCountry('headlines_dreadnought_researcher').GetName] has invented #bold dreadnought #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_chemical_warfare_tooltip:0 "#header $notification_headlines_tech_chemical_warfare_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_chemical_warfare_desc$"
+ notification_headlines_tech_chemical_warfare_name:0 "#b chemical_warfare researched #!"
+ notification_headlines_tech_chemical_warfare_desc:1 " [SCOPE.sCountry('headlines_chemical_warfare_researcher').GetName] has invented #bold chemical_warfare #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_military_aviation_tooltip:0 "#header $notification_headlines_tech_military_aviation_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_military_aviation_desc$"
+ notification_headlines_tech_military_aviation_name:0 "#b military_aviation researched #!"
+ notification_headlines_tech_military_aviation_desc:1 " [SCOPE.sCountry('headlines_military_aviation_researcher').GetName] has invented #bold military_aviation #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_flamethrowers_tooltip:0 "#header $notification_headlines_tech_flamethrowers_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_flamethrowers_desc$"
+ notification_headlines_tech_flamethrowers_name:0 "#b flamethrowers researched #!"
+ notification_headlines_tech_flamethrowers_desc:1 " [SCOPE.sCountry('headlines_flamethrowers_researcher').GetName] has invented #bold flamethrowers #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_nco_training_tooltip:0 "#header $notification_headlines_tech_nco_training_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_nco_training_desc$"
+ notification_headlines_tech_nco_training_name:0 "#b nco_training researched #!"
+ notification_headlines_tech_nco_training_desc:1 " [SCOPE.sCountry('headlines_nco_training_researcher').GetName] has invented #bold nco_training #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_carrier_tech_tooltip:0 "#header $notification_headlines_tech_carrier_tech_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_carrier_tech_desc$"
+ notification_headlines_tech_carrier_tech_name:0 "#b carrier_tech researched #!"
+ notification_headlines_tech_carrier_tech_desc:1 " [SCOPE.sCountry('headlines_carrier_tech_researcher').GetName] has invented #bold carrier_tech #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_battleship_tech_tooltip:0 "#header $notification_headlines_tech_battleship_tech_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_battleship_tech_desc$"
+ notification_headlines_tech_battleship_tech_name:0 "#b battleship_tech researched #!"
+ notification_headlines_tech_battleship_tech_desc:1 " [SCOPE.sCountry('headlines_battleship_tech_researcher').GetName] has invented #bold battleship_tech #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_mobile_armor_tooltip:0 "#header $notification_headlines_tech_mobile_armor_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_mobile_armor_desc$"
+ notification_headlines_tech_mobile_armor_name:0 "#b mobile_armor researched #!"
+ notification_headlines_tech_mobile_armor_desc:1 " [SCOPE.sCountry('headlines_mobile_armor_researcher').GetName] has invented #bold mobile_armor #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_pharmaceuticals_tooltip:0 "#header $notification_headlines_tech_pharmaceuticals_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_pharmaceuticals_desc$"
+ notification_headlines_tech_pharmaceuticals_name:0 "#b pharmaceuticals researched #!"
+ notification_headlines_tech_pharmaceuticals_desc:1 " [SCOPE.sCountry('headlines_pharmaceuticals_researcher').GetName] has invented #bold pharmaceuticals #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_realism_tooltip:0 "#header $notification_headlines_tech_realism_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_realism_desc$"
+ notification_headlines_tech_realism_name:0 "#b realism researched #!"
+ notification_headlines_tech_realism_desc:1 " [SCOPE.sCountry('headlines_realism_researcher').GetName] has invented #bold realism #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_organized_sports_tooltip:0 "#header $notification_headlines_tech_organized_sports_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_organized_sports_desc$"
+ notification_headlines_tech_organized_sports_name:0 "#b organized_sports researched #!"
+ notification_headlines_tech_organized_sports_desc:1 " [SCOPE.sCountry('headlines_organized_sports_researcher').GetName] has invented #bold organized_sports #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_quinine_tooltip:0 "#header $notification_headlines_tech_quinine_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_quinine_desc$"
+ notification_headlines_tech_quinine_name:0 "#b quinine researched #!"
+ notification_headlines_tech_quinine_desc:1 " [SCOPE.sCountry('headlines_quinine_researcher').GetName] has invented #bold quinine #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_steel_frame_buildings_tooltip:0 "#header $notification_headlines_tech_steel_frame_buildings_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_steel_frame_buildings_desc$"
+ notification_headlines_tech_steel_frame_buildings_name:0 "#b steel_frame_buildings researched #!"
+ notification_headlines_tech_steel_frame_buildings_desc:1 " [SCOPE.sCountry('headlines_steel_frame_buildings_researcher').GetName] has invented #bold steel_frame_buildings #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_mutual_funds_tooltip:0 "#header $notification_headlines_tech_mutual_funds_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_mutual_funds_desc$"
+ notification_headlines_tech_mutual_funds_name:0 "#b mutual_funds researched #!"
+ notification_headlines_tech_mutual_funds_desc:1 " [SCOPE.sCountry('headlines_mutual_funds_researcher').GetName] has invented #bold mutual_funds #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_camera_tooltip:0 "#header $notification_headlines_tech_camera_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_camera_desc$"
+ notification_headlines_tech_camera_name:0 "#b camera researched #!"
+ notification_headlines_tech_camera_desc:1 " [SCOPE.sCountry('headlines_camera_researcher').GetName] has invented #bold camera #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_socialism_tooltip:0 "#header $notification_headlines_tech_socialism_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_socialism_desc$"
+ notification_headlines_tech_socialism_name:0 "#b socialism researched #!"
+ notification_headlines_tech_socialism_desc:1 " [SCOPE.sCountry('headlines_socialism_researcher').GetName] has invented #bold socialism #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_elevator_tooltip:0 "#header $notification_headlines_tech_elevator_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_elevator_desc$"
+ notification_headlines_tech_elevator_name:0 "#b elevator researched #!"
+ notification_headlines_tech_elevator_desc:1 " [SCOPE.sCountry('headlines_elevator_researcher').GetName] has invented #bold elevator #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_zeppelins_tooltip:0 "#header $notification_headlines_tech_zeppelins_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_zeppelins_desc$"
+ notification_headlines_tech_zeppelins_name:0 "#b zeppelins researched #!"
+ notification_headlines_tech_zeppelins_desc:1 " [SCOPE.sCountry('headlines_zeppelins_researcher').GetName] has invented #bold zeppelins #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_malaria_prevention_tooltip:0 "#header $notification_headlines_tech_malaria_prevention_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_malaria_prevention_desc$"
+ notification_headlines_tech_malaria_prevention_name:0 "#b malaria_prevention researched #!"
+ notification_headlines_tech_malaria_prevention_desc:1 " [SCOPE.sCountry('headlines_malaria_prevention_researcher').GetName] has invented #bold malaria_prevention #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_film_tooltip:0 "#header $notification_headlines_tech_film_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_film_desc$"
+ notification_headlines_tech_film_name:0 "#b film researched #!"
+ notification_headlines_tech_film_desc:1 " [SCOPE.sCountry('headlines_film_researcher').GetName] has invented #bold film #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_paved_roads_tooltip:0 "#header $notification_headlines_tech_paved_roads_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_paved_roads_desc$"
+ notification_headlines_tech_paved_roads_name:0 "#b paved_roads researched #!"
+ notification_headlines_tech_paved_roads_desc:1 " [SCOPE.sCountry('headlines_paved_roads_researcher').GetName] has invented #bold paved_roads #!. #lore REPLACE_ME #!"
+
+
+notification_headlines_tech_antibiotics_tooltip:0 "#header $notification_headlines_tech_antibiotics_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_tech_antibiotics_desc$"
+ notification_headlines_tech_antibiotics_name:0 "#b antibiotics researched #!"
+ notification_headlines_tech_antibiotics_desc:1 " [SCOPE.sCountry('headlines_antibiotics_researcher').GetName] has invented #bold antibiotics #!. #lore REPLACE_ME #!"
+
+

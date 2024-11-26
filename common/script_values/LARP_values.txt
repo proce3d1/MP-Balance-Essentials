@@ -1,0 +1,25 @@
+﻿larp_radicals_percent = {
+	value = "radical_fraction"
+}
+larp_loyalists_percent = {
+	value = "loyalist_fraction"
+}
+larp_neutrals_percent = {
+	value = 1
+	subtract = larp_loyalists_percent
+	subtract = larp_radicals_percent
+}
+larp_global_gdp = {
+	value = "global_gdp"
+}
+larp_global_gdp_percent = {
+	value = gdp
+	divide = global_gdp
+}
+larp_global_pop = {
+	value = global_population
+}
+larp_global_pop_percent = {
+	value = total_population
+	divide = global_population
+}

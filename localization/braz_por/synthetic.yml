@@ -1,0 +1,15 @@
+﻿l_braz_por:
+ building_synthetic_oil_plants:0 "Plantas de Óleo Sintético"
+ building_synthetic_oil_plants_lens_option:0 "Expandir $building_synthetic_oil_plants$"
+ building_synthetic_rubber_plants:0 "Plantas de Borracha Sintética"
+ building_synthetic_rubber_plants_lens_option:0 "Expandir $building_synthetic_rubber_plants$"
+ 
+ pmg_base_building_synthetic_oil_plants:0 "Óleo Sintético"
+ pmg_base_building_synthetic_rubber_plants:0 "Borracha Sintética"
+ pm_synth_oil_production:0 "Produção de Óleo Sintético"
+ pm_improved_synth_oil_production:0 "Produção de Óleo Sintético Melhorado"
+ pm_synth_rubber_production:0 "Produção de Borracha Sintética"
+
+ pmg_ownership_capital_building_synthetic_oil_plants:0 "Propriedade Privada"
+ pmg_ownership_capital_building_synthetic_rubber_plants:0 "Propriedade Privada"
+ pm_publicly_traded_building_synthetic_plants:0 "Capital Aberto"

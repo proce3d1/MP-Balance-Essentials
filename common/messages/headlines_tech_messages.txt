@@ -1,0 +1,693 @@
+﻿headlines_tech_bessemer_process = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_crystal_glass = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_baking_powder = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_nitroglycerin = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_improved_fertilizer = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_steam_donkey = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_dynamite = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_steel_railway_cars = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_rubber_mastication = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_pumpjacks = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_electrical_generation = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_aniline = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_vulcanization = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_nitrogen_fixation = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_mechanized_farming = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_plastics = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_steam_turbine = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_combustion_engine = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_telephone = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_art_silk = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_electric_railway = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_radio = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_pasteurization = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_arc_welding = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_oil_turbine = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_compression_ignition = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_dough_rollers = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_rifling = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_breech_loading_artillery = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_repeaters = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_modern_nursing = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_gantry_cranes = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_ironclad_tech = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_handcranked_machine_gun = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_bolt_action_rifles = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_trench_works = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_destroyer = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_submarine = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_sea_lane_strategies = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_automatic_machine_guns = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_dreadnought = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_chemical_warfare = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_military_aviation = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_flamethrowers = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_nco_training = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_carrier_tech = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_battleship_tech = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_mobile_armor = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_pharmaceuticals = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_realism = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_organized_sports = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_quinine = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_steel_frame_buildings = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_mutual_funds = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_camera = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_socialism = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_elevator = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_zeppelins = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_malaria_prevention = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_important_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_film = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_paved_roads = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+headlines_tech_antibiotics = {
+    type = country
+    texture = "gfx/interface/icons/notification_icons/news_tech.dds"
+    group = "headlines_tech_group"
+    notification_type = feed
+    days = 28
+    color = neutral
+}
+
+
+
+
+
+
+
+
+##Production Techs
+#Bessemer Process
+#Crystal Glass
+#Baking Powder
+#Nitroglycerin
+#Improved Fertilizer
+#Steam Donkey
+#Dynamite
+#Steel Railway Cars
+#Rubber Mastication*
+#Pumpjacks*
+#Electrical Generation*
+#Aniline
+#Vulcanization
+#Nitrogen Fixation
+#Mechanized Farming
+#Plastics*
+#Steam Turbine
+#Combustion Engine*
+#Telephone*
+#Art Silk
+#Electric Railways*
+#Radio*
+#Pasteurization
+#Arc Welding*
+#Oil Turbine
+#Compression Ignition
+#Dough Rollers
+
+##Military Techs
+#Rifles
+#Breech-Loading Artillery
+#Repeaters
+#Modern Nursing
+#Gantry Cranes
+#Ironclad*
+#Handcranked Machine Gun*
+#Bolt-Action Rifle
+#Trench Works*
+#Destroyer*
+#Submarine*
+#Sea Lane Strategy*
+#Automatic Machine Guns*
+#Dreadnought*
+#Chemical Warfare*
+#Military Aviation*
+#Flamethrowers
+#NCO Training*
+#Aircraft Carrier*
+#Battleship*
+#Mobile Armor*
+
+##Society Techs
+#Pharmaceuticals
+#Realism
+#Organized Sports
+#Quinine*
+#Steel-Frame Buildings*
+#Mutual Funds
+#Camera
+#Socialism*
+#Elevators
+#Zeppelins
+#Malaria Prevention*
+#Film
+#Paved Roads
+#Antibiotics

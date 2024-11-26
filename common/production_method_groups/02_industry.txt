@@ -1,0 +1,12 @@
+﻿pmg_base_building_synthetic_oil_plants = {
+	production_methods = {
+		pm_synth_oil_production
+		pm_improved_synth_oil_production
+	}
+}
+
+pmg_base_building_synthetic_rubber_plants = {
+	production_methods = {
+		pm_synth_rubber_production
+	}
+}

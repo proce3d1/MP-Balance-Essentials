@@ -1,0 +1,61 @@
+﻿l_english:
+
+ decree_road_maintenance:0 "Efficient Administration"
+ decree_road_maintenance_desc:0 "Encourage efficient tax collection and State administration"
+ decree_greener_grass_campaign:0 "Greener Grass Campaign"
+ decree_greener_grass_campaign_desc:0 "Promote the state as a desirable place to migrate to"
+ decree_promote_social_mobility:0 "Encourage Innovation"
+ decree_promote_social_mobility_desc:0 "Encourage the population to strive for higher job qualifications and innovate new technologies and artistic pursuits"
+ decree_promote_national_values:0 "Encourage Values"
+ decree_promote_national_values_desc:0 "Increase cultural assimilation and religious conversion rates with a propaganda campaign"
+ decree_encourage_construction:0 "Encourage Construction"
+ decree_encourage_construction_desc:0 "Increase Construction Sector throughput"
+ decree_emergency_relief:0 "Emergency Relief"
+ decree_emergency_relief_desc:0 "Promote charitable support and care for the state's most unfortunate"
+ bd_any_starving_pops_tt:0 "Any [concept_pop] is in [concept_starvation]"
+ decree_encourage_manufacturing_industry:0 "Encourage Manufacturing Industry"
+ decree_encourage_manufacturing_industry_desc:0 "Increase Manufacturing sector throughput"
+ decree_encourage_agricultural_industry:0 "Encourage Agricultural Industry"
+ decree_encourage_agricultural_industry_desc:0 "Increase Agricultural and Plantation sector throughput"
+ decree_encourage_resource_industry:0 "Encourage Resource Industry"
+ decree_encourage_resource_industry_desc:0 "Increase Resource sector throughput"
+ decree_encourage_urban_services:0 "Encourage Urban Services"
+ decree_encourage_urban_services_desc:0 "Increase urban services throughput. Includes trade, urban centre, ports, rail, monuments, canals and power plants"
+ decree_enlistment_efforts:1 "Military Training"
+ decree_enlistment_efforts_desc:1 "Incentivizing recruitment and training of local troops through financial incentives and high quality training to create an elite military force"
+ decree_violent_suppression:0 "Violent Suppression"
+ decree_violent_suppression_desc:0 "Use the nation's national guard to control the angry mobs"
+ decree_promote_health:0 "Public Health Programs"
+ decree_promote_health_desc:0 "Initiate public health programs targeted towards families and the infirm"
+ decree_worker_exploitation:0 "Worker Exploitation"
+ decree_worker_exploitation_desc:0 "Exploit local workers to improve productivity"
+ decree_penal_colony:0 "Penal Colony Transfers"
+ decree_penal_colony_desc:0 "Send off trouble-makers and miscontents to populate our growing colonies"
+
+ decree_violent_hostility:0 "Encourage Violent Hostility"
+ decree_violent_hostility_desc:0 "Issue public endorsement and support for initatives designed to eradicate people groups deemed not to belong."
+ violent_hostility_decree_eligble_tt:0 "A [concept_culture] is present which is not in their [concept_homeland]#b  and#! is not one of our  [concept_primary_cultures]."
+
+ decree_conservation:0 "Land Conservation"
+ decree_conservation_desc:0 "Oversee the wise use of resources by minimising polluting practices in industry and the reclamation of land in to national parks."
+#The government should be in charge of ensuring the conservation of resources for future generations
+#from conquerer of nature to citizen of it
+#maybe event creating arable land? connection to national parks
+
+ decree_disenfranchise:0 "Civic Suppression"
+ decree_disenfranchise_desc:0 "Suppress political engagement and influence."
+
+#decree_red_tape:0 "Cut Red Tape" #change
+#decree_red_tape:0 "By authority of the state, the state shall have less authority over business."
+
+building_group_bg_monuments_throughput_add:0 "Monuments [concept_throughput]"
+building_group_bg_canals_throughput_add:0 "Canals [concept_throughput]"
+
+building_group_bg_monuments_throughput_add_desc:0 "A bonus or penalty to both input and output of Monuments"
+building_group_bg_canals_throughput_add_desc:0 "A bonus or penalty to both input and output of Canals"
+
+state_radicals_from_sol_change_mult:0 "$concept_radicals$ from [concept_sol] changes"
+state_radicals_from_sol_change_mult_desc:0 "A bonus or penalty to how many [Concept('concept_pop', '$concept_pops$')] will become [concept_radical] from changes in [concept_sol]"
+
+state_loyalists_from_sol_change_mult:0 "$concept_loyalists$ from [concept_sol] changes"
+state_loyalists_from_sol_change_mult_desc:0 "A bonus or penalty to how many [Concept('concept_pop', '$concept_pops$')] will become concept_loyalist from changes in [concept_sol]"

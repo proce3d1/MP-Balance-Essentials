@@ -1,0 +1,17 @@
+texticon = {
+	icon = headlines_newsicon
+	iconsize = {
+	  offset = { 0 5 }
+	  texture = "gfx/interface/icons/generic_icons/news_15.dds"
+	  fontsize = 30
+	}
+  }
+
+  texticon = {
+	icon = headlines_techicon
+	iconsize = {
+	  offset = { 0 5 }
+	  texture = "gfx/interface/icons/generic_icons/news_tech_15.dds"
+	  fontsize = 30
+	}
+  }

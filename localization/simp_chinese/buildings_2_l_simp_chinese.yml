@@ -1,0 +1,5 @@
+﻿l_simp_chinese:
+ building_synthetic_oil_plants:0 "合成油厂"
+ building_synthetic_oil_plants_lens_option:0 "扩展 $building_synthetic_oil_plants$"
+ building_synthetic_rubber_plants:0 "合成橡胶厂"
+ building_synthetic_rubber_plants_lens_option:0 "扩展 $building_synthetic_rubber_plants$"

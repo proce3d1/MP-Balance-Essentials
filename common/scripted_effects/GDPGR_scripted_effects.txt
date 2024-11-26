@@ -1,0 +1,347 @@
+﻿GDPGR_initialize_all = {
+    set_global_variable = {
+        name  = GDPGR_year
+        value = year
+    }
+    set_global_variable = {
+        name  = GDPGR_month
+        value = month
+    }
+    every_country = {
+        GDPGR_initialize_country = yes
+    }
+}
+
+GDPGR_initialize_country = {
+    GDPGR_initialize_monthly_records = yes
+    set_variable = {
+        name     = GDPGR_past_year_avg_diff # Rolling avg
+        value    = 0
+    }
+    set_variable = {
+        name     = GDPGR_past_year_avg_rate
+        value    = 0
+    }
+    set_variable = {
+        name     = GDPGR_past_month_diff # Between 1st of prev month and current month
+        value    = 0
+    }
+    set_variable = {
+        name     = GDPGR_past_month_rate
+        value    = 0
+    }
+    set_variable = { # Between January of last year and current year (old functionality by Sena Lee)
+        name  = gdp_growth_rate
+        value = 0
+    }
+    if = {
+        limit = {
+            has_game_started = yes
+        }
+        trigger_event = {
+            id   = gdp.2
+            days = 1
+        }
+        trigger_event = {
+            id   = gdp.3
+            days = 1
+        }
+    }
+    else = {
+        trigger_event = {
+            id   = gdp.2
+            days = 1
+        }
+        trigger_event = {
+            id   = gdp.3
+            days = 1
+        }
+    }
+}
+
+# ==================================================================================================================== #
+
+GDPGR_update_monthly_record = {
+    # Using helper variables for each month because arrays don't exist
+    # (Variable lists don't count; they don't allow multiple instances of duplicate values)
+    #
+    # Can't use switch because apparently "month" doesn't count as a "simple assign trigger"
+    if = { limit = { month =  0 } GDPGR_set_month_gdp_record = { MONTH =  0 } }
+    if = { limit = { month =  1 } GDPGR_set_month_gdp_record = { MONTH =  1 } }
+    if = { limit = { month =  2 } GDPGR_set_month_gdp_record = { MONTH =  2 } }
+    if = { limit = { month =  3 } GDPGR_set_month_gdp_record = { MONTH =  3 } }
+    if = { limit = { month =  4 } GDPGR_set_month_gdp_record = { MONTH =  4 } }
+    if = { limit = { month =  5 } GDPGR_set_month_gdp_record = { MONTH =  5 } }
+    if = { limit = { month =  6 } GDPGR_set_month_gdp_record = { MONTH =  6 } }
+    if = { limit = { month =  7 } GDPGR_set_month_gdp_record = { MONTH =  7 } }
+    if = { limit = { month =  8 } GDPGR_set_month_gdp_record = { MONTH =  8 } }
+    if = { limit = { month =  9 } GDPGR_set_month_gdp_record = { MONTH =  9 } }
+    if = { limit = { month = 10 } GDPGR_set_month_gdp_record = { MONTH = 10 } }
+    if = { limit = { month = 11 } GDPGR_set_month_gdp_record = { MONTH = 11 } }
+}
+
+GDPGR_update_rolling_gdp_growth = {
+    if = { limit = { month =  0 } GDPGR_calculate_rolling_gdp_growth = { MONTH =  0 } }
+    if = { limit = { month =  1 } GDPGR_calculate_rolling_gdp_growth = { MONTH =  1 } }
+    if = { limit = { month =  2 } GDPGR_calculate_rolling_gdp_growth = { MONTH =  2 } }
+    if = { limit = { month =  3 } GDPGR_calculate_rolling_gdp_growth = { MONTH =  3 } }
+    if = { limit = { month =  4 } GDPGR_calculate_rolling_gdp_growth = { MONTH =  4 } }
+    if = { limit = { month =  5 } GDPGR_calculate_rolling_gdp_growth = { MONTH =  5 } }
+    if = { limit = { month =  6 } GDPGR_calculate_rolling_gdp_growth = { MONTH =  6 } }
+    if = { limit = { month =  7 } GDPGR_calculate_rolling_gdp_growth = { MONTH =  7 } }
+    if = { limit = { month =  8 } GDPGR_calculate_rolling_gdp_growth = { MONTH =  8 } }
+    if = { limit = { month =  9 } GDPGR_calculate_rolling_gdp_growth = { MONTH =  9 } }
+    if = { limit = { month = 10 } GDPGR_calculate_rolling_gdp_growth = { MONTH = 10 } }
+    if = { limit = { month = 11 } GDPGR_calculate_rolling_gdp_growth = { MONTH = 11 } }
+}
+
+GDPGR_calculate_rolling_gdp_growth = {
+    set_variable = {
+        name  = GDPGR_rolling_difference
+        value = {
+            add      = gdp
+            subtract = var:GDPGR_gdp_month_$MONTH$
+        }
+    }
+    set_variable = {
+        name  = GDPGR_rolling_gdp_growth_rate 
+        value = {
+            add      = var:GDPGR_rolling_difference
+            divide   = gdp
+        }
+    }
+}
+
+GDPGR_initialize_monthly_records = {
+    GDPGR_set_month_gdp_record = { MONTH =  0 }
+    GDPGR_set_month_gdp_record = { MONTH =  1 }
+    GDPGR_set_month_gdp_record = { MONTH =  2 }
+    GDPGR_set_month_gdp_record = { MONTH =  3 }
+    GDPGR_set_month_gdp_record = { MONTH =  4 }
+    GDPGR_set_month_gdp_record = { MONTH =  5 }
+    GDPGR_set_month_gdp_record = { MONTH =  6 }
+    GDPGR_set_month_gdp_record = { MONTH =  7 }
+    GDPGR_set_month_gdp_record = { MONTH =  8 }
+    GDPGR_set_month_gdp_record = { MONTH =  9 }
+    GDPGR_set_month_gdp_record = { MONTH = 10 }
+    GDPGR_set_month_gdp_record = { MONTH = 11 }
+    set_variable = {
+        name  = GDPGR_rolling_difference
+        value = 0
+    }
+    set_variable = {
+        name  = GDPGR_rolling_gdp_growth_rate 
+        value = 0
+    }
+    set_variable = {
+        name     = GDPGR_past_month_diff
+        value    = 0
+    }
+    set_variable = {
+        name     = GDPGR_past_month_rate
+        value    = 0
+    }
+}
+
+GDPGR_set_month_gdp_record = {
+    set_variable = {
+        name  = GDPGR_gdp_month_$MONTH$
+        value = gdp
+    }
+}
+
+# ==================================================================================================================== #
+
+# in:  local_var:month - specifies month; range is [0, 11], matching `month` trigger
+# out: local_var:m_gdp - that month's GDP
+GDPGR_get_gdp_for_month = {
+    switch = {
+        trigger = local_var:month
+        0  = { set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_0  } }
+        1  = { set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_1  } }
+        2  = { set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_2  } }
+        3  = { set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_3  } }
+        4  = { set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_4  } }
+        5  = { set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_5  } }
+        6  = { set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_6  } }
+        7  = { set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_7  } }
+        8  = { set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_8  } }
+        9  = { set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_9  } }
+        10 = { set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_10 } }
+        11 = { set_local_variable = { name = m_gdp value = var:GDPGR_gdp_month_11 } }
+    }
+}
+
+GDPGR_update_past_month_stats = {
+    set_local_variable = {
+        name  = month
+        value = month
+    }
+    GDPGR_get_gdp_for_month = yes
+    set_local_variable = {
+        name  = gdp_new
+        value = local_var:m_gdp
+    }
+    
+    set_local_variable = {
+        name  = month
+        value = {
+            if = {
+                limit = {
+                    month = 0
+                }
+                add = 11
+            }
+            else = {
+                add      = month
+                subtract = 1
+            }
+        }
+    }
+    GDPGR_get_gdp_for_month = yes
+    set_local_variable = {
+        name  = gdp_old
+        value = local_var:m_gdp
+    }
+    
+    set_variable = {
+        name     = GDPGR_past_month_diff
+        value    = {
+            add      = local_var:gdp_new
+            subtract = local_var:gdp_old
+        }
+    }
+    set_variable = {
+        name     = GDPGR_past_month_rate
+        value    = {
+            add      = local_var:gdp_new
+            subtract = local_var:gdp_old
+            divide   = local_var:gdp_old
+        }
+    }
+}
+
+GDPGR_calculate_past_year_averages = {
+    # Set up iterator variables
+    set_local_variable = {
+        name  = i1
+        value = month
+    }
+    set_local_variable = {
+        name   = i2
+        value  = {
+            if = {
+                limit = {
+                    local_var:i1 = 0
+                }
+                add = 11
+            }
+            else = {
+                add      = local_var:i1
+                subtract = 1
+            }
+        }
+    }
+
+    # Calculate averages
+    set_local_variable = { # TODO: Shortcut? https://www.wolframalpha.com/input?i=simplify+%28B-A%29%2B%28C-B%29%2B%28D-C%29
+        name  = avg_diff
+        value = 0
+    }
+    set_local_variable = {
+        name  = avg_rate
+        value = 0
+    }
+    while = {
+        count = 11 # **NOT** 12
+        
+        # Get newer GDP
+        set_local_variable = {
+            name  = month
+            value = local_var:i1
+        }
+        GDPGR_get_gdp_for_month = yes
+        set_local_variable = {
+            name  = gdp_new
+            value = local_var:m_gdp
+        }
+        
+        # Get older GDP
+        set_local_variable = {
+            name  = month
+            value = local_var:i2
+        }
+        GDPGR_get_gdp_for_month = yes
+        set_local_variable = {
+            name  = gdp_old
+            value = local_var:m_gdp
+        }
+        
+        # Calculate differences
+        set_local_variable = {
+            name  = avg_diff
+            value = {
+                add = local_var:avg_diff
+                add = {
+                    add      = local_var:gdp_new
+                    subtract = local_var:gdp_old
+                }
+            }
+        }
+        set_local_variable = {
+            name  = avg_rate
+            value = {
+                add = local_var:avg_rate
+                add = {
+                    add      = local_var:gdp_new
+                    subtract = local_var:gdp_old
+                    divide   = local_var:gdp_old
+                }
+            }
+        }
+        
+        # Decrement iterators (we goin backwards)
+        change_local_variable = {
+            name     = i1
+            subtract = 1
+        }
+        change_local_variable = {
+            name     = i2
+            subtract = 1
+        }
+        if = {
+            limit = {
+                local_var:i1 < 0
+            }
+            set_local_variable = {
+                name  = i1
+                value = 11
+            }
+        }
+        if = {
+            limit = {
+                local_var:i2 < 0
+            }
+            set_local_variable = {
+                name  = i2
+                value = 11
+            }
+        }
+    }
+
+    # Export
+    set_variable = {
+        name     = GDPGR_past_year_avg_diff
+        value    = {
+            add    = local_var:avg_diff
+            divide = 12
+        }
+    }
+    set_variable = {
+        name     = GDPGR_past_year_avg_rate
+        value    = {
+            add    = local_var:avg_rate
+            divide = 12
+        }
+    }
+}

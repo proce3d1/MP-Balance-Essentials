@@ -1,0 +1,50 @@
+﻿l_braz_por:
+
+decree_road_maintenance:0 "Administração Eficiente"
+decree_road_maintenance_desc:0 "Incentivar a administração estatal eficiente"
+ decree_greener_grass_campaign:0 "Campanha Grama Mais Verde"
+ decree_greener_grass_campaign_desc:0 "Promover o estado como um lugar desejável para migrar"
+ decree_promote_social_mobility:0 "Programa de Inovação e Educação"
+ decree_promote_social_mobility_desc:0 "Incentivar a população a buscar maiores qualificações profissionais e inovar em novas tecnologias e atividades artísticas"
+ decree_promote_national_values:0 "Propaganda de Valores Nacionais"
+ decree_promote_national_values_desc:0 "Aumente a assimilação cultural e as taxas de conversão religiosa com uma campanha de propaganda"
+ decree_encourage_construction:0 "Incentivar o Setor da Construção"
+ decree_encourage_construction_desc:0 "Aumentar o rendimento do setor de construção"
+decree_emergency_relief:0 "Bem-estar e alívio"
+decree_emergency_relief_desc:0 "Promover apoio de caridade e cuidar dos mais infelizes do estado"
+ decree_encourage_manufacturing_industry:0 "Incentivar a Indústria de Manufatura"
+ decree_encourage_manufacturing_industry_desc:0 "Aumentar o rendimento do setor de manufatura"
+ decree_encourage_agricultural_industry:0 "Incentivar a Indústria Agrícola"
+ decree_encourage_agricultural_industry_desc:0 "Aumentar o rendimento do setor agrícola e de plantações"
+ decree_encourage_resource_industry:0 "Incentivar a indústria de recursos"
+ decree_encourage_resource_industry_desc:0 "Aumentar a produtividade do setor de recursos"
+ decree_encourage_urban_services:0 "Incentivar Serviços Urbanos"
+ decree_encourage_urban_services_desc:0 "Aumentar o rendimento dos serviços urbanos. Inclui comércio, centro urbano, portos, caminhos-de-ferro, monumentos, canais e centrais elétricas"
+ decree_enlistment_efforts:1 "Programa de Treinamento Militar"
+ decree_enlistment_efforts_desc:1 "Incentivar o recrutamento e treinamento de tropas locais por meio de incentivos financeiros e treinamento de alta qualidade para criar uma força militar de elite"
+ decree_violent_suppression:0 "Supressão Violenta"
+ decree_violent_suppression_desc:0 "Use a guarda nacional da nação para controlar as multidões enfurecidas"
+ decree_promote_health:0 "Programas de saúde pública"
+ decree_promote_health_desc:0 "Iniciar programas de saúde pública voltados para as famílias e os enfermos"
+ decree_worker_exploitation:0 "exploração do trabalhador"
+ decree_worker_exploitation_desc:0 "Explorar os trabalhadores locais para melhorar a produtividade da indústria"
+ decree_penal_colony:0 "Transferências de colônias penais"
+ decree_penal_colony_desc:0 "Envie criadores de problemas e descontentes para povoar nossas colônias em crescimento"
+
+decree_violent_hostility:0 "Conversão Cultural"
+decree_violent_hostility_desc:0 "Iniciar um programa de alta intensidade para converter a cultura das populações discriminadas para uma aceita."
+
+decree_conservation:0 "Conservação de Terras"
+decree_conservation_desc:0 "Supervisionar o uso sábio dos recursos minimizando práticas poluentes na indústria e a transformação de terras em parques nacionais."
+
+decree_disenfranchise:0 "Supressão Cívica"
+decree_disenfranchise_desc:0 "Suprimir o envolvimento político e influência."
+
+decree_red_tape:0 "Redução da Burocracia" #change
+decree_red_tape_desc:0 "Por autoridade do estado, o estado terá menos autoridade sobre os negócios."
+
+building_group_bg_monuments_throughput_add:0 "Monumentos [concept_throughput]"
+building_group_bg_canals_throughput_add:0 "Canal [concept_throughput]"
+
+building_group_bg_monuments_throughput_add_desc:0 "Um bônus ou penalidade para tanto a entrada quanto a saída dos monumentos"
+building_group_bg_canals_throughput_add_desc:0 "Um bônus ou penalidade para tanto a entrada quanto a saída dos canal"

@@ -1,0 +1,15 @@
+﻿l_french:
+ 
+ pm_electric_passenger_carriages:0 "Electric Passenger Carriages"
+ 
+ pmg_gauges_building_railway:0 "Railway System Standard"
+ pm_narrow_gauge_railway:0 "Narrow-Gauge Railway"
+ pm_standard_gauge_railway:0 "Standard-Gauge Railway"
+ pm_broad_gauge_railway:0 "Broad-Gauge Railway"
+ pm_electrified_railway:0 "Electrified Railway"
+ 
+ pmg_automation_building_railway:0 "Facility Automation"
+ pm_auto_disabled_building_railway:0 "Hand Cranked Crane"
+ pm_watertube_boiler_building_railway:0 "Water-tube Boiler"
+ pm_rotary_valve_engine_building_railway:0 "Rotary Valve Engine"
+ pm_steam_donkey_building_railway:0 "Steam Donkey"

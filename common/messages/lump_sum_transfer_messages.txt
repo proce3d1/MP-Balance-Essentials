@@ -1,0 +1,16 @@
+﻿imperia_received_money = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/unsued/money.dds"
+	notification_type = toast
+	on_created_soundeffect = "event:/SFX/UI/Alerts/Toasts/peace_agreement"
+	color = good
+	days = 60
+}
+
+imperia_sent_money = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/unsued/money.dds"
+	notification_type = toast
+	on_created_soundeffect = "event:/SFX/UI/Alerts/Toasts/peace_agreement"
+	days = 60
+}

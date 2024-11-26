@@ -1,0 +1,24 @@
+﻿# Goods
+goods_input_grain_mult = {
+    color = bad
+    percent = yes
+    decimals = 0
+}
+
+goods_input_meat_mult = {
+    color = bad
+    percent = yes
+    decimals = 0
+}
+
+goods_input_groceries_mult = {
+    color = bad
+    percent = yes
+    decimals = 0
+}
+
+goods_input_fruit_mult = {
+    color = bad
+    percent = yes
+    decimals = 0
+}

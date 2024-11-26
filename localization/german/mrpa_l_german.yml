@@ -1,0 +1,15 @@
+﻿l_german:
+ 
+pm_electric_passenger_carriages:0 "Elektrische-Passagierwagons"
+
+pmg_gauges_building_railway:0 "Spurweite"
+pm_narrow_gauge_railway:0 "Schmalspurbahn"
+pm_standard_gauge_railway:0 "Normalspurbahn"
+pm_broad_gauge_railway:0 "Breitspurbahn"
+pm_electrified_railway:0 "Elektrifizierte Bahnstrecke"
+
+pmg_automation_building_railway:0 "Dampf-Automation"
+pm_auto_disabled_building_railway:0 "Handkurbelkran"
+pm_watertube_boiler_building_railway:0 "Wasserrohrkessel"
+pm_rotary_valve_engine_building_railway:0 "Drehventilmotor"
+pm_steam_donkey_building_railway:0 "Dampfhilfsaggregat"

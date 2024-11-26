@@ -1,0 +1,16 @@
+﻿on_lump_sum_transfer_monthly_pulse_country = {
+	effect = {
+		# Add money transfer variables to countries that doesnt have them yet
+		if = {
+			limit = {
+				NOT = {
+					has_variable = imperia_money_transfer_amount
+				}
+			}
+			set_variable = {
+				name = imperia_money_transfer_amount
+				value = 0
+			}
+		}
+	}
+}

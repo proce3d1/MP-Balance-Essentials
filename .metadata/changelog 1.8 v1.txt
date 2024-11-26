@@ -1,0 +1,7 @@
+
+Mods:
+- Make My Railway Profitable Again!
+
+
+Changes:
+- Character interaction cooldown reduced from 5 to 2 years-

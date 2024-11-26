@@ -1,0 +1,83 @@
+﻿pm_synth_oil_production = {
+	texture = "gfx/interface/icons/production_method_icons/simple_oil_extraction.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_coal_add = 60
+			goods_input_tools_add = 10
+			goods_input_electricity_add = 20
+			
+			goods_output_oil_add = 60
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 1000
+			building_employment_engineers_add = 1000
+		}
+	}
+}
+pm_improved_synth_oil_production = {
+	texture = "gfx/interface/icons/production_method_icons/combustion_derricks.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		combustion_engine
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_coal_add = 60
+			goods_input_tools_add = 10
+			goods_input_electricity_add = 30
+			
+			goods_output_oil_add = 100
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 500
+			building_employment_machinists_add = 1250
+			building_employment_engineers_add = 1250
+		}
+	}
+}
+pm_synth_rubber_production = {
+	texture = "gfx/interface/icons/production_method_icons/rayon.dds"
+	
+	state_modifiers = {
+		workforce_scaled = {
+			state_pollution_generation_add = 10
+		}
+	}
+	
+	unlocking_technologies = {
+		plastics
+	}
+	
+	building_modifiers = {
+		workforce_scaled = {
+			goods_input_oil_add = 30
+			goods_input_tools_add = 10
+			goods_input_electricity_add = 10
+			
+			goods_output_rubber_add = 80	# 100
+		}
+		
+		level_scaled = {
+			building_employment_laborers_add = 1000
+			building_employment_machinists_add = 1500
+			building_employment_engineers_add = 500
+		}
+	}
+}

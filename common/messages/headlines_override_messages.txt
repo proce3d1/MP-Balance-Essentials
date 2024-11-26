@@ -1,0 +1,46 @@
+﻿##Headlines vanilla overrides
+
+victoria_notification = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+opium_wars_british_response_angry = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+opium_wars_british_response_passive = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+santa_anna_captured_notification = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+brz_isabel_accession = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}

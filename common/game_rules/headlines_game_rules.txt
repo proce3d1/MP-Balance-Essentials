@@ -1,0 +1,12 @@
+﻿headlines_minor_events = {
+	default = headlines_all_minor_events
+
+	headlines_all_minor_events = {
+	}
+
+	headlines_relevant_minor_events = {
+	}
+
+	headlines_no_minor_events = {
+	}
+}

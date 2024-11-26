@@ -1,0 +1,77 @@
+﻿GDPGR_cl_month = {
+    type = country
+    random_valid = no
+
+    text = {
+        trigger = {
+            global_var:GDPGR_month = 0
+        }
+        localization_key = GDPGR_month_0
+    }
+    text = {
+        trigger = {
+            global_var:GDPGR_month = 1
+        }
+        localization_key = GDPGR_month_1
+    }
+    text = {
+        trigger = {
+            global_var:GDPGR_month = 2
+        }
+        localization_key = GDPGR_month_2
+    }
+    text = {
+        trigger = {
+            global_var:GDPGR_month = 3
+        }
+        localization_key = GDPGR_month_3
+    }
+    text = {
+        trigger = {
+            global_var:GDPGR_month = 4
+        }
+        localization_key = GDPGR_month_4
+    }
+    text = {
+        trigger = {
+            global_var:GDPGR_month = 5
+        }
+        localization_key = GDPGR_month_5
+    }
+    text = {
+        trigger = {
+            global_var:GDPGR_month = 6
+        }
+        localization_key = GDPGR_month_6
+    }
+    text = {
+        trigger = {
+            global_var:GDPGR_month = 7
+        }
+        localization_key = GDPGR_month_7
+    }
+    text = {
+        trigger = {
+            global_var:GDPGR_month = 8
+        }
+        localization_key = GDPGR_month_8
+    }
+    text = {
+        trigger = {
+            global_var:GDPGR_month = 9
+        }
+        localization_key = GDPGR_month_9
+    }
+    text = {
+        trigger = {
+            global_var:GDPGR_month = 10
+        }
+        localization_key = GDPGR_month_10
+    }
+    text = {
+        trigger = {
+            global_var:GDPGR_month = 11
+        }
+        localization_key = GDPGR_month_11
+    }
+}

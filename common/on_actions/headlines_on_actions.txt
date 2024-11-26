@@ -1,0 +1,1297 @@
+﻿on_monthly_pulse_country = {
+	on_actions = {
+		headlines_action
+	}
+}
+
+headlines_action = {
+	effect = {
+		if = {
+			limit = { 
+				is_ai = no
+				is_revolutionary = no
+			}
+		##Civil Wars##
+		#ACW Starts
+		if = {
+			limit = {
+				c:USA ?= {
+					has_journal_entry = je_acw_war
+				}
+				OR = {
+					exists = c:FSA 
+					exists = c:CSA
+				}
+				NOT = {
+					has_variable = headlines_acw_seen
+				}
+			}
+			if = {
+				limit = { exists = c:CSA }
+				c:CSA = {
+					save_scope_as = csa_scope
+				}
+				post_notification = headlines_acw_begin_csa
+				set_variable = headlines_acw_seen
+			}
+			if = {
+				limit = { exists = c:FSA }
+				c:FSA = {
+					save_scope_as = fsa_scope
+				}
+				post_notification = headlines_acw_begin_fsa
+				set_variable = headlines_acw_seen
+			}
+		}
+		#ACW Ends
+		if = {
+			limit = {
+				c:USA ?= {
+					has_journal_entry = je_acw_reconstruction
+				}
+				NOR = {
+					exists = c:FSA 
+					exists = c:CSA
+				}
+				NOT = {
+					has_variable = headlines_acw_end_seen
+				}
+			 }
+			 c:USA = {
+				save_scope_as = usa_scope
+			}
+			 if = {
+				limit = { 
+					c:USA = {
+						NOT = {
+							ruler = {
+								has_ideology = ideology:ideology_abolitionist
+							}
+						}
+						OR = {
+							has_law = law_type:law_slave_trade
+							has_law = law_type:law_legacy_slavery
+						}
+					}
+				}
+				set_variable = headlines_acw_end_seen
+				post_notification = headlines_acw_end_slaver
+			 }
+			 if = {
+				limit = { 
+					c:USA = {
+						OR = {
+							ruler = {
+								has_ideology = ideology:ideology_abolitionist
+							}
+							has_law = law_type:law_slavery_banned
+						}	
+					}
+				}
+				set_variable = headlines_acw_end_seen
+				post_notification = headlines_acw_end_emancipation
+			 }
+		}
+		#ACW Ends (Stalemate)
+		if = {
+			limit = { 
+				exists = c:USA
+				OR = {
+					exists = c:FSA
+					exists = c:CSA
+				}
+				c:USA = {
+					is_at_war = no
+					OR = {
+						AND = {
+							exists = c:FSA
+							has_truce_with = c:FSA
+						}
+						AND = {
+							exists = c:CSA
+							has_truce_with = c:CSA
+						}	
+					}
+				}
+				NOT = {
+					has_variable = headlines_acw_end_seen
+				}
+			}
+			c:USA = {
+				save_scope_as = usa_scope
+			}
+			c:CSA ?= {
+				save_scope_as = acw_other_one_scope
+			}
+			c:FSA ?= {
+				save_scope_as = acw_other_one_scope
+			}
+			set_variable = headlines_acw_end_seen
+			post_notification = headlines_acw_end_stalemate
+		}
+		#Taiping Appears
+		if = {
+			limit = {
+				exists = c:TPG
+				exists = c:CHI
+				NOT = {
+					has_variable = headlines_taiping_appears_seen
+				}
+			 }
+			 c:CHI = {
+				save_scope_as = china_scope
+			 }
+			 c:TPG = {
+				save_scope_as = taiping_scope
+			 }
+			 set_variable = headlines_taiping_appears_seen
+			 post_notification = headlines_taiping_appears
+		}
+		#Taiping Victory
+		if = {
+			limit = {
+				exists = c:TPG
+				NOT = {
+					exists = c:CHI
+				}
+				NOT = {
+					has_variable = headlines_taiping_victory_seen
+				}
+			 }
+			 c:TPG = {
+				save_scope_as = taiping_scope
+			 }
+			 set_variable = headlines_taiping_victory_seen
+			 post_notification = headlines_taiping_victory
+		}
+		#Taiping Defeat
+		if = {
+			limit = {
+				NOT = {
+					exists = c:TPG
+				}
+				exists = c:CHI
+				NOT = {
+					has_variable = headlines_taiping_defeat_seen
+				}
+				has_variable = headlines_taiping_appears_seen
+			 }
+			 c:CHI = {
+				save_scope_as = china_scope
+			 }
+			 set_variable = headlines_taiping_defeat_seen
+			 post_notification = headlines_taiping_defeat
+		}
+		##Collapses##
+		#Qing Collapse
+		if = {
+			limit = {
+				NOT = {
+					has_variable = headlines_qing_seen
+				}
+				has_global_variable = china_shatters
+			}
+			c:CHI = {
+				save_scope_as = china_scope
+			}
+			post_notification = headlines_qing_collapse
+			set_variable = headlines_qing_seen
+		}
+		#BIC Collapse
+		if = {
+			limit = {
+				NOT = {
+					has_variable = headlines_bic_collapse_seen
+					exists = c:BIC
+					exists = c:BHT
+				}
+			}
+			post_notification = headlines_bic_collapse
+			set_variable = headlines_bic_collapse_seen
+		}
+		#DEI Collapse
+		if = {
+			limit = { 
+				NOT = {
+					has_variable = headlines_dei_collapse_seen
+					exists = c:DEI
+					exists = c:IDN
+				}
+			}
+			post_notification = headlines_dei_collapse
+			set_variable = headlines_dei_collapse_seen
+		}
+		#UCA Collapse
+		if = {
+			limit = {
+				NOT = {
+					has_game_rule = headlines_no_minor_events
+				}
+				OR = {
+					has_game_rule = headlines_all_minor_events
+					has_interest_marker_in_region = region_central_america
+				}
+				NOT = {
+					has_variable = headlines_uca_collapse_seen
+					exists = c:UCA
+				}
+			 }
+			 set_variable = headlines_uca_collapse_seen
+			 post_notification = headlines_uca_collapse
+		}
+		##Formations##
+		#NGF Formed
+		if = {
+			limit = { 
+				NOT = {
+					has_variable = headlines_ngf_formed_seen
+				}
+				exists = c:NGF
+			}
+			c:NGF = {
+				save_scope_as = ngf_scope
+			}
+			set_variable = headlines_ngf_formed_seen
+			post_notification = headlines_ngf_formed
+		}
+		#SGF Formed
+		if = {
+			limit = { 
+				NOT = {
+					has_variable = headlines_sgf_formed_seen
+				}
+				exists = c:SGF
+			}
+			c:SGF = {
+				save_scope_as = sgf_scope
+			}
+			set_variable = headlines_sgf_formed_seen
+			post_notification = headlines_sgf_formed
+		}
+		#Germany Formed
+		if = {
+			limit = { 
+				NOT = {
+					has_variable = headlines_ger_formed_seen
+				}
+				exists = c:GER
+			}
+			c:GER = {
+				save_scope_as = germany_scope
+			}
+			set_variable = headlines_ger_formed_seen
+			post_notification = headlines_ger_formed
+		}
+		#Italy Formed
+		if = {
+			limit = { 
+				NOT = {
+					has_variable = headlines_italy_formed_seen
+				}
+				exists = c:ITA
+			}
+			c:ITA = {
+				save_scope_as = italy_scope
+			}
+			set_variable = headlines_italy_formed_seen
+			post_notification = headlines_italy_formed
+		}
+		#Central Europe Formed
+		if = {
+			limit = { 
+				NOT = {
+					has_variable = headlines_central_europe_formed_seen
+				}
+				exists = c:HRE
+			}
+			c:HRE = {
+				save_scope_as = hre_scope
+			}
+			set_variable = headlines_central_europe_formed_seen
+			post_notification = headlines_central_europe_formed
+		}
+		#Scandinavia Formed
+		if = {
+			limit = { 
+				NOT = {
+					has_variable = headlines_scandinavia_formed_seen
+				}
+				exists = c:SCA
+			}
+			c:SCA = {
+				save_scope_as = scandinavia_scope
+			}
+			set_variable = headlines_scandinavia_formed_seen
+			post_notification = headlines_scandinavia_formed
+		}
+		#Yugoslavia Formed
+		if = {
+			limit = { 
+				NOT = {
+					has_variable = headlines_yugoslavia_formed_seen
+				}
+				exists = c:YUG
+			}
+			c:YUG = {
+				save_scope_as = yugoslavia_scope
+			}
+			set_variable = headlines_yugoslavia_formed_seen
+			post_notification = headlines_yugoslavia_formed
+		}
+		##Regime Changes##
+		#British Republic
+		if = {
+			limit = {
+				NOT = {
+					has_variable = headlines_british_republic_seen
+				}
+				exists = c:GBR
+				c:GBR = {
+					is_subject = no
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+				}
+			}
+			c:GBR ?= {
+				save_scope_as = britain_scope
+			}
+			post_notification = headlines_british_republic
+			set_variable = headlines_british_republic_seen
+		}
+		#British Council Republic
+		if = {
+			limit = {
+				NOT = {
+					has_variable = headlines_british_council_republic_seen
+				}
+				exists = c:GBR
+				c:GBR = {
+					is_subject = no
+					has_law = law_type:law_council_republic
+				}
+			}
+			c:GBR ?= {
+				save_scope_as = britain_scope
+			}
+			post_notification = headlines_british_council_republic
+			set_variable = headlines_british_council_republic_seen
+		}
+		#British Raj
+		if = {
+			limit = {
+				exists = c:BIC
+				NOT = {
+					has_game_rule = headlines_no_minor_events
+				}
+				OR = {
+					has_game_rule = headlines_all_minor_events
+					has_diplomatic_relevance = c:BIC				
+				}
+				NOT = {
+					has_variable = headlines_british_raj_seen
+				} 
+				c:BIC = {
+					has_diplomatic_pact = {
+						who = c:GBR
+						type = puppet
+					}
+				}
+			}
+			c:BIC ?= {
+				save_scope_as = raj_scope
+			}
+			post_notification = headlines_british_raj
+			set_variable = headlines_british_raj_seen
+		}
+		#Tricolors over Rome
+		if = {
+			limit = { 
+				NOT = {
+					has_variable = headlines_roman_republic_seen
+				}
+				exists = c:PAP
+				c:PAP = {
+					OR = {
+						has_law = law_type:law_parliamentary_republic
+						has_law = law_type:law_presidential_republic
+					}
+				}
+			}
+			c:PAP = {
+				save_scope_as = rome_scope
+			}
+			post_notification = headlines_roman_republic
+			set_variable = headlines_roman_republic_seen
+		}
+		#Japan Restoration
+		if = {
+			limit = {
+				NOT = {
+					has_variable = headlines_japan_restoration_seen
+				}
+				exists = c:JAP
+				c:JAP = {
+					has_variable = meiji_restoration_complete
+				}
+			 }
+			 c:JAP = {
+				save_scope_as = japan_scope
+			 }
+			 post_notification = headlines_japan_restoration
+			 set_variable = headlines_japan_restoration_seen
+		}
+		#French Commune
+		if = {
+			limit = {
+				exists = c:FRA
+				c:FRA = {
+					has_law = law_type:law_council_republic
+				}
+				NOT = {
+					has_variable = headlines_french_commune_seen
+				}
+			 }
+			 c:FRA = {
+				save_scope_as = france_scope
+			 }
+			 set_variable = headlines_french_commune_seen
+			 post_notification = headlines_french_commune
+		}
+		#French Legitimist Restoration
+		if = {
+			limit = { 
+				exists = c:FRA
+				c:FRA = {
+					has_law = law_type:law_monarchy
+					has_variable = legitimist_restoration_var
+					has_variable = one_true_french_dynasty
+				}
+				NOT = {
+					has_variable = headlines_french_legitimist_seen
+				}
+			}
+			c:FRA = {
+				save_scope_as = france_scope
+			}
+			set_variable = headlines_french_legitimist_seen
+			post_notification = headlines_french_legitimist
+		}
+		#French Monarchy Restored (again)
+		if = {
+			limit = {
+				exists = c:FRA
+				c:FRA = {
+					has_law = law_type:law_monarchy
+				}
+				OR = {
+					has_variable = headlines_french_commune_seen
+					has_variable = headlines_french_republic_seen
+				}
+				NOT = {
+					has_variable = headlines_french_monarchy_seen
+				}
+			 }
+			 c:FRA = {
+				save_scope_as = france_scope
+			 }
+			 set_variable = headlines_french_monarchy_seen
+			 post_notification = headlines_french_monarchy_returns
+		}
+		#French Republic
+		if = {
+			limit = {
+				exists = c:FRA
+				c:FRA = {
+					OR = {
+						has_law = law_type:law_presidential_republic
+						has_law = law_type:law_parliamentary_republic
+					}
+				}
+				NOT = {
+					has_variable = headlines_french_republic_seen
+				}
+			 }
+			 c:FRA = {
+				save_scope_as = france_scope
+			}
+			 set_variable = headlines_french_republic_seen
+			 post_notification = headlines_french_republic
+		}
+		#French Empire
+		if = {
+			limit = { 
+				exists = c:FRA
+				c:FRA = {
+					has_law = law_type:law_monarchy
+					has_variable = bonapartist_restoration_var
+					has_variable = one_true_french_dynasty
+				}
+				NOT = {
+					has_variable = headlines_french_empire_seen
+				}
+			}
+			c:FRA = {
+				save_scope_as = france_scope
+			}
+			set_variable = headlines_french_empire_seen
+			post_notification = headlines_french_empire
+		}
+		#Communist Germany
+		if = {
+			limit = { 
+				exists = c:GER
+				c:GER = {
+					has_law = law_type:law_council_republic
+				}
+				NOT = {
+					has_variable = headlines_communist_germany_seen
+				}
+			}
+			c:GER = {
+				save_scope_as = germany_scope
+			}
+			set_variable = headlines_communist_germany_seen
+			post_notification = headlines_communist_germany
+		}
+		#Communist USA
+		if = {
+			limit = { 
+				exists = c:USA
+				c:USA = {
+					has_law = law_type:law_council_republic
+				}
+				NOT = {
+					has_variable = headlines_communist_usa_seen
+				}
+			}
+			c:USA = {
+				save_scope_as = usa_scope
+			}
+			set_variable = headlines_communist_usa_seen
+			post_notification = headlines_communist_usa
+		}
+		#Monarchy USA
+		if = {
+			limit = { 
+				exists = c:USA
+				c:USA = {
+					has_law = law_type:law_monarchy
+				}
+				NOT = {
+					has_variable = headlines_monarchy_usa_seen
+				}
+			}
+			c:USA = {
+				save_scope_as = usa_scope
+			}
+			set_variable = headlines_monarchy_usa_seen
+			post_notification = headlines_monarchy_usa
+		}
+		#Technocracy USA
+		if = {
+			limit = { 
+				exists = c:USA
+				c:USA = {
+					OR = {
+						has_law = law_type:law_parliamentary_republic
+						has_law = law_type:law_presidential_republic
+					}
+					has_law = law_type:law_technocracy
+				}
+				NOT = {
+					has_variable = headlines_technocracy_usa_seen
+				}
+			}
+			c:USA = {
+				save_scope_as = usa_scope
+			}
+			set_variable = headlines_technocracy_usa_seen
+			post_notification = headlines_technocracy_usa
+		}
+		#Austria-Hungary
+		if = {
+			limit = {
+				exists = c:AUS
+				c:AUS = {
+					has_law = law_type:law_monarchy
+					country_has_primary_culture = cu:hungarian
+				}
+				NOT = {
+					has_variable = headlines_austria_hungary_seen
+				}
+			 }
+			 c:AUS = {
+				save_scope_as = austria_scope
+			 }
+			 set_variable = headlines_austria_hungary_seen
+			 post_notification = headlines_austria_hungary
+		}
+		#Democratic Russia
+		if = {
+			limit = { 
+				exists = c:RUS
+				c:RUS = {
+					OR = {
+						has_law = law_type:law_parliamentary_republic
+						has_law = law_type:law_presidential_republic
+					}
+					country_has_voting_franchise = yes
+				}
+				NOT = {
+					has_variable = headlines_democratic_russia_seen
+				}
+			}
+			c:RUS = {
+				save_scope_as = russia_scope
+			 }
+			set_variable = headlines_democratic_russia_seen
+			post_notification = headlines_democratic_russia
+		}
+		#Soviet Russia
+		if = {
+			limit = { 
+				exists = c:RUS
+				c:RUS = {
+					has_law = law_type:law_council_republic
+				}
+				NOT = {
+					has_variable = headlines_soviet_russia_seen
+				}
+			}
+			c:RUS = {
+				save_scope_as = russia_scope
+			 }
+			set_variable = headlines_soviet_russia_seen
+			post_notification = headlines_soviet_russia
+		}
+		#President Pedro
+		if = {
+			limit = { 
+				exists = c:BRZ
+				c:BRZ = {
+					has_law = law_type:law_presidential_republic
+					ruler = {
+						has_variable = is_pedro
+					}
+				}
+				NOT = {
+					has_variable = headlines_pedro_president_seen
+				}
+			}
+			c:BRZ = {
+				save_scope_as = brazil_scope
+			}
+			set_variable = headlines_pedro_president_seen
+			post_notification = headlines_pedro_president
+		}
+		#Pedro Dies
+		if = {
+			limit = {
+				exists = c:BRZ
+				c:BRZ = {
+					has_law = law_type:law_monarchy
+					ruler = {
+						NOT = {
+							has_variable = is_pedro
+						}
+						has_variable = isabel_var
+					}
+				}
+				NOT = {
+					has_variable = headlines_pedro_death_seen
+				}
+				NOT = {
+					has_interest_marker_in_region = region_brazil
+				}
+			}
+			c:BRZ = {
+				save_scope_as = brazil_scope
+			}
+			set_variable = headlines_pedro_death_seen
+			post_notification = brz_isabel_accession
+		}
+		##Constructions
+		#Suez Canal Built
+		if = {
+			limit = {
+				NOT = {
+					has_variable = headlines_suez_seen
+				} 
+				s:STATE_SINAI = {
+					has_building = building_suez_canal
+				}
+			}
+			if = {
+				limit = { 
+					s:STATE_SINAI = {
+						any_scope_state = {
+							owner = {
+								owns_treaty_port_in = STATE_SINAI
+							}
+						}
+					}
+				}
+				s:STATE_SINAI = {
+					random_scope_state = {
+						limit = {
+							owner = {
+								owns_treaty_port_in = STATE_SINAI 
+							}
+						}
+						owner = {
+							save_scope_as = suez_owner_scope
+						}
+					}
+				}
+			} else = {
+				s:STATE_SINAI = {
+					random_scope_state = {
+						owner = {
+							save_scope_as = suez_owner_scope
+						}
+					}
+				}
+			}
+			s:STATE_SINAI = {
+				random_state = {
+					limit = {
+						has_building = building_suez_canal
+					}
+					random_scope_building = {
+						limit = {
+							is_building_type = building_suez_canal
+						}
+						save_scope_as = suez_canal_scope
+					}
+				}
+			}
+			set_variable = headlines_suez_seen
+			post_notification = headlines_suez_canal
+		}
+		#Panama Canal Built
+		if = {
+			limit = {
+				NOT = {
+					has_variable = headlines_panama_seen
+				} 
+				s:STATE_PANAMA = {
+					has_building = building_panama_canal
+				}
+			}
+			if = {
+				limit = { 
+					s:STATE_PANAMA = {
+						any_scope_state = {
+							owner = {
+								owns_treaty_port_in = STATE_PANAMA
+							}
+						}
+					}
+				}
+				s:STATE_PANAMA = {
+					random_scope_state = {
+						limit = {
+							owner = {
+								owns_treaty_port_in = STATE_PANAMA 
+							}
+						}
+						owner = {
+							save_scope_as = panama_owner_scope
+						}
+					}
+				}
+			} else = {
+				s:STATE_PANAMA = {
+					random_scope_state = {
+						owner = {
+							save_scope_as = panama_owner_scope
+						}
+					}
+				}
+			}
+			s:STATE_PANAMA = {
+				random_state = {
+					limit = {
+						has_building = building_panama_canal
+					}
+					random_scope_building = {
+						limit = {
+							is_building_type = building_panama_canal
+						}
+						save_scope_as = panama_canal_scope
+					}
+				}
+			}
+			set_variable = headlines_panama_seen
+			post_notification = headlines_panama_canal
+		}
+		#Cristo Redentor
+		if = {
+			limit = { 
+				s:STATE_RIO_DE_JANEIRO = {
+					has_building = building_cristo_redentor
+				}
+				NOT = {
+					has_variable = headlines_cristo_redentor_seen
+				}
+			}
+			s:STATE_RIO_DE_JANEIRO = {
+				random_state = {
+					limit = {
+						has_building = building_cristo_redentor
+					}
+					random_scope_building = {
+						limit = {
+							is_building_type = building_cristo_redentor
+						}
+						save_scope_as = cristo_redentor_scope
+					}
+					save_scope_as = rio_scope
+				}
+			}
+			set_variable = headlines_cristo_redentor_seen
+			post_notification = headlines_cristo_redentor
+		}
+		#Statue of Liberty
+		if = {
+			limit = { 
+				s:STATE_NEW_YORK = {
+					has_building = building_statue_of_liberty
+				}
+				NOT = {
+					has_variable = headlines_statue_of_liberty_seen
+				}
+			}
+			s:STATE_NEW_YORK = {
+				random_state = {
+					limit = {
+						has_building = building_statue_of_liberty
+					}
+					random_scope_building = {
+						limit = {
+							is_building_type = building_statue_of_liberty
+						}
+						save_scope_as = statue_of_liberty_scope
+					}
+					save_scope_as = new_york_scope
+				}
+			}
+			set_variable = headlines_statue_of_liberty_seen
+			post_notification = headlines_statue_of_liberty
+		}
+		#Big Ben
+		if = {
+			limit = { 
+				s:STATE_HOME_COUNTIES = {
+					has_building = building_big_ben
+				}
+				NOT = {
+					has_variable = headlines_big_ben_seen
+				}
+			}
+			s:STATE_HOME_COUNTIES = {
+				random_state = {
+					limit = {
+						has_building = building_big_ben
+					}
+					random_scope_building = {
+						limit = {
+							is_building_type = building_big_ben
+						}
+						save_scope_as = big_ben_scope
+					}
+					save_scope_as = home_counties_scope
+				}
+			}
+			set_variable = headlines_big_ben_seen
+			post_notification = headlines_big_ben
+		}
+		#Great Mosque of Djenne
+		if = {
+			limit = { 
+				s:STATE_EASTERN_MALI = {
+					has_building = building_mosque_of_djenne
+				}
+				NOT = {
+					has_variable = headlines_mosque_of_djenne_seen
+				}
+			}
+			s:STATE_EASTERN_MALI = {
+				random_state = {
+					limit = {
+						has_building = building_mosque_of_djenne
+					}
+					random_scope_building = {
+						limit = {
+							is_building_type = building_mosque_of_djenne
+						}
+						save_scope_as = mosque_of_djenne_scope
+					}
+					save_scope_as = djenne_scope
+				}
+			}
+			set_variable = headlines_mosque_of_djenne_seen
+			post_notification = headlines_mosque_of_djenne
+		}
+		#Eiffel Tower
+		if = {
+			limit = { 
+				s:STATE_ILE_DE_FRANCE = {
+					has_building = building_eiffel_tower
+				}
+				NOT = {
+					has_variable = headlines_eiffel_tower_seen
+				}
+			}
+			s:STATE_EASTERN_MALI = {
+				random_state = {
+					limit = {
+						has_building = building_eiffel_tower
+					}
+					random_scope_building = {
+						limit = {
+							is_building_type = building_eiffel_tower
+						}
+						save_scope_as = eiffel_tower_scope
+					}
+					save_scope_as = eiffel_state
+				}
+			}
+			set_variable = headlines_eiffel_tower_seen
+			post_notification = headlines_eiffel_tower
+		}
+		#First Skyscraper
+		if = {
+			limit = {
+				has_global_variable = first_skyscraper
+				NOT = {
+					has_variable = headlines_first_skyscraper_seen
+				}
+			}
+			random_country = {
+				limit = {
+					has_variable = first_skyscraper_builder
+				}
+				save_scope_as = first_skyscraper_country
+				random_state = {
+					limit = {
+						has_building = building_skyscraper
+					}
+					save_scope_as = first_skyscraper_state
+				}
+			}
+			set_variable = headlines_first_skyscraper_seen
+			post_notification = headlines_first_skyscraper
+		}
+		## Other Events
+		#First Billion GDP
+		if = {
+			limit = {
+				NOT = {
+					has_variable = headlines_billionare_happened
+				} 
+				any_country = {
+					GDP >= 1000000000
+				}
+			}
+			every_country = {
+				limit = {
+					GDP >= 1000000000
+				}
+				save_scope_as = billionare_country
+			}
+			set_variable = headlines_billionare_happened
+			post_notification = headlines_billion_gdp
+		}
+		#Tanzimat Fail
+		if = {
+			limit = {
+				NOT = {
+					has_variable = headlines_tanzimat_fail_seen
+				}
+				exists = c:TUR
+				c:TUR = {
+					is_country_type = unrecognized
+				}
+			 }
+			 c:TUR = {
+				save_scope_as = ottoman_scope
+			 }
+			 set_variable = headlines_tanzimat_fail_seen
+			 post_notification = headlines_tanzimat_fail
+		}
+		#French Algeria
+		if = {
+			limit = {
+				NOT = {
+					has_game_rule = headlines_no_minor_events
+				}
+				OR = {
+					has_game_rule = headlines_all_minor_events
+					has_interest_marker_in_region = region_north_africa
+				}
+				exists = c:FRA 
+				c:FRA = {
+					has_journal_entry = je_the_algerian_departements
+				}
+				NOT = {
+					has_variable = headlines_french_algeria_seen
+				}
+			}
+			c:FRA = {
+				save_scope_as = france_scope
+			}
+			set_variable = headlines_french_algeria_seen
+			post_notification = headlines_french_algeria
+		}
+		#Major Power Bankrupt
+		if = {
+			limit = { 
+				any_country = {
+					country_rank >= rank_value:major_power
+					has_modifier = declared_bankruptcy
+					NOT = {
+						has_variable = headlines_bankruptcy_sent
+					}
+					is_revolutionary = no
+				}
+			}
+			random_country = {
+				limit = {
+					country_rank >= rank_value:major_power
+					has_modifier = declared_bankruptcy
+					NOT = {
+						has_variable = headlines_bankruptcy_sent
+					}
+				}
+				set_variable = {
+					name = headlines_bankruptcy_sent
+					years = 11
+				}
+				save_scope_as = bankrupt_country
+			}
+			post_notification = headlines_notable_bankrupt
+		}
+		#First State Atheism
+		if = {
+			limit = {
+				any_country = {
+					has_law = law_type:law_state_atheism
+					country_rank > rank_value:insignificant_power
+					is_revolutionary = no
+				}
+				NOT = {
+					has_variable = headlines_state_atheism_seen
+				}
+			 }
+			 random_country = {
+				limit = {
+					has_law = law_type:law_state_atheism
+					country_rank > rank_value:insignificant_power
+				}
+				save_scope_as = atheist_country
+			 }
+			set_variable = headlines_state_atheism_seen
+			post_notification = headlines_state_atheism
+		}
+		#South Pole Reached
+		if = {
+			limit = {
+				NOT = {
+					has_game_rule = headlines_no_minor_events
+				} 
+				any_country = {
+					has_modifier = first_to_the_pole
+				}
+				NOT = {
+					has_variable = headlines_south_pole_seen
+				}
+			}
+			random_country = {
+				limit = {
+					has_modifier = first_to_the_pole
+				}
+				save_scope_as = south_pole_country
+			}
+			set_variable = headlines_south_pole_seen
+			post_notification = headlines_south_pole
+		}
+		#Coronation of Queen Victoria
+		if = {
+			limit = {
+				NOT = {
+					has_game_rule = headlines_no_minor_events
+				}
+				exists = c:GBR
+				c:GBR = {
+					has_law = law_type:law_monarchy
+					ruler = {
+						has_modifier = queen_victoria_mod
+					}
+				}
+				OR = {
+					has_game_rule = headlines_all_minor_events
+					has_diplomatic_relevance = c:GBR
+				}
+				NOT = {
+					has_variable = headlines_victoria_coronation_seen
+				} 
+			}
+			c:GBR = {
+				save_scope_as = britain_scope
+				ruler = {
+					save_scope_as = queen_victoria
+				}
+			}
+			set_variable = headlines_victoria_coronation_seen
+			post_notification = headlines_victoria_coronation
+		}
+		#failsafe in case of british monarchy overthrown, then restored without Victoria
+		if = {
+			limit = {
+				exists = c:GBR 
+				c:GBR = {
+					NOT = {
+						has_law = law_type:law_monarchy
+						has_variable = headlines_victoria_overthrown
+					}
+				}
+			}
+			c:GBR = {
+				set_variable = headlines_victoria_overthrown
+			}
+		}
+		#Funeral of Queen Victoria
+		if = {
+			limit = {
+				has_variable = headlines_victoria_coronation_seen 
+				NOT = {
+					has_game_rule = headlines_no_minor_events
+				}
+				exists = c:GBR
+				c:GBR = {
+					has_law = law_type:law_monarchy
+					ruler = {
+						NOT = {
+							has_modifier = queen_victoria_mod
+						}
+					}
+					NOT = {
+						has_variable = headlines_victoria_overthrown
+					}
+
+				}
+				OR = {
+					has_game_rule = headlines_all_minor_events
+					has_diplomatic_relevance = c:GBR
+				}
+				NOT = {
+					has_variable = headlines_victoria_funeral_seen
+				} 
+			}
+			c:GBR = {
+				ruler = {
+					save_scope_as = new_british_monarch
+				}
+			}
+			set_variable = headlines_victoria_funeral_seen
+			post_notification = headlines_victoria_funeral
+		}
+		}
+	}	
+}
+
+
+on_diplo_play_war_start = {
+	on_actions = {
+		headlines_gp_war
+	}
+}
+
+headlines_gp_war = {
+	effect = {
+		if = {
+			limit = {
+				OR = {
+					#Case: straightforward GP vs GP
+					AND = {
+						scope:actor = {
+							country_rank = rank_value:great_power
+							is_revolutionary = no
+						}
+						scope:target = {
+							country_rank = rank_value:great_power
+							is_revolutionary = no
+						}
+					}
+					#Case: GP initiator, GP sides with target
+					AND = {
+						scope:actor = {
+							country_rank = rank_value:great_power
+							is_revolutionary = no
+						}
+						any_scope_play_involved = {
+							country_rank = rank_value:great_power
+							has_war_with = scope:actor
+							is_revolutionary = no
+						}
+					}
+					#Case: GP target, GP sides with initiator
+					AND = {
+						scope:target = {
+							country_rank = rank_value:great_power
+							is_revolutionary = no
+						}
+						any_scope_play_involved = {
+							country_rank = rank_value:great_power
+							has_war_with = scope:target
+							is_revolutionary = no
+						}
+					}
+				}
+			 }
+			 if = {
+				limit = {
+					scope:actor = {
+						country_rank = rank_value:great_power
+					}
+				 }
+				 scope:actor = {
+					save_scope_as = great_power_scope_1
+				 }
+			 } else = {
+				random_scope_initiator_ally = {
+					limit = {
+						country_rank = rank_value:great_power
+					}
+					save_scope_as = great_power_scope_1
+				}
+			 }
+			 if = {
+				limit = {
+					scope:target = {
+						country_rank = rank_value:great_power
+					}
+				 }
+				 scope:target = {
+					save_scope_as = great_power_scope_2
+				 }
+			 } else = {
+				random_scope_target_ally = {
+					limit = {
+						country_rank = rank_value:great_power
+					}
+					save_scope_as = great_power_scope_2
+				}
+			 }
+			 every_country = {
+				limit = {
+					is_ai = no
+				}
+				post_notification = headlines_gp_war
+			 }
+		}
+	}
+}

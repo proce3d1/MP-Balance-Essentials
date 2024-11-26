@@ -1,0 +1,518 @@
+﻿##Civil Wars
+#ACW Starts
+headlines_acw_begin_csa = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+headlines_acw_begin_fsa = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#ACW Ends
+headlines_acw_end_slaver = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+headlines_acw_end_emancipation = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+headlines_acw_end_stalemate = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Heavenly Kingdom Appears
+headlines_taiping_appears = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Heavenly Kingdom Wins
+headlines_taiping_victory = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Heavenly Kingdom Defeated
+headlines_taiping_defeat = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+##Collapses
+#Qing Collapse
+headlines_qing_collapse = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#British India dissolves
+headlines_bic_collapse = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#DEI Dissolved
+headlines_dei_collapse = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#Central America Dissolved
+headlines_uca_collapse = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+##Formations
+#NGF Formed
+headlines_ngf_formed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#SGF Formed
+headlines_sgf_formed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#GER Formed
+headlines_ger_formed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#Italy Formed
+headlines_italy_formed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#Central Europe Formed
+headlines_central_europe_formed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#Scandinavia Formed
+headlines_scandinavia_formed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#Yugoslavia Formed
+headlines_yugoslavia_formed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+##Regime Changes
+#BEI into Raj
+headlines_british_raj = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Meiji Restoration
+headlines_japan_restoration = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#British Republic
+headlines_british_republic = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#British Council Republic
+headlines_british_council_republic = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Coronation of Victoria
+headlines_victoria_coronation = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Funeral of Victoria
+headlines_victoria_funeral = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#French Commune
+headlines_french_commune = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#French Legitimists Restored
+headlines_french_legitimist = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#French Monarchy Restored (post-republic)
+headlines_french_monarchy_returns = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#French Republic Restored
+headlines_french_republic = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#French Empire Restored
+headlines_french_empire = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Communist Germany
+headlines_communist_germany = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Communist US
+headlines_communist_usa = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Monarchy US
+headlines_monarchy_usa = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Technocracy US
+headlines_technocracy_usa = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Tricolors over Rome
+headlines_roman_republic = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Austria-Hungary Dual Monarchy
+headlines_austria_hungary = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Democratic Russia
+headlines_democratic_russia = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Soviet Russia
+headlines_soviet_russia = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Brazil President Pedro
+headlines_pedro_president = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Brazil Pedro Dies
+headlines_pedro_death = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+##Constructions
+#Suez Canal Built
+headlines_suez_canal = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_constructions_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Panama Canal Built
+headlines_panama_canal = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_constructions_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Cristo Redentor
+headlines_cristo_redentor = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_constructions_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#Statue of Liberty
+headlines_statue_of_liberty = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_constructions_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#Big Ben
+headlines_big_ben = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_constructions_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#Mosque of Djenne
+headlines_mosque_of_djenne = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_constructions_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#Eiffel Tower
+headlines_eiffel_tower = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_constructions_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+#First Skyscraper
+headlines_first_skyscraper = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_constructions_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+##Other Events
+#First Billion GDP
+headlines_billion_gdp = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Tanzimat Failure
+headlines_tanzimat_fail = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#French Conquest of Algeria
+headlines_french_algeria = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#South Pole Reached
+headlines_south_pole = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_minor_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
+##Dynamic
+#Great Power vs Great Power
+headlines_gp_war = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Major Power Bankrupt
+headlines_notable_bankrupt = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#First State Atheism
+headlines_state_atheism = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Grand Exhibition
