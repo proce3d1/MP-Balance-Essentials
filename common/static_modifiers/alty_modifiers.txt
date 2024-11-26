@@ -1,0 +1,4 @@
+jap_mapi = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_positive.dds
+	state_market_access_price_impact = 0.1
+}
