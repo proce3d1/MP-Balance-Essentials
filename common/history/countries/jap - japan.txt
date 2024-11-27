@@ -54,8 +54,5 @@
 			months = very_long_modifier_time
 		}
 
-		add_modifier = {
-			name = jap_mapi
-		}
 	}
 }
