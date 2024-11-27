@@ -1,0 +1,10 @@
+﻿ig_trait_elan_vital = {
+	icon = "gfx/interface/icons/ig_trait_icons/patriotic_fervor.dds"
+	min_approval = loyal
+	
+	modifier = {
+		unit_offense_mult = 0.15	
+		# added
+		unit_defense_mult = 0.05	
+	}
+}

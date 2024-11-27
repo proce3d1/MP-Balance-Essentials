@@ -6,7 +6,7 @@ NPolitics = {
 	MOVEMENT_IDENTITY_MIN_INDIVIDUALS_RELATIVE_THRESHOLD = 0.2 # Number of individuals relative to country population
 
 	LAW_ENACTMENT_MIN_TOTAL_DAYS = 14			# Vanilla = 1, Minimum number of total days that an enactment checkpoint can take [>=1]
-	LAW_ENACTMENT_DEFAULT_BASE_DAYS = 90		# Vanilla = 100, Default number of base days required to reach an enactment checkpoint [>=1]
+	LAW_ENACTMENT_DEFAULT_BASE_DAYS = 80		# Vanilla = 100, Default number of base days required to reach an enactment checkpoint [>=1]
 	LAW_ENACTMENT_COOLDOWN_DAYS = 456			# Vanilla = 730, When an enactment fails, or is manually stopped after at least one checkpoint, that law can't be tried to be enacted for this many days [>=0]
 	
 }
