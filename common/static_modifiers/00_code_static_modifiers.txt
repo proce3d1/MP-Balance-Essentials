@@ -811,7 +811,7 @@ forced_regime_change = {
 
 weak_power_bloc = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	power_bloc_cohesion_mult = -0.1	# -0.5
+	# power_bloc_cohesion_mult = -0.1	# -0.5
 }
 
 power_bloc_no_primary_principles = {
