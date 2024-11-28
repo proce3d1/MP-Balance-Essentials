@@ -14,7 +14,7 @@ NPolitics = {
 NEconomy = {
 	MIN_CONSTRUCTION_EFFICIENCY = 0.15			# Vanilla = 0.05; Construction efficiency cannot go below this amount
 	
-	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 5	# 10		# How many years does it take for penalties from declaring bankruptcy to fully decay
+	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 7	# 10		# How many years does it take for penalties from declaring bankruptcy to fully decay
 
 	GOODS_LEADERBOARD_SIZE = 20					# How many spots there are on each goods leaderboard, default: 10
 
