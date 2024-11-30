@@ -1,4 +1,4 @@
-ig_landowners = {
+﻿ig_landowners = {
 	color = hsv{ 0.63 0.40 0.69 }
 	texture = "gfx/interface/icons/ig_icons/landowners.dds"
 	layer = "revolution_dynamic_landowners"
@@ -8,6 +8,12 @@ ig_landowners = {
 		ideology_paternalistic
 		ideology_stratocratic
 		ideology_patriarchal
+	}
+	
+	character_ideologies = {
+		ideology_moderate
+		ideology_traditionalist
+		ideology_legitimist
 	}
 
 	enable = {
@@ -238,8 +244,47 @@ ig_landowners = {
 				add_ideology = ideology_republican_paternalistic
 			}
 		}
+		# India
+		else_if = {
+			limit = {
+				OR = {
+					c:BIC ?= this
+					any_primary_culture = {
+						has_discrimination_trait = south_asian_heritage
+					}
+				}
+			}
+			ig:ig_landowners = {
+				set_interest_group_name = ig_zamindars
+				if = {
+					limit = {
+						owner = {
+							c:BIC ?= this
+						}
+					}
+					set_ig_trait = ig_trait:ig_trait_summon_no_zamindars
+				}
+				set_ig_trait = ig_trait:ig_trait_famine_reserves
+				set_ig_trait = ig_trait:ig_trait_profitable_estates
+			}
+		}
 	}
 	on_disable = {}
+	
+	priority_cultures = { #Country scope
+		rule = {
+			trigger = {
+				c:BIC ?= this
+				any_primary_culture = { 
+					cu:british = this
+				}
+			}
+			cultures = {
+				assamese avadhi baluchi bengali bihari gujarati kannada malayalam marathi oriya panjabi pathan rajput sindi tamil telegu hindustani bundeli pahari gondi bageli chhattisgarhi deccani
+			}
+		}
+	}
+	
 	on_character_ig_membership = {}
 
 	pop_potential = {
@@ -280,7 +325,7 @@ ig_landowners = {
 				limit = {
 					is_pop_type = officers
 				}
-				value = 50
+				value = 25
 			}
 		}
 
@@ -306,6 +351,20 @@ ig_landowners = {
 					}
 					multiply = 4
 				}
+			}
+		}
+
+		
+		if = {
+			limit = {
+				c:BIC ?= owner
+				culture = {
+					has_discrimination_trait = european_heritage
+				}
+			}
+			multiply = {
+				desc = "POP_INDIA_COLONIAL_RULE"
+				value = 0.1
 			}
 		}
 
@@ -503,15 +562,6 @@ ig_landowners = {
 	# scope:character is the most popular commander in the IG
 	commander_leader_chance = {
 		value = 0.5
-		if = {
-			limit = {
-				exists = scope:character
-			}
-			multiply = {
-				value = 1
-				add = scope:character.popularity
-				min = 0
-			}
-		}
+		multiply = ig_commander_leader_chance_mult
 	}
 }

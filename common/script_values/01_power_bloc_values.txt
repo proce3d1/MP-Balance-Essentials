@@ -468,7 +468,7 @@ power_bloc_mandate_progress_by_rank = {
 	value = {
 		value = 10	# 6
 		subtract = power_bloc_rank
-		min = 5	# 1
+		min = 6	# 1
 		desc = "POWER_BLOC_MANDATE_PROGRESS_BASE"
 	}
 

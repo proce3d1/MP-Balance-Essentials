@@ -5,7 +5,7 @@
 
 lawgroup_governance_principles = {
 	law_group_category = power_structure
-	base_enactment_days = 180	# 200
+	base_enactment_days = 160	# 200
 	enactment_approval_mult = 2.0
 	affected_by_regime_change = yes
 	
@@ -25,7 +25,7 @@ lawgroup_governance_principles = {
 
 lawgroup_distribution_of_power = {
 	law_group_category = power_structure
-	base_enactment_days = 135	# 150
+	base_enactment_days = 120	# 150
 	affected_by_regime_change = yes
 	
 	progressive_movement_chance = 2.5
@@ -82,7 +82,7 @@ lawgroup_internal_security = {
 
 lawgroup_economic_system = {
 	law_group_category = economy	
-	base_enactment_days = 135	# 150
+	base_enactment_days = 120	# 150
 	
 	progressive_movement_chance = 3
 	regressive_movement_chance = 0.15
@@ -189,7 +189,7 @@ lawgroup_migration = {
 lawgroup_slavery = {
 	law_group_category = human_rights
 	enactment_approval_mult = 2.0
-	base_enactment_days = 135	# 150
+	base_enactment_days = 120	# 150
 	
 	progressive_movement_chance = 5
 	regressive_movement_chance = 0.25

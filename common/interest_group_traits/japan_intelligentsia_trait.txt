@@ -1,0 +1,9 @@
+
+ig_trait_jap_techspread = {
+	icon = "gfx/interface/icons/ig_trait_icons/propagandists.dds"
+	min_approval = loyal
+	
+	modifier = {
+		country_tech_spread_mult = 0.15
+	}
+}

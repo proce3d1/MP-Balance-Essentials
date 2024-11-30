@@ -205,7 +205,7 @@ je_sick_man_economy = {
 		any_scope_state = {
 			is_incorporated = yes
 			has_building = building_urban_center
-			percent >= 0.75
+			percent >= 0.66	# 0.75
 		}
 	}
 
@@ -272,7 +272,7 @@ je_sick_man_education = {
 	}
 
 	goal_add_value = {
-		add = 0.2
+		add = 0.1	# 0.2
 	}
 
 	invalid = {

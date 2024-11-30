@@ -86,7 +86,7 @@ character_base_values = {
 
 coastal_state = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_infrastructure_add = 3	# 2
+	state_infrastructure_add = 5	# 2
 }
 
 working_conditions = {
@@ -263,9 +263,9 @@ tax_modifier_high = {
 	country_legitimacy_base_add = -10
 	state_radicals_from_political_movements_mult = 0.5
 	interest_group_in_government_attraction_mult = -0.1
-	state_lower_strata_expected_sol_add = 1.5	#2.5
-	state_middle_strata_expected_sol_add = 2	# 3
-	state_upper_strata_expected_sol_add = 2.5	# 3.5
+	state_lower_strata_expected_sol_add = 1.5
+	state_middle_strata_expected_sol_add = 2.5
+	state_upper_strata_expected_sol_add = 3.5
 }	
 
 tax_modifier_very_high = {
@@ -273,9 +273,9 @@ tax_modifier_very_high = {
 	country_legitimacy_base_add = -20
 	state_radicals_from_political_movements_mult = 1.0
 	interest_group_in_government_attraction_mult = -0.2
-	state_lower_strata_expected_sol_add = 3		# 5
-	state_middle_strata_expected_sol_add = 4	# 6
-	state_upper_strata_expected_sol_add = 5		# 7
+	state_lower_strata_expected_sol_add = 3
+	state_middle_strata_expected_sol_add = 5
+	state_upper_strata_expected_sol_add = 7
 }	
 
 government_wages_very_low = {
@@ -303,6 +303,7 @@ government_wages_high = {
 	interest_group_ig_intelligentsia_approval_add = 1	
 	interest_group_ig_petty_bourgeoisie_approval_add = 1
 	country_authority_mult = 0.05
+	country_law_enactment_time_mult = -0.05
 }
 
 government_wages_very_high = {
@@ -311,6 +312,7 @@ government_wages_very_high = {
 	interest_group_ig_intelligentsia_approval_add = 2
 	interest_group_ig_petty_bourgeoisie_approval_add = 2
 	country_authority_mult = 0.1
+	country_law_enactment_time_mult = -0.1
 }
 
 military_wages_very_low = {
@@ -318,7 +320,7 @@ military_wages_very_low = {
 	country_military_wages_mult = -0.3
 	interest_group_ig_armed_forces_approval_add = -5	# -2	
 	building_training_rate_mult = -0.75
-	unit_experience_gain_mult = -0.3
+	unit_experience_gain_mult = -0.5
 }
 
 military_wages_low = {
@@ -326,7 +328,7 @@ military_wages_low = {
 	country_military_wages_mult = -0.15
 	interest_group_ig_armed_forces_approval_add = -2 	# -1
 	building_training_rate_mult = -0.5
-	unit_experience_gain_mult = -0.15
+	unit_experience_gain_mult = -0.25
 }
 
 military_wages_medium = {
@@ -338,7 +340,7 @@ military_wages_high = {
 	interest_group_ig_armed_forces_approval_add = 1
 													   
 	unit_morale_recovery_mult = 0.1
-	unit_experience_gain_mult = 0.1
+	unit_experience_gain_mult = 0.15
 }
 
 military_wages_very_high = {
@@ -347,7 +349,7 @@ military_wages_very_high = {
 	interest_group_ig_armed_forces_approval_add = 2	
 													   
 	unit_morale_recovery_mult = 0.2
-	unit_experience_gain_mult = 0.2
+	unit_experience_gain_mult = 0.3
 }
 
 insurrectionary_ig = {
@@ -811,7 +813,7 @@ forced_regime_change = {
 
 weak_power_bloc = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
-	power_bloc_cohesion_mult = -0.1	# -0.5
+	# power_bloc_cohesion_mult = -0.1	# -0.5
 }
 
 power_bloc_no_primary_principles = {
