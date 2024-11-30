@@ -1,0 +1,47 @@
+﻿ideology_pluralist_movement_1 = { # National Supremacy
+	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
+
+	lawgroup_citizenship = {
+		law_ethnostate = disapprove
+		law_national_supremacy = strongly_approve
+		law_racial_segregation = neutral
+		law_cultural_exclusion = neutral
+		law_multicultural = neutral
+	}
+}
+
+ideology_pluralist_movement_2 = { # Racial Segregation
+	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
+	
+	lawgroup_citizenship = {
+		law_ethnostate = strongly_disapprove
+		law_national_supremacy = disapprove
+		law_racial_segregation = strongly_approve
+		law_cultural_exclusion = neutral
+		law_multicultural = neutral
+	}
+}
+
+ideology_pluralist_movement_3 = { # Cultural Exclusion
+	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
+	
+	lawgroup_citizenship = {
+		law_ethnostate = strongly_disapprove
+		law_national_supremacy = strongly_disapprove
+		law_racial_segregation = disapprove
+		law_cultural_exclusion = strongly_approve
+		law_multicultural = approve
+	}
+}
+
+ideology_pluralist_movement_4 = { # Multicultural
+	icon = "gfx/interface/icons/ideology_icons/reformer.dds"
+	
+	lawgroup_citizenship = {
+		law_ethnostate = strongly_disapprove
+		law_national_supremacy = disapprove
+		law_racial_segregation = neutral
+		law_cultural_exclusion = approve
+		law_multicultural = strongly_approve
+	}
+}
