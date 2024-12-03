@@ -50,6 +50,8 @@ NDiplomacy = {
 
 	MAKE_WARGOAL_PRIMARY_DEMAND_MANEUVERS_COST = 0.2 			#0.5 Fraction of the wargoal's base maneuver cost that it costs to turn it into a primary demand
 	MAKE_WARGOAL_PRIMARY_DEMAND_INFAMY_AMOUNT = 0.2				#0.5 Fraction of the wargoal's base infamy that is accured when you turn it into a primary demand
+	
+	WAR_GOAL_INFAMY_RETURN_STATE = 1.25	# 2.0
 		
 	PRESTIGE_FROM_COUNTRY_GDP_DIVISOR = 1000000
 	PRESTIGE_FROM_COUNTRY_GDP = 6							# 3 # Per PRESTIGE_FROM_COUNTRY_GDP_DIVISOR GDP

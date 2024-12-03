@@ -1,8 +1,4 @@
-japan_military_reward = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
-	country_military_tech_research_speed_mult = 0.15
-	country_diplomatic_play_maneuvers_add = 30
-}
+# Canada & Australia
 
 canada_growth_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
@@ -54,6 +50,8 @@ aus_unified_australia_new = {
 #	building_group_bg_manufacturing_throughput_add = 0.1
 #}
 
+# Ottoman Tanzimat
+
 modifier_ottoman_reclaimed_syria = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
 	country_prestige_mult = 0.25
@@ -100,3 +98,71 @@ modifier_ottoman_bureaucratic_reform = {
 	country_society_tech_research_speed_mult = 0.25
 }
 
+# Japan
+
+samurai_officers = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_negative.dds
+	country_military_tech_research_speed_mult = -0.25
+}
+
+japan_military_reward = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_military_tech_research_speed_mult = 0.15
+}
+
+japan_military_reward_new = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	country_diplomatic_play_maneuvers_add = 25
+	country_infamy_generation_mult = -0.30
+}
+
+japan_diplomatic_reward = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_influence_mult = 0.2
+	country_improve_relations_speed_mult = 0.25
+	country_damage_relations_speed_mult = 0.25
+}
+
+japan_production_reward = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	building_railway_throughput_add = 0.4
+}
+
+meiji_favored_ig = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	interest_group_pol_str_mult = 0.5
+}
+
+japan_shogunate_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_negative.dds
+	country_legitimacy_headofstate_add = -30
+}
+
+western_military_consultant = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_military_tech_spread_mult = 1
+}
+
+japan_production_tech_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_production_tech_spread_mult = 1
+}
+
+japan_society_tech_modifier = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_lightbulb_positive.dds
+	country_society_tech_spread_mult = 1
+}
+
+modifier_jap_terakoya = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_education_access_add = 0.25
+	state_peasants_education_access_add = 0.10	# 0.20
+	country_tech_research_speed_mult = -0.10
+}
+
+modifier_legacy_of_terakoya = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
+	state_education_access_add = 0.25
+	country_tech_research_speed_mult = 0.15
+	country_bureaucracy_mult = -0.05
+}
