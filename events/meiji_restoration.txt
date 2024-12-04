@@ -451,7 +451,7 @@ meiji.2 = {
 		default_option = yes
 		add_modifier = {
 			name = japan_military_reward_new
-		 	months = normal_modifier_time
+		 	months = long_modifier_time	# normal_modifier_time
 		}
 		if = {
 			limit = {

@@ -1,5 +1,5 @@
 ﻿movement_modernizer = {
-	category = movement_category_ideological
+	category = movement_category_modernizer
 	
 	ideology = ideology_modernizer
 	character_ideologies = {
