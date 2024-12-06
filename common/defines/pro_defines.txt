@@ -13,17 +13,10 @@ NEconomy = {
 	DECLARE_BANKRUPTCY_PENALTY_DURATION_YEARS = 7	# 10		# How many years does it take for penalties from declaring bankruptcy to fully decay
 
 	GOODS_LEADERBOARD_SIZE = 20					# How many spots there are on each goods leaderboard, default: 10
-
 	
-	REINVESTMENT_EFFICIENCY_MAX = 2	# 3.0						# Maximum conversion of reinvestment to investment pool
-	REINVESTMENT_BASE_EFFICIENCY_THRESHOLD = 30000000	# 10000000	# Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0	
-	BUILDING_RAISE_WAGES_MIN_RELEVANT_POP_SIZE = 50 # Pops with less workforce than this are ignored when checking whether a profitable building should raise wages because of radicalizing workers
-	BUILDING_RAISE_WAGES_DISCRIMINATION_FACTOR = 0.75	# 0.66 # Profitable buildings only care to raise wages for discriminated pops if their wealth to expected SoL ratio is less than this
-	BUILDING_LOWER_WAGES_TARGET_WEALTH_MULT = 1.5	# 1.33 # Buildings will consider lowering wages if all significant pops working in them have this * the target wealth to expected SoL ratio
-	BUILDING_DEFAULT_MIN_EARNINGS_TO_HIRE_EMPLOYEES = 3  # Non-subsidized buildings will not hire if it would result in their annual earnings/employee falling below this threshold
-	BUILDING_PROFIT_TARGET_TO_RAISE_WAGES = 0.25	# 0.3		# Required profit margin to consider raising wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
-	BUILDING_PROFIT_TARGET_TO_LOWER_WAGES = 0.1	# 0.15	# If profit margin is this or below, consider lowering wages for SoL or employment reasons, with BUILDING_WEEKS_BETWEEN_PAY_CHANGES weeks cooldown
-	BUILDING_MAX_EMPLOYMENT_FRACTION_TO_RAISE_WAGES = 0.9	# 0.5 # If the employment fraction of a building is above this, don't raise wages just to try and snipe employees from other buildings
+	REINVESTMENT_EFFICIENCY_MAX = 3.0					# Maximum conversion of reinvestment to investment pool
+	REINVESTMENT_BASE_EFFICIENCY_THRESHOLD = 50000000	# Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0
+	# REINVESTMENT_SUBSISTENCE_FRACTION_REDUCTION = 0.5	# Reinvestment from pops in ownership buildings is multiplied by ( 1 - this * the share of levels owned that are subsistence buildings
 
 }
 
