@@ -6,6 +6,10 @@
     australia_growth_modifier:0 "Australian Expansion"
     aus_unified_australia_new:0 "Australian Federation"
 
+    italian_idea_modifier:0 "Italian Idea"
+    italian_unifier_prestige_new:0 "Risorgimento"
+    italian_unifiers_ig_new:0 "Italian Unifiers"
+
     je_sick_man_main_goal:0 "Complete 6 'Tanzimat' [Concept('concept_journal_entry', '$concept_journal_entries$')]"
     modifier_ottoman_reclaimed_syria:0 "Reclaimed Syria"
     modifier_ottoman_egypt:0 "Conquered Egypt"
@@ -16,6 +20,8 @@
     modifier_ottoman_bureaucratic_reform:0 "Bureaucratic Reform"
     jap_mapi:0 "Japanese Internal Focus"
     je_meiji_restoration_goal:0 "The following must be true for 5 total years:"
+
+    modifier_america_migration:0 "American Migration"
 
     # Landowners IG Traits
     ig_trait_jap_noblesse_oblige:0 "Shogun's Treasury"

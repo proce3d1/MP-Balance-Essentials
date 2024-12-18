@@ -294,6 +294,9 @@
 				}
 				value = 25
 				add = this.standard_of_living
+				## -new-
+				multiply = 0.75
+				## -----
 			}
 		}
 

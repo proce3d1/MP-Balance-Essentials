@@ -68,17 +68,17 @@ mobilization_option_extra_supplies = {
 	}
 	upkeep_modifier_unscaled = {
         # GGGG
-        goods_input_grain_mult = 0.25
-        goods_input_meat_mult = 0.25
-        goods_input_groceries_mult = 0.25
-        goods_input_fruit_mult = 0.25
+        goods_input_grain_mult = 0.1	# 0.25
+        goods_input_meat_mult = 0.1	# 0.25
+        goods_input_groceries_mult = 0.1	# 0.25
+        goods_input_fruit_mult = 0.1	# 0.25
         
-        goods_input_small_arms_mult = 0.25
-        goods_input_artillery_mult = 0.25
-		goods_input_ammunition_mult = 0.25
-        goods_input_oil_mult = 0.25
-        goods_input_radios_mult = 0.25
-        goods_input_tanks_mult = 0.25
+        goods_input_small_arms_mult = 0.1	# 0.25
+        goods_input_artillery_mult = 0.1	# 0.25
+		goods_input_ammunition_mult = 0.1	# 0.25
+        goods_input_oil_mult = 0.1	# 0.25
+        goods_input_radios_mult = 0.1	# 0.25
+        goods_input_tanks_mult = 0.1	# 0.25
 	}	
 	
 	unit_modifier = {
@@ -130,17 +130,17 @@ mobilization_option_luxurious_supplies = {
 	}
 	upkeep_modifier_unscaled = {
         # GGGG
-        goods_input_grain_mult = 0.25
-        goods_input_meat_mult = 0.25
-        goods_input_groceries_mult = 0.25
-        goods_input_fruit_mult = 0.25
+        goods_input_grain_mult = 0.1	# 0.25
+        goods_input_meat_mult = 0.1	# 0.25
+        goods_input_groceries_mult = 0.1	# 0.25
+        goods_input_fruit_mult = 0.1	# 0.25
         
-        goods_input_small_arms_mult = 0.25
-        goods_input_artillery_mult = 0.25
-		goods_input_ammunition_mult = 0.25
-        goods_input_oil_mult = 0.25
-        goods_input_radios_mult = 0.25
-        goods_input_tanks_mult = 0.25
+        goods_input_small_arms_mult = 0.1	# 0.25
+        goods_input_artillery_mult = 0.1	# 0.25
+		goods_input_ammunition_mult = 0.1	# 0.25
+        goods_input_oil_mult = 0.1	# 0.25
+        goods_input_radios_mult = 0.1	# 0.25
+        goods_input_tanks_mult = 0.1	# 0.25
 	}	
 	
 	unit_modifier = {

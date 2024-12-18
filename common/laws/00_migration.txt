@@ -25,7 +25,7 @@ law_migration_controls = {
 	
 	modifier = {
 		country_migration_restrictiveness_add = 60
-		country_authority_mult = 0.075
+		country_authority_mult = 0.05
 	}
 	
 	progressiveness = 0
@@ -81,9 +81,9 @@ law_closed_borders = {
 		country_migration_restrictiveness_add = 101
 		country_disallow_agitator_invites_bool = yes
 		country_leverage_resistance_mult = 0.25
-		country_authority_add = 100
-		country_authority_mult = 0.1	# 0.2
-		state_tax_capacity_mult = 0.1
+		country_tech_spread_mult = -0.10
+		# country_authority_mult = 0.1	# 0.2
+		# state_tax_capacity_mult = 0.1
 	}
 	
 	progressiveness = -50

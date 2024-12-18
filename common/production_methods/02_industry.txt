@@ -17,9 +17,9 @@
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add = 1000
+			building_employment_laborers_add = 2000	# 1000
 			building_employment_machinists_add = 1000
-			building_employment_engineers_add = 1000
+			building_employment_engineers_add = 500	# 1000
 		}
 	}
 }
@@ -38,7 +38,7 @@ pm_improved_synth_oil_production = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_coal_add = 60
+			goods_input_coal_add = 70	# 60
 			goods_input_tools_add = 10
 			goods_input_electricity_add = 30
 			
@@ -46,9 +46,9 @@ pm_improved_synth_oil_production = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add = 500
+			building_employment_laborers_add = 1500	# 500
 			building_employment_machinists_add = 1250
-			building_employment_engineers_add = 1250
+			building_employment_engineers_add = 750
 		}
 	}
 }
@@ -67,7 +67,7 @@ pm_synth_rubber_production = {
 	
 	building_modifiers = {
 		workforce_scaled = {
-			goods_input_oil_add = 30
+			goods_input_oil_add = 50	# 30
 			goods_input_tools_add = 10
 			goods_input_electricity_add = 10
 			
@@ -75,9 +75,9 @@ pm_synth_rubber_production = {
 		}
 		
 		level_scaled = {
-			building_employment_laborers_add = 1000
-			building_employment_machinists_add = 1500
-			building_employment_engineers_add = 500
+			building_employment_laborers_add = 1500	# 1000
+			building_employment_machinists_add = 1250	# 1500
+			building_employment_engineers_add = 750
 		}
 	}
 }

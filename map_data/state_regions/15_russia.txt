@@ -287,7 +287,7 @@ STATE_MOSCOW = {
     farm = "x54C962"
     mine = "x8B324E"
     wood = "xE19E7E"
-    arable_land = 120
+    arable_land = 80
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 60
@@ -418,7 +418,7 @@ STATE_ARKHANGELSK = {
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
-        undiscovered_amount = 4
+        undiscovered_amount = 8
     }
     naval_exit_id = 3039
 }
@@ -847,7 +847,7 @@ STATE_NORTH_CAUCASUS = {
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
-        undiscovered_amount = 2
+        undiscovered_amount = 4
     }
 }
 
@@ -1051,7 +1051,7 @@ STATE_KRASNOYARSK = {
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
-        undiscovered_amount = 6
+        undiscovered_amount = 12
     }
 }
 
@@ -1073,7 +1073,7 @@ STATE_ALTAI = {
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
-        undiscovered_amount = 1
+        undiscovered_amount = 3
     }
 }
 
@@ -1095,7 +1095,7 @@ STATE_BURYATIA = {
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
-        undiscovered_amount = 8
+        undiscovered_amount = 16
     }
 }
 
@@ -1118,7 +1118,7 @@ STATE_KOLYMA = {
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
-        undiscovered_amount = 7
+        undiscovered_amount = 16
     }
 }
 
@@ -1142,7 +1142,7 @@ STATE_AMUR = {
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
-        undiscovered_amount = 7
+        undiscovered_amount = 18
     }
     naval_exit_id = 3059
 }
@@ -1168,7 +1168,7 @@ STATE_CHELYABINSK = {
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
-        undiscovered_amount = 4
+        undiscovered_amount = 9
     }
 }
 

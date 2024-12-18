@@ -684,7 +684,7 @@ nationalism = {
 	
 	modifier = {
 		country_authority_mult = 0.1
-		state_birth_rate_mult = 0.05							  
+		state_birth_rate_mult = 0.025							  
 	}
 	
 	unlocking_technologies = {
@@ -711,13 +711,21 @@ nationalism = {
 			limit = { 
 				OR = {
 					country_has_primary_culture = cu:north_german
-					country_has_primary_culture = cu:south_german
+					country_has_primary_culture = cu:south_german										   
+				}				
+			}
+			add = 1	# 4
+		}	
+
+		if = {
+			limit = { 
+				OR = {
 					country_has_primary_culture = cu:north_italian
 					country_has_primary_culture = cu:south_italian											   
 				}				
 			}
-			add = 2	# 4
-		}	
+			add = 4
+		}
 		
 		if = {
 			limit = {

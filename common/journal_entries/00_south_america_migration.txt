@@ -11,7 +11,9 @@
 	}
 
 	possible = {
-		has_technology_researched = civilizing_mission
+		# has_technology_researched = civilizing_mission
+		has_technology_researched = nationalism
+		has_technology_researched = quinine
 		country_rank >= rank_value:minor_power
 		average_sol >= 10
 		is_at_war = no
@@ -26,7 +28,9 @@
 			has_law = law_type:law_isolationism
 		}
 	}
-
+	modifiers_while_active = {
+		modifier_america_migration
+	}
 	immediate = {
 		set_variable = {
 			name = south_america_incorporated_population
@@ -176,7 +180,9 @@ je_central_america_migration = {
 			has_law = law_type:law_isolationism
 		}
 	}
-
+	modifiers_while_active = {
+		modifier_america_migration
+	}
 	immediate = {
 		set_variable = {
 			name = central_america_incorporated_population
@@ -341,7 +347,9 @@ je_american_west_migration = {
 			has_law = law_type:law_isolationism
 		}
 	}
-
+	modifiers_while_active = {
+		modifier_america_migration
+	}
 	immediate = {
 		set_variable = {
 			name = american_west_incorporated_population

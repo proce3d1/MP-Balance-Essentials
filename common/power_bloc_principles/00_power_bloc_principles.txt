@@ -810,7 +810,7 @@ principle_police_coordination_2 = {
 	institution = institution_police
 	institution_modifier = {
 		# Police institution adds authority
-		country_authority_add = 50
+		country_authority_add = 25
 		# Police institution reduces radicalism of political movements
 		political_movement_radicalism_add = -0.05
 	}
@@ -838,7 +838,7 @@ principle_police_coordination_3 = {
 	institution = institution_police
 	institution_modifier = {
 		# Police institution adds authority
-		country_authority_add = 100
+		country_authority_add = 50
 		
 		# Police institution reduces radicalism of political movements
 		political_movement_radicalism_add = -0.05
@@ -1428,7 +1428,7 @@ principle_divine_economics_2 = {
 	member_modifier = {
 		# Modifiers from previous level(s)		
 		country_subject_income_transfer_heathen_mult = 0.5
-		state_birth_rate_mult = 0.025 # New
+		state_birth_rate_mult = 0.01 # New
 		# New PM for Financial Districts/Manor Houses unlocked via trigger
 	}	
 	
@@ -1455,7 +1455,7 @@ principle_divine_economics_3 = {
 	
 		# New PM for Financial Districts/Manor Houses unlocked via trigger
 		
-		state_birth_rate_mult = 0.05 # New
+		state_birth_rate_mult = 0.025 # New
 	}
 
 	ai_weight = {

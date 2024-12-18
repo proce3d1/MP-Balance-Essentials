@@ -10,7 +10,8 @@
 		add_technology_researched = paddle_steamer
 		add_technology_researched = napoleonic_warfare
 		add_technology_researched = mass_communication 
-		# -------------	
+		add_technology_researched = banking
+		# -------------
 
 		set_tax_level = medium
 		

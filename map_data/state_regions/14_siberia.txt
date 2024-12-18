@@ -36,7 +36,7 @@ STATE_TOMSK = {
     farm = "xB17826"
     mine = "xAD226E"
     wood = "x02FAB2"
-    arable_land = 120
+    arable_land = 110
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
         bg_coal_mining = 85
@@ -54,7 +54,7 @@ STATE_TUVA = {
     farm = "xE24AC6"
     mine = "x8C119F"
     wood = "x01871B"
-    arable_land = 35
+    arable_land = 25
     traits = { "state_trait_yenisei_river" }
     arable_resources = { "bg_rye_farms" "bg_livestock_ranches" }
     capped_resources = {
@@ -153,7 +153,7 @@ STATE_CHUKOTKA = {
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
-        undiscovered_amount = 2
+        undiscovered_amount = 4
     }
     naval_exit_id = 3128
 }
@@ -179,7 +179,7 @@ STATE_KAMCHATKA = {
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
-        undiscovered_amount = 1
+        undiscovered_amount = 2
     }
     naval_exit_id = 3118
 }
@@ -207,7 +207,7 @@ STATE_OKHOTSK = {
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
-        undiscovered_amount = 4
+        undiscovered_amount = 8
     }
     naval_exit_id = 3118
 }
@@ -233,7 +233,7 @@ STATE_YAKUTSK = {
     resource = {
         type = "bg_gold_fields"
         depleted_type = "bg_gold_mining"
-        undiscovered_amount = 3
+        undiscovered_amount = 8
     }
     resource = {
         type = "bg_oil_extraction"

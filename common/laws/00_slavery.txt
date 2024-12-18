@@ -179,11 +179,11 @@ law_debt_slavery = {
 	
 	modifier = {
 		interest_group_ig_landowners_pol_str_mult = 0.25
-		country_authority_add = 100
-		state_aristocrats_investment_pool_efficiency_mult = 0.1
+		country_authority_add = 50	# 100
+		# state_aristocrats_investment_pool_efficiency_mult = 0.1
 		building_group_bg_agriculture_throughput_add = 0.05
 		building_group_bg_plantations_throughput_add = 0.05
-		building_group_bg_extraction_throughput_add = 0.05
+		# building_group_bg_extraction_throughput_add = 0.05
 	}
 	
 	# AI should never enact debt slavery
@@ -261,11 +261,11 @@ law_slave_trade = {
 
 	modifier = {
 		interest_group_ig_landowners_pol_str_mult = 0.5
-		country_authority_add = 200
-		state_aristocrats_investment_pool_efficiency_mult = 0.2
+		country_authority_add = 100	# 200
+		# state_aristocrats_investment_pool_efficiency_mult = 0.15	# 0.2
 		building_group_bg_agriculture_throughput_add = 0.1
 		building_group_bg_plantations_throughput_add = 0.1
-		building_group_bg_extraction_throughput_add = 0.1
+		# building_group_bg_extraction_throughput_add = 0.1
 	}	
 	
 	ai_will_do = {
@@ -326,11 +326,11 @@ law_legacy_slavery = {
 		
 	modifier = {
 		interest_group_ig_landowners_pol_str_mult = 0.3
-		country_authority_add = 150
-		state_aristocrats_investment_pool_efficiency_mult = 0.15
-		building_group_bg_agriculture_throughput_add = 0.07
-		building_group_bg_plantations_throughput_add = 0.07
-		building_group_bg_extraction_throughput_add = 0.07
+		country_authority_add = 75	 # 150
+		# state_aristocrats_investment_pool_efficiency_mult = 0.125	# 0.15
+		building_group_bg_agriculture_throughput_add = 0.075
+		building_group_bg_plantations_throughput_add = 0.075
+		# building_group_bg_extraction_throughput_add = 0.07
 	}
 
 	ai_enact_weight_modifier = {
