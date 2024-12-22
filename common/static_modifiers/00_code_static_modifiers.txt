@@ -177,7 +177,7 @@ declared_bankruptcy = {
 	state_welfare_payments_mult = -1
 	state_market_access_price_impact = -0.1
 	country_institution_size_change_speed_mult = -0.95
-	country_force_privatization_bool = yess
+	country_force_privatization_bool = yes
 }
 
 incorporated_state = {

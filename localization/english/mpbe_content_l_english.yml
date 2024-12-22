@@ -20,8 +20,21 @@
     modifier_ottoman_bureaucratic_reform:0 "Bureaucratic Reform"
     jap_mapi:0 "Japanese Internal Focus"
     je_meiji_restoration_goal:0 "The following must be true for 5 total years:"
+    
+    modifier_risorgimento_je:0 "Risorgimento"
 
     modifier_america_migration:0 "American Migration"
+
+    je_north_german_fed_pu:0 "North German Confederation"
+    je_north_german_fed_pu_reason:0 "After the defeat against Austria, the North German states attempt to unite. We must strive to be the foremost power in northern Germany, so that the people still look to us as champions of the cause."
+    # je_north_german_status:1 "The North German minor nations will unify with us if we can become the sole [concept_unification_candidate]."
+    # je_german_status:1 "To complete the unification of Germany, we should launch a Unification [concept_diplomatic_play]"
+    german_unification.6.t:0 "Unification with [SCOPE.sCountry('german_annex_country').GetName]"
+    german_unification.6.d:0 "The remaining North German state of [SCOPE.sCountry('german_annex_country').GetName] has wisely decided to join our efforts to unify the North German people."
+    german_unification.6.f:0 ""To thrive again, we must look forward, not back. It is unity under a single state that will drive the North German people to greatness once more.""
+    german_unification.6.a:0 "Diplomacy has won the day!"
+    german_unification.6.b:0 "It is not the right time."
+
 
     # Landowners IG Traits
     ig_trait_jap_noblesse_oblige:0 "Shogun's Treasury"

@@ -23,6 +23,21 @@ NEconomy = {
 NMilitary = {
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MIN = 0.0025	# 0.04	# The minimum percentage of manpower a unit can lose each week due to attrition
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.06	# 0.12 	# The maximum percentage of manpower a unit can lose each week due to attrition
+
+
+	#CONVOY_RAIDING_STRENGTH_MULT = 0.3						# How strong each Convoy raiding point is ( num flotillas * ce offense )
+	#CONVOY_RAIDING_COOLDOWN_DAYS_MIN = 10					# Min days until the next convoy raiding in the sea node
+	#CONVOY_RAIDING_COOLDOWN_DAYS_MAX = 30					# Max days until the next convoy raiding in the sea node
+	#CONVOY_RAIDING_DAMAGE_MIN_RANDOM_FACTOR = 0.5			# Actual convoy raiding damage is scaled between CONVOY_RAIDING_DAMAGE_MIN_RANDOM_FACTOR and CONVOY_RAIDING_DAMAGE_MAX_RANDOM_FACTOR to provide some random variability
+	#CONVOY_RAIDING_DAMAGE_MAX_RANDOM_FACTOR = 1.0			# Actual convoy raiding damage is scaled between CONVOY_RAIDING_DAMAGE_MIN_RANDOM_FACTOR and CONVOY_RAIDING_DAMAGE_MAX_RANDOM_FACTOR to provide some random variability
+	CONVOY_RAIDING_DEFENSE_MULT = 0.3 #0.15					# How much is Convoy raiding strength reduced by patrolling flotillas  ( num flotillas * ce defense )
+	CONVOY_RAIDING_MAX_DEFENSE = 0.95						# Example: the defender can never block more than 90% of the convoy damage they're currently taking
+
+	## Convoy recovery rate after being raided is based on a global and a local rate, using whichever is lower
+	CONVOY_RAIDING_GLOBAL_RECOVERY_RATE = 0.004 #0.001		# The rate at which damaged convoys are replaced each day, relative to total number of produced convoys in the raided country
+	CONVOY_RAIDING_LOCAL_RECOVERY_RATE = 0.02 #0.01			# The rate at which damaged convoys are replaced each day, relative to total number of convoys passing through the sea node
+	#CONVOY_RAIDING_RECOVERY_RATE_PEACETIME_FACTOR = 4		# While a country is at peace, convoys will be restored this much faster
+																																			  
 }	
 
 NDiplomacy = {
@@ -242,18 +257,6 @@ NTechnology = {
 	TECH_AHEAD_OF_TIME_PENALTY_FACTOR = 0.3	# 0.25	# For every tech in a previous era not already researched in this category, take this multiple of the cost as an additional penalty (multiplied by number of eras between the techs)
 }
 
-NBattle = {	
-	CHANCE_OF_POPULARITY_NARROW_VICTORY = 0.75 #0.5	# The chance (0-1) to be affected by popularity for a narrow victory (start with numeric advantage, end with numeric disadvantage)
-	CHANCE_OF_POPULARITY_NORMAL_VICTORY	= 0.33 #0.1	# The chance (0-1) to be affected by popularity for a normal victory (any victory that's not narrow or heroic)
-	CHANCE_OF_POPULARITY_HEROIC_VICTORY	= 1.0		# The chance (0-1) to be affected by popularity for a heroic victory (start with numeric disadvantage against a more prestigious nation)
-	POPULARITY_GAIN_NARROW_VICTORY = 3 			# Multiple of commander_battle_end_victory modifier the winner should get for a narrow victory if the random chance roll is true
-	POPULARITY_GAIN_NORMAL_VICTORY = 2			# Multiple of commander_battle_end_victory modifier the winner should get for a normal victory if the random chance roll is true
-	POPULARITY_GAIN_HEROIC_VICTORY = 5 			# Multiple of commander_battle_end_victory modifier the winner should get for a heroic victory if the random chance roll is true
-	POPULARITY_GAIN_NARROW_LOSS	= -3			# Multiple of commander_battle_end_loss modifier the loser should get for a narrow victory for the other side if the random chance roll is true
-	POPULARITY_GAIN_NORMAL_LOSS	= -2			# Multiple of commander_battle_end_loss modifier the loser should get for a normal victory for the other side if the random chance roll is true
-	POPULARITY_GAIN_HEROIC_LOSS = -5			# Multiple of commander_battle_end_loss modifier the loser should get for a heroic victory for the other side if the random chance roll is true
-	POPULARITY_DECAY_MONTHS = 120	#600 #60				# The number of months battle popularity modifiers decay over
-}
 
 NWar = {
 	OCCUPATION_STATE_DEFENSIVE_BATTLE_VICTORY_SCORE = 25	# 100 	# How many occupation "points" each country receives after winning a defensive battle

@@ -714,7 +714,7 @@ nationalism = {
 					country_has_primary_culture = cu:south_german										   
 				}				
 			}
-			add = 1	# 4
+			add = 2	# 4
 		}	
 
 		if = {

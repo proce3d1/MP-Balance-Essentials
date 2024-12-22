@@ -818,7 +818,7 @@ decree_enlistment_efforts = {
 	unlocking_technologies = {
 		mandatory_service
 	}
-	cost = 75
+	cost = 100	# 75
 	
 	ai_weight = {
 		value = 0

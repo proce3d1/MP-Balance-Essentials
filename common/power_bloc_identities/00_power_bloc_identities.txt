@@ -128,7 +128,7 @@
 			else = {
 				add = scope:power_bloc.power_bloc_worst_economic_dependence
 			}
-			add = -3.5
+			add = -1.5	# -3.5
 			divide = define:NDiplomacy|ECONOMIC_DEPENDENCE_MAX
 			multiply = define:NPowerBlocs|COHESION_TARGET_MAX
 			multiply = 0.5

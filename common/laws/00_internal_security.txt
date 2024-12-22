@@ -30,7 +30,6 @@ law_national_guard = {
 	}
 
 	modifier = {
-		country_institution_home_affairs_max_investment_add = 1
 		country_officers_pol_str_mult = 0.5
 		country_soldiers_pol_str_mult = 0.25
 	}
@@ -111,7 +110,6 @@ law_guaranteed_liberties = {
 	
 	modifier = {
 		country_institution_home_affairs_max_investment_add = 2
-		country_authority_add = -100
 	}
 	
 	institution = institution_home_affairs

@@ -90,34 +90,11 @@ je_sick_man_syria = {
 		s:STATE_LOWER_EGYPT = {
 			add_claim = ROOT
 		}
-		if = {
-			limit = {
-				OR = {
-					AND = {
-						exists = c:EGY
-						c:EGY = {
-							is_subject_of = ROOT
-						}
-					}
-					AND = {
-						# owns_entire_state_region = STATE_SINAI
-						owns_entire_state_region = STATE_UPPER_EGYPT
-						owns_entire_state_region = STATE_MIDDLE_EGYPT
-						owns_entire_state_region = STATE_LOWER_EGYPT
-					}
-				}
-			}
-			custom_tooltip = je_sick_man_advance
-			change_variable = {
-				name = sick_man_var
-				add = 1
-			}
-		}
-		else = {
-			add_journal_entry = {
+
+		add_journal_entry = {
 				type = je_sick_man_egypt
 			}
-		}
+			
 		custom_tooltip = sickman_syria_egypt
 		add_modifier = {
 			name = modifier_ottoman_reclaimed_syria
@@ -152,20 +129,20 @@ je_sick_man_egypt = {
 	group = je_group_historical_content
 
 	complete = {
-		OR = {
-			AND = {
-				exists = c:EGY
-				c:EGY = {
-					is_subject_of = ROOT
-				}
-			}
-			AND = {
-				owns_entire_state_region = STATE_SINAI
+		#OR = {
+		#	AND = {
+		#		exists = c:EGY
+		#		c:EGY = {
+		#			is_subject_of = ROOT
+		#		}
+		#	}
+		#	AND = {
+				# owns_entire_state_region = STATE_SINAI
 				owns_entire_state_region = STATE_UPPER_EGYPT
 				owns_entire_state_region = STATE_MIDDLE_EGYPT
 				owns_entire_state_region = STATE_LOWER_EGYPT
-			}
-		}
+		#	}
+		#}
 	}
 
 	on_complete = {

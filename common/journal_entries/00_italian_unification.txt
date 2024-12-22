@@ -17,6 +17,10 @@
 	scripted_button = je_risorgimento_austrian_radicals_button
 	scripted_button = je_risorgimento_italian_radicals_button
 
+	modifiers_while_active = {
+		modifier_risorgimento_je
+	}
+
 	immediate = {
 		set_variable = { name = italian_states_radicals_total_bar value = 0 }
 		cu:north_italian = {

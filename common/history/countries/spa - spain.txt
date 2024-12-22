@@ -11,6 +11,7 @@
 		add_technology_researched = napoleonic_warfare
 		add_technology_researched = mass_communication 
 		add_technology_researched = banking
+		add_technology_researched = empiricism
 		# -------------
 
 		set_tax_level = medium

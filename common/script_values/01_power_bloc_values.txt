@@ -20,7 +20,7 @@ power_bloc_leverage_gain = {
 			}
 		}
 		add = {
-			value = 300
+			value = 100	# 300
 			desc = POWER_BLOC_LEVERAGE_GAIN_FROM_MEMBERSHIP
 		}
 	}

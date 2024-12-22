@@ -173,3 +173,9 @@ modifier_america_migration = {
 	# state_migration_pull_mult = 0.25
 	state_migration_pull_add = 15
 }
+
+modifier_risorgimento_je = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fire_positive.dds
+	country_prestige_mult = 0.25
+	# country_authority_mult = 0.20	
+}
