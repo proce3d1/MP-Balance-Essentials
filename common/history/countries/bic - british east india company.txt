@@ -66,6 +66,8 @@
 		}
 
 		add_modifier = modifier_india_company_rule
+		add_modifier = modifier_high_pop_authority
+
 
 		every_scope_state = {
 			limit = {

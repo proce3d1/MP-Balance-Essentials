@@ -57,7 +57,7 @@ GGGG_mo_full_dress = {
     }
     
     unit_modifier = {
-        unit_offense_add        = 5
+        # unit_offense_add        = 5
         unit_morale_damage_mult = 0.10
     }
     

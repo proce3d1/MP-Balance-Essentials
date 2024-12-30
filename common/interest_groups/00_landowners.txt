@@ -255,7 +255,9 @@
 				}
 			}
 			ig:ig_landowners = {
-				set_interest_group_name = ig_zamindars
+				set_interest_group_name = ig_zamindars			
+				remove_ideology = ideology_paternalistic
+				add_ideology = ideology_paternalistic_eic
 				if = {
 					limit = {
 						owner = {

@@ -1,0 +1,11 @@
+ig_trait_wounded_honor = {
+	icon = "gfx/interface/icons/ig_trait_icons/xenophobia.dds"
+	max_approval = unhappy
+	
+	modifier = {
+		state_mortality_turmoil_mult = 0.15
+		country_authority_mult = -0.10
+		state_capitalists_investment_pool_efficiency_mult = -0.25
+		state_shopkeepers_investment_pool_efficiency_mult = -0.25
+	}
+}

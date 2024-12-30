@@ -40,3 +40,9 @@
     ig_trait_jap_noblesse_oblige:0 "Shogun's Treasury"
     ig_trait_jap_noblesse_oblige_desc:0 "The Shogun shall lend a hand in the development of the country by investing in its economy."
 
+
+    ideology_paternalistic_eic:0 "Paternalistic"
+  
+    modifier_high_pop_authority:0 " High population"
+
+

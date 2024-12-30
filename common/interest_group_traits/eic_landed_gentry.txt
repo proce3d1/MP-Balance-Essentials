@@ -1,0 +1,20 @@
+ig_trait_summon_no_zamindars = {
+	icon = "gfx/interface/icons/ig_trait_icons/noble_privileges.dds"
+	max_approval = unhappy
+	
+	modifier = {
+		state_bureaucracy_population_base_cost_factor_mult = 0.05
+		country_authority_mult = -0.05
+		state_clergymen_investment_pool_efficiency_mult = -0.25	
+		state_aristocrats_investment_pool_efficiency_mult = -0.25
+	}
+}
+
+ig_trait_profitable_estates = {
+	icon = "gfx/interface/icons/ig_trait_icons/noblesse_oblige.dds"
+	min_approval = loyal
+	
+	modifier = {
+		state_aristocrats_investment_pool_efficiency_mult = 0.1		# 0.15
+	}
+}

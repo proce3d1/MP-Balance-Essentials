@@ -129,7 +129,8 @@ interception_coordinated_attack = {
 	modifier = {
 		character_interception_add = 1
 		battle_casualties_mult = 0.1
-		unit_navy_offense_mult = 0.2
+		# unit_navy_offense_mult = 0.2
+		unit_morale_damage_mult = 0.1
 	}
 
 	clicksound = "event:/SFX/UI/Military/order_admiral_patrol"

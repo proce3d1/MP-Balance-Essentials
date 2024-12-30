@@ -179,3 +179,22 @@ modifier_risorgimento_je = {
 	country_prestige_mult = 0.25
 	# country_authority_mult = 0.20	
 }
+
+modifier_high_pop_authority = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	country_consumption_tax_cost_mult = 0.5
+	state_decree_cost_mult = 0.5
+	# country_tech_spread_mult = -0.25
+}
+
+modifier_india_company_rule = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
+	interest_group_ig_industrialists_pol_str_mult = 2
+	country_bureaucrats_pol_str_mult = 1.5	# 2
+	country_capitalists_pol_str_mult = 0.5
+	country_officers_pol_str_mult = 0.5
+	country_aristocrats_pol_str_mult = -0.60	# -0.80
+	country_legitimacy_base_add = -50
+	country_legitimacy_headofstate_add = 65
+	country_tech_spread_mult = -0.25
+}
