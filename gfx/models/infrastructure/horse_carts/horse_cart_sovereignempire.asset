@@ -1,0 +1,76 @@
+pdxmesh = {
+	name = "horse_cart_sovereignempire_mesh"
+	file = "horse_cart_sovereignempire.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 5.5 }
+		lod = { index = 2 percent = 4.0 }
+		lod = { index = 3 percent = 2.5 }
+	}
+
+	animation = { id = "moving_animation" type = "horse_cart_sovereignempire_moving.anim" }
+
+	meshsettings = {
+		name = "cart_Shape0Deformed"
+		index = 0
+		texture_diffuse = "horse_cart_sovereignempire_diffuse.dds"
+		texture_normal = "horse_cart_sovereignempire_normal.dds"
+		texture_specular = "horse_cart_sovereignempire_properties.dds"
+		texture = { file = "horse_cart_sovereignempire_masks.dds" index = 6 }
+		shader = "standard"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cart_Shape1Deformed"
+		index = 0
+		texture_diffuse = "horse_cart_sovereignempire_diffuse.dds"
+		texture_normal = "horse_cart_sovereignempire_normal.dds"
+		texture_specular = "horse_cart_sovereignempire_properties.dds"
+		texture = { file = "horse_cart_sovereignempire_masks.dds" index = 6 }
+		shader = "standard"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cart_Shape2Deformed"
+		index = 0
+		texture_diffuse = "horse_cart_sovereignempire_diffuse.dds"
+		texture_normal = "horse_cart_sovereignempire_normal.dds"
+		texture_specular = "horse_cart_sovereignempire_properties.dds"
+		texture = { file = "horse_cart_sovereignempire_masks.dds" index = 6 }
+		shader = "standard"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cart_Shape3Deformed"
+		index = 0
+		texture_diffuse = "horse_cart_sovereignempire_diffuse.dds"
+		texture_normal = "horse_cart_sovereignempire_normal.dds"
+		texture_specular = "horse_cart_sovereignempire_properties.dds"
+		texture = { file = "horse_cart_sovereignempire_masks.dds" index = 6 }
+		shader = "standard"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "horse_cart_sovereignempire_entity"
+	pdxmesh = "horse_cart_sovereignempire_mesh"
+
+	default_state = "moving"
+	scale = 0.5
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		
+		start_event = { node = "loc_vfx" particle = "vehicles/carriage_royal" trigger_once = yes
+		sound  = { soundeffect = "event:/SFX/Animation/vehicles/identity/anm_identity_cart_sovereign_empire" } keep_sound = yes }
+	}
+}

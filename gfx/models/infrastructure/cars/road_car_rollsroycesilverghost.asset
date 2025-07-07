@@ -1,0 +1,150 @@
+pdxmesh = {
+	name = "road_car_rollsroycesilverghost_mesh"
+	file = "road_car_rollsroycesilverghost.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 8.0 }
+		lod = { index = 2 percent = 4.0 }
+		lod = { index = 3 percent = 2.0 }
+		lod = { index = 4 percent = 1.0 }
+	}
+
+	animation = { id = "moving_animation" type = "road_car_rollsroycesilverghost_moving.anim" }
+
+	meshsettings = {
+		name = "car0Shape"
+		index = 0
+		texture_diffuse = "road_car_rollsroycesilverghost_diffuse.dds"
+		texture_normal = "road_car_rollsroycesilverghost_normal.dds"
+		texture_specular = "road_car_rollsroycesilverghost_properties.dds"
+		texture = { file = "road_car_rollsroycesilverghost_masks.dds" index = 6 }
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "flags0Shape"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		texture = { file = "flag_wrinkles_properties.dds" index = 6 }
+		additional_shader_defines = { "PB_COLOR" "PB_TEXTURE" "FLAGWAVE_SETTINGS_BUILDING" }
+		shader = "standard_flag_basic"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "car1Shape"
+		index = 0
+		texture_diffuse = "road_car_rollsroycesilverghost_diffuse.dds"
+		texture_normal = "road_car_rollsroycesilverghost_normal.dds"
+		texture_specular = "road_car_rollsroycesilverghost_properties.dds"
+		texture = { file = "road_car_rollsroycesilverghost_masks.dds" index = 6 }
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "flags1Shape"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		texture = { file = "flag_wrinkles_properties.dds" index = 6 }
+		additional_shader_defines = { "PB_COLOR" "PB_TEXTURE" "FLAGWAVE_SETTINGS_BUILDING" }
+		shader = "standard_flag_basic"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "car2Shape"
+		index = 0
+		texture_diffuse = "road_car_rollsroycesilverghost_diffuse.dds"
+		texture_normal = "road_car_rollsroycesilverghost_normal.dds"
+		texture_specular = "road_car_rollsroycesilverghost_properties.dds"
+		texture = { file = "road_car_rollsroycesilverghost_masks.dds" index = 6 }
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "flags2Shape"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		texture = { file = "flag_wrinkles_properties.dds" index = 6 }
+		additional_shader_defines = { "PB_COLOR" "PB_TEXTURE" "FLAGWAVE_SETTINGS_BUILDING" }
+		shader = "standard_flag_basic"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "car3Shape"
+		index = 0
+		texture_diffuse = "road_car_rollsroycesilverghost_diffuse.dds"
+		texture_normal = "road_car_rollsroycesilverghost_normal.dds"
+		texture_specular = "road_car_rollsroycesilverghost_properties.dds"
+		texture = { file = "road_car_rollsroycesilverghost_masks.dds" index = 6 }
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "flags3Shape"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		texture = { file = "flag_wrinkles_properties.dds" index = 6 }
+		additional_shader_defines = { "PB_COLOR" "PB_TEXTURE" "FLAGWAVE_SETTINGS_BUILDING" }
+		shader = "standard_flag_basic"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "car4Shape"
+		index = 0
+		texture_diffuse = "road_car_rollsroycesilverghost_diffuse.dds"
+		texture_normal = "road_car_rollsroycesilverghost_normal.dds"
+		texture_specular = "road_car_rollsroycesilverghost_properties.dds"
+		texture = { file = "road_car_rollsroycesilverghost_masks.dds" index = 6 }
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "flags4Shape"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		texture = { file = "flag_wrinkles_properties.dds" index = 6 }
+		additional_shader_defines = { "PB_COLOR" "PB_TEXTURE" "FLAGWAVE_SETTINGS_BUILDING" }
+		shader = "standard_flag_basic"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "road_car_rollsroycesilverghost_entity"
+	pdxmesh = "road_car_rollsroycesilverghost_mesh"
+	
+	default_state = "moving"
+
+	scale = 0.5
+	state = { 
+		name = "moving" 
+		animation = "moving_animation" 
+		looping = yes
+
+		start_event = { node = "loc_vfx" particle = "vehicles/rollsroyce_car_effects" trigger_once = yes
+		sound  = { soundeffect = "event:/SFX/Animation/vehicles/identity/anm_identity_car_ideological_union" } keep_sound = yes }
+	}
+}

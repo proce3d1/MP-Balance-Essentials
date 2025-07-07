@@ -1,7 +1,7 @@
 ﻿je_sick_man_main = {
 	icon = "gfx/interface/icons/event_icons/event_skull.dds"
 
-	group = je_group_historical_content
+	group = je_group_tanzimat
 
 	complete = {
 		scope:journal_entry = {
@@ -26,7 +26,7 @@
 		if = {
 			limit = {
 	       		is_in_power_bloc = yes
-	        	is_power_bloc_leader = yes				
+	        	is_power_bloc_leader = yes
 			}
 			custom_tooltip = sick_man_of_europe_lose_power_bloc
 		}
@@ -45,20 +45,20 @@
 	}
 
 	goal_add_value = {
-		add = 6	# 4
+		add = 4
 	}
 
 	progressbar = yes
 
 	weight = 10000
-	
+
 	should_be_pinned_by_default = yes
 }
 
 je_sick_man_syria = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
-	group = je_group_historical_content
+	group = je_group_tanzimat
 
 	complete = {
 		owns_entire_state_region = STATE_ALEPPO
@@ -68,9 +68,11 @@ je_sick_man_syria = {
 		owns_entire_state_region = STATE_TRANSJORDAN
 		owns_entire_state_region = STATE_ADANA
 	}
+
 	modifiers_while_active = {
 		modifier_syrian_ambitions
 	}
+
 	on_complete = {
 		custom_tooltip = je_sick_man_advance
 		change_variable = {
@@ -90,15 +92,38 @@ je_sick_man_syria = {
 		s:STATE_LOWER_EGYPT = {
 			add_claim = ROOT
 		}
-
-		add_journal_entry = {
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						exists = c:EGY
+						c:EGY = {
+							is_subject_of = ROOT
+						}
+					}
+					AND = {
+						owns_entire_state_region = STATE_SINAI
+						owns_entire_state_region = STATE_UPPER_EGYPT
+						owns_entire_state_region = STATE_MIDDLE_EGYPT
+						owns_entire_state_region = STATE_LOWER_EGYPT
+					}
+				}
+			}
+			custom_tooltip = je_sick_man_advance
+			change_variable = {
+				name = sick_man_var
+				add = 1
+			}
+		}
+		else = {
+			add_journal_entry = {
 				type = je_sick_man_egypt
 			}
-			
+		}
 		custom_tooltip = sickman_syria_egypt
 		add_modifier = {
 			name = modifier_ottoman_reclaimed_syria
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 			is_decaying = yes
 		}
 	}
@@ -119,30 +144,30 @@ je_sick_man_syria = {
 	transferable = no
 
 	weight = 5000
-	
+
 	should_be_pinned_by_default = yes
 }
 
 je_sick_man_egypt = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
-	group = je_group_historical_content
+	group = je_group_tanzimat
 
 	complete = {
-		#OR = {
-		#	AND = {
-		#		exists = c:EGY
-		#		c:EGY = {
-		#			is_subject_of = ROOT
-		#		}
-		#	}
-		#	AND = {
+		OR = {
+			AND = {
+				exists = c:EGY
+				c:EGY = {
+					is_subject_of = ROOT
+				}
+			}
+			AND = {
 				# owns_entire_state_region = STATE_SINAI
 				owns_entire_state_region = STATE_UPPER_EGYPT
 				owns_entire_state_region = STATE_MIDDLE_EGYPT
 				owns_entire_state_region = STATE_LOWER_EGYPT
-		#	}
-		#}
+			}
+		}
 	}
 
 	on_complete = {
@@ -153,7 +178,7 @@ je_sick_man_egypt = {
 		}
 		add_modifier = {
 			name = modifier_ottoman_egypt
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 			is_decaying = yes
 		}
 	}
@@ -168,14 +193,14 @@ je_sick_man_egypt = {
 	transferable = no
 
 	weight = 5000
-	
+
 	should_be_pinned_by_default = yes
 }
 
 je_sick_man_economy = {
 	icon = "gfx/interface/icons/event_icons/event_industry.dds"
 
-	group = je_group_historical_content
+	group = je_group_tanzimat
 
 	complete = {
 		in_default = no
@@ -195,7 +220,7 @@ je_sick_man_economy = {
 		}
 		add_modifier = {
 			name = modifier_ottoman_urbanization
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 			is_decaying = yes
 		}
 	}
@@ -217,7 +242,7 @@ je_sick_man_economy = {
 je_sick_man_education = {
 	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
 
-	group = je_group_historical_content
+	group = je_group_tanzimat
 
 	complete = {
 		any_scope_building = {
@@ -239,7 +264,7 @@ je_sick_man_education = {
 		}
 		add_modifier = {
 			name = modifier_ottoman_education
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 			is_decaying = yes
 		}
 	}
@@ -272,7 +297,7 @@ je_sick_man_education = {
 je_sick_man_separatism = {
 	icon = "gfx/interface/icons/event_icons/event_fire.dds"
 
-	group = je_group_historical_content
+	group = je_group_tanzimat
 
 	complete = {
 		scope:journal_entry = {
@@ -290,7 +315,7 @@ je_sick_man_separatism = {
 		}
 		add_modifier = {
 			name = modifier_ottoman_separatism
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 			is_decaying = yes
 		}
 	}
@@ -345,7 +370,7 @@ je_sick_man_separatism = {
 je_sick_man_army = {
 	icon = "gfx/interface/icons/event_icons/event_military.dds"
 
-	group = je_group_historical_content
+	group = je_group_tanzimat
 
 	complete = {
 		army_size >= 100
@@ -353,11 +378,10 @@ je_sick_man_army = {
 		any_scope_building = {
 			filter = {
 				is_building_type = building_barracks
-			}			
+			}
 			NOR = {
 				building_has_goods_shortage = yes
 				has_active_production_method = pm_no_organization
-	 
 			}
 			percent = 1
 		}
@@ -383,7 +407,7 @@ je_sick_man_army = {
 		}
 		add_modifier = {
 			name = modifier_ottoman_army_modernization
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 			is_decaying = yes
 		}
 	}
@@ -413,15 +437,15 @@ je_sick_man_army = {
 je_sick_man_bureaucracy = {
 	icon = "gfx/interface/icons/event_icons/event_scales.dds"
 
-	group = je_group_historical_content
+	group = je_group_tanzimat
 
 	complete = {
-		NOR = { 
-			has_law = law_type:law_hereditary_bureaucrats 
+		NOR = {
+			has_law = law_type:law_hereditary_bureaucrats
 			has_law = law_type:law_land_based_taxation
 			has_law = law_type:law_consumption_based_taxation
 		}
-		bureaucracy >= 0 
+		bureaucracy >= 0
 		approaching_bureaucracy_shortage = no
 	}
 
@@ -435,7 +459,7 @@ je_sick_man_bureaucracy = {
 		remove_modifier = outmoded_bureaucracy
 		add_modifier = {
 			name = modifier_ottoman_bureaucratic_reform
-			months = very_long_modifier_time
+			days = very_long_modifier_time
 			is_decaying = yes
 		}
 	}

@@ -1,0 +1,1 @@
+﻿concept_cnm_battle_width = {}

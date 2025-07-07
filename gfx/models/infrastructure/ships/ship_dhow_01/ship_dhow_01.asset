@@ -1,0 +1,197 @@
+pdxmesh = {
+	name = "ship_dhow_01_mesh"
+	file = "ship_dhow_01.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 16.0 }
+		lod = { index = 2 percent = 6.0 }
+		lod = { index = 3 percent = 3.0 }
+	}
+
+	animation = { id = "moving_animation" type = "ship_dhow_01_moving.anim" }
+
+	meshsettings = {
+		name = "ship_0Shape"
+		index = 0
+		texture_diffuse = "ship_dhow_01_diffuse.dds"
+		texture_normal = "ship_dhow_01_normal.dds"
+		texture_specular = "ship_dhow_01_properties.dds"
+		texture = { file = "ship_dhow_01_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "EMISSIVE_NIGHT" "UNIT_COLOR" }
+	}
+
+	meshsettings = {
+		name = "ship_0Shape"
+		index = 1
+		texture_diffuse = "generic_ship_alpha_diffuse.dds"
+		texture_normal = "generic_ship_alpha_normal.dds"
+		texture_specular = "generic_ship_alpha_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_0Shape"
+		index = 2
+		texture_diffuse = "ship_dhow_sail_01_diffuse.dds"
+		texture_normal = "ship_dhow_sail_01_normal.dds"
+		texture_specular = "ship_dhow_sail_01_properties.dds"
+		texture = { file = "ship_dhow_sail_01_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "UNIT_COLOR" "BACKLIGHT" }
+	}
+
+	meshsettings = {
+		name = "LOD_0|flag_1|flag_1Shape"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		shader = "standard_flag_basic"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "COA_TEXTURE" "BACKLIGHT" }
+	}
+
+	meshsettings = {
+		name = "ship_Shape1"
+		index = 0
+		texture_diffuse = "ship_dhow_01_diffuse.dds"
+		texture_normal = "ship_dhow_01_normal.dds"
+		texture_specular = "ship_dhow_01_properties.dds"
+		texture = { file = "ship_dhow_01_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "EMISSIVE_NIGHT" "UNIT_COLOR" }
+	}
+
+	meshsettings = {
+		name = "ship_Shape1"
+		index = 1
+		texture_diffuse = "generic_ship_alpha_diffuse.dds"
+		texture_normal = "generic_ship_alpha_normal.dds"
+		texture_specular = "generic_ship_alpha_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_Shape1"
+		index = 2
+		texture_diffuse = "ship_dhow_sail_01_diffuse.dds"
+		texture_normal = "ship_dhow_sail_01_normal.dds"
+		texture_specular = "ship_dhow_sail_01_properties.dds"
+		texture = { file = "ship_dhow_sail_01_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "UNIT_COLOR" "BACKLIGHT" }
+	}
+
+	meshsettings = {
+		name = "LOD_1|flag_1|flag_1Shape"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		shader = "standard_flag_basic"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "COA_TEXTURE" "BACKLIGHT" }
+	}
+
+	meshsettings = {
+		name = "ship_Shape2"
+		index = 0
+		texture_diffuse = "ship_dhow_01_diffuse.dds"
+		texture_normal = "ship_dhow_01_normal.dds"
+		texture_specular = "ship_dhow_01_properties.dds"
+		texture = { file = "ship_dhow_01_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "EMISSIVE_NIGHT" "UNIT_COLOR" }
+	}
+
+	meshsettings = {
+		name = "ship_Shape2"
+		index = 1
+		texture_diffuse = "generic_ship_alpha_diffuse.dds"
+		texture_normal = "generic_ship_alpha_normal.dds"
+		texture_specular = "generic_ship_alpha_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_Shape2"
+		index = 2
+		texture_diffuse = "ship_dhow_sail_01_diffuse.dds"
+		texture_normal = "ship_dhow_sail_01_normal.dds"
+		texture_specular = "ship_dhow_sail_01_properties.dds"
+		texture = { file = "ship_dhow_sail_01_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "UNIT_COLOR" "BACKLIGHT" }
+	}
+
+	meshsettings = {
+		name = "flag_3Shape"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		shader = "standard_flag_basic"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "COA_TEXTURE" "BACKLIGHT" }
+	}
+
+	meshsettings = {
+		name = "ship_3Shape"
+		index = 0
+		texture_diffuse = "ship_dhow_01_diffuse.dds"
+		texture_normal = "ship_dhow_01_normal.dds"
+		texture_specular = "ship_dhow_01_properties.dds"
+		texture = { file = "ship_dhow_01_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "EMISSIVE_NIGHT" "UNIT_COLOR" }
+	}
+
+	meshsettings = {
+		name = "ship_3Shape"
+		index = 1
+		texture_diffuse = "ship_dhow_sail_01_diffuse.dds"
+		texture_normal = "ship_dhow_sail_01_normal.dds"
+		texture_specular = "ship_dhow_sail_01_properties.dds"
+		texture = { file = "ship_dhow_sail_01_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "UNIT_COLOR" "BACKLIGHT" }
+	}
+}
+
+entity = {
+	name = "ship_dhow_01_entity"
+	pdxmesh = "ship_dhow_01_mesh"
+
+	cull_radius = 10
+
+	default_state = "moving"
+	
+	scale = 0.5
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+
+		start_event =
+		{
+			time = 0
+			node = "loc_front"
+			particle = "ships/ship_water_front_01"
+			trigger_once = yes
+			keep_particle = no
+		}
+		
+		start_event = { sound  = { soundeffect = "event:/SFX/Animation/vehicles/transport/naval_dhow/anm_transport_naval_dhow_moving" } keep_sound = yes }
+	}
+}

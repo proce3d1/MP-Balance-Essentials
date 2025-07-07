@@ -80,61 +80,6 @@ types market_panel
 						}
 					}
 				}
-
-				### MAP MODES
-				container = {
-					parentanchor = center
-					minimumsize = { @panel_width -1 }
-					maximumsize = { @panel_width -1 }
-
-					map_modes_minimized = {
-						parentanchor = right|vcenter
-						position = { -10 0 }
-						
-						blockoverride "first_button_click" {
-							onclick = "[MarketPanel.ShowStarvation]"
-						}
-
-						blockoverride "first_button_selected" {
-							visible = "[MarketPanel.IsShowingStarvation]"
-						}
-
-						blockoverride "first_button_not_selected" {
-							visible = "[Not(MarketPanel.IsShowingStarvation)]"
-						}
-
-						blockoverride "first_button_icon" {
-							texture = "gfx/interface/icons/map_mode_icons/starvation.dds"
-						}
-
-						blockoverride "first_button_text" {
-							text = "SHOW_STARVATION_MAP_MODE"
-						}
-
-						blockoverride "second_button_click" {
-							onclick = "[MarketPanel.ShowHarvestConditions]"
-						}
-
-						blockoverride "second_button_selected" {
-							visible = "[MarketPanel.IsShowingHarvestConditions]"
-						}
-
-						blockoverride "second_button_not_selected" {
-							visible = "[Not(MarketPanel.IsShowingHarvestConditions)]"
-						}
-
-						blockoverride "second_button_icon" {
-							texture = "gfx/interface/icons/map_mode_icons/harvest_conditions.dds"
-						}
-
-						blockoverride "second_button_text" {
-							text = "SHOW_HARVEST_CONDITIONS_MAP_MODE"
-						}
-
-						blockoverride "third_button" {}
-						blockoverride "fourth_button" {}
-					}
-				}
 			}
 
 			### BASIC FOOD POP NEED
@@ -216,7 +161,7 @@ types market_panel
 					### SORT BUTTONS / COLUMN HEADERS
 					flowcontainer = {
 						sort_button = {
-							size = { 105 20 }
+							size = { 130 30 }
 							tooltip = "SORT_BY_MARKET_GOODS"
 							onclick = "[GoodsList.Sort('name')]"
 							onclick = "[GoodsList.RestoreSort]"
@@ -229,71 +174,9 @@ types market_panel
 							}
 						}
 
-						widget = {
-							size = { 95 20 }
-
-							sort_button_with_textbox = {
-								visible = "[GoodsList.HasMarketContext]"
-								size = { 95 20 }
-								onclick = "[GoodsList.Sort('sell')]"
-								onclick = "[GoodsList.RestoreSort]"
-
-								blockoverride "label_text" {
-									text = "[concept_sell_orders]"
-								}
-							}
-							
-							sort_button_with_textbox = {
-								visible = "[GoodsList.HasStateContext]"
-								size = { 95 20 }
-								onclick = "[GoodsList.Sort('production')]"
-								onclick = "[GoodsList.RestoreSort]"
-
-								blockoverride "label_text" {
-									text = "[concept_good_production]"
-								}
-							}
-						}
-
-						widget = {
-							size = { 95 20 }
-
-							sort_button_with_textbox = {
-								visible = "[GoodsList.HasMarketContext]"
-								size = { 95 20 }
-								onclick = "[GoodsList.Sort('buy')]"
-								onclick = "[GoodsList.RestoreSort]"
-
-								blockoverride "label_text" {
-									text = "[concept_buy_orders]"
-								}
-							}
-
-							sort_button_with_textbox = {
-								visible = "[GoodsList.HasStateContext]"
-								size = { 95 20 }
-								onclick = "[GoodsList.Sort('consumption')]"
-								onclick = "[GoodsList.RestoreSort]"
-
-								blockoverride "label_text" {
-									text = "[concept_good_consumption]"
-								}
-							}
-						}
-
+						
 						sort_button_with_textbox = {
-							size = { 80 20 }
-							onclick = "[GoodsList.Sort('balance')]"
-							onclick = "[GoodsList.RestoreSort]"
-							tooltip = "SORT_BY_BALANCE_TOOLTIP"
-
-							blockoverride "label_text" {
-								text = "BALANCE"
-							}
-						}
-
-						sort_button_with_textbox = {
-							size = { 80 20 }
+							size = { 90 30 }
 							onclick = "[GoodsList.Sort('price')]"
 							onclick = "[GoodsList.RestoreSort]"
 
@@ -303,12 +186,94 @@ types market_panel
 						}
 						
 						sort_button_with_textbox = {
-							size = { 85 30 }
+							size = { 80 30 }
 							onclick = "[GoodsList.Sort('shortage')]"
 							onclick = "[GoodsList.RestoreSort]"
 
 							blockoverride "label_text" {
 								text = "GOODS_SHORTAGE_SHORT_CONCEPT"
+							}
+						}
+
+						sort_button = {
+							size = { 80 30 }
+							onclick = "[GoodsList.Sort('balance')]"
+							onclick = "[GoodsList.RestoreSort]"
+							tooltip = "SORT_BY_BALANCE_TOOLTIP"
+
+							button = {
+								texture = "gfx/interface/buttons/sort_button_icons/sort_balance.dds"
+								size = { 25 25 }
+								parentanchor = center
+								alwaystransparent = yes
+							}
+						}
+
+						widget = {
+							size = { 80 30 }
+
+							sort_button = {
+								visible = "[GoodsList.HasMarketContext]"
+								size = { 80 30 }
+								onclick = "[GoodsList.Sort('sell')]"
+								onclick = "[GoodsList.RestoreSort]"
+								tooltip = "SORT_BY_SELL_ORDERS"
+
+								button = {
+									texture = "gfx/interface/buttons/sort_button_icons/sort_sell_orders.dds"
+									size = { 25 25 }
+									parentanchor = center
+									alwaystransparent = yes
+								}
+							}
+							
+							sort_button = {
+								visible = "[GoodsList.HasStateContext]"
+								size = { 80 30 }
+								onclick = "[GoodsList.Sort('production')]"
+								onclick = "[GoodsList.RestoreSort]"
+								tooltip = "SORT_BY_PRODUCTION"
+
+								button = {
+									texture = "gfx/interface/buttons/sort_button_icons/sort_production.dds"
+									size = { 25 25 }
+									parentanchor = center
+									alwaystransparent = yes
+								}
+							}
+						}
+
+						widget = {
+							size = { 80 30 }
+
+							sort_button = {
+								visible = "[GoodsList.HasMarketContext]"
+								size = { 80 30 }
+								onclick = "[GoodsList.Sort('buy')]"
+								onclick = "[GoodsList.RestoreSort]"
+								tooltip = "SORT_BY_BUY_ORDERS"
+
+								button = {
+									texture = "gfx/interface/buttons/sort_button_icons/sort_buy_orders.dds"
+									size = { 25 25 }
+									parentanchor = center
+									alwaystransparent = yes
+								}
+							}
+
+							sort_button = {
+								visible = "[GoodsList.HasStateContext]"
+								size = { 80 30 }
+								onclick = "[GoodsList.Sort('consumption')]"
+								onclick = "[GoodsList.RestoreSort]"
+								tooltip = "SORT_BY_CONSUMPTION"
+
+								button = {
+									texture = "gfx/interface/buttons/sort_button_icons/sort_consumption.dds"
+									size = { 25 25 }
+									parentanchor = center
+									alwaystransparent = yes
+								}
 							}
 						}
 					}
@@ -323,63 +288,6 @@ types market_panel
 							container = {
 								state_goods_entry_button = {
 									visible = "[Goods.HasStateContext]"
-
-									blockoverride "last_column" {
-										widget = {
-											using = market_price_tooltip_with_graph
-											size = { 80 25 }
-											flowcontainer = {
-												direction = vertical
-												minimumsize = { 80 25 }
-												margin_top = 4
-												parentanchor = left
-												textbox = {
-													align = left|nobaseline
-													raw_text = "[Goods.GetCompareIconAgainstBasePriceNoFormatting( Goods.GetStatePrice )] @money![Goods.GetStatePrice|0v]"
-													size = { 90 25 }
-													margin_left = 10
-													parentanchor = vcenter
-												}
-											}
-										}
-
-										vertical_divider = {}
-
-										widget = {
-											tooltip = "GOODS_SHORTAGE_TOOLTIP"
-											size = { 85 25 }
-											
-											flowcontainer = {
-												direction = vertical
-												minimumsize = { 85 25 }
-												margin_top = 4
-												parentanchor = right
-												textbox = {
-													visible = "[Goods.HasShortageInState]"
-													align = left|nobaseline
-													size = { 85 25 }
-													margin_right = 10
-													parentanchor = vcenter
-													margin_left = 15
-													fontsize_min = 12
-													elide = right
-													text = "FOOD_SECURITY_GOODS_ITEM_HAS_SHORTAGE_IN_STATE"
-												}
-												textbox = {
-													visible = "[Not(Goods.HasShortageInState)]"
-													align = right|nobaseline
-													size = { 85 25 }
-													margin_right = 10
-													parentanchor = vcenter
-													margin_left = 5
-													fontsize_min = 12
-													elide = right
-													using = empty_state_text_properties
-													text = "FOOD_SECURITY_GOODS_ITEM_NO_SHORTAGE"
-												}
-											}
-										}
-									}
 								}
 
 								goods_entry_button = {
@@ -387,20 +295,15 @@ types market_panel
 
 									blockoverride "last_column" {
 										widget = {
-											using = market_price_tooltip_with_graph
-											size = { 80 25 }
-											flowcontainer = {
-												direction = vertical
-												minimumsize = { 80 25 }
-												margin_top = 4
-												parentanchor = left
-												textbox = {
-													align = left|nobaseline
-													raw_text = "[Goods.GetCompareIconAgainstBasePriceNoFormatting( Goods.GetMarketPrice )] @money![Goods.GetMarketPrice|0v]"
-													size = { 90 25 }
-													margin_left = 10
-													parentanchor = vcenter
-												}
+											size = { 90 55 }
+
+											textbox = {
+												parentanchor = vcenter
+												align = right|nobaseline
+												size = { 80 40 }
+												fontsize_min = 12
+												elide = right
+												raw_text = "@money![Goods.GetMarketPrice|0v] [Goods.GetCompareIconAgainstBasePriceNoFormatting( Goods.GetMarketPrice )]"
 											}
 										}
 
@@ -408,36 +311,31 @@ types market_panel
 
 										widget = {
 											tooltip = "GOODS_SHORTAGE_TOOLTIP"
-											size = { 85 25 }
+											size = { 80 55 }
 											
-											flowcontainer = {
-												direction = vertical
-												minimumsize = { 85 25 }
-												margin_top = 4
-												parentanchor = right
-												textbox = {
-													visible = "[Goods.HasShortageInMarket]"
-													align = left|nobaseline
-													size = { 85 25 }
-													margin_right = 10
-													parentanchor = vcenter
-													margin_left = 15
-													fontsize_min = 12
-													elide = right
-													text = "FOOD_SECURITY_GOODS_ITEM_HAS_SHORTAGE_IN_MARKET"
-												}
-												textbox = {
-													visible = "[Not(Goods.HasShortageInMarket)]"
-													align = right|nobaseline
-													size = { 85 25 }
-													margin_right = 10
-													parentanchor = vcenter
-													margin_left = 5
-													fontsize_min = 12
-													elide = right
-													using = empty_state_text_properties
-													text = "FOOD_SECURITY_GOODS_ITEM_NO_SHORTAGE"
-												}
+											textbox = {
+												visible = "[Goods.HasShortageInMarket]"
+												align = right|nobaseline
+												size = { 80 40 }
+												margin_right = 10
+												parentanchor = vcenter
+												margin_left = 5
+												fontsize_min = 12
+												elide = right
+												text = "FOOD_SECURITY_GOODS_ITEM_HAS_SHORTAGE_IN_MARKET"
+											}
+
+											textbox = {
+												visible = "[Not(Goods.HasShortageInMarket)]"
+												align = right|nobaseline
+												size = { 80 40 }
+												margin_right = 10
+												parentanchor = vcenter
+												margin_left = 5
+												fontsize_min = 12
+												elide = right
+												using = empty_state_text_properties
+												text = "FOOD_SECURITY_GOODS_ITEM_NO_SHORTAGE"
 											}
 										}
 									}

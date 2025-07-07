@@ -46,7 +46,7 @@ pm_steam_trains = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 25
+			state_infrastructure_add = 30
 			state_pollution_generation_add = 20
 		}
 		unscaled = {
@@ -78,7 +78,7 @@ pm_electric_trains = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 30
+			state_infrastructure_add = 40
 		}
 		unscaled = {
 			state_market_access_price_impact = 0.05
@@ -112,15 +112,13 @@ pm_diesel_trains = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 40
+			state_infrastructure_add = 50
 			state_pollution_generation_add = 15
 		}
 		unscaled = {
 			state_market_access_price_impact = 0.1
 		}
 	}
-	
-	required_input_goods = oil
 }
 
 pm_no_passenger_trains = {
@@ -179,7 +177,6 @@ pm_electric_passenger_carriages = {
 	required_input_goods = electricity
 }
 
-
 pm_auto_disabled_building_railway = {
 	texture = "gfx/interface/icons/production_method_icons/no_automation.dds"
 }
@@ -209,6 +206,7 @@ pm_watertube_boiler_building_railway = {
 		}
 
 		level_scaled = {
+			state_infrastructure_add = 5
 			building_employment_laborers_add = -1500
 		}
 	}
@@ -239,6 +237,7 @@ pm_rotary_valve_engine_building_railway = {
 		}
 
 		level_scaled = {
+			state_infrastructure_add = 5
 			building_employment_laborers_add = -2000
 		}
 	}
@@ -268,6 +267,7 @@ pm_steam_donkey_building_railway = {
 		}
 
 		level_scaled = {
+			state_infrastructure_add = 10
 			building_employment_laborers_add = -2000
 			building_employment_machinists_add = -500
 		}
@@ -301,7 +301,7 @@ pm_steam_trains_principle_transport_3 = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 30
+			state_infrastructure_add = 40
 			state_pollution_generation_add = 25
 		}
 		unscaled = {
@@ -337,7 +337,7 @@ pm_electric_trains_principle_transport_3 = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 40
+			state_infrastructure_add = 50
 		}
 		unscaled = {
 			state_market_access_price_impact = 0.1
@@ -374,7 +374,7 @@ pm_diesel_trains_principle_transport_3 = {
 
 	state_modifiers = {
 		workforce_scaled = {
-			state_infrastructure_add = 55
+			state_infrastructure_add = 60
 			state_pollution_generation_add = 20
 		}
 	unscaled = {

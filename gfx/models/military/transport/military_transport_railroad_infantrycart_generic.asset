@@ -1,0 +1,113 @@
+pdxmesh = {
+	name = "military_transport_railroad_infantrycart_generic_mesh"
+	file = "military_transport_railroad_infantrycart_generic.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 6.0 }
+		lod = { index = 2 percent = 3.0 }
+		lod = { index = 3 percent = 1.5 }
+	}
+
+	animation = { id = "moving_animation" type = "military_transport_railroad_infantrycart_generic_moving.anim" }
+
+	meshsettings = {
+		name = "infantrycart_0ShapeDeformed"
+		index = 0
+		texture_diffuse = "military_transport_railroad_wagon_generic_diffuse.dds"
+		texture_normal = "military_transport_railroad_wagon_generic_normal.dds"
+		texture_specular = "military_transport_railroad_wagon_generic_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "infantrycart_0ShapeDeformed"
+		index = 1
+		texture_diffuse = "military_transport_railroad_infantrycart_generic_01_diffuse.dds"
+		texture_normal = "military_transport_railroad_infantrycart_generic_01_normal.dds"
+		texture_specular = "military_transport_railroad_infantrycart_generic_01_properties.dds"
+		shader = "standard"
+		additional_shader_defines = {"EMISSIVE_NIGHT" "COA_TEXTURE" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "infantrycart_1ShapeDeformed"
+		index = 0
+		texture_diffuse = "military_transport_railroad_wagon_generic_diffuse.dds"
+		texture_normal = "military_transport_railroad_wagon_generic_normal.dds"
+		texture_specular = "military_transport_railroad_wagon_generic_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "infantrycart_1ShapeDeformed"
+		index = 1
+		texture_diffuse = "military_transport_railroad_infantrycart_generic_01_diffuse.dds"
+		texture_normal = "military_transport_railroad_infantrycart_generic_01_normal.dds"
+		texture_specular = "military_transport_railroad_infantrycart_generic_01_properties.dds"
+		shader = "standard"
+		additional_shader_defines = {"EMISSIVE_NIGHT" "COA_TEXTURE" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "infantrycart_2ShapeDeformed"
+		index = 0
+		texture_diffuse = "military_transport_railroad_wagon_generic_diffuse.dds"
+		texture_normal = "military_transport_railroad_wagon_generic_normal.dds"
+		texture_specular = "military_transport_railroad_wagon_generic_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "infantrycart_2ShapeDeformed"
+		index = 1
+		texture_diffuse = "military_transport_railroad_infantrycart_generic_01_diffuse.dds"
+		texture_normal = "military_transport_railroad_infantrycart_generic_01_normal.dds"
+		texture_specular = "military_transport_railroad_infantrycart_generic_01_properties.dds"
+		shader = "standard"
+		additional_shader_defines = {"EMISSIVE_NIGHT" "COA_TEXTURE" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "infantrycart_3ShapeDeformed"
+		index = 0
+		texture_diffuse = "military_transport_railroad_wagon_generic_diffuse.dds"
+		texture_normal = "military_transport_railroad_wagon_generic_normal.dds"
+		texture_specular = "military_transport_railroad_wagon_generic_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "infantrycart_3ShapeDeformed"
+		index = 1
+		texture_diffuse = "military_transport_railroad_infantrycart_generic_01_diffuse.dds"
+		texture_normal = "military_transport_railroad_infantrycart_generic_01_normal.dds"
+		texture_specular = "military_transport_railroad_infantrycart_generic_01_properties.dds"
+		shader = "standard"
+		additional_shader_defines = {"EMISSIVE_NIGHT" "COA_TEXTURE" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+
+
+entity = {
+	name = "military_transport_railroad_infantrycart_generic_entity"
+	pdxmesh = "military_transport_railroad_infantrycart_generic_mesh"
+	
+	scale = 0.5
+	default_state = "moving"
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		start_event = { time = 0 node = "loc_vfx" particle = "trains/infantry" trigger_once = yes}
+		animation_speed = 2
+		event = { time = 0.0 keep_sound = no sound  = { soundeffect = "event:/SFX/Animation/vehicles/transport/railroad_infantrycart/anm_military_transport_railroad_infantrycart_generic" }}
+	}
+}

@@ -1,0 +1,199 @@
+﻿cnm_commander_defense = {
+	value = modifier:unit_defense_mult
+	if = {
+		limit = {
+			has_commander_order = defend
+		}
+		add = -0.1
+	}
+	if = {
+		limit = {
+			has_commander_order = defend_dig_in
+		}
+		add = -0.15
+	}
+	if = {
+		limit = {
+			has_commander_order = defend_last_stand
+		}
+		add = -0.2
+	}
+	if = {
+		limit = {
+			has_commander_order = defend_guerilla_warfare
+		}
+		add = -0.1
+	}
+}
+cnm_commander_offense = {
+	value = modifier:unit_offense_mult
+	if = {
+		limit = {
+			has_commander_order = advance
+		}
+		add = -0.1
+	}
+	if = {
+		limit = {
+			has_commander_order = advance_reckless
+		}
+		add = -0.15
+	}
+	if = {
+		limit = {
+			has_commander_order = advance_cavalry_assualt
+		}
+		add = -0.1
+	}
+	if = {
+		limit = {
+			has_commander_order = advance_tank_assualt
+		}
+		add = -0.15
+	}
+	if = {
+		limit = {
+			has_commander_order = escort_convoys
+		}
+		add = 0.1
+	}
+	if = {
+		limit = {
+			has_commander_order = escort_convoys_advanced
+		}
+		add = 0.05
+	}
+}
+cnm_state_building_government_administration_tax_capacity = {
+	value = modifier:state_tax_capacity_add
+	#base_values
+	subtract = 100
+	if = {
+		limit = {
+			owner = {
+				has_technology_researched = centralization
+			}
+		}
+		subtract = 25
+	}
+	if = {
+		limit = {
+			owner = {
+				has_technology_researched = central_archives
+			}
+		}
+		subtract = 25
+	}
+	if = {
+		limit = {
+			owner = {
+				has_technology_researched = identification_documents
+			}
+		}
+		subtract = 25
+	}
+	if = {
+		limit = {
+			owner = {
+				has_technology_researched = central_planning
+			}
+		}
+		subtract = 25
+	}
+	if = {
+		limit = {
+			owner = {
+				has_technology_researched = mass_surveillance
+			}
+		}
+		subtract = 25
+	}
+	multiply = {
+		value = 1
+		add = modifier:state_tax_capacity_mult
+	}
+}
+cnm_state_building_government_administration_tax_capacity_per_level = {
+	value = cnm_state_building_government_administration_tax_capacity
+	if = {
+		limit = {
+			any_scope_building = {
+				is_building_type = building_government_administration
+			}
+		}
+		divide = b:building_government_administration.level
+	}
+	else = {
+		value = 0
+	}
+}
+cnm_state_building_government_administration_tax_capacity_rate = {
+	value = cnm_state_building_government_administration_tax_capacity
+	if = {
+		limit = {
+			any_scope_building = {
+				is_building_type = building_government_administration
+			}
+		}
+		divide = b:building_government_administration.level
+	}
+	divide = tax_capacity_usage
+}
+cnm_state_building_government_administration_profit = {
+	if = {
+		limit = {
+			any_scope_building = {
+				is_building_type = building_government_administration
+			}
+		}
+		value = b:building_government_administration.weekly_profit
+		divide = b:building_government_administration.level
+	}
+	else = {
+		value = 0
+	}
+}
+cnm_state_building_government_administration_cost = {
+	value = cnm_state_building_government_administration_profit
+	multiply = -1
+}
+
+cnm_state_available_workers = {
+	value = cnm_state_subsistence_workers
+	add = cnm_state_unemployed
+}
+
+cnm_state_unemployed = {
+	add = state_population
+	multiply = state_unemployment_rate
+}
+
+cnm_state_subsistence_workers = {
+	every_scope_building = {
+		limit = {
+			is_subsistence_building = yes
+		}
+		add = {
+			add = {
+				add = modifier:building_employment_peasants_add
+				add = modifier:building_employment_clergymen_add
+				add = modifier:building_employment_aristocrats_add
+				add = modifier:building_employment_farmers_add
+				add = modifier:building_employment_bureaucrats_add
+			}
+			multiply = occupancy
+		}
+	}
+}
+
+cnm_state_available_workers_5k = {
+	if = {
+		limit = {
+			cnm_state_available_workers > 5000
+		}
+		value = 1
+	}
+	else ={
+		value = 0
+	}
+}

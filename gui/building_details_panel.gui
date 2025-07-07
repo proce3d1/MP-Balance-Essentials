@@ -25,7 +25,7 @@ types building_panels
 
 		blockoverride "window_header_name"
 		{
-			text = "[Building.GetName]"
+			text = "[LabelingHelper.CapitalizeOnlyFirst(Building.GetNameNoFormatting)]"
 		}
 
 		blockoverride "window_header_name_line_two"
@@ -137,7 +137,7 @@ types building_panels
 		}
 		
 		blockoverride "pin_visibility" {
-			visible = "[ObjectsEqual(Building.GetState.GetOwner, GetPlayer.Self)]"
+			visible = "[Building.IsValid]"
 		}
 
 		blockoverride "pin_properties" {
@@ -188,11 +188,13 @@ types building_panels
 
 				### BUILDING ICON
 				button = {
+					visible = "[Not(Building.IsBuildingType('building_company_headquarter'))]" #todo - PRCAL-38246 Make sure this function works for company HQs, does not seem to be correct atm, but it works for other building types.
+					size = { 115 115 }
+					onrightclick = "[RightClickMenuManager.ShowForBuilding(Building.AccessSelf)]"
+
 					tooltipwidget = {
 						FancyTooltip_Building = {}
 					}
-					onrightclick = "[RightClickMenuManager.ShowForBuilding(Building.AccessSelf)]"
-					size = { 115 115 }
 
 					icon = {
 						alpha = "[TransparentIfFalse(Building.IsActive)]"
@@ -206,6 +208,32 @@ types building_panels
 							size = { 30 30 }
 							texture = "gfx/interface/production_methods/auto_downsize.dds"
 						}
+					}
+
+					icon = {
+						visible = "[And( GreaterThan_int32( Building.GetExpansionLevel, '(int32)0'), Not( Building.IsActive ))]"
+						size = { 100% 100% }
+						texture = "gfx/interface/icons/generic_icons/inactive_building.dds"
+					}
+				}
+
+				### BUILDING COMPANY ICON
+				button = {
+					visible = "[Building.IsBuildingType('building_company_headquarter')]"
+					datacontext = "[Building.GetCompany]"
+					parentanchor = hcenter
+					size = { 115 115 }
+					using = tooltip_se
+					tooltip = "GO_TO_BUTTON_COMPANY"
+					onclick = "[InformationPanelBar.OpenCompanyPanel(Company.Self)]"
+					texture = "[Company.GetCompanyType.GetIcon]"
+
+					icon = {
+						visible = "[Building.IsAutoDownsizing]"
+						tooltip = "[Building.GetAutoDownsizeTooltip]"
+						position = { 5 5 }
+						size = { 30 30 }
+						texture = "gfx/interface/production_methods/auto_downsize.dds"
 					}
 
 					icon = {
@@ -315,30 +343,6 @@ types building_panels
 			}
 		}
 
-		flowcontainer = {
-			visible = "[Building.IsBuildingType('building_trade_center')]"
-			margin_top = 5
-			margin_bottom = 5
-			parentanchor = hcenter
-			
-			button = {
-				using = default_button
-				onclick = "[InformationPanelBar.OpenMarketPanel(Building.AccessState.AccessMarket)]"
-
-				textbox = {
-					resizeparent = yes
-					text = "[Building.GetState.GetMarket.GetName]"
-					align = center|nobaseline
-					autoresize = yes
-					maximumsize = { @panel_width -1 }
-					minimumsize = { @panel_width -1 }
-					margin = { 10 10 }
-					multiline = yes
-					parentanchor = center
-				}
-			}
-		}
-
 		widget = { size = { 5 5 } }
 		divider_decorative = {}
 		widget = { size = { 5 5 } }
@@ -348,15 +352,15 @@ types building_panels
 			margin_top = 0
 			
 			blockoverride "state_name_button" {}
-			
+
 			blockoverride "productivity" {}
-			
-			blockoverride "balance" {}
 
 			blockoverride "animated_building_controls" {}
 			blockoverride "animated_building_controls_trigger" {}
 
 			blockoverride "background" {}
+
+			blockoverride "action_status_icons" {}
 
 			blockoverride "divider" {
 				widget = { size = { 5 5 }}
@@ -437,12 +441,13 @@ types building_panels
 					container = {
 						background = {
 							using = fade_right_entry_header_colored
-							color = "[BuildingOwnership.GetOwnedBuilding.GetState.GetOwner.GetMapColor]"
+							color = "[Select_CVector4f( BuildingOwnership.GetOwnedBuilding.IsValid, BuildingOwnership.GetOwnedBuilding.GetState.GetOwner.GetMapColor, Building.GetOwner.GetMapColor )]"
 							margin_top = 4
 							margin_left = 5
 						}
 
 						flowcontainer = {
+							visible = "[BuildingOwnership.GetOwnedBuilding.IsValid]"
 							tooltip = "PROPERTY_SHARE_CHART_TOOLTIP"
 							margin_bottom = 4
 							icon = {
@@ -497,6 +502,23 @@ types building_panels
 								default_format = "#v"
 							}
 						}
+						
+						flowcontainer = {
+							visible = "[Not(BuildingOwnership.GetOwnedBuilding.IsValid)]"
+							tooltip = "PROPERTY_SHARE_CHART_TOOLTIP"
+							margin_bottom = 4
+							minimumsize = { 250 30 }
+							
+							textbox = {
+								size = { 120 30 }
+								text = "BUILDING_OWNERSHIP_INVALID_ENTRY"
+								align = right|nobaseline
+								margin_right = 5
+								fontsize_min = 12
+								elide = right
+							}
+						}
+						
 						divider_clean = {
 							parentanchor = bottom|hcenter
 							size = { 100% 1 }
@@ -506,37 +528,64 @@ types building_panels
 			}
 		}
 
+		### WORLD MARKET INFO
 		flowcontainer = {
-			visible = "[Building.HasTradeRouteRevenue]"
+			datacontext = "[Building.AccessState]"
+			visible = "[ObjectsEqual(Building.GetBuildingType, GetBuildingType('building_trade_center').Self)]"
 			using = default_list_position
 			direction = vertical
 			minimumsize = { @panel_width -1 }
 
 			default_header_2texts = {
 				blockoverride "text1" {
-					text = "TRADE_ROUTES"
+					text = "concept_world_market"
 				}
-			}
 
-			dynamicgridbox = {
-				datamodel = "[Building.AccessPlayerTradeRoutes]"
-				parentanchor = hcenter
-				
-				item = {
-					trade_route_list_item = {
-						datacontext = "[Building.GetState.GetOwner]"
-						datacontext = "[Building.GetState.GetMarket]"
+				blockoverride "right" {
+					button_icon_goto = {
+						position = { -10 0 }
+						size = { 28 28 }
+						parentanchor = vcenter|right
+						onclick = "[InformationPanelBar.OpenPanel('world_market')]"
+						tooltip = "GOTO_WORLD_MARKET"
 					}
 				}
 			}
-			dynamicgridbox = {
-				datamodel = "[Building.AccessNonPlayerTradeRoutes]"
+
+			flowcontainer = {
 				parentanchor = hcenter
+				spacing = 10
+				margin_top = 10
+				margin_bottom = 10 
+
+				state_panel_status_item_small = {
+					tooltip = "STATE_WORLD_MARKET_ACCESS_DESC"
+					alwaystransparent = no
+
+					blockoverride "texture" {
+						texture = "gfx/interface/icons/generic_icons/world_market.dds"
+					}
+
+					blockoverride "name" {
+						text = "STATE_WORLD_MARKET_ACCESS"
+					}
+
+					blockoverride "alpha" {
+						alpha = "[TransparentIfZero_int32(State.GetTradeCapacity)]"
+					}
+				}			
 				
-				item = {
-					trade_route_list_item = {
-						datacontext = "[Building.GetState.GetOwner]"
-						datacontext = "[Building.GetState.GetMarket]"						
+				state_panel_status_item_small = {
+					tooltip = "STATE_TRADE_CAPACITY_DESC"
+					visible = "[GreaterThan_int32(State.GetTradeCapacity,'(int32)0')]"
+					alwaystransparent = no
+
+					blockoverride "texture" {
+						texture = "gfx/interface/icons/state_status_icons/trade_capacity.dds"
+					}
+
+					blockoverride "name" {
+						text = "STATE_TRADE_CAPACITY"
 					}
 				}
 			}
@@ -580,6 +629,7 @@ types building_panels
 							align = left|nobaseline
 							using = fontsize_large
 						}
+
 						textbox = {
 							visible = "[Building.IsGovernmentFunded]"
 							text = "GOVERNMENTAL_EXPENSES"
@@ -945,18 +995,46 @@ types building_panels
 						}
 					}
 
+					### Subsistence output
+					building_process_entry = {
+						tooltip = "[Building.GetSubsistenceOutputDesc]"
+
+						blockoverride "visible" {
+							visible = "[GreaterThan_CFixedPoint(Building.GetSubsistenceOutput, '(CFixedPoint)0')]"
+						}
+						blockoverride "text" {
+							text = "[concept_subsistence_output]"
+						}
+						blockoverride "text_right" {
+							raw_text = "@money![Building.GetSubsistenceOutput|Dv]"
+						}
+					}
+
 					### trade revenue
 					building_process_entry = {
 						blockoverride "visible" {
-							visible = "[Building.HasTradeRouteRevenue]"
+							visible = "[Building.HasTradeRevenue]"
 						}
 						blockoverride "text" {
 							text = "[concept_trade_revenue]"
 						}
 						blockoverride "text_right" {
-							raw_text = "#variable @money![Building.GetTradeRouteRevenue|K]#!"
+							raw_text = "#variable @money![Building.GetTradeRevenue|K]#!"
 						}
 					}
+					
+					### subventions
+					building_process_entry = {
+						blockoverride "visible" {
+							visible = "[GreaterThan_CFixedPoint(Building.GetSubventions, '(CFixedPoint)0')]"
+						}
+						blockoverride "text" {
+							text = "[concept_subventions]"
+						}
+						blockoverride "text_right" {
+							raw_text = "#variable @money![Building.GetSubventions|K]#!"
+						}
+					}						
 
 					building_process_entry = {
 						tooltip = BUILDING_URBANIZATION_TOOLTIP
@@ -1022,8 +1100,150 @@ types building_panels
 			}
 
 		}
-
 		
+		widget = { 
+			size = { 10 10 }
+		}	
+
+		flowcontainer = {
+			direction = vertical
+			parentanchor = hcenter
+			visible = "[ObjectsEqual(Building.GetBuildingType, GetBuildingType('building_trade_center').Self)]"
+
+			### IMPORTS
+			flowcontainer = {
+				using = default_list_position
+				visible = "[NotZero_CFixedPoint(Building.AccessState.GetTotalImportRevenue)]"
+				direction = vertical
+				minimumsize = { @panel_width -1 }
+
+				default_header_2texts = {
+					blockoverride "text1" {
+						text = "IMPORTS"
+					}
+					blockoverride "right" {
+						textbox = {
+							datacontext = "[Building.AccessState]"
+							text = "IMPORTS_TOTAL"
+							autoresize = yes
+							multiline = yes
+							maximumsize = { 250 -1 }
+							margin_right = 10
+							parentanchor = right|vcenter
+							align = right|nobaseline
+						}
+					}
+				}
+
+				trade_center_trade_headers = {}
+				
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					datamodel = "[Building.AccessState.GetImports]"
+					margin_bottom = 10
+					
+					item = {
+						building_imports_exports_item = {}		
+					}
+				}
+			}
+			
+			### EXPORTS
+			flowcontainer = {
+				using = default_list_position
+				visible = "[NotZero_CFixedPoint(Building.AccessState.GetTotalExportRevenue)]"
+				direction = vertical
+				minimumsize = { @panel_width -1 }
+
+				default_header_2texts = {
+					blockoverride "text1" {
+						text = "EXPORTS"
+					}
+
+					blockoverride "right" {
+						textbox = {
+							datacontext = "[Building.AccessState]"
+							text = "EXPORTS_TOTAL"
+							autoresize = yes
+							multiline = yes
+							maximumsize = { 250 -1 }
+							margin_right = 10
+							parentanchor = right|vcenter
+							align = right|nobaseline
+						}
+					}
+				}
+
+				trade_center_trade_headers = {
+					blockoverride "trade_direction_price_text" {
+						text = "concept_export_price"
+						tooltip = "concept_export_price"
+					}
+
+					blockoverride "trade_direction_text" {
+						text = "IMPORTERS"
+						tooltip = "IMPORTERS"
+					}
+				}
+				
+				flowcontainer = {
+					parentanchor = hcenter
+					direction = vertical
+					datamodel = "[Building.AccessState.GetExports]"
+					margin_bottom = 10
+					
+					item = {
+						building_imports_exports_item = {
+							blockoverride "tooltip" {
+								tooltip = "[Goods.GetStateExportsDesc]"
+							}
+
+							blockoverride "amount" {
+								raw_text = "[Building.GetState.GetExportedAmount(Goods.Self)|v0D]"
+							}	
+
+							blockoverride "amount_progressbar_widget_properties" {
+								tooltip = "STATE_GOODS_EXPORT_DEPENDENCE"
+								visible = "[GreaterThan_CFixedPoint(Goods.GetStateConsumption, '(CFixedPoint)0')]"
+
+								gold_progressbar_horizontal = {
+									size = { 100% 100% }
+									alpha = "[TransparentIfZero(Goods.GetStateExports)]"
+								
+									blockoverride "values" {
+										min = 0
+										max = "[Goods.GetStateConsumption]"
+										value = "[Goods.GetStateExports]"
+									}
+								}
+							}
+
+							blockoverride "first_price" {
+								raw_text = "[Goods.GetCompareIconAgainstBasePriceNoFormatting( Goods.GetStatePrice )] [Goods.GetStatePrice|v1]"						
+							}
+							
+							blockoverride "second_price" {
+								raw_text = "[Goods.GetCompareIconAgainstBasePriceNoFormatting( Goods.GetStateExportPrice )] [Goods.GetStateExportPrice|v1]"						
+							}	
+							
+							blockoverride "advantage" {
+								raw_text = "[Goods.GetStateRelativeExportAdvantage|=+%0]"
+								tooltip = "[Goods.GetStateRelativeExportAdvantageDesc]"
+							}
+
+							blockoverride "revenue" {
+								raw_text = "@money![Building.GetState.GetExportRevenue(Goods.Self)|+K]"
+							}
+
+							blockoverride "provider"{
+								datamodel = "[Goods.GetImportersFromState]"
+							}
+						}		
+					}						
+				}
+			}
+		}
 
 		### FORMATIONS
 		flowcontainer = {
@@ -1067,107 +1287,136 @@ types building_panels
 						align = left|nobaseline
 					}
 				}
+
 				flowcontainer = {
+					parentanchor = hcenter
 					direction = vertical
 					datamodel = "[Building.GetMilitaryFormations]"
 
 					item = {
 						flowcontainer = {
-							margin = { 5 5 }
-							spacing = 10
+							direction = vertical
+							spacing = 5
+
 							background = {
-								using = entry_bg_simple
+								using = dropdown_background
+								margin = { 0 -2 }
 							}
 
-							tooltipwidget = {
-								FancyTooltip_MilitaryFormation = {}
-							}
-
-							icon = {
-								size = { 40 40 }
-								texture = "[MilitaryFormation.GetFlag]"
-								color = "[MilitaryFormation.GetFlagColor]"
-							}
-							flowcontainer = {
-								spacing = 10
-								maximumsize = { 190 -1 }
-								minimumsize = { 190 -1 }
-								parentanchor = vcenter
-								textbox = {
-									autoresize = yes
-									text = "[MilitaryFormation.GetNameNoFormatting]"
-									parentanchor = vcenter
-									align = nobaseline
-									maximumsize = { 155 -1 }
-									elide = right
-									fontsize_min = 12
+							section_header_button = {
+								blockoverride "layout" {
+									parentanchor = hcenter
+									size = { @panel_width_minus_10 38 }
 								}
-								button_icon_goto = {
-									parentanchor = vcenter
-									size = { 25 25 }
-										onclick = "[InformationPanelBar.OpenMilitaryFormationPanelTab( MilitaryFormation.AccessSelf, 'mobilization' )]"
-									tooltip = "GO_TO_BUTTON_MILITARY_FORMATION"
-									block "goto_visibility" {}
-								}
-							}
-							textbox = {
-								autoresize = yes
-								maximumsize = { 60 -1 }
-								minimumsize = { 60 -1 }
-								text = "UNITS_PROVIDED_FROM_BUILDING"
-								tooltip = "UNITS_PROVIDED_FROM_BUILDING_TOOLTIP"
-								parentanchor = vcenter
-								align = right|nobaseline
-							}
 
-							textbox = {
-								autoresize = yes
-								maximumsize = { 60 -1 }
-								minimumsize = { 60 -1 }
-								text = "[MilitaryFormation.GetSupply]"
-								parentanchor = vcenter
-								align = right|nobaseline
-							}
-
-							overlappingitembox = {
-								size = { 140 25 }
-								alpha = "[TransparentIfFalse(MilitaryFormation.IsMobilized)]"
-
-								parentanchor = vcenter 
-
-								datamodel = "[MilitaryFormation.GetMobilizationOptions]"
-
-								item = {
-									icon = {
-										size = { 25 25 }
-										texture = "[MobilizationOption.GetTexture]"
-										visible = "[MobilizationOption.IsActivated(MilitaryFormation.AccessSelf)]"
+								blockoverride "left_textbox" {
+									hbox = {
+										layoutpolicy_horizontal = expanding
+										layoutpolicy_vertical = expanding
+										spacing = 5
+										margin_left = 30
 
 										tooltipwidget = {
-											FancyTooltip_MobilizationOption = {}
+											FancyTooltip_MilitaryFormation = {}
 										}
 
+										widget = {
+											size = { 195 38 }
+
+											icon = {
+												parentanchor = vcenter
+												size = { 32 32 }
+												texture = "[MilitaryFormation.GetFlag]"
+												color = "[MilitaryFormation.GetFlagColor]"
+											}
+
+											textbox = {
+												parentanchor = vcenter
+												position = { 35 0 }
+												autoresize = yes
+												align = nobaseline
+												max_width = 120
+												elide = right
+												fontsize_min = 12
+												text = "[MilitaryFormation.GetNameNoFormatting]"
+											}
+
+											button_icon_goto = {
+												block "goto_visibility" {}
+												parentanchor = right|vcenter
+												size = { 25 25 }
+												tooltip = "GO_TO_BUTTON_MILITARY_FORMATION"
+												onclick = "[InformationPanelBar.OpenMilitaryFormationPanelTab( MilitaryFormation.Self, 'mobilization' )]"
+											}
+										}
+
+										textbox = {
+											maximumsize = { 65 38 }
+											minimumsize = { 65 38 }
+											align = right|nobaseline
+											text = "UNITS_PROVIDED_FROM_BUILDING"
+											tooltip = "UNITS_PROVIDED_FROM_BUILDING_TOOLTIP"
+										}
+
+										textbox = {
+											maximumsize = { 60 38 }
+											minimumsize = { 60 38 }
+											align = right|nobaseline
+											text = "[MilitaryFormation.GetSupply]"
+										}
+
+										overlappingitembox = {
+											size = { 140 25 }
+											alpha = "[TransparentIfFalse(MilitaryFormation.IsMobilized)]"
+											datamodel = "[MilitaryFormation.GetMobilizationOptions]"
+
+											item = {
+												icon = {
+													size = { 25 25 }
+													texture = "[MobilizationOption.GetTexture]"
+													visible = "[MobilizationOption.IsActivated(MilitaryFormation.AccessSelf)]"
+
+													tooltipwidget = {
+														FancyTooltip_MobilizationOption = {}
+													}
+
+												}
+											}
+										}
+									}
+								}
+
+								blockoverride "onclick" {
+									onclick = "[GetVariableSystem.Toggle( Concatenate('show_units_', MilitaryFormation.GetIDString) )]"
+								}
+
+								blockoverride "onclick_showmore" {
+									visible = "[Not(GetVariableSystem.Exists( Concatenate('show_units_', MilitaryFormation.GetIDString) ))]"
+								}
+
+								blockoverride "onclick_showless" {
+									visible = "[GetVariableSystem.Exists( Concatenate('show_units_', MilitaryFormation.GetIDString) )]"
+								}
+							}
+
+							flowcontainer = {
+								visible = "[GetVariableSystem.Exists( Concatenate('show_units_', MilitaryFormation.GetIDString) )]"
+								parentanchor = hcenter
+								direction = vertical
+								margin_bottom = 5
+
+								combat_units_list = {
+									parentanchor = hcenter
+									datacontext = "[Building.GetOwner]"
+									datamodel = "[Building.GetCombatUnitsInFormation(MilitaryFormation.Self)]"
+
+									blockoverride "combat_unit_goto_button" {}
+									blockoverride "combat_unit_name_maximumsize" {
+										maximumsize = { 205 -1 }
 									}
 								}
 							}
 						}
-					}
-				}
-			}
-
-			flowcontainer = {
-				margin_top = 10 
-				direction = vertical
-				parentanchor = hcenter
-
-				combat_units_list = {
-					visible = "[InDebugMode]"
-					datacontext = "[Building.GetOwner]"
-					datamodel = "[Building.GetCombatUnits]"
-
-					blockoverride "combat_unit_goto_button" {}
-					blockoverride "combat_unit_name_maximumsize" {
-						maximumsize = { 205 -1 }
 					}
 				}
 			}
@@ -1192,7 +1441,7 @@ types building_panels
 		flowcontainer = {
 			datacontext = "[Building.AccessPopsList]"
 			datacontext = "[Building]"
-			datamodel = "[PopList.AccessPopList]"
+			datamodel = "[PopList.GetItems]"
 			direction = vertical
 			using = default_list_position
 			spacing = 10
@@ -1258,7 +1507,7 @@ types building_panels
 
 			flowcontainer = {
 				margin_top = 5
-				margin_bottom = 5
+				margin_bottom = 15
 				parentanchor = hcenter
 
 				building_ownership_stacked_barchart = {}
@@ -1465,6 +1714,225 @@ types building_panels
 		}
 	}
 
+	type trade_center_trade_headers = flowcontainer {
+		parentanchor = hcenter
+		minimumsize = { @panel_width -1 }
+		margin_top = 5
+		margin_bottom = 2
+
+		sort_button = {
+			enabled = no
+			size = { 40 20 }
+
+			icon = {
+				texture = "gfx/interface/buttons/sort_button_icons/sort_icon_good.dds"
+				size = { 23 23 }
+				parentanchor = center
+			}
+		}
+
+		sort_button = {
+			text = "AMOUNT"
+			tooltip = "AMOUNT"
+			enabled = no
+			
+			size = { 64 20 }
+			align = hcenter|nobaseline
+		}
+
+		sort_button = {
+			block "trade_direction_price_text" {
+				text = "concept_import_price"
+				tooltip = "concept_import_price"
+			}
+
+			enabled = no
+			
+			size = { 80 20 }
+			elide = right
+		}
+
+		sort_button = {
+			text = "concept_local_price"
+			tooltip = "concept_local_price"
+
+			enabled = no
+			
+			size = { 80 20 }
+			elide = right
+		}
+
+		sort_button = {
+			text = "concept_trade_advantage"
+			tooltip = "concept_trade_advantage"
+
+			enabled = no
+			
+			size = { 60 20 }
+			elide = right
+		}
+
+		sort_button = {
+			block "trade_direction_text" {
+				text = "EXPORTERS"
+				tooltip = "EXPORTERS"
+			}
+
+			enabled = no
+			
+			size = { 129 20 }
+			elide = right
+		}
+
+		sort_button = {
+			text = "concept_revenue"
+			tooltip = "concept_revenue"
+
+			enabled = no
+			
+			size = { 87 20 }
+			elide = right
+		}
+	}
+	
+	type building_imports_exports_item = button {
+
+		block "tooltip" {
+			tooltip = "[Goods.GetStateImportsDesc]"
+		}			
+
+		using = default_button
+		onclick = "[InformationPanelBar.OpenGoodsStatePanel(Building.GetState, Goods.Self)]"
+		onrightclick = "[RightClickMenuManager.ShowForGoods(Goods.AccessSelf)]"
+
+		flowcontainer = {
+			resizeparent = yes
+			minimumsize = { @panel_width 40 }
+			margin_left = 7
+
+			icon = {
+				size = { 30 30 }
+				texture = "[Goods.GetTexture]"
+				parentanchor = vcenter
+			}
+
+			widget = { size = { 7 7 }}
+
+			flowcontainer = {
+				direction = vertical
+				parentanchor = vcenter
+
+				textbox = {
+					block "amount" {
+						raw_text = "[Building.GetState.GetImportedAmount(Goods.Self)|v0D]"
+					}
+					autoresize = yes
+					align = nobaseline
+					size = { 50 23 }
+					using = elide_fontsize_min
+				}
+
+				widget = {
+					parentanchor = hcenter
+					datacontext = "[Building.GetState]"
+					size = { 50 6 }
+
+					block "amount_progressbar_widget_properties" {
+						tooltip = "STATE_GOODS_IMPORT_DEPENDENCE"
+						visible = "[GreaterThan_CFixedPoint(Goods.GetStateProduction, '(CFixedPoint)0')]"
+
+						gold_progressbar_horizontal = {
+							size = { 100% 100% }
+							alpha = "[TransparentIfZero(Goods.GetStateImports)]"
+						
+							blockoverride "values" {
+								min = 0
+								max = "[Goods.GetStateProduction]"
+								value = "[Goods.GetStateImports]"
+							}
+						}
+					}
+				}
+			}
+
+			widget = { size = { 10 10 }}
+
+			vertical_divider = {}
+			
+			textbox = {
+				block "first_price" {
+					raw_text = "[Goods.GetStateImportPrice|v1] [Goods.GetCompareIconAgainstBasePriceNoFormatting( Goods.GetStateImportPrice )]"
+				}		
+				parentanchor = vcenter
+				align = right|nobaseline
+
+				size = { 80 23 }
+				using = elide_fontsize_min
+				margin_right = 7
+
+			}	
+			
+			vertical_divider = {}
+
+			textbox = {
+				block "second_price" {		
+					raw_text = "[Goods.GetStatePrice|v1] [Goods.GetCompareIconAgainstBasePriceNoFormatting( Goods.GetStatePrice )]"
+				}
+				parentanchor = vcenter
+				align = right|nobaseline
+				size = { 80 23 }
+				using = elide_fontsize_min
+				margin_right = 7
+			}
+
+			vertical_divider = {}
+				
+			textbox = {
+				block "advantage" {
+					raw_text = "[Goods.GetStateRelativeImportAdvantage|=+%0]"
+					tooltip = "[Goods.GetStateRelativeImportAdvantageDesc]"
+				}
+				parentanchor = vcenter
+				align = right|nobaseline
+				size = { 60 23 }
+				using = elide_fontsize_min
+				margin_right = 7
+			}
+
+			vertical_divider = {}
+
+			widget = { size = { 7 7 }}
+
+			overlappingitembox = {
+				block "provider" {
+					datamodel = "[Goods.GetExportersToState]"
+				}
+				size = { 115 18 }
+				righttoleft = yes
+				parentanchor = vcenter
+				spacing = 5
+
+				item = {
+					small_market_flag = {}
+				}
+			}
+
+			widget = { size = { 7 7 }}
+
+			vertical_divider = {}
+
+			textbox = {
+				block "revenue" {		
+					raw_text = "@money![Building.GetState.GetImportRevenue(Goods.Self)|+K]"
+				}
+				parentanchor = vcenter
+				align = right|nobaseline
+				size = { 80 23 }
+				using = elide_fontsize_min
+			}			
+		}
+	}
+
 	type military_building_combat_unit_summary = flowcontainer {
 		visible = "[Building.IsMilitaryBuilding]"
 		margin_right = 10
@@ -1507,29 +1975,37 @@ types building_panels
 
 	type military_building_combat_unit_summary_list_item = flowcontainer {
 		direction = vertical
+
 		icon = {
-			modify_texture = {
-				using = simple_frame_mask
-			}
-			icon = {
-				using = simple_frame
-				size = { 100% 100% }
-			}
-			block "icon_size" {
-				size = { 75 75 }
-			}
 			texture = "[CombatUnitType.GetTextureForCulture(Culture.Self)]"
 
 			tooltipwidget = {
 				FancyTooltip_CombatUnitTypeWithCulture = {}
 			}
 
+			modify_texture = {
+				using = simple_frame_mask
+			}
+
+			icon = {
+				using = simple_frame
+				size = { 100% 100% }
+			}
+
+			offense_defense_info_small = {}
+
+			block "icon_size" {
+				size = { 75 75 }
+			}
+
 			textbox = {
 				parentanchor = left|bottom
 				autoresize = yes
 				raw_text = "#v [Building.GetNumUnitsOfCombatUnitType(CombatUnitType.Self)]#!"
+				using = fontsize_small
+
 				block "unit_number_margins" {
-					margin = { 8 5 }
+					margin = { 10 5 }
 				}
 				background = {
 					using = blurry_dark_background
@@ -1630,8 +2106,8 @@ types building_panels
 				
 				
 
-		### STATE NAME AND BUTTON
-			block "state_name_button" {
+				### STATE NAME AND BUTTON
+			    block "state_name_button" {
 					button = {
 						layoutpolicy_horizontal = expanding
 						layoutpolicy_vertical = expanding
@@ -1643,15 +2119,16 @@ types building_panels
 						textbox = {
 							size = { 100% 100% }
 							margin = { 10 0 }
+							datacontext = "[Building.GetState]"
+							text = "STATE_NAME_WITH_FOREIGN_FLAG_NO_FORMAT"
+							parentanchor = vcenter
 							align = nobaseline
 							elide =  right
-							fontsize_min = 14
-							text = "[Building.GetState.GetNameNoFormatting]"
 						}
 					}
 				}	
 
-			### ACTION BUTTONS
+				### ACTION BUTTONS
 				hbox = {
 					layoutpolicy_horizontal = preferred
 					layoutpolicy_vertical = expanding
@@ -1809,7 +2286,7 @@ types building_panels
 							}
 						}					
 					
-					block "balance" {
+						block "balance" {
 							textbox = {
 								name = "tutorial_highlight_weekly_balance_building"
 								text = "@money!#v [Building.GetBalance|D+=]#!"
@@ -1861,37 +2338,37 @@ types building_panels
 					}
 				}
 				
- 			container = {
-				
-				flowcontainer = {
+				container = {
 					
-					condensed_building_information_pms = {
-						blockoverride "pms_slot_sizes" {
-							addcolumn = 52
-							addrow = 50
-						}
-						blockoverride "pms_minimumsize" {
-							minimumsize = { 208 -1 }
-						}
-						blockoverride "pms_item_size" {
-							size = { 50 50 }
+					flowcontainer = {
+						
+						condensed_building_information_pms = {
+							blockoverride "pms_slot_sizes" {
+								addcolumn = 52
+								addrow = 50
+							}
+							blockoverride "pms_minimumsize" {
+								minimumsize = { 208 -1 }
+							}
+							blockoverride "pms_item_size" {
+								size = { 50 50 }
+							}
 						}
 					}
-				}
 
-				block "extra_items_in_production_methods_list" {}
-			}
+					block "extra_items_in_production_methods_list" {}
+				}
 		
 		
 
-			building_progressbars = {
-				position = { -5 0 }
+				building_progressbars = {
+					position = { -5 0 }
 
-				blockoverride "progressbar_size" {
-					size = { 180 26 }
+					blockoverride "progressbar_size" {
+						size = { 180 26 }
+					}
 				}
-			}
-		  }
+		    }
 		}
 	}
 
@@ -1931,7 +2408,7 @@ types building_panels
 			size = { 80% 80% }
 		}
 	}
-	
+
 	### autoexpand
 	type building_auto_expand_toggle = widget {
 		visible = "[IsPotential( Building.ToggleAutoExpand )]"
@@ -1982,8 +2459,8 @@ types building_panels
 			}
 		}
 	}
-	
-		### subsidize
+
+	### subsidize
 	type building_subsidize_toggle = widget {
 		visible = "[IsPotential( Building.ToggleSubsidies )]"
 		size = { 35 35 }
@@ -2166,14 +2643,82 @@ types building_panels
 		}
 	}
 
+	type building_type_privatize_or_monopolize = widget {
+		visible = "[BuildingBrowserBuildingTypeItem.GetBuildingType.CanSwitchOwner]"
+		size = { 40 40 }
+		datacontext = "[BuildingBrowserBuildingTypeItem.GetBuildingType]"
+
+		icon = {
+			visible = "[Or(BuildingType.HasCountryMonopoly, BuildingBrowserBuildingTypeItem.HasAllPrivatization)]"
+			using = rotate_glow_blue
+			size = { 130% 130% }
+			alwaystransparent = yes
+			parentanchor = center
+			using = default_fade_in_out
+		}
+
+		### COUNTRY MONOPOLY ACTIVE
+		button_icon_round_privatize_or_monopolize_button = {
+			visible = "[BuildingType.HasCountryMonopoly]"
+			using = tooltip_ne
+			tooltip = "COUNTRY_MONOPOLIZE_TOOLTIP_ACTIVE"
+
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/monopolize_active.dds"
+			}
+		}
+
+		### NONE ACTIVE
+		button_icon_round_privatize_or_monopolize_button = {
+			visible = "[And(And(Not(BuildingType.HasCountryMonopoly), Not(BuildingBrowserBuildingTypeItem.HasAllPrivatization)), Not(BuildingBrowserBuildingTypeItem.HasMixedPrivatization))]"
+			using = tooltip_ne
+			tooltip = "COUNTRY_MONOPOLIZE_TOOLTIP_NONE_ACTIVE"
+
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/none_active.dds"
+			}
+		}
+
+		### PRIVATIZE MIXED
+		button_icon_round_privatize_or_monopolize_button = {
+			visible = "[BuildingBrowserBuildingTypeItem.HasMixedPrivatization]"
+			using = tooltip_ne
+			tooltip = "PRIVATIZATION_MIXED_ACTIVE"
+
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/subsidized_mixed.dds"
+			}
+		}
+
+		### ALL PRIVATIZED
+		button_icon_round_privatize_or_monopolize_button = {
+			visible = "[BuildingBrowserBuildingTypeItem.HasAllPrivatization]"
+			using = tooltip_ne
+			tooltip = "PRIVATIZATION_ALL_ACTIVE"
+
+			blockoverride "icon" {
+				texture = "gfx/interface/production_methods/privatize.dds"
+			}
+		}
+	}
+
+	type button_icon_round_privatize_or_monopolize_button = button_icon_round {
+		size = { 100% 100% }
+		onclick = "[RightClickMenuManager.TogglePrivatizeOrMonopolize(BuildingBrowserBuildingTypeItem.AccessSelf, PdxGuiWidget.AccessSelf)]"
+
+		blockoverride "icon_size" {
+			size = { 75% 75% }
+		}
+	}
+
 	### privatize
 	type building_privatize_toggle = building_privatize_toggle_base {
 
 		blockoverride "toggle_privatize"
 		{
+			visible = "[And(Or( IsPotential( Building.TogglePrivatization ), Building.CanBePrivatized), Not(Building.GetBuildingType.HasCountryMonopoly))]"
 			tooltip = "[Building.GetTogglePrivatizationTooltip]"
 			using = tooltip_se
-			visible = "[Or( IsPotential( Building.TogglePrivatization ), Building.CanBePrivatized)]"
 		}
 
 		blockoverride "toggle_privatize_on_glow"
@@ -2242,7 +2787,7 @@ types building_panels
 		{
 			visible = "[BuildingBrowserBuildingTypeItem.HasMixedPrivatization]"
 			onclick = "[Execute( BuildingBrowserBuildingTypeItem.ToggleAllPrivatization )]"
-			tooltip = "PRIVATIZATION_ALL_MIXED"
+			tooltip = "PRIVATIZATION_ALL_MIXED_ACTIVATE_ALL"
 			using = tooltip_se
 		}
 	}
@@ -2257,6 +2802,7 @@ types building_panels
 		
 		widget = {
 			size = { 100% 100% }
+
 			block "toggle_privatize_valid"
 			{
 				visible = yes
@@ -2274,6 +2820,7 @@ types building_panels
 				parentanchor = center
 				using = default_fade_in_out
 			}
+
 			button_icon_round_action = {
 				size = { 100% 100% }
 				block "toggle_privatize_on"
@@ -2346,7 +2893,7 @@ types building_panels
 			}
 		}
 	}
-	
+
 	### autoexpand, only the icon
 	type building_auto_expand_icon = widget {
 		size = { 30 30 }
@@ -2364,6 +2911,26 @@ types building_panels
 			tooltip = "AUTOEXPAND_BUILDING_ICON_TOOLTIP"
 			using = tooltip_ne
 			texture = "gfx/interface/production_methods/auto_expand.dds"
+		}
+	}
+
+	### Country Monopolized, only the icon
+	type building_country_monopoly_icon = widget {
+		size = { 30 30 }
+		
+		icon = {
+			using = rotate_glow_blue
+			size = { 100% 100% }
+			alwaystransparent = yes
+			parentanchor = center
+			alpha = 0.3
+		}
+		
+		icon = {
+			size = { 100% 100% }
+			tooltip = "COUNTRY_MONOPOLIZE_TOOLTIP_ACTIVE"
+			using = tooltip_ne
+			texture = "gfx/interface/production_methods/monopolize_active.dds"
 		}
 	}
 
@@ -2407,73 +2974,146 @@ types building_panels
 		}
 	}
 
-	type condensed_building_information_pms = fixedgridbox {
-		name = "tutorial_highlight_condensed_production_methods"
-		datamodel = "[Building.AccessProductionMethodGroups]"
-		flipdirection = yes
+	type condensed_building_information_pms = container {
+		fixedgridbox = {
+			name = "tutorial_highlight_condensed_production_methods"
+			datamodel = "[Building.AccessProductionMethodGroups]"
+			flipdirection = yes
 
-		block "pms_slot_sizes" {
-			addcolumn = 52
-			addrow = 50
-		}
-		parentanchor = vcenter
+			block "pms_slot_sizes" {
+				addcolumn = 52
+				addrow = 50
+			}
+			parentanchor = vcenter
 
-		block "pms_minimumsize" {
-			minimumsize = { 208 -1 }
-		}
+			block "pms_minimumsize" {
+				minimumsize = { 208 -1 }
+			}
 
-		item = {
-			widget = {
-				block "pms_item_size" {
-					size = { 50 50 }
+			item = {
+				widget = {
+					block "pms_item_size" {
+						size = { 50 50 }
+					}
+					datacontext = "[Building.AccessProductionMethod(ProductionMethodGroup.Self)]"
+					datacontext = "[ProductionMethod]"
+					datacontext = "[Building]"
+					datacontext = "[ProductionMethodGroup]"
+					using = tooltip_ne
+					tooltip = "CHANGE_FROM_CURRENT_PRODUCTION_METHOD_TOOLTIP"
+
+					button = {
+						visible = "[NotEqualTo_int32( GetDataModelSize( ProductionMethodGroup.AccessBuildingProductionMethods( Building.Self ) ), '(int32)1' )]"
+						onclick = "[RightClickMenuManager.ToggleSwitchProductionMethodMenu(Building.AccessSelf, ProductionMethodGroup.AccessSelf, PdxGuiWidget.AccessSelf)]"
+						using = expand_button_bg_dropdown
+						size = { 100% 100% }
+					}
+
+					icon = {
+						texture = "[ProductionMethod.GetTexture]"
+						size = { 80% 80% }
+						parentanchor = center
+					}
+
+					### new pm
+					has_new_pm_icon = {
+						position = { -2 2 }
+						parentanchor = bottom|left
+						blockoverride "visible" {
+							visible = "[And(Building.IsOwner( GetPlayer.Self ), GetPlayer.HasNewProductionMethodInSameGroup( Building.GetBuildingType.Self, ProductionMethod.Self ))]"
+						}
+					}
+
+					### nr available
+					textbox = {
+						raw_text = "#P #bold [ProductionMethodGroup.GetNumAvailableOptions(Building.AccessSelf)]#!#!"
+						parentanchor = top|right
+						position = { -5 0 }
+						autoresize = yes
+						align = right|nobaseline
+						block "pms_number_visibility" {
+							visible = "[NotEqualTo_int32( ProductionMethodGroup.GetNumAvailableOptions(Building.AccessSelf), '(int32)1')]"
+						}
+						tooltip = "PRODUCTION_METHOD_OPTIONS"
+						using = tooltip_above
+						using = fontsize_small
+
+						background = {
+							using = default_background
+							margin = { 8 4 }
+
+						}
+					}
 				}
-				datacontext = "[Building.AccessProductionMethod(ProductionMethodGroup.Self)]"
-				datacontext = "[ProductionMethod]"
-				datacontext = "[Building]"
-				datacontext = "[ProductionMethodGroup]"
-				using = tooltip_ne
-				tooltip = "CHANGE_FROM_CURRENT_PRODUCTION_METHOD_TOOLTIP"
+			}
+		}
 
-				button = {
-					visible = "[NotEqualTo_int32( GetDataModelSize( ProductionMethodGroup.AccessBuildingProductionMethods( Building.Self ) ), '(int32)1' )]"
-					using = expand_button_bg_dropdown
-					size = { 100% 100% }
-					onclick = "[RightClickMenuManager.ToggleSwitchProductionMethodMenu(Building.AccessSelf, ProductionMethodGroup.AccessSelf, PdxGuiWidget.AccessSelf)]"
-				}
+		flowcontainer = {
+			block "trade_center_extra_info_visibility" {
+				visible = "[ObjectsEqual(Building.GetBuildingType, GetBuildingType('building_trade_center').Self)]"
+			}
+
+			block "trade_center_extra_info_position" {
+				position = { 150 0 }
+			}
+
+			direction = vertical
+			parentanchor = vcenter
+
+			block "trade_center_extra_info_line_spacing" {
+				spacing = 4
+			}
+
+			flowcontainer = {
+				spacing = 5
 
 				icon = {
-					size = { 80% 80% }
-					parentanchor = center
-					texture = "[ProductionMethod.GetTexture]"
+					texture = "gfx/interface/icons/trade_icons/imports.dds"
+					size = { 23 23 }
 				}
 
-				### new pm
-				has_new_pm_icon = {
-					position = { -2 2 }
-					parentanchor = bottom|left
-					blockoverride "visible" {
-						visible = "[And(Building.IsOwner( GetPlayer.Self ), GetPlayer.HasNewProductionMethodInSameGroup( Building.GetBuildingType.Self, ProductionMethod.Self ))]"
+				vertical_divider = {}
+
+				overlappingitembox = {
+					block "trade_center_extra_info_size" {
+						size = { 110 23 }
+					}
+					
+					datamodel = "[Building.AccessState.GetImports]"
+					
+					item = {
+						small_goods_button = {
+							blockoverride "tooltip" {
+								tooltip = "[Goods.GetStateImportsDesc]"
+							}
+						}		
 					}
 				}
+			}
 
-				### nr available
-				textbox = {
-					raw_text = "#P #bold [ProductionMethodGroup.GetNumAvailableOptions(Building.AccessSelf)]#!#!"
-					parentanchor = top|right
-					position = { -5 0 }
-					autoresize = yes
-					align = right|nobaseline
-					block "pms_number_visibility" {
-						visible = "[NotEqualTo_int32( ProductionMethodGroup.GetNumAvailableOptions(Building.AccessSelf), '(int32)1')]"
+			flowcontainer = {
+				spacing = 5
+
+				icon = {
+					texture = "gfx/interface/icons/trade_icons/exports.dds"
+					size = { 23 23 }
+				}
+
+				vertical_divider = {}
+
+				overlappingitembox = {
+					block "trade_center_extra_info_size" {
+						size = { 110 23 }
 					}
-					tooltip = "PRODUCTION_METHOD_OPTIONS"
-					using = tooltip_above
-					using = fontsize_small
-
-					background = {
-						using = default_background
-						margin = { 8 4 }
-
+					
+					datamodel = "[Building.AccessState.GetExports]"
+					
+					item = {
+						small_goods_button = {
+							blockoverride "tooltip" {
+								tooltip = "[Goods.GetStateExportsDesc]"
+							}
+						}		
 					}
 				}
 			}
@@ -2855,76 +3495,9 @@ types building_panels
 	type building_progressbars = flowcontainer {
 		direction = vertical
 		spacing = 8
-		widget = {
-			onmousehierarchyenter = "[PdxGuiWidget.FindChild('employment_max').InterruptThenTriggerAnimation('hide_employment_max','show_employment_max')]"
-			onmousehierarchyleave = "[PdxGuiWidget.FindChild('employment_max').InterruptThenTriggerAnimation('show_employment_max','hide_employment_max')]"
-			alwaystransparent = no
+		
+		building_employment_bar = {}
 
-			block "progressbar_size" {
-				size = { 161 26 }
-			}
-
-			default_progressbar_horizontal = {
-				tooltip = "TOOLTIP_BUILDING_EMPLOYMENT"
-				size = { 100% 100% }
-				parentanchor = vcenter
-
-				blockoverride "values" {
-					value = "[FixedPointToFloat(Building.GetEmploymentPercentage)]"
-					min = 0
-					max = 1
-				}
-			}
-
-			flowcontainer = {
-				parentanchor = vcenter
-				textbox = {
-					text = "[Building.GetNoOfEmployed|1*v]"
-					margin_left = 10
-					margin_bottom = 5
-					margin_top = 5
-					align = hcenter|nobaseline
-					autoresize = yes
-					parentanchor = vcenter
-					widgetanchor = vcenter
-				}
-
-				textbox = {
-					alpha = 0
-					name = employment_max
-
-					state = {
-						name = show_employment_max
-						delay = 0.15
-						alpha = 1
-						duration = 0.15
-						using = Animation_Curve_Default
-					}
-					state = {
-						name = hide_employment_max
-						alpha = 0
-						duration = 0
-						using = Animation_Curve_Default
-					}
-
-					visible = "[LessThan_int64(Building.GetNoOfEmployed, Building.GetEmployeeCap)]"
-					raw_text = "/ #maximum [Building.GetEmployeeCap|1*]#!"
-					margin_left = 7
-					align = hcenter|nobaseline
-					autoresize = yes
-					parentanchor = vcenter
-					widgetanchor = vcenter
-				}
-			}
-
-			employment_indicator_icon = {
-				blockoverride "indicator_icon_size" {
-					size = { 25 25 }
-				}
-				parentanchor = right|vcenter
-				position = { -2 0 }
-			}
-		}
 		widget = {
 			alpha = "[TransparentIfFalse(Building.IsActive)]"
 			visible = "[And(GreaterThan_CFixedPoint(Building.GetMaxCashReserves, '(CFixedPoint)0'), Building.IsActive)]"
@@ -3048,6 +3621,77 @@ types building_panels
 				size = { 161 26 }
 			}
 
+		}
+	}
+
+	type building_employment_bar = widget {
+		onmousehierarchyenter = "[PdxGuiWidget.FindChild('employment_max').InterruptThenTriggerAnimation('hide_employment_max','show_employment_max')]"
+		onmousehierarchyleave = "[PdxGuiWidget.FindChild('employment_max').InterruptThenTriggerAnimation('show_employment_max','hide_employment_max')]"
+		alwaystransparent = no
+
+		block "progressbar_size" {
+			size = { 161 26 }
+		}
+
+		default_progressbar_horizontal = {
+			tooltip = "TOOLTIP_BUILDING_EMPLOYMENT"
+			size = { 100% 100% }
+			parentanchor = vcenter
+
+			blockoverride "values" {
+				value = "[FixedPointToFloat(Building.GetEmploymentPercentage)]"
+				min = 0
+				max = 1
+			}
+		}
+
+		flowcontainer = {
+			parentanchor = vcenter
+			textbox = {
+				text = "[Building.GetNoOfEmployed|1*v]"
+				margin_left = 10
+				margin_bottom = 5
+				margin_top = 5
+				align = hcenter|nobaseline
+				autoresize = yes
+				parentanchor = vcenter
+				widgetanchor = vcenter
+			}
+
+			textbox = {
+				alpha = 0
+				name = employment_max
+
+				state = {
+					name = show_employment_max
+					delay = 0.15
+					alpha = 1
+					duration = 0.15
+					using = Animation_Curve_Default
+				}
+				state = {
+					name = hide_employment_max
+					alpha = 0
+					duration = 0
+					using = Animation_Curve_Default
+				}
+
+				visible = "[LessThan_int64(Building.GetNoOfEmployed, Building.GetEmployeeCap)]"
+				raw_text = "/ #maximum [Building.GetEmployeeCap|1*]#!"
+				margin_left = 7
+				align = hcenter|nobaseline
+				autoresize = yes
+				parentanchor = vcenter
+				widgetanchor = vcenter
+			}
+		}
+
+		employment_indicator_icon = {
+			blockoverride "indicator_icon_size" {
+				size = { 25 25 }
+			}
+			parentanchor = right|vcenter
+			position = { -2 0 }
 		}
 	}
 
@@ -3428,15 +4072,28 @@ types building_panels
 			### trade revenue
 			building_process_entry_small = {
 				blockoverride "visible" {
-					visible = "[Building.HasTradeRouteRevenue]"
+					visible = "[Building.HasTradeRevenue]"
 				}
 				blockoverride "text" {
 					text = "[concept_trade_revenue]"
 				}
 				blockoverride "text_right" {
-					raw_text = "#variable @money![Building.GetTradeRouteRevenue|K]#!"
+					raw_text = "#variable @money![Building.GetTradeRevenue|K]#!"
 				}
 			}
+			
+			### subventions
+			building_process_entry_small = {
+				blockoverride "visible" {
+					visible = "[GreaterThan_CFixedPoint(Building.GetSubventions, '(CFixedPoint)0')]"
+				}
+				blockoverride "text" {
+					text = "[concept_subventions]"
+				}
+				blockoverride "text_right" {
+					raw_text = "#variable @money![Building.GetSubventions|K]#!"
+				}
+			}			
 
 			building_process_entry_small = {
 				tooltip = BUILDING_URBANIZATION_TOOLTIP
@@ -3663,10 +4320,9 @@ template visible_if_ownership_can_be_split
 	# The buildings ownership can be split between multiple entities:
 	# It is not a Manor House, Financial District (GetBuildingAssets)
 	# It is not a Government Building. 
-	# It is not a Trade Center (HasTradeRouteRevenue)
 	# It is not a Urban Center
 	# Or it is simply a level 0 building
-	visible = "[And( Not(Building.HasTradeRouteRevenue), And( Not(Building.IsUrbanCenter), And( And( IsDataModelEmpty(Building.GetBuildingAssets), Not(Building.IsGovernmentFunded) ), NotEqualTo_int32(Building.GetExpansionLevel, '(int32)0'))))]"
+	visible = "[And( Not(Building.IsUrbanCenter), And( And( IsDataModelEmpty(Building.GetBuildingAssets), Not(Building.IsGovernmentFunded) ), NotEqualTo_int32(Building.GetExpansionLevel, '(int32)0')))]"
 }
 
 template visible_if_ownership_always_workforce

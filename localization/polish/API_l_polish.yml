@@ -1,0 +1,50 @@
+﻿l_polish:
+    # Modifiers
+    API_granted_leadership: "Zwierzchnictwo wykorzystane do nadania przywództwa"
+    API_granted_command:    "Zwierzchnictwo wykorzystane do nadania dowództwa"
+    API_exiled_agitator:    "Zwierzchnictwo wykorzystane do wygnania"
+    API_invited_agitator:   "Zwierzchnictwo wykorzystane do zaproszenia"
+    API_arranged_accident:  "Zwierzchnictwo wykorzystane do zabójstwa"
+    API_arrested_agitator:  "Authority Exercised for Imprisonment"
+    API_authority_cost:     "Zwierzchnictwo wykorzystane"
+    
+    API_bolstering_career:  "Promowanie kariery postaci"
+    API_suppressing_career: "Tłumienie kariery postaci"
+    API_bolstered_career:   "Kariera wzmocniona"
+    API_suppressed_career:  "Kariera stłumiona"
+    
+    # Modifier Types
+    country_api_authority_add:      "$country_authority_add$ Po Mnożnikach"
+    country_api_authority_add_desc: "$country_authority_add_desc$\n\n$API_authority_desc_ext$"
+    API_authority_desc_ext: "Wyświetlana tutaj wartość nie odnosi się bezpośrednio do @aut![Nbsp][concept_authority], lecz jest używana do obliczenia wartości dla modyfikatora #bold $API_authority_cost$#!. Modyfikator #bold $API_authority_cost$#! będzie zawierał wartość zastosowaną do bazowej, niemodyfikowanej @aut![Nbsp][concept_authority], aby uzyskać poprawny efektywny koszt @aut![Nbsp][concept_authority], który zostanie zastosowany do [concept_country] po uwzględnieniu wszelkich mnożników do @aut![Nbsp][concept_authority]."
+    
+    # Character Interactions
+    API_bolster_character:    "Wzmocnij karierę"
+    API_unbolster_character:  "Zatrzymaj wzmacnianie"
+    API_suppress_character:   "Stłum karierę"
+    API_unsuppress_character: "Zatrzymaj tłumienie"
+    
+    # Tooltips
+    API_tt_character_not_bolstered:  "[Character.GetCustom('GetUniversalFullName')] nie ma wzmocnionej kariery"
+    API_tt_character_not_suppressed: "[Character.GetCustom('GetUniversalFullName')] nie ma stłumionej kariery"
+    
+    API_tt_character_bolstered:       "[Character.GetCustom('GetUniversalFullName')] zyskuje [SCOPE.ScriptValue('API_CHAR_POPU_ACTIVE_DELTA')|+=] [concept_popularity] co tydzień"
+    API_tt_country_bolster_character: "Koszt: #v 25#! $country_authority_add$"
+    
+    API_tt_character_unbolstered:       "[Character.GetCustom('GetUniversalFullName')] #n przestaje zyskiwać#! [SCOPE.ScriptValue('API_CHAR_POPU_ACTIVE_DELTA')|v=] [concept_popularity] co tydzień"
+    API_tt_country_unbolster_character: "Zwrot: #v 25#! $country_authority_add$"
+    
+    API_tt_character_suppressed:       "[Character.GetCustom('GetUniversalFullName')] traci [Multiply_CFixedPoint(SCOPE.ScriptValue('API_CHAR_POPU_ACTIVE_DELTA'),'(CFixedPoint)-1')|+=] [concept_popularity] co tydzień"
+    API_tt_country_suppress_character: "$API_tt_country_bolster_character$"
+    
+    API_tt_character_unsuppressed:       "[Character.GetCustom('GetUniversalFullName')] #p przestaje tracić#! [Multiply_CFixedPoint(SCOPE.ScriptValue('API_CHAR_POPU_ACTIVE_DELTA'),'(CFixedPoint)-1')|v=] [concept_popularity] co tydzień"
+    API_tt_country_unsuppress_character: "$API_tt_country_unbolster_character$"
+    
+    API_tt_bolster_decay:  "The [concept_popularity] gained by bolstering their career will #bold decay#! by [Multiply_CFixedPoint(SCOPE.ScriptValue('API_CHAR_POPU_DECAY_DELTA'),'(CFixedPoint)-1')|+=] every week"
+    API_tt_suppress_decay: "The [concept_popularity] lost by suppressing their career will #bold recover#! by [SCOPE.ScriptValue('API_CHAR_POPU_DECAY_DELTA')|+=] every week"
+    
+    API_tt_not_at_bolster_cap:  "[Character.GetCustom('GetUniversalFullName')] nie zyskał #p 100#! [concept_popularity] przez wzmacnianie"
+    API_tt_not_at_suppress_cap: "[Character.GetCustom('GetUniversalFullName')] nie stracił #n -100#! [concept_popularity] przez tłumienie"
+    
+    API_tt_bolster_autostop:  "Ta akcja automatycznie się zakończy, gdy [Character.GetCustom('GetUniversalFullName')] zostanie wzmocniony o #p 100#! [concept_popularity]"
+    API_tt_suppress_autostop: "Ta akcja automatycznie się zakończy, gdy [Character.GetCustom('GetUniversalFullName')] zostanie stłumiony o #n -100#! [concept_popularity]"

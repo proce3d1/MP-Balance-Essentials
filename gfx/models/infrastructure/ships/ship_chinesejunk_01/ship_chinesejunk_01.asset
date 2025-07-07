@@ -1,0 +1,197 @@
+pdxmesh = {
+	name = "ship_chinesejunk_01_mesh"
+	file = "ship_chinesejunk_01.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 16.0 }
+		lod = { index = 2 percent = 6.0 }
+		lod = { index = 3 percent = 3.0 }
+	}
+
+	animation = { id = "moving_animation" type = "ship_chinesejunk_01_moving.anim" }
+
+	meshsettings = {
+		name = "ship_chinesejunk_Shape0Deformed"
+		index = 0
+		texture_diffuse = "ship_chinesejunk_diffuse.dds"
+		texture_normal = "ship_chinesejunk_normal.dds"
+		texture_specular = "ship_chinesejunk_properties.dds"
+		texture = { file = "ship_chinesejunk_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "EMISSIVE_NIGHT" "UNIT_COLOR" }
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_ropes_Shape0Deformed"
+		index = 0
+		texture_diffuse = "generic_ship_alpha_diffuse.dds"
+		texture_normal = "generic_ship_alpha_normal.dds"
+		texture_specular = "generic_ship_alpha_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_flag_Shape0Deformed"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		shader = "standard_flag_basic"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "COA_TEXTURE" "BACKLIGHT" }
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_sails_Shape0Deformed"
+		index = 0
+		texture_diffuse = "ship_chinesejunk_sails_diffuse.dds"
+		texture_normal = "ship_chinesejunk_sails_normal.dds"
+		texture_specular = "ship_chinesejunk_sails_properties.dds"
+		texture = { file = "ship_chinesejunk_sails_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "BACKLIGHT" "UNIT_COLOR" }
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_Shape1Deformed"
+		index = 0
+		texture_diffuse = "ship_chinesejunk_diffuse.dds"
+		texture_normal = "ship_chinesejunk_normal.dds"
+		texture_specular = "ship_chinesejunk_properties.dds"
+		texture = { file = "ship_chinesejunk_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "EMISSIVE_NIGHT" "UNIT_COLOR" }
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_ropes_Shape1Deformed"
+		index = 0
+		texture_diffuse = "generic_ship_alpha_diffuse.dds"
+		texture_normal = "generic_ship_alpha_normal.dds"
+		texture_specular = "generic_ship_alpha_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_flag_Shape1Deformed"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		shader = "standard_flag_basic"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "COA_TEXTURE" "BACKLIGHT" }
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_sails_Shape1Deformed"
+		index = 0
+		texture_diffuse = "ship_chinesejunk_sails_diffuse.dds"
+		texture_normal = "ship_chinesejunk_sails_normal.dds"
+		texture_specular = "ship_chinesejunk_sails_properties.dds"
+		texture = { file = "ship_chinesejunk_sails_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "BACKLIGHT" "UNIT_COLOR" }
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_Shape2Deformed"
+		index = 0
+		texture_diffuse = "ship_chinesejunk_diffuse.dds"
+		texture_normal = "ship_chinesejunk_normal.dds"
+		texture_specular = "ship_chinesejunk_properties.dds"
+		texture = { file = "ship_chinesejunk_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "EMISSIVE_NIGHT" "UNIT_COLOR" }
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_ropes_Shape2Deformed"
+		index = 0
+		texture_diffuse = "generic_ship_alpha_diffuse.dds"
+		texture_normal = "generic_ship_alpha_normal.dds"
+		texture_specular = "generic_ship_alpha_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_flag_Shape2Deformed"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		shader = "standard_flag_basic"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "COA_TEXTURE" "BACKLIGHT" }
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_sails_Shape2Deformed"
+		index = 0
+		texture_diffuse = "ship_chinesejunk_sails_diffuse.dds"
+		texture_normal = "ship_chinesejunk_sails_normal.dds"
+		texture_specular = "ship_chinesejunk_sails_properties.dds"
+		texture = { file = "ship_chinesejunk_sails_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "BACKLIGHT" "UNIT_COLOR" }
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_Shape3Deformed"
+		index = 0
+		texture_diffuse = "ship_chinesejunk_diffuse.dds"
+		texture_normal = "ship_chinesejunk_normal.dds"
+		texture_specular = "ship_chinesejunk_properties.dds"
+		texture = { file = "ship_chinesejunk_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "EMISSIVE_NIGHT" "UNIT_COLOR" }
+	}
+
+	meshsettings = {
+		name = "ship_chinesejunk_sails_Shape3Deformed"
+		index = 0
+		texture_diffuse = "ship_chinesejunk_sails_diffuse.dds"
+		texture_normal = "ship_chinesejunk_sails_normal.dds"
+		texture_specular = "ship_chinesejunk_sails_properties.dds"
+		texture = { file = "ship_chinesejunk_sails_colormask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "BACKLIGHT" "UNIT_COLOR" }
+	}
+}
+
+entity = {
+	name = "ship_chinesejunk_01_entity"
+	pdxmesh = "ship_chinesejunk_01_mesh"
+
+	cull_radius = 10
+
+	default_state = "moving"
+	
+	scale = 0.5
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+
+		start_event =
+		{
+			time = 0
+			node = "loc_front"
+			particle = "ships/ship_water_front_01"
+			trigger_once = yes
+			keep_particle = no
+		}
+		
+		start_event = { sound  = { soundeffect = "event:/SFX/Animation/vehicles/transport/naval_junk/anm_transport_naval_junk_moving" } keep_sound = yes }
+	}
+}

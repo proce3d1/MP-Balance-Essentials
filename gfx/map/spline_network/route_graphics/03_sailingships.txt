@@ -1,0 +1,184 @@
+﻿#################################################################
+#####				TRADE ROUTE GRAPHICS					#####
+#################################################################
+
+#################################################################
+#####				    SAIL SHIPS  						#####
+#################################################################
+
+
+sailing_ships = {
+	valid_spline_styles = { "naval_route" "coastal_naval_route" }
+
+	speed = 0.75
+	min_caravan_distance = 35
+	max_count = 50
+	max_path_length = 10
+	side_offset = 0.3
+	path_generation_mode = naval
+
+	tags = {
+		sail = {
+			trigger = {
+				NOT = { has_technology_researched = screw_frigate }
+				NOR =  {
+					gfx_marmara_ship_trigger = yes
+					gfx_dhow_ship_trigger = yes
+					gfx_junk_ship_trigger = yes
+				}
+			}
+		}
+	}
+
+	route_entities = {
+		generic_sailship = {
+			tags = { sail }
+			entity = "sail_transport_ship_01_entity"
+			position = 0
+			entity_length = 2.5
+
+			count = {
+				value = 0
+				scope:state = {
+					market = {
+						mg:clippers = {
+							add = market_goods_sell_orders # Let's have a 'significant' amount of sales
+						}
+					}
+				}
+				divide = 2000
+				add = 1
+				max = 3
+			}
+		}
+	}
+}
+
+marmara_ships = {
+	valid_spline_styles = { "naval_route" "coastal_naval_route" }
+
+	speed = 0.75
+	min_caravan_distance = 35
+	max_count = 50
+	max_path_length = 10
+	side_offset = 0.3
+	path_generation_mode = naval
+
+	tags = {
+		sail = {
+			trigger = {
+				NOT = { has_technology_researched = screw_frigate }
+				gfx_marmara_ship_trigger = yes
+			}
+		}
+	}
+
+	route_entities = {
+		ship_marmara = {
+			tags = { sail }
+			entity = "ship_marmara_01_entity"
+			position = 0
+			entity_length = 2.5
+
+			count = {
+				value = 0
+				scope:state = {
+					market = {
+						mg:clippers = {
+							add = market_goods_sell_orders # Let's have a 'significant' amount of sales
+						}
+					}
+				}
+				divide = 2000
+				add = 1
+				max = 3
+			}
+		}
+	}
+}
+
+chinesejunk_ships = {
+	valid_spline_styles = { "naval_route" "coastal_naval_route" }
+
+	speed = 0.75
+	min_caravan_distance = 35
+	max_count = 50
+	max_path_length = 10
+	side_offset = 0.3
+	path_generation_mode = naval
+
+	tags = {
+		sail = {
+			trigger = {
+				NOT = { has_technology_researched = screw_frigate }
+				gfx_junk_ship_trigger = yes
+			}
+		}
+	}
+
+	route_entities = {
+		ship_chinesejunk = {
+			tags = { sail }
+			entity = "ship_chinesejunk_01_entity"
+			position = 0
+			entity_length = 2.5
+
+			count = {
+				value = 0
+				scope:state = {
+					market = {
+						mg:clippers = {
+							add = market_goods_sell_orders # Let's have a 'significant' amount of sales
+						}
+					}
+				}
+				divide = 2000
+				add = 1
+				max = 3
+			}
+		}
+	}
+}
+
+dhow_ships = {
+	valid_spline_styles = { "naval_route" "coastal_naval_route" }
+
+	speed = 0.75
+	min_caravan_distance = 35
+	max_count = 50
+	max_path_length = 10
+	side_offset = 0.3
+	path_generation_mode = naval
+
+	tags = {
+		sail = {
+			trigger = {
+				NOT = { has_technology_researched = screw_frigate }
+				gfx_dhow_ship_trigger = yes
+			}
+		}
+	}
+
+	route_entities = {
+		ship_dhow = {
+			tags = { sail }
+			entity = "ship_dhow_01_entity"
+			position = 0
+			entity_length = 2.5
+			
+			count = {
+				value = 0
+				scope:state = {
+					market = {
+						mg:clippers = {
+							add = market_goods_sell_orders # Let's have a 'significant' amount of sales
+						}
+					}
+				}
+				divide = 2000
+				add = 1
+				max = 3
+			}
+		}
+	}
+}

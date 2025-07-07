@@ -1,0 +1,130 @@
+pdxmesh = {
+	name = "horse_cart_ap1_02_mesh"
+	file = "horse_cart_ap1.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 6.0 }
+		lod = { index = 2 percent = 4.0 }
+		lod = { index = 3 percent = 2.3 }
+	}
+
+	animation = { id = "moving_animation" type = "horse_cart_ap1_moving.anim" }
+
+	meshsettings = {
+		name = "cargo_0Shape"
+		index = 0
+		texture_diffuse = "horse_cart_cargo_01_diffuse.dds"
+		texture_normal = "horse_cart_cargo_01_normal.dds"
+		texture_specular = "horse_cart_cargo_01_properties.dds"
+		texture = { file = "horse_cart_p1_cargo_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "TINT_COLOR" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cart_Shape0"
+		index = 0
+		texture_diffuse = "horse_cart_ap1_02_diffuse.dds"
+		texture_normal = "horse_cart_ap1_01_normal.dds"
+		texture_specular = "horse_cart_ap1_01_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cargo_1Shape"
+		index = 0
+		texture_diffuse = "horse_cart_cargo_01_diffuse.dds"
+		texture_normal = "horse_cart_cargo_01_normal.dds"
+		texture_specular = "horse_cart_cargo_01_properties.dds"
+		texture = { file = "horse_cart_p1_cargo_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "TINT_COLOR" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cart_Shape1"
+		index = 0
+		texture_diffuse = "horse_cart_ap1_02_diffuse.dds"
+		texture_normal = "horse_cart_ap1_01_normal.dds"
+		texture_specular = "horse_cart_ap1_01_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cargo_2Shape"
+		index = 0
+		texture_diffuse = "horse_cart_cargo_01_diffuse.dds"
+		texture_normal = "horse_cart_cargo_01_normal.dds"
+		texture_specular = "horse_cart_cargo_01_properties.dds"
+		texture = { file = "horse_cart_p1_cargo_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "TINT_COLOR" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cart_Shape2"
+		index = 0
+		texture_diffuse = "horse_cart_ap1_02_diffuse.dds"
+		texture_normal = "horse_cart_ap1_01_normal.dds"
+		texture_specular = "horse_cart_ap1_01_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cargo_3Shape"
+		texture_diffuse = "horse_cart_cargo_01_diffuse.dds"
+		texture_normal = "horse_cart_cargo_01_normal.dds"
+		texture_specular = "horse_cart_cargo_01_properties.dds"
+		texture = { file = "horse_cart_p1_cargo_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "TINT_COLOR" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "cart_Shape3"
+		index = 0
+		texture_diffuse = "horse_cart_ap1_02_diffuse.dds"
+		texture_normal = "horse_cart_ap1_01_normal.dds"
+		texture_specular = "horse_cart_ap1_01_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "horse_cart_ap1_02_entity"
+	pdxmesh = "horse_cart_ap1_02_mesh"
+	locator = { name = "lights" position = { 0.0 0.55 0.0 }rotation = { 0 0 0 }}
+	locator = { name = "l_back_wheel" position = { -0.27 0.0 0.41 }}
+	locator = { name = "r_back_wheel" position = { 0.27 0.0 0.41 }}
+
+	default_state = "moving"
+		
+		state =
+		{
+			name = "moving"
+			animation = "moving_animation"
+			looping = yes
+			animation_speed = 1.5
+
+			start_event = { time = 0 node = "lights" particle = "infrastructure/horse_cart_lights_02" trigger_once = yes}
+			start_event = { time = 0 node = "l_back_wheel" particle = "vehicles/stagecoach_dust" trigger_once = yes}
+			
+			start_event = { sound  = { soundeffect = "event:/SFX/Vehicles/horse_cart" } keep_sound = yes }
+
+
+		}
+	scale = 0.45
+}
+

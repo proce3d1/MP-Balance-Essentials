@@ -68,6 +68,34 @@ headlines_taiping_defeat = {
 	days = 28
 	color = neutral
 }
+#Sepoy Mutiny
+headlines_sepoy_mutiny = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Sepoy Mutiny Success
+headlines_sepoy_mutiny_success = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+#Sepoy Mutiny Failure
+headlines_sepoy_mutiny_crushed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
+
 ##Collapses
 #Qing Collapse
 headlines_qing_collapse = {
@@ -179,7 +207,15 @@ headlines_yugoslavia_formed = {
 	days = 28
 	color = neutral
 }
-
+#India Formed
+headlines_india_formed = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/news.dds"
+	group = "headlines_major_group"
+	notification_type = feed
+	days = 28
+	color = neutral
+}
 ##Regime Changes
 #BEI into Raj
 headlines_british_raj = {

@@ -1,0 +1,155 @@
+﻿namespace = build_administrations_events
+
+build_administrations_events.1 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        always = yes
+    }
+
+    immediate = {
+        if = {
+            limit = {
+                has_law = law_type:law_appointed_bureaucrats
+            }
+            set_variable = has_law_appointed_bureaucrats
+        } else = {
+            set_variable = {
+                name = has_law_appointed_bureaucrats
+                value = no
+            }
+        }
+
+        every_scope_state = {
+            set_variable = {
+                name = tax_capacity_balance
+                value = {
+                    add = {
+                        value = tax_capacity
+                        subtract = tax_capacity_usage
+                    }
+                }
+            }
+
+            if = {
+                limit = {
+                    is_incorporated = yes
+                    var:tax_capacity_balance < 0
+                    or = {
+                        any_scope_building = {
+                            is_building_type = building_government_administration
+                            occupancy > 0.85
+                        }
+                        not = {
+                            any_scope_building = {
+                                is_building_type = building_government_administration
+                            }
+                        }
+                    }
+                }
+
+                if = {
+                    limit = {
+                        NOT = {
+                            any_scope_building = {
+                                is_building_type = building_government_administration
+                            }
+                        }
+                    }
+                    create_building = {
+                        building = building_government_administration
+                        level = 1
+                    }
+                    set_variable = must_destroy_building
+                }
+                else = {
+                    set_variable = {
+                        name = must_destroy_building
+                        value = no
+                    }
+                }
+
+                set_variable = {
+                    name = tax_capacity_per_building
+                    value = {
+                        if = {
+                            limit = {
+                                is_production_method_active = {
+                                    building_type = building_government_administration
+                                    production_method = pm_simple_organization
+                                }
+                            }
+                            value = 5
+                        }
+                        else_if = {
+                            limit = {
+                                is_production_method_active = {
+                                    building_type = building_government_administration
+                                    production_method = pm_horizontal_drawer_cabinets
+                                }
+                            }
+                            value = 10
+                        }
+                        else_if = {
+                            limit = {
+                                is_production_method_active = {
+                                    building_type = building_government_administration
+                                    production_method = pm_vertical_filing_cabinets
+                                }
+                            }
+                            value = 15
+                        }
+                        else = {
+                            value = 30
+                        }
+                    }
+                }
+
+                if = {
+                    limit = {
+                        var:must_destroy_building = yes
+                    }
+                    remove_building = building_government_administration
+                }
+
+                set_variable = {
+                    name = missing_buildings
+                    value = {
+                        add = {
+                            value = var:tax_capacity_balance
+                            multiply = -1
+                            add = var:tax_capacity_per_building
+                            subtract = 1 # add tax_capacity_per_building - 1 to make division round up
+                            divide = var:tax_capacity_per_building
+                        }
+                    }
+                }
+
+                if = {
+                    limit = {
+                        var:missing_buildings > 0
+                    }
+
+                    if = {
+                        limit = {
+                            prev.var:has_law_appointed_bureaucrats = yes
+                        }
+                        # appointed_bureaucrats add extra 25% more taxation so we need 20% less buildings for same effect
+                        # missing_buildings = ceil(missing_buildings/1.25)
+                        change_variable = {
+                            name = missing_buildings
+                            add = 1.24 # add 1.24 - 0.01 to ensure ceiling
+                            multiply = 0.8
+                        }
+                    }
+
+                    while = {
+                        count = var:missing_buildings
+                        start_building_construction = building_government_administration
+                    }
+                }
+            }
+        }
+    }
+}

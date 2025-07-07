@@ -82,8 +82,6 @@ law_closed_borders = {
 		country_disallow_agitator_invites_bool = yes
 		country_leverage_resistance_mult = 0.25
 		country_tech_spread_mult = -0.10
-		# country_authority_mult = 0.1	# 0.2
-		# state_tax_capacity_mult = 0.1
 	}
 	
 	progressiveness = -50

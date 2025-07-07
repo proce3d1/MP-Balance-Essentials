@@ -1,0 +1,63 @@
+pdxmesh = {
+	name = "zeppelin_01_mesh"
+	file = "zeppelin_01.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 12.0 }
+		lod = { index = 2 percent = 6.0 }
+	}
+
+	animation = { id = "moving_animation" type = "zeppelin_01_moving.anim" }
+
+	meshsettings = {
+		name = "zeppelinShape"
+		index = 0
+		texture_diffuse = "zeppelin_01_diffuse.dds"
+		texture_normal = "zeppelin_01_normal.dds"
+		texture_specular = "zeppelin_01_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "polySurface3Shape"
+		index = 0
+		texture_diffuse = "zeppelin_01_diffuse.dds"
+		texture_normal = "zeppelin_01_normal.dds"
+		texture_specular = "zeppelin_01_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "polySurface29Shape"
+		index = 0
+		texture_diffuse = "zeppelin_01_diffuse.dds"
+		texture_normal = "zeppelin_01_normal.dds"
+		texture_specular = "zeppelin_01_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+    name = "zeppelin_01_entity"
+    pdxmesh = "zeppelin_01_mesh"
+    default_state = "moving"
+	locator = { name = "loc_light" position = { 0 0.87 -0.6 } rotation = { 0 0 0 }}
+
+    state = {
+        name = "moving"
+        animation = "moving_animation"
+        looping = yes
+        next_state = "moving"
+
+		start_event = { time = 0 node = "loc_light" particle = "infrastructure/zeppelin_01_lights" trigger_once = yes}
+
+        start_event = { sound  = { soundeffect = "event:/SFX/Vehicles/zeppelin" } keep_sound = yes }
+    }
+    scale = 1.0
+}

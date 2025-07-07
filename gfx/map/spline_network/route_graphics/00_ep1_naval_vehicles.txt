@@ -1,0 +1,29 @@
+﻿cutty_sark = {
+	valid_spline_styles = { "naval_route" "coastal_naval_route" }
+
+	speed = 0.75
+	min_caravan_distance = 3.0
+	max_count = 5
+	max_path_length = 10
+	side_offset = 0.3
+	path_generation_mode = naval
+
+	tags = {
+		trade_league = {
+			trigger = {
+				power_bloc ?= {
+					has_identity = identity:identity_trade_league
+				}
+			}
+		}
+	}
+
+	route_entities = {
+		sail_transport_ship_01 = {
+			tags = { trade_league }
+			entity = "ship_cuttysark_01_entity"
+			position = 0
+			entity_length = 3.0
+		}
+	}
+}

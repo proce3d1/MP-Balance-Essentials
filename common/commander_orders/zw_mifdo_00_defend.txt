@@ -2,7 +2,7 @@
     texture = "gfx/interface/icons/commander_order_icons/defend.dds"
     
     military_type = army
-    ai_usage = defend
+    behavior = defend
     is_basic_order_type = yes
 
     visible = {
@@ -31,7 +31,7 @@ defend_dig_in = {
     texture = "gfx/interface/icons/commander_order_icons/zw_defend_adamant_defense.dds"
     
     military_type = army
-    ai_usage = defend
+    behavior = defend
 
     visible = {
         has_role = general
@@ -66,7 +66,7 @@ defend_desperate_charge = {
     texture = "gfx/interface/icons/commander_order_icons/zw_defend_counter_charge.dds"
     
     military_type = army
-    ai_usage = defend
+    behavior = defend
 
     visible = {
         has_role = general
@@ -129,7 +129,7 @@ defend_last_stand = {
     texture = "gfx/interface/icons/commander_order_icons/zw_defend_last_stand.dds"
     
     military_type = army
-    ai_usage = defend
+    behavior = defend
 
     visible = {
         has_role = general
@@ -162,7 +162,7 @@ defend_guerilla_warfare = {
     texture = "gfx/interface/icons/commander_order_icons/zw_defend_delaying_tatics.dds"
     
     military_type = army
-    ai_usage = defend
+    behavior = defend
 
     visible = {
         has_role = general

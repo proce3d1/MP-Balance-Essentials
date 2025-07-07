@@ -1,0 +1,107 @@
+﻿##################################################################
+######				POWERBLOC - IDENTITY PILLAR 			#####
+##################################################################
+#
+#
+##################################################
+####       			MOTORS 		 			  ###
+##################################################
+
+powerblocs_motor_dirt_road_route_graphics = {
+	valid_spline_styles = { "dirtroad" "pavedroad" }
+
+	speed = 0.5
+	min_caravan_distance = 10.0
+	max_count = 20
+	max_path_length = 4
+
+	tags = {
+		ideological_union = {
+			trigger = {
+				gfx_car_condition_trigger = yes
+				power_bloc ?= {
+					has_identity = identity:identity_ideological_union
+				}
+			}
+		}
+	}
+
+	route_entities = {
+		ideological_union_cars = {
+			tags = { ideological_union }
+			entity = "road_car_rollsroycesilverghost_entity"
+			position = 0
+			entity_length = 0.75
+		}
+	}
+}
+
+##################################################
+####       			CARTS 		 			   ###
+##################################################
+
+powerblocs_horse_cart_dirtroad_route_graphics = {
+	valid_spline_styles = { "dirtroad" "pavedroad" }
+
+	speed = 0.25
+	min_caravan_distance = 10.0
+	max_count = 20
+	max_path_length = 2
+
+	tags = {
+		sovereign_empire = {
+			trigger = {
+				power_bloc ?= {
+					has_identity = identity:identity_sovereign_empire
+				}
+			}
+		}
+		religious = {
+			trigger = {
+				power_bloc ?= {
+					has_identity = identity:identity_religious
+				}
+			}
+		}
+		sovereign_empire_or_religious = {
+			trigger = {
+				power_bloc ?= {
+					OR= {
+						has_identity = identity:identity_sovereign_empire
+						has_identity = identity:identity_religious
+					}
+				}
+			}
+		}
+	}
+
+	route_entities = {
+		sovereign_empire_horses_01 = {
+			tags = { sovereign_empire_or_religious }
+			entity = "horses_01_entity"
+			position = 0
+			entity_length = 0.35
+
+			count = {
+				integer_range = {
+					min = 2
+					max = 3
+				}
+			}
+		}
+			
+		sovereign_empire_cart_01 = {
+			tags = { sovereign_empire }
+			entity = "horse_cart_sovereignempire_entity"
+			position = 1
+			entity_length = 0.65
+		}
+
+		sovereign_empire_cart_01 = {
+			tags = { religious }
+			entity = "horse_cart_religiouscongregation_01_entity"
+			position = 1
+			entity_length = 0.65
+		}
+	}
+}

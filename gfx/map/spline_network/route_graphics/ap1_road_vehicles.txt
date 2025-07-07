@@ -1,0 +1,48 @@
+﻿horse_carts_ap1 = {
+	valid_spline_styles = { "dirtroad" "pavedroad" }
+
+	speed = 0.25
+	min_caravan_distance = 3.0
+	max_count = 600
+	max_path_length = 2
+
+	possible = {
+		scope:state = {
+			market = {
+				mg:automobiles = {
+					market_goods_sell_orders < 10
+				}
+			}
+		}
+	}
+
+	route_entities = {
+		horses_ap1 = {
+			entity = "horses_ap1_entity"
+			position = 0
+			entity_length = 0.35
+			
+			count = {
+				value = 3
+			}
+		}
+
+		cart_ap1_01 = {
+			entity = "horse_cart_ap1_01_entity"
+			position = 1
+			entity_length = 0.45
+		}
+	
+		cart_ap1_02 = {
+			entity = "horse_cart_ap1_02_entity"
+			position = 1
+			entity_length = 0.45
+		}
+	
+		cart_ap1_03 = {
+			entity = "horse_cart_ap1_03_entity"
+			position = 1
+			entity_length = 0.45
+		}
+	}
+}

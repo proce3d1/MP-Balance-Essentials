@@ -4,7 +4,8 @@ NPolitics = {
 	LAW_ENACTMENT_MIN_TOTAL_DAYS = 14			# Vanilla = 1, Minimum number of total days that an enactment checkpoint can take [>=1]
 	LAW_ENACTMENT_DEFAULT_BASE_DAYS = 80		# Vanilla = 100, Default number of base days required to reach an enactment checkpoint [>=1]
 	LAW_ENACTMENT_COOLDOWN_DAYS = 456			# Vanilla = 730, When an enactment fails, or is manually stopped after at least one checkpoint, that law can't be tried to be enacted for this many days [>=0]
-	
+	LAW_ENACTMENT_LAW_COMMITMENT_EFFECT = 0.05	# 0.25 # Committing to enacting a law via treaty adds this much to pass chance	
+
 }
 
 NEconomy = {
@@ -18,6 +19,9 @@ NEconomy = {
 	REINVESTMENT_BASE_EFFICIENCY_THRESHOLD = 30000000	# 50000000 # Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0
 	# REINVESTMENT_SUBSISTENCE_FRACTION_REDUCTION = 0.5	# Reinvestment from pops in ownership buildings is multiplied by ( 1 - this * the share of levels owned that are subsistence buildings
 
+	COMPANY_PROSPERITY_POPULARITY_MULTIPLIER = 0.1	# 0.2				# Companies gain this much target prosperity, scaled by the popularity of its executive
+
+	PRESTIGE_GOODS_INPUT_THROUGHPUT_BONUS = 0.1	# 0.2		# Bonus to throughput, scaled against proportion of input goods base value that is prestige goods
 }
 
 NMilitary = {
@@ -41,12 +45,12 @@ NMilitary = {
 }	
 
 NDiplomacy = {
-
+	DEFAULT_DIPLOMATIC_PLAY = "dp_default_treaty_article" 
 
 	DEFAULT_TRUCE_MONTHS = 60
 	PEACE_DEAL_DURATION_IN_DAYS = 30
 	PEACE_DEAL_COOLDOWN_IN_DAYS = 60	# 120
-	PACT_REQUIRES_APPROVAL_MIN_FORCED_MONTHS = 1 		# Diplomatic pacts that require approval always have at least this cooldown period before they can be broken
+	PACT_REQUIRES_APPROVAL_MIN_FORCED_MONTHS = 12 		# Diplomatic pacts that require approval always have at least this cooldown period before they can be broken
 	OBLIGATION_FORCED_PACT_MONTHS = 60	# 120
 	SWAY_FORCED_PACT_MONTHS = 120
 	EXPEL_DIPLOMATS_MONTHS = 24			# 60

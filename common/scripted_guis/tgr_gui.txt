@@ -1,0 +1,40 @@
+﻿
+check_if_has_researched_railways = {
+	scope = country
+	
+    is_valid = {
+		has_technology_researched = railways
+    }
+}
+
+
+executelessclicksrailways = {
+	scope = country
+	
+    effect = {
+		trigger_event = { id = build_railways_events.1 }
+    }
+}
+executelessclicksgovadmin = {
+	scope = country
+	
+    effect = {
+		trigger_event = { id = build_administrations_events.1 }
+    }
+}
+
+check_if_has_researched_mutual_funds = {
+	scope = country
+	
+    is_valid = {
+		has_technology_researched = electrical_generation
+    }
+}
+
+executebuildpowerplants = {
+	scope = country
+	
+    effect = {
+		trigger_event = { id = build_powerplants_events.1 }
+    }
+}

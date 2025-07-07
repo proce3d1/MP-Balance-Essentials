@@ -51,6 +51,21 @@ notification_headlines_taiping_defeat_tooltip:0 "#header $notification_headlines
  notification_headlines_taiping_defeat_name:0 "#b CHRISTIANS MASSACRED IN CHINA #!"
  notification_headlines_taiping_defeat_desc:1 "The [SCOPE.sCountry('china_scope').GetName] have crushed the God-Worshipping Society's rebellion. #lore Shocking reports of civilian massacres have filtered out from the recaptured provinces, with one eyewitness claiming that over 30,000 people were killed in a single day by... #!"
 
+#Sepoy Mutiny
+notification_headlines_sepoy_mutiny_tooltip:0 "#header $notification_headlines_sepoy_mutiny_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sepoy_mutiny_desc$"
+ notification_headlines_sepoy_mutiny_name:0 "#b SEPOY MUTINY — BRITISH MOBILIZE #!"
+ notification_headlines_sepoy_mutiny_desc:1 "The Indian subjects of the [SCOPE.sCountry('bic_scope').GetName] have risen in revolt across the subcontinent. #lore Entire regiments of local Hindu and Muslim troops have rebelled against their British masters, fighting for an end to foreign domination by the... #!"
+
+#Sepoy Mutiny Success
+notification_headlines_sepoy_mutiny_success_tooltip:0 "#header $notification_headlines_sepoy_mutiny_success_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sepoy_mutiny_success_desc$"
+ notification_headlines_sepoy_mutiny_success_name:0 "#b THE END OF BRITISH INDIA? #!"
+ notification_headlines_sepoy_mutiny_success_desc:1 "The Sepoy Mutiny has succeeded in liberating large swathes of India from [SCOPE.sCountry('bic_scope').GetAdjective] rule. #lore The catastrophic defeat has sent markets in London into chaos, while the remnants of the British administration fortify their remaining holdings in... #!"
+
+#Sepoy Mutiny Failure
+notification_headlines_sepoy_mutiny_crushed_tooltip:0 "#header $notification_headlines_sepoy_mutiny_crushed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_sepoy_mutiny_crushed_desc$"
+ notification_headlines_sepoy_mutiny_crushed_name:0 "#b THE ARMY OF RETRIBUTION #!"
+ notification_headlines_sepoy_mutiny_crushed_desc:1 "The [SCOPE.sCountry('bic_scope').GetName] has crushed the sepoy mutiny with overwhelming force. #lore Horrific reports from the recaptured cities describe British regulars shooting everything that moves, bayoneting women and children, and even... #!"
+
 
 ##Collapses##
 #Qing Collapse
@@ -59,8 +74,8 @@ notification_headlines_qing_collapse_tooltip:0 "#header $notification_headlines_
  notification_headlines_qing_collapse_desc:1 "Beleagured on all sides, the authority of the [SCOPE.sCountry('china_scope').GetName] appears to have totally collapsed. #lore  Local generals and ambitious bandits have seized control of provinces across China, subjecting the population to untold privations. The foreign ministries of several European powers issued statements concerning...#!"
 #BIC Collapse
 notification_headlines_bic_collapse_tooltip:0 "#header $notification_headlines_bic_collapse_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_bic_collapse_desc$"
- notification_headlines_bic_collapse_name:0 "#b THE END OF BRITISH INDIA? #!"
- notification_headlines_bic_collapse_desc:1 "Political turmoil has ended the long British rule over India, with the formerly-subject princes reasserting themselves across the continent. #lore Indian ports are clogged with English seeking passage back to the home islands. The British foreign ministry has given its full support to repatriation of...#!"
+ notification_headlines_bic_collapse_name:0 "#b THE CROWN JEWEL, LOST #!"
+ notification_headlines_bic_collapse_desc:1 "The long [SCOPE.sCountry('britain_scope').GetAdjective] rule over India has ended, leaving the future of the subcontinent uncertain. #lore Indian ports are clogged with English seeking passage back to the home islands. The British foreign ministry has given its full support to repatriation of...#!"
 
 #DEI Collapse
 notification_headlines_dei_collapse_tooltip:0 "#header $notification_headlines_dei_collapse_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_dei_collapse_desc$"
@@ -107,6 +122,11 @@ notification_headlines_scandinavia_formed_tooltip:0 "#header $notification_headl
 notification_headlines_yugoslavia_formed_tooltip:0 "#header $notification_headlines_yugoslavia_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_yugoslavia_formed_desc$"
  notification_headlines_yugoslavia_formed_name:0 "#b YUGOSLAV FEDERATION DECLARED #!"
  notification_headlines_yugoslavia_formed_desc:1 "The western balkans have been united under [SCOPE.sCountry('yugoslavia_scope').GetName]. #lore Ambassadors of the new Yugoslav state were formally recognized by the other European countries at a diplomatic congress. Long under the Austrian and Ottoman yokes, the slavic peoples must now... #!"
+
+#India Formed
+notification_headlines_india_formed_tooltip:0 "#header $notification_headlines_india_formed_name$#!\n$TOOLTIP_DELIMITER$\n$notification_headlines_india_formed_desc$"
+ notification_headlines_india_formed_name:0 "#b FREE INDIA #!"
+ notification_headlines_india_formed_desc:1 "The state of [SCOPE.sCountry('india_scope').GetName] has been declared, claiming the title of unifier of the subcontinent. #lore International observers remain skeptical of the new state's prospects, citing increasing tension between the Hindu and Muslim populations of the region, especially in... #!"
 
 ##Regime Changes##
 #British Republic

@@ -1,0 +1,90 @@
+pdxmesh = {
+	name = "horse_cart_religiouscongregation_01_mesh"
+	file = "horse_cart_religiouscongregation_01.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 10.0 }
+		lod = { index = 2 percent = 5.0 }
+		lod = { index = 3 percent = 2.5 }
+		lod = { index = 4 percent = 1.2 }
+	}
+
+	animation = { id = "moving_animation" type = "horse_cart_religiouscongregation_01_moving.anim" }
+
+	meshsettings = {
+		name = "horse_cart_religiouscongregation_01_Shape0Deformed"
+		index = 0
+		texture_diffuse = "horse_cart_religiouscongregation_diffuse.dds"
+		texture_normal = "horse_cart_religiouscongregation_normal.dds"
+		texture_specular = "horse_cart_religiouscongregation_properties.dds"
+		texture = { file = "horse_cart_religiouscongregation_mask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+	}
+
+	meshsettings = {
+		name = "horse_cart_religiouscongregation_01_Shape1Deformed"
+		index = 0
+		texture_diffuse = "horse_cart_religiouscongregation_diffuse.dds"
+		texture_normal = "horse_cart_religiouscongregation_normal.dds"
+		texture_specular = "horse_cart_religiouscongregation_properties.dds"
+		texture = { file = "horse_cart_religiouscongregation_mask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+	}
+
+	meshsettings = {
+		name = "horse_cart_religiouscongregation_01_Shape2Deformed"
+		index = 0
+		texture_diffuse = "horse_cart_religiouscongregation_diffuse.dds"
+		texture_normal = "horse_cart_religiouscongregation_normal.dds"
+		texture_specular = "horse_cart_religiouscongregation_properties.dds"
+		texture = { file = "horse_cart_religiouscongregation_mask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+	}
+
+	meshsettings = {
+		name = "horse_cart_religiouscongregation_01_Shape3Deformed"
+		index = 0
+		texture_diffuse = "horse_cart_religiouscongregation_diffuse.dds"
+		texture_normal = "horse_cart_religiouscongregation_normal.dds"
+		texture_specular = "horse_cart_religiouscongregation_properties.dds"
+		texture = { file = "horse_cart_religiouscongregation_mask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+	}
+
+	meshsettings = {
+		name = "horse_cart_religiouscongregation_01_Shape4Deformed"
+		index = 0
+		texture_diffuse = "horse_cart_religiouscongregation_diffuse.dds"
+		texture_normal = "horse_cart_religiouscongregation_normal.dds"
+		texture_specular = "horse_cart_religiouscongregation_properties.dds"
+		texture = { file = "horse_cart_religiouscongregation_mask.dds" index = 6 }
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+	}
+}
+
+entity = {
+	name = "horse_cart_religiouscongregation_01_entity"
+	pdxmesh = "horse_cart_religiouscongregation_01_mesh"
+
+	default_state = "moving"
+
+	scale = 0.5
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+
+		start_event = { node = "loc_vfx" particle = "vehicles/carriage_festive" trigger_once = yes
+		sound  = { soundeffect = "event:/SFX/Animation/vehicles/identity/anm_identity_caravan_religious_congregation" } keep_sound = yes }
+	}
+}

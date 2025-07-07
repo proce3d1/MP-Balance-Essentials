@@ -1,0 +1,5 @@
+﻿GLOBAL = {
+    trigger_event = {
+        on_action = API_on_weekly_driver
+    }
+}

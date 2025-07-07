@@ -1,0 +1,35 @@
+﻿
+	researchedrailwayscustom = {
+		type = country
+		random_valid = no
+		log_loc_errors = no
+		
+		text = {
+			trigger = {
+				has_technology_researched = railways
+			}
+			localization_key = tooltip_buildrailwaysx
+		}
+		text = {
+			localization_key = tooltip_buildrailwaysxx
+		}
+		berlinclaimstooltip = {
+		}
+	}
+researchedelectriccustom = {
+		type = country
+		random_valid = no
+		log_loc_errors = no
+		
+		text = {
+			trigger = {
+				has_technology_researched = electrical_generation
+			}
+			localization_key = tooltip_buildpowerplantsx
+		}
+		text = {
+			localization_key = tooltip_buildpowerplantsxx
+		}
+	berlinclaimstooltip = {
+	}
+}

@@ -1,0 +1,12 @@
+﻿#catch battle width, this scope is province get by UI
+cnm_battleinfo_province_terrain_infrastructure_force_limit = {
+	value = this.state.infrastructure
+	divide = 2
+	add = 5
+	multiply = this.combat_width
+	ceiling = yes
+}
+#catch front_length, this scope is front get by UI
+cnm_battleinfo_get_front_length = {
+	value = this.front_length
+}

@@ -1,0 +1,56 @@
+pdxmesh = {
+	name = "horses_ap1_mesh"
+	file = "horses_ap1.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 7.0 }
+		lod = { index = 2 percent = 4.0 }
+	}
+
+	animation = { id = "idle_animation" type = "horses_01_idle.anim" }
+	animation = { id = "moving_animation" type = "horses_01_moving.anim" }
+	animation = { id = "moving_2_animation" type = "horses_01_moving_2.anim" }
+
+	meshsettings = {
+		name = "horses_LOD0Shape"
+		index = 0
+		texture_diffuse = "horseandcart_ap1_01_diffuse.dds"
+		texture_normal = "horseandcart_ap1_01_normal.dds"
+		texture_specular = "horseandcart_ap1_01_diffuse.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "horses_LOD1Shape"
+		index = 0
+		texture_diffuse = "horseandcart_ap1_01_diffuse.dds"
+		texture_normal = "horseandcart_ap1_01_normal.dds"
+		texture_specular = "horseandcart_ap1_01_diffuse.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "horses_LOD2Shape"
+		index = 0
+		texture_diffuse = "horseandcart_ap1_01_diffuse.dds"
+		texture_normal = "horseandcart_ap1_01_normal.dds"
+		texture_specular = "horseandcart_ap1_01_diffuse.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "horses_ap1_entity"
+	pdxmesh = "horses_ap1_mesh"
+
+	default_state = "moving_2"
+	state = { name = "idle" animation = "idle_animation" looping = no next_state = "idle" }
+	state = { name = "moving" animation = "moving_animation" looping = yes animation_speed = 0.6 }
+
+	state = { name = "moving_2" animation = "moving_2_animation" looping = yes animation_speed = 0.6 }
+
+	scale = 0.45
+}

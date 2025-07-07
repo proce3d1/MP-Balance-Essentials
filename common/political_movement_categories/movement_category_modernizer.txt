@@ -1,9 +1,0 @@
-﻿movement_category_modernizer = {
-	icon = "gfx/interface/icons/political_movement_icons/movement_ideological.dds"
-	
-	minimum_support_to_create = 0.005
-	minimum_support_to_maintain = 0.0025
-	
-	sorting_order = 1
-}
-

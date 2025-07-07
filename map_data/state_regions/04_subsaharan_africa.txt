@@ -1238,7 +1238,7 @@ STATE_VRYSTAAT = {
         bg_coal_mining = 60
         bg_iron_mining = 30
         bg_logging = 12
-		bg_gold_fields = 7
+		# bg_gold_fields = 7
     }
     resource = {
         type = "bg_gold_fields"
@@ -1262,7 +1262,7 @@ STATE_TRANSVAAL = {
         bg_coal_mining = 104
         bg_iron_mining = 60
         bg_logging = 5
-		bg_gold_fields = 10
+		# bg_gold_fields = 10
     }
     resource = {
         type = "bg_gold_fields"

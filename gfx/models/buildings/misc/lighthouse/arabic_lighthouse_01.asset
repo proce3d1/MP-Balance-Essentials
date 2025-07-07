@@ -1,0 +1,137 @@
+pdxmesh = {
+	name = "arabic_lighthouse_01_mesh"
+	file = "generic_lighthouse_01.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 12.0 }
+		lod = { index = 2 percent = 6.0 }
+		lod = { index = 3 percent = 3.0 }
+	}
+
+	animation = { id = "idle_animation" type = "generic_lighthouse_01_idle.anim" }
+
+	meshsettings = {
+		name = "LOD_0|generic_lighthouse_01|generic_lighthouse_01Shape"
+		index = 0
+		texture_diffuse = "arabic_lighthouse_01_diffuse.dds"
+		texture_normal = "arabic_lighthouse_01_normal.dds"
+		texture_specular = "arabic_lighthouse_01_properties.dds"
+		texture = { file = "generic_lighthouse_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_0|generic_lighthouse_01|generic_lighthouse_01Shape"
+		index = 1
+		texture_diffuse = "arabic_lighthouse_01_diffuse.dds"
+		texture_normal = "arabic_lighthouse_01_normal.dds"
+		texture_specular = "arabic_lighthouse_01_properties.dds"
+		texture = { file = "generic_lighthouse_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|generic_lighthouse_01|generic_lighthouse_01Shape"
+		index = 0
+		texture_diffuse = "arabic_lighthouse_01_diffuse.dds"
+		texture_normal = "arabic_lighthouse_01_normal.dds"
+		texture_specular = "arabic_lighthouse_01_properties.dds"
+		texture = { file = "generic_lighthouse_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_1|generic_lighthouse_01|generic_lighthouse_01Shape"
+		index = 1
+		texture_diffuse = "arabic_lighthouse_01_diffuse.dds"
+		texture_normal = "arabic_lighthouse_01_normal.dds"
+		texture_specular = "arabic_lighthouse_01_properties.dds"
+		texture = { file = "generic_lighthouse_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|generic_lighthouse_01|generic_lighthouse_01Shape"
+		index = 0
+		texture_diffuse = "arabic_lighthouse_01_diffuse.dds"
+		texture_normal = "arabic_lighthouse_01_normal.dds"
+		texture_specular = "arabic_lighthouse_01_properties.dds"
+		texture = { file = "generic_lighthouse_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "PDX_MESH_SNAP_VERTICES_TO_TERRAIN" "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_2|generic_lighthouse_01|generic_lighthouse_01Shape"
+		index = 1
+		texture_diffuse = "arabic_lighthouse_01_diffuse.dds"
+		texture_normal = "arabic_lighthouse_01_normal.dds"
+		texture_specular = "arabic_lighthouse_01_properties.dds"
+		texture = { file = "generic_lighthouse_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "LOD_3|generic_lighthouse_01|generic_lighthouse_01Shape"
+		index = 0
+		texture_diffuse = "arabic_lighthouse_01_diffuse.dds"
+		texture_normal = "arabic_lighthouse_01_normal.dds"
+		texture_specular = "arabic_lighthouse_01_properties.dds"
+		texture = { file = "generic_lighthouse_tint.dds" index = 5 }
+		shader = "standard"
+		additional_shader_defines = { "TINT_COLOR" "EMISSIVE_NIGHT" "EMISSIVE_NIGHT_RANDOM" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+entity = {
+	name = "arabic_lighthouse_01_entity"
+	pdxmesh = "arabic_lighthouse_01_mesh"
+
+	scale = 0.5
+	default_state = "idle"
+
+	locator = { name = "birds" position = { 0 3 0 } }
+
+	state =
+	{
+		name = "idle"
+		animation = "idle_animation"
+		chance = 1
+		state_time = 5
+		looping = yes
+
+		start_event =
+		{
+			time = 0
+			node = "birds"
+			entity = "seagull_port_entity"
+			trigger_once = yes
+			keep_sound = yes trigger_once = yes sound  = { soundeffect = "event:/SFX/Ambience/3D/Fauna/seagulls" }
+		}
+
+		event = { time = 0	node = "loc_light" particle = "infrastructure/lighthouse" trigger_once = yes keep_particle = yes}		
+	}
+
+	state =
+	{
+		name = "idle"
+		animation = "idle_animation"
+		chance = 1
+		state_time = 5
+		looping = yes
+
+		event = { time = 0 node = "loc_light" particle = "infrastructure/lighthouse" trigger_once = yes keep_particle = yes}
+	}
+}

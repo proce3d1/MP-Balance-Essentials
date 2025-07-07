@@ -2,7 +2,7 @@
 	texture = "gfx/interface/icons/commander_order_icons/advance.dds"
 	
 	military_type = army
-	ai_usage = advance
+	behavior = advance
     is_basic_order_type = yes
 
 	visible = {
@@ -31,7 +31,7 @@ advance_reckless = {
 	texture = "gfx/interface/icons/commander_order_icons/zw_advance_reckless_advance.dds"
     
     military_type = army
-	ai_usage = advance
+	behavior = advance
 
 	visible = {
 		has_role = general
@@ -64,7 +64,7 @@ advance_pillager = {
 	texture = "gfx/interface/icons/commander_order_icons/zw_advance_pillage.dds"
     
     military_type = army
-	ai_usage = advance
+	behavior = advance
 
 	visible = {
 		has_role = general
@@ -102,7 +102,7 @@ advance_cautious = {
 	texture = "gfx/interface/icons/commander_order_icons/zw_advance_cautious_advance.dds"
     
     military_type = army
-	ai_usage = advance
+	behavior = advance
 
 	visible = {
 		has_role = general
@@ -133,7 +133,7 @@ advance_heavy_barrage = {
 	texture = "gfx/interface/icons/commander_order_icons/zw_advance_heavy_barrage.dds"
     
     military_type = army
-    ai_usage = advance
+    behavior = advance
 
 	visible = {
 		has_role = general
@@ -206,7 +206,7 @@ advance_cavalry_assualt = {
 	texture = "gfx/interface/icons/commander_order_icons/zw_advance_rapid_advance.dds"
 
     military_type = army
-    ai_usage = advance
+    behavior = advance
 
 	visible = {
 		has_role = general
@@ -274,7 +274,7 @@ advance_tank_assualt = {
 	texture = "gfx/interface/icons/commander_order_icons/zw_advance_heavy_advance.dds"
 
     military_type = army
-    ai_usage = advance
+    behavior = advance
 
 	visible = {
 		has_role = general

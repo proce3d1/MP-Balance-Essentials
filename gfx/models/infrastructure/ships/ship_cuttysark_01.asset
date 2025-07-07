@@ -1,0 +1,236 @@
+pdxmesh = {
+	name = "ship_cuttysark_01_mesh"
+	file = "ship_cuttysark_01.mesh"
+
+	lod_percentages = {
+		lod = { index = 1 percent = 32.0 }
+		lod = { index = 2 percent = 16.0 }
+		lod = { index = 3 percent = 8.0 }
+		lod = { index = 4 percent = 4.0 }
+	}
+
+	animation = { id = "moving_animation" type = "generic_ship_cargo_01_moving.anim" }
+
+	meshsettings = {
+		name = "ship_cuttysark_ropes_01_Shape0Deformed"
+		index = 0
+		texture_diffuse = "generic_ship_alpha_diffuse.dds"
+		texture_normal = "generic_ship_alpha_normal.dds"
+		texture_specular = "generic_ship_alpha_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_01_Shape0Deformed"
+		index = 0
+		texture_diffuse = "ship_cuttysark_diffuse.dds"
+		texture_normal = "ship_cuttysark_normal.dds"
+		texture_specular = "ship_cuttysark_properties.dds"
+		texture = { file = "ship_cuttysark_mask.dds" index = 6 }
+		shader = "standard"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_flag_01_Shape0Deformed"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		shader = "standard_flag_basic"
+		additional_shader_defines = { "COA_TEXTURE" "BACKLIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_sails_01_Shape0Deformed"
+		index = 0
+		texture_diffuse = "ship_cuttysark_diffuse.dds"
+		texture_normal = "ship_cuttysark_normal.dds"
+		texture_specular = "ship_cuttysark_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "BACKLIGHT" "PB_TEXTURE" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_ropes_01_Shape1Deformed"
+		index = 0
+		texture_diffuse = "generic_ship_alpha_diffuse.dds"
+		texture_normal = "generic_ship_alpha_normal.dds"
+		texture_specular = "generic_ship_alpha_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_01_Shape1Deformed"
+		index = 0
+		texture_diffuse = "ship_cuttysark_diffuse.dds"
+		texture_normal = "ship_cuttysark_normal.dds"
+		texture_specular = "ship_cuttysark_properties.dds"
+		texture = { file = "ship_cuttysark_mask.dds" index = 6 }
+		shader = "standard"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_flag_01_Shape1Deformed"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		shader = "standard_flag_basic"
+		additional_shader_defines = { "COA_TEXTURE" "BACKLIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_sails_01_Shape1Deformed"
+		index = 0
+		texture_diffuse = "ship_cuttysark_diffuse.dds"
+		texture_normal = "ship_cuttysark_normal.dds"
+		texture_specular = "ship_cuttysark_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "BACKLIGHT" "PB_TEXTURE" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_ropes_01_Shape2Deformed"
+		index = 0
+		texture_diffuse = "generic_ship_alpha_diffuse.dds"
+		texture_normal = "generic_ship_alpha_normal.dds"
+		texture_specular = "generic_ship_alpha_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_01_Shape2Deformed"
+		index = 0
+		texture_diffuse = "ship_cuttysark_diffuse.dds"
+		texture_normal = "ship_cuttysark_normal.dds"
+		texture_specular = "ship_cuttysark_properties.dds"
+		texture = { file = "ship_cuttysark_mask.dds" index = 6 }
+		shader = "standard"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_flag_01_Shape2Deformed"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		shader = "standard_flag_basic"
+		additional_shader_defines = { "COA_TEXTURE" "BACKLIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_sails_01_Shape2Deformed"
+		index = 0
+		texture_diffuse = "ship_cuttysark_diffuse.dds"
+		texture_normal = "ship_cuttysark_normal.dds"
+		texture_specular = "ship_cuttysark_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "BACKLIGHT" "PB_TEXTURE" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_ropes_01_Shape3Deformed"
+		index = 0
+		texture_diffuse = "generic_ship_alpha_diffuse.dds"
+		texture_normal = "generic_ship_alpha_normal.dds"
+		texture_specular = "generic_ship_alpha_properties.dds"
+		shader = "standard"
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_01_Shape3Deformed"
+		index = 0
+		texture_diffuse = "ship_cuttysark_diffuse.dds"
+		texture_normal = "ship_cuttysark_normal.dds"
+		texture_specular = "ship_cuttysark_properties.dds"
+		texture = { file = "ship_cuttysark_mask.dds" index = 6 }
+		shader = "standard"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_flag_01_Shape3Deformed"
+		index = 0
+		texture_diffuse = "flag_wrinkles_diffuse.dds"
+		texture_normal = "flag_wrinkles_normal.dds"
+		texture_specular = "flag_wrinkles_properties.dds"
+		shader = "standard_flag_basic"
+		additional_shader_defines = { "COA_TEXTURE" "BACKLIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_sails_01_Shape3Deformed"
+		index = 0
+		texture_diffuse = "ship_cuttysark_diffuse.dds"
+		texture_normal = "ship_cuttysark_normal.dds"
+		texture_specular = "ship_cuttysark_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "BACKLIGHT" "PB_TEXTURE" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_01_Shape4Deformed"
+		index = 0
+		texture_diffuse = "ship_cuttysark_diffuse.dds"
+		texture_normal = "ship_cuttysark_normal.dds"
+		texture_specular = "ship_cuttysark_properties.dds"
+		texture = { file = "ship_cuttysark_mask.dds" index = 6 }
+		shader = "standard"
+		additional_shader_defines = { "PB_COLOR" "EMISSIVE_NIGHT" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+
+	meshsettings = {
+		name = "ship_cuttysark_sails_01_Shape4Deformed"
+		index = 0
+		texture_diffuse = "ship_cuttysark_diffuse.dds"
+		texture_normal = "ship_cuttysark_normal.dds"
+		texture_specular = "ship_cuttysark_properties.dds"
+		shader = "standard"
+		additional_shader_defines = { "BACKLIGHT" "PB_TEXTURE" }
+		shader_file = "gfx/FX/pdxmesh.shader"
+	}
+}
+
+#locators:
+# locator_front_body_water
+# locator_back_body_water
+# locator_front_root_water
+# locator_back_root_water
+
+entity = {
+	name = "ship_cuttysark_01_entity"
+	pdxmesh = "ship_cuttysark_01_mesh"
+
+	cull_radius = 10
+
+	default_state = "moving"
+
+	scale = 0.5
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+
+		event = { time = 0	node = "locator_front_root_water"	particle = "ships/ship_water_front_01"	trigger_once = yes	keep_particle = no
+		sound  = { soundeffect = "event:/SFX/Animation/vehicles/identity/anm_identity_ship_cutty_shark" } keep_sound = yes }
+	}
+}

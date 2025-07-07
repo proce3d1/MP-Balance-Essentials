@@ -3,20 +3,13 @@
 		ig:ig_industrialists = {
 			add_ruling_interest_group = yes
 		}
-		# effect_starting_technology_tier_2_tech = yes
-		effect_starting_technology_tier_3_tech = yes
+		effect_starting_technology_tier_2_tech = yes
 
-		add_technology_researched = mass_communication
-		add_technology_researched = stock_exchange
-		add_technology_researched = corporate_charters
-		add_technology_researched = lathe
-		add_technology_researched = atmospheric_engine
-		add_technology_researched = napoleonic_warfare
-		
-		# add_technology_researched = mechanical_tools
+
+		add_technology_researched = mechanical_tools
 		# add_technology_researched = atmospheric_engine
 		# add_technology_researched = railways
-		# add_technology_researched = corporate_charters
+		add_technology_researched = corporate_charters
 
 		activate_law = law_type:law_presidential_republic
 		activate_law = law_type:law_total_separation
@@ -41,11 +34,17 @@
 		}
 
 		set_tax_level = high # EIC revenue was essentially based on tax farming
-		set_military_wage_level = high # The soldiers were quite well-compensated, especially those of the Bengal Presidency
 
 		add_taxed_goods = g:opium
 		add_taxed_goods = g:tobacco
 
+		set_export_tariff_level = { 
+			goods = g:opium
+			level = low_subventions
+		}
+		set_export_tariff_level = { 
+			goods = g:clothes
+			level = high_tariffs
 		set_variable = {
 			name = east_indies_revolt_var
 			value = 0
@@ -59,14 +58,8 @@
 			type = je_uneasy_raj
 		}
 
-		add_company = company_type:company_east_india_company
-		company:company_east_india_company = {
-			set_company_establishment_date = 1600.12.31
-			set_company_state_region = s:STATE_WEST_BENGAL
-		}
 
 		add_modifier = modifier_india_company_rule
-		add_modifier = modifier_high_pop_authority
 
 
 		every_scope_state = {

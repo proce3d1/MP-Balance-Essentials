@@ -1,0 +1,237 @@
+###			EXPERIMENTAL LOCOMOTIVES			###
+
+entity = {
+	name = "train_locomotive_planet_01_entity"
+	pdxmesh = "train_locomotive_planet_01_mesh"
+
+	default_state = "moving"
+		
+	state = { 
+		name = "moving" 
+		animation = "moving_animation" 
+		looping = yes
+		
+		start_event = { time = 0 node = "loc_vfx" particle = "trains/planet" trigger_once = yes keep_particle = yes sound  = { soundeffect = "event:/SFX/Vehicles/train/train_locomotive_early_planet" } keep_sound = yes }
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_saxonia_01_entity"
+	pdxmesh = "train_locomotive_saxonia_01_mesh"
+
+	default_state = "moving"
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		
+		start_event = { time = 0 node = "_loc_vfx" particle = "trains/saxonia" trigger_once = yes keep_particle = yes sound  = { soundeffect = "event:/SFX/Vehicles/train/train_locomotive_early_saxonia" } keep_sound = yes }
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_crampton_01_entity"
+	pdxmesh = "train_locomotive_crampton_01_mesh"
+
+	default_state = "moving"
+		
+	state = { 
+		name = "moving" 
+		animation = "moving_animation" 
+		looping = yes
+
+		start_event = { time = 0 node = "loc_vfx" particle = "trains/crampton" trigger_once = yes keep_particle = yes sound  = { soundeffect = "event:/SFX/Vehicles/train/train_locomotive_early_crampton" } keep_sound = yes }
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_cramptontender_01_entity"
+	pdxmesh = "train_locomotive_cramptontender_01_mesh"
+
+	default_state = "moving"
+		
+	state = { 
+		name = "moving" 
+		animation = "moving_animation" 
+		looping = yes
+
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_cherepanov_01_entity"
+	pdxmesh = "train_locomotive_cherepanov_01_mesh"
+
+	default_state = "moving"
+
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		
+		start_event = { time = 0 node = "_loc_vfx" particle = "trains/cherepanov" trigger_once = yes keep_particle = yes	sound  = { soundeffect = "event:/SFX/Vehicles/train/train_locomotive_early_cherepanov" } keep_sound = yes }
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_johnbull_01_entity"
+	pdxmesh = "train_locomotive_johnbull_01_mesh"
+
+	default_state = "moving"
+		
+	state = { 
+		name = "moving" 
+		animation = "moving_animation" 
+		looping = yes
+
+		start_event = { time = 0 node = "loc_vfx" particle = "trains/johnbull" trigger_once = yes keep_particle = yes sound  = { soundeffect = "event:/SFX/Vehicles/train/train_locomotive_early_johnbull" } keep_sound = yes }
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_johnbulltender_01_entity"
+	pdxmesh = "train_locomotive_johnbulltender_01_mesh"
+	
+	default_state = "moving"
+		
+	state = { 
+		name = "moving" 
+		animation = "moving_animation" 
+		looping = yes
+
+	}
+	scale = 0.5
+}
+
+
+###				STEAM LOCOMOTIVES 				###
+
+entity = {
+	name = "train_locomotive_gnrstirling_01_entity"
+	pdxmesh = "train_locomotive_gnrstirling_01_mesh"
+
+	default_state = "moving"
+		
+	state = { 
+		name = "moving" 
+		animation = "moving_animation" 
+		looping = yes
+		
+		start_event = { time = 0 node = "loc_vfx" particle = "trains/gnrstirling" trigger_once = yes keep_particle = yes sound  = { soundeffect = "event:/SFX/Vehicles/train/train_locomotive_victorian_gnrstirling" } keep_sound = yes }
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_gnrstirlingtender_01_entity"
+	pdxmesh = "train_locomotive_gnrstirlingtender_01_mesh"
+
+	default_state = "moving"
+		
+	state = { 
+		name = "moving" 
+		animation = "moving_animation" 
+		looping = yes
+		
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_ouest_01_entity"
+	pdxmesh = "train_locomotive_ouest_01_mesh"
+
+	default_state = "moving"
+		
+	state = { 
+		name = "moving" 
+		animation = "moving_animation" 
+		looping = yes
+
+		start_event = { time = 0 node = "loc_vfx" particle = "trains/ouest" trigger_once = yes keep_particle = yes sound  = { soundeffect = "event:/SFX/Vehicles/train/train_locomotive_victorian_ouest" } keep_sound = yes }
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_ouesttender_01_entity"
+	pdxmesh = "train_locomotive_ouesttender_01_mesh"
+	
+	default_state = "moving"
+		
+	state = { 
+		name = "moving" 
+		animation = "moving_animation" 
+		looping = yes
+
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_sudbahn_01_entity"
+	pdxmesh = "train_locomotive_sudbahn_01_mesh"
+
+	default_state = "moving"
+
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		
+		start_event = { time = 0 node = "_loc_vfx" particle = "trains/sudbahn" trigger_once = yes keep_particle = yes sound = { soundeffect = "event:/SFX/Vehicles/train/train_locomotive_victorian_sudbahn" } keep_sound = yes }
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_g_01_entity"
+	pdxmesh = "train_locomotive_g_01_mesh"
+
+	default_state = "moving"
+	
+	state = {
+		name = "moving"
+		animation = "moving_animation"
+		looping = yes
+		
+		start_event = { time = 0 node = "_loc_vfx" particle = "trains/the_g" trigger_once = yes keep_particle = yes sound = { soundeffect = "event:/SFX/Vehicles/train/train_locomotive_victorian_g" } keep_sound = yes }
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_jupiter_01_entity"
+	pdxmesh = "train_locomotive_jupiter_01_mesh"
+
+	default_state = "moving"
+		
+	state = { 
+		name = "moving" 
+		animation = "moving_animation" 
+		looping = yes
+
+		start_event = { time = 0 node = "loc_vfx" particle = "trains/jupiter" trigger_once = yes keep_particle = yes sound  = { soundeffect = "event:/SFX/Vehicles/train/train_locomotive_victorian_jupiter" } keep_sound = yes }
+	}
+	scale = 0.5
+}
+
+entity = {
+	name = "train_locomotive_jupitertender_01_entity"
+	pdxmesh = "train_locomotive_jupitertender_01_mesh"
+
+	default_state = "moving"
+		
+	state = { 
+		name = "moving" 
+		animation = "moving_animation" 
+		looping = yes
+	}
+	scale = 0.5
+}

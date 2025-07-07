@@ -1,0 +1,125 @@
+﻿namespace = build_powerplants_events
+
+build_powerplants_events.1 = {
+    type = country_event
+    hidden = yes
+
+    trigger = {
+        always = yes
+    }
+
+    immediate = {
+        every_scope_state = {
+            if = {
+                limit = {
+                    sg:electricity = { state_goods_delta < 0 }
+                    or = {
+                        any_scope_building = {
+                            is_building_type = building_power_plant
+                            occupancy > 0.75
+                        }
+                        not = {
+                            any_scope_building = {
+                                is_building_type = building_power_plant
+                            }
+                        }
+                    }
+                }
+
+                set_variable = {
+                    name = electricity_balance_left
+                    value = sg:electricity.state_goods_delta
+                }
+
+                if = {
+                    limit = {
+                        NOT = {
+                            any_scope_building = {
+                                is_building_type = building_power_plant
+                            }
+                        }
+                    }
+                    create_building = {
+                        building = building_power_plant
+                        level = 1
+                    }
+                    set_variable = must_destroy_building
+                }
+                else = {
+                    set_variable = {
+                        name = must_destroy_building
+                        value = no
+                    }
+                }
+
+                if = {
+                    limit = {
+                        any_scope_building = {
+                            is_building_type = building_power_plant
+                        }
+                    }
+
+                    set_variable = {
+                        name = electricity_per_plant
+                        value = {
+                            if = {
+                                limit = {
+                                    any_scope_building = {
+                                        is_building_type = building_power_plant
+                                        has_active_production_method = pm_hydroelectric_plant
+                                    }
+                                }
+                                value = 50
+                            }
+                            else = {
+                                if = {
+                                    limit = {
+                                        any_scope_building = {
+                                            is_building_type = building_power_plant
+                                            has_active_production_method = pm_coal-fired_plant
+                                        }
+                                    }
+                                    value = 100
+                                }
+                                else = {
+                                    value = 150
+                                }
+                            }
+                        }
+                    }
+                }
+
+                if = {
+                    limit = {
+                        var:must_destroy_building = yes
+                    }
+                    remove_building = building_power_plant
+                }
+
+                set_variable = {
+                    name = missing_power_plants
+                    value = {
+                        add = {
+                            value = var:electricity_balance_left
+                            multiply = -1
+                            add = var:electricity_per_plant
+                            subtract = 0.5 # add electricity_per_plant - 0.5 to ensure ceiling at divison
+                            divide = var:electricity_per_plant
+                        }
+                    }
+                }
+
+                if = {
+                    limit = {
+                        var:missing_power_plants > 0
+                    }
+
+                    while = {
+                        count = var:missing_power_plants
+                        start_building_construction = building_power_plant
+                    }
+                }
+            }
+        }
+    }
+}

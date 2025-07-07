@@ -182,6 +182,77 @@ headlines_action = {
 			 set_variable = headlines_taiping_defeat_seen
 			 post_notification = headlines_taiping_defeat
 		}
+		#Sepoy Mutiny
+		if = {
+			limit = {
+				exists = c:BIC
+				any_diplomatic_play = {
+					is_diplomatic_play_type = dp_sepoy_mutiny
+				}
+				NOT = {
+					has_variable = headlines_sepoy_mutiny_seen
+				}
+			 }
+			 c:BIC = {
+				save_scope_as = bic_scope
+			 }
+			 set_variable = headlines_sepoy_mutiny_seen
+			 post_notification = headlines_sepoy_mutiny
+		}
+		#Successful Sepoy Mutiny
+		if = {
+			limit = {
+				exists = c:MUG
+				c:MUG = {
+					is_subject = no
+				}
+				OR = {
+					NOT = {
+						exists = c:BIC
+					}
+					c:BIC = {
+						has_truce_with = c:MUG
+					}
+				}
+				has_variable = headlines_sepoy_mutiny_seen
+				NOT = {
+					has_variable = headlines_sepoy_mutiny_success_seen
+				}
+			 }
+			 c:BIC = {
+				save_scope_as = bic_scope
+			 }
+			 set_variable = headlines_sepoy_mutiny_success_seen
+			 post_notification = headlines_sepoy_mutiny_success
+		}
+		#Failed Sepoy Mutiny
+		if = {
+			limit = {
+				exists = c:BIC
+				c:BIC = {
+					is_at_war = no
+					is_diplomatic_play_committed_participant = no
+				}
+				OR = {
+					NOT = {
+						exists = c:MUG
+					}
+					c:MUG = {
+						is_subject_of = c:BIC
+						has_truce_with = c:BIC
+					}
+				}
+				has_variable = headlines_sepoy_mutiny_seen
+				NOT = {
+					has_variable = headlines_sepoy_mutiny_crushed_seen
+				}
+			 }
+			 c:BIC = {
+				save_scope_as = bic_scope
+			 }
+			 set_variable = headlines_sepoy_mutiny_crushed_seen
+			 post_notification = headlines_sepoy_mutiny_crushed
+		}
 		##Collapses##
 		#Qing Collapse
 		if = {
@@ -200,11 +271,29 @@ headlines_action = {
 		#BIC Collapse
 		if = {
 			limit = {
+				exists = c:GBR
 				NOT = {
 					has_variable = headlines_bic_collapse_seen
-					exists = c:BIC
-					exists = c:BHT
 				}
+				OR = {
+					NOT = {
+						exists = c:BIC
+					}
+					c:BIC = {
+						NOT = {
+							is_subject_of = c:GBR
+						}
+					}
+				}
+				NAND = {
+					exists = c:BHT
+					c:BHT = {
+						is_subject_of = c:GBR
+					}
+				}
+			}
+			c:GBR = {
+				save_scope_as = britain_scope
 			}
 			post_notification = headlines_bic_collapse
 			set_variable = headlines_bic_collapse_seen
@@ -338,6 +427,25 @@ headlines_action = {
 			set_variable = headlines_yugoslavia_formed_seen
 			post_notification = headlines_yugoslavia_formed
 		}
+		#India Formed
+		if = {
+			limit = { 
+				exists = c:BHT
+				c:BHT = {
+					is_subject = no
+					is_diplomatic_play_committed_participant = no
+					is_revolutionary = no
+				}
+				NOT = {
+					has_variable = headlines_india_formed_seen
+				}
+			}
+			c:BHT = {
+				save_scope_as = india_scope
+			}
+			set_variable = headlines_india_formed_seen
+			post_notification = headlines_india_formed
+		}
 		##Regime Changes##
 		#British Republic
 		if = {
@@ -393,10 +501,14 @@ headlines_action = {
 					has_variable = headlines_british_raj_seen
 				} 
 				c:BIC = {
-					has_diplomatic_pact = {
-						who = c:GBR
-						type = puppet
+					OR = {
+						has_diplomatic_pact = {
+							who = c:GBR
+							type = colony
+						}
+						has_modifier = modifier_india_crown_rule
 					}
+
 				}
 			}
 			c:BIC ?= {

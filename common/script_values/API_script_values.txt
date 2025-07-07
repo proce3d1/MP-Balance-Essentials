@@ -1,0 +1,20 @@
+﻿# Constants
+API_CHAR_POPU_ACTIVE_DELTA = 0.25 # Weekly change in popularity towards +/-100 from active bolstering/suppressing
+API_CHAR_POPU_DECAY_DELTA  = 0.15 # Weekly change in popularity from bolstering/suppressing towards 0 when stopped
+
+# root = character
+# scope:actor = interacting country
+
+# Use for good interactions (e.g. inviting an agitator, granting leadership, etc.)
+API_sv_calculate_authority_cost_good = {
+    value    = 100
+    subtract = root.popularity
+    min      = 0
+}
+
+# Use for bad interactions (e.g. exiling an agitator)
+API_sv_calculate_authority_cost_bad = {
+    value = 100
+    add   = root.popularity
+    min   = 0
+}
