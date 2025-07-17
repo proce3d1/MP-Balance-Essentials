@@ -45,6 +45,8 @@
 		set_export_tariff_level = { 
 			goods = g:clothes
 			level = high_tariffs
+		}
+
 		set_variable = {
 			name = east_indies_revolt_var
 			value = 0
@@ -60,7 +62,8 @@
 
 
 		add_modifier = modifier_india_company_rule
-
+		
+		add_modifier = modifier_high_pop_authority
 
 		every_scope_state = {
 			limit = {

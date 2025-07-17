@@ -35,11 +35,11 @@ GGGG_ev_uniforms.1 = {
         add_modifier = {
             name       = GGGG_dress_modifier
             multiplier = 0.5
-            days = normal_modifier_time
+            days       = normal_modifier_time
         }
         ig:ig_armed_forces = {
             add_modifier = {
-                name   = GGGG_parade_modifier
+                name = GGGG_parade_modifier
                 days = normal_modifier_time
             }
         }
@@ -50,7 +50,7 @@ GGGG_ev_uniforms.1 = {
         default_option = yes
         
         add_modifier = {
-            name   = GGGG_dress_modifier
+            name = GGGG_dress_modifier
             days = normal_modifier_time
         }
     }
@@ -206,7 +206,7 @@ GGGG_ev_uniforms.2 = {
         default_option = yes
         
         add_modifier = {
-            name   = GGGG_helmets_throughput_modifier
+            name = GGGG_helmets_throughput_modifier
             days = normal_modifier_time
         }
     }

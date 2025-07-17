@@ -25,7 +25,7 @@
 		}
 		NOR = {
 			has_law = law_type:law_closed_borders
-			has_law = law_type:law_isolationism
+			has_law_or_variant = law_type:law_isolationism
 		}
 	}
 	modifiers_while_active = {
@@ -179,7 +179,7 @@ je_central_america_migration = {
 		}
 		NOR = {
 			has_law = law_type:law_closed_borders
-			has_law = law_type:law_isolationism
+			has_law_or_variant = law_type:law_isolationism
 		}
 	}
 	modifiers_while_active = {
@@ -346,7 +346,7 @@ je_american_west_migration = {
 		}
 		NOR = {
 			has_law = law_type:law_closed_borders
-			has_law = law_type:law_isolationism
+			has_law_or_variant = law_type:law_isolationism
 		}
 	}
 	modifiers_while_active = {

@@ -34,7 +34,7 @@ GGGG_ev_rations.1 = {
         default_option = yes
         
         add_modifier = {
-            name   = GGGG_food_throughput_modifier
+            name = GGGG_food_throughput_modifier
             days = normal_modifier_time
         }
     }
@@ -55,12 +55,12 @@ GGGG_ev_rations.1 = {
         add_modifier = {
             name       = GGGG_food_throughput_modifier
             multiplier = 0.5
-            days = normal_modifier_time
+            days       = normal_modifier_time
         }
         add_modifier = {
             name       = modifier_developing_can_opener
             multiplier = money_amount_multiplier_small
-            days = normal_modifier_time
+            days       = normal_modifier_time
         }
         custom_tooltip = GGGG_tt_no_can_opener_ev
     }
@@ -229,7 +229,7 @@ GGGG_ev_rations.2 = {
         default_option = yes
         
         add_modifier = {
-            name   = GGGG_fresh_rations_modifier
+            name = GGGG_fresh_rations_modifier
             days = normal_modifier_time
         }
     }
@@ -238,7 +238,7 @@ GGGG_ev_rations.2 = {
         name = GGGG_ev_rations_2_b
         
         add_modifier = {
-            name   = GGGG_produce_throughput_modifier
+            name = GGGG_produce_throughput_modifier
             days = normal_modifier_time
         }
     }
@@ -259,12 +259,12 @@ GGGG_ev_rations.2 = {
         add_modifier = {
             name       = GGGG_fresh_rations_modifier
             multiplier = 0.5
-            days = normal_modifier_time
+            days       = normal_modifier_time
         }
         add_modifier = {
             name       = modifier_developing_can_opener
             multiplier = money_amount_multiplier_small
-            days = normal_modifier_time
+            days       = normal_modifier_time
         }
         custom_tooltip = GGGG_tt_no_can_opener_ev
     }

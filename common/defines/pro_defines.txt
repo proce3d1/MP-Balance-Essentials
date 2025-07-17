@@ -45,7 +45,6 @@ NMilitary = {
 }	
 
 NDiplomacy = {
-	DEFAULT_DIPLOMATIC_PLAY = "dp_default_treaty_article" 
 
 	DEFAULT_TRUCE_MONTHS = 60
 	PEACE_DEAL_DURATION_IN_DAYS = 30
