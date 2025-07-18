@@ -51,7 +51,7 @@ base_values = {
 	
 	state_market_access_price_impact = 0.75
 	
-	country_company_throughput_bonus_add = 0.1	# 0.2
+	country_company_throughput_bonus_add = 0.15	# 0.2
 	country_company_construction_efficiency_bonus_add = 0.2	# 0.5
 	
 	country_max_weekly_construction_progress_add = 15	# 10
@@ -70,15 +70,15 @@ base_values = {
 # Scales with a country's global prestige rank, so at 20/100 this is multiplied by 0.8x, 50/100 by 0.5x, etc
 # Not applied if the top_prestige_ranking modifier is applied instead
 prestige_ranking = {
-	country_company_throughput_bonus_add = 0.05	# 0.1
-	country_company_construction_efficiency_bonus_add = 0.1
+	# country_company_throughput_bonus_add = 0.05	# 0.1
+	# country_company_construction_efficiency_bonus_add = 0.1
 }
 
 # Scales with a country's prestige rank compared against TOP_PRESTIGE_RANK_BONUS_THRESHOLD
 # Multiplied by 1x if at TOP_PRESTIGE_RANK_BONUS_THRESHOLD, all the way up to TOP_PRESTIGE_RANK_BONUS_SCALE if at rank 1
 top_prestige_ranking = {
-	country_company_throughput_bonus_add = 0.1
-	country_company_construction_efficiency_bonus_add = 0.1
+	# country_company_throughput_bonus_add = 0.1
+	# country_company_construction_efficiency_bonus_add = 0.1
 }
 
 character_base_values = {
@@ -88,7 +88,8 @@ character_base_values = {
 
 coastal_state = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_infrastructure_add = 5	# 2
+	state_infrastructure_from_population_max_add = 10
+	state_infrastructure_from_population_mult = 0.05										 
 }
 
 working_conditions = {
@@ -221,12 +222,15 @@ market_capital_state = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_infrastructure_mult = 0.25
 	state_market_access_price_impact = 0.03
+	state_trade_advantage_mult = 0.25
 }
 
 capital_state = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
 	state_pop_pol_str_mult = 0.25
 	state_tax_capacity_mult = 0.25
+	state_infrastructure_from_population_max_add = 20
+	state_infrastructure_from_population_mult = 0.1											
 }
 
 moved_capital_recently = {
@@ -238,7 +242,7 @@ moved_capital_recently = {
 
 moved_market_capital_recently = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_negative.dds
-	building_throughput_add = -0.1
+	building_throughput_add = -0.05	# -0.1
 }
 
 tax_modifier_very_low = {
@@ -654,6 +658,9 @@ state_region_pollution_general = {
 insufficient_tax_capacity = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	state_tax_collection_mult = -1
+	building_group_bg_manufacturing_throughput_add = -0.25
+	building_group_bg_extraction_throughput_add = -0.25
+	building_group_bg_plantations_throughput_add = -0.25
 }
 
 # Applied if state is above 'in turmoil' threshold

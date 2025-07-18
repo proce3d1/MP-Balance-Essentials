@@ -27,12 +27,12 @@ law_traditionalism = {
 		state_aristocrats_investment_pool_efficiency_mult = -0.25	# -0.2	
 		state_bureaucracy_population_base_cost_factor_mult = -0.4
 		country_government_dividends_reinvestment_add = 0.25
-		state_tax_capacity_mult = -0.1
+		state_tax_capacity_mult = -0.05	# -0.1
 		country_private_construction_allocation_mult = 0.25
 		building_nationalization_cost_mult = 1.0
 		building_nationalization_investment_return_add = 0.1
 		country_leverage_resistance_mult = 0.25
-		state_market_access_price_impact = -0.1	# -0.15
+		state_market_access_price_impact = -0.05	# -0.15
 		country_disable_nationalization_without_compensation_bool = yes
 		country_authority_add = 100
 	}
@@ -388,6 +388,7 @@ law_extraction_economy = {
 
 	modifier = {
 		building_group_bg_agriculture_throughput_add = 0.1
+		building_group_bg_manufacturing_throughput_add = -0.2
 		building_group_bg_plantations_throughput_add = 0.1
 		building_group_bg_extraction_throughput_add = 0.1
 		state_shopkeepers_investment_pool_efficiency_mult = -0.5
