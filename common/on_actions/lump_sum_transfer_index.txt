@@ -1,5 +1,0 @@
-﻿on_monthly_pulse_country = {
-	on_actions = {
-		on_lump_sum_transfer_monthly_pulse_country
-	}
-}
