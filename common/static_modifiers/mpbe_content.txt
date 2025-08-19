@@ -1,4 +1,4 @@
-﻿# Canada & Australia
+# Canada & Australia
 
 canada_growth_modifier = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
@@ -88,6 +88,8 @@ modifier_ottoman_education = {
 modifier_ottoman_separatism = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
 	country_authority_add = 100
+	state_radicals_from_sol_change_mult = -0.2
+	state_loyalists_from_sol_change_mult = 0.2
 }
 
 modifier_ottoman_army_modernization = {

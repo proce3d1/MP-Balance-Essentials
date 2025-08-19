@@ -26,28 +26,28 @@ italian_unification.1 = {
 		ruler.interest_group = {
 			save_scope_as = ruler_ig_scope
 		}
-	}
+	}		
 
 	option = {
 		name = italian_unification.1.a
 		default_option = yes
 		give_claims_on_italy = yes
-
+		
 		# prestige
 		add_modifier = {
-			name = italian_unifier_prestige
-			days = long_modifier_time
+			name = italian_unifier_prestige_new
+			days= long_modifier_time
 		}
 	}
 	option = {
 		name = italian_unification.1.b
 		give_claims_on_italy = yes
-
+		
 		# ruler IG attraction
 		scope:ruler_ig_scope = {
 			add_modifier = {
-				name = italian_unifiers_ig
-				days = long_modifier_time
+				name = italian_unifiers_ig_new
+				days= long_modifier_time
 			}
 		}
 	}
@@ -82,8 +82,8 @@ italian_unification.2 = {
 				OR = {
 					is_subject = no
 					is_subject_of = ROOT
-					is_in_customs_union_with = root
 				}
+				is_in_customs_union_with = root
 				country_rank <= rank_value:minor_power
 				relations:root >= relations_threshold:amicable
 				is_player = no
@@ -103,8 +103,8 @@ italian_unification.2 = {
 					OR = {
 						is_subject = no
 						is_subject_of = ROOT
-						is_in_customs_union_with = root
 					}
+					is_in_customs_union_with = root
 					country_rank <= rank_value:minor_power
 					relations:root >= relations_threshold:amicable
 					is_player = no
@@ -124,7 +124,6 @@ italian_unification.2 = {
 			name = italian_idea_modifier
 			days = normal_modifier_time 	#5 years
 			is_decaying = yes
-		}
 		create_incident = {
 			country = scope:italian_annex_country
 			value = 10
@@ -360,7 +359,7 @@ italian_unification.4 = {
 			trigger_event = { id = italian_unification.6 popup = yes }
 		}
 	}
-
+	
 	option = {
 		name = italian_unification.4.c
 		trigger = {
@@ -400,7 +399,7 @@ italian_unification.5 = {
 	}
 
 	immediate = {
-
+		
 	}
 
 	option = {
@@ -432,9 +431,9 @@ italian_unification.5 = {
 				add_radicals = {
 					value = -1
 					culture = cu:south_italian
-				}
+				}				
 			}
-		}
+		}		
 		annex_with_incorporation = scope:italian_pannational_country
 	}
 	option = {
@@ -447,7 +446,7 @@ italian_unification.5 = {
 			type = puppet
 		}
 		scope:italian_pannational_country = {
-			set_variable = {
+			set_variable = { 
 				name = italian_unification_5_happened_here
 				days = normal_modifier_time
 			}
@@ -479,7 +478,7 @@ italian_unification.6 = {
 	}
 
 	immediate = {
-
+		
 	}
 
 	option = {
@@ -544,7 +543,7 @@ italian_unification.7 = {
 	immediate = {
 		save_scope_as = rsm_revolted_scope
 		random_country = {
-			limit = {
+			limit = {	
 				is_secessionist = yes
 				OR = {
 					country_has_primary_culture = cu:north_italian
@@ -554,7 +553,7 @@ italian_unification.7 = {
 			activate_law = law_type:law_presidential_republic
 			activate_law = law_type:law_oligarchy
 			change_tag = RSM
-			save_scope_as = rsm_scope
+			save_scope_as = rsm_scope	
 			capital = {
 				save_scope_as = rsm_capital_scope
 			}
@@ -667,44 +666,26 @@ italian_unification.8 = {
 		}
 		if = {
 			limit = {
-				any_scope_treaty = {
-					binds = scope:rsm_revolted_scope
-					any_scope_article = {
-						has_type = alliance
-					}
+				has_diplomatic_pact = {
+					who = scope:rsm_revolted_scope
+					 type = alliance
 				}
 			}
-			every_scope_treaty = {
-				limit = {
-					binds = scope:rsm_revolted_scope
-					any_scope_article = {
-						has_type = alliance
-					}
-				}
-				withdraw = {
-					country = root
-				}
+			remove_diplomatic_pact = {
+				country = scope:rsm_revolted_scope
+				type = alliance
 			}
 		}
 		if = {
 			limit = {
-				any_scope_treaty = {
-					binds = scope:rsm_revolted_scope
-					any_scope_article = {
-						has_type = defensive_pact
-					}
+				has_diplomatic_pact = {
+					who = scope:rsm_revolted_scope
+					 type = defensive_pact
 				}
 			}
-			every_scope_treaty = {
-				limit = {
-					binds = scope:rsm_revolted_scope
-					any_scope_article = {
-						has_type = defensive_pact
-					}
-				}
-				withdraw = {
-					country = root
-				}
+			remove_diplomatic_pact = {
+				country = scope:rsm_revolted_scope
+				type = defensive_pact
 			}
 		}
 		if = {
@@ -829,7 +810,7 @@ italian_unification.10 = {
 					has_ideology = ideology:ideology_liberal
 					has_ideology = ideology:ideology_liberal_modern
 					leader = {
-						OR = {
+						OR = {						
 							has_ideology = ideology:ideology_radical
 							has_ideology = ideology:ideology_jingoist_leader
 						}
@@ -865,7 +846,7 @@ italian_unification.10 = {
 		}
 		add_modifier = {
 			name = modifier_risorgimento_support
-			days = long_modifier_time
+			dasys = long_modifier_time
 			is_decaying = yes
 		}
 		every_country = {
@@ -919,7 +900,7 @@ italian_unification.10 = {
 				}
 				NOT = {
 					leader = {
-						OR = {
+						OR = {						
 							has_ideology = ideology:ideology_radical
 							has_ideology = ideology:ideology_jingoist_leader
 						}
