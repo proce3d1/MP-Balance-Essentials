@@ -1,0 +1,19 @@
+﻿
+ig_trait_da_wat = {
+	icon = "gfx/interface/icons/ig_trait_icons/be_fruitful_and_multiply.dds"
+	min_approval = loyal
+
+	modifier = {
+		state_conversion_mult = 0.2
+		state_birth_rate_mult = 0.01
+	}
+}
+
+ig_trait_mecelle = {
+	icon = "gfx/interface/icons/ig_trait_icons/divine_right.dds"
+	min_approval = happy
+
+	modifier = {
+		state_decree_cost_mult = -0.15	# -0.1
+	}
+}

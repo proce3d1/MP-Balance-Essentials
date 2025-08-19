@@ -10,3 +10,13 @@ pmg_base_building_synthetic_rubber_plants = {
 		pm_synth_rubber_production
 	}
 }
+
+pmg_base_building_motor_industry = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_base.dds"
+	production_methods = {
+		pm_steam_engines
+		pm_improved_steam_engines
+		pm_electric_engines
+		pm_diesel_engines
+	}
+}

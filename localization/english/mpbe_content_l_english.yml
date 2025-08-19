@@ -46,3 +46,13 @@
     modifier_high_pop_authority:0 " High population"
 
 
+    claims_on_algeria:0 "Claim Algeria"
+    claims_on_algeria_desc:0 "France gains claims on Algiers, Constantine and Oran. Starts "The Conquest of Algeria" journal entry."
+
+    automatic_privatization_decision_enable:0 "Enable Automatic Privatization"
+    automatic_privatization_decision_enable_desc:0 "Enables Automatic Privatization"
+    automatic_privatization_decision_remove:0 "Disable Automatic Privatization"
+    automatic_privatization_decision_remove_desc:0 "Disables Automatic Privatization"
+    modifier_auto_privatize:0 "Automatic Privatization"
+
+    pm_improved_steam_engines:0 "Improved Steam Engines"
