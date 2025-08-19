@@ -1,0 +1,6 @@
+﻿l_english:
+ modifier_auto_privatize: "Forcing privatization"
+ automatic_privatization_decision_enable: "Turn on automatic privatization"
+ automatic_privatization_decision_enable_desc: "Turns on privatization for all eligible buildings"
+ automatic_privatization_decision_remove: "Turn off automatic privatization"
+ automatic_privatization_decision_remove_desc: "Turns off privatization for all eligible buildings"

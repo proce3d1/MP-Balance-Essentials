@@ -1,10 +1,4 @@
-﻿
-modifier_auto_privatize = {
+﻿modifier_auto_privatize = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
 	country_force_privatization_bool = yes
-}
-
-vergi = {
-	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_positive.dds
-	country_consumption_tax_cost_mult = -1
 }
