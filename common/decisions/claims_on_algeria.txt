@@ -1,0 +1,97 @@
+﻿claims_on_algeria = {
+
+	is_shown = {
+        has_dlc_feature = voice_of_the_people_content
+		exists = c:FRA
+		root = c:FRA
+		NOT = { has_variable = claims_on_algeria }
+        OR = {
+            NOT = { owns_entire_state_region = STATE_ORAN }
+            NOT = { owns_entire_state_region = STATE_ALGIERS }
+            NOT = { owns_entire_state_region = STATE_CONSTANTINE }
+        }
+	}
+
+	possible = {
+		has_interest_marker_in_region = region_north_africa
+	}
+
+	when_taken = {
+		if = {
+			limit = {
+				has_dlc_feature = voice_of_the_people_content
+			}
+		    add_journal_entry = {
+			    type = je_conquest_of_algeria
+		    }
+        }
+        if = {
+			limit = {
+				exists = c:MAS
+			}
+			create_incident = {
+				country = c:MAS
+				value = 5
+			}
+		}
+        if = {
+			limit = {
+				exists = c:AIT
+			}
+			create_incident = {
+				country = c:AIT
+				value = 5
+			}
+		}
+        if = {
+			limit = {
+				exists = c:CON
+			}
+			create_incident = {
+				country = c:CON
+				value = 5
+			}
+		}
+		# Add Claims
+		s:STATE_ORAN = {
+			if = {
+				limit = {
+					any_scope_state = {
+						 NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT
+			}
+		}
+		s:STATE_ALGIERS = {
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT
+			}
+		}
+		s:STATE_CONSTANTINE = {
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = {
+							owner = ROOT
+						}
+					}
+				}
+				add_claim = ROOT
+			}
+		}
+        set_variable = claims_on_algeria
+    }
+	ai_chance = {
+		value = 100
+	}
+}
