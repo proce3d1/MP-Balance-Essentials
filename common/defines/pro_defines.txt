@@ -29,7 +29,18 @@ NMilitary = {
 	MANPOWER_LOST_DUE_TO_ATTRITION_PER_WEEK_MAX = 0.06	# 0.12 	# The maximum percentage of manpower a unit can lose each week due to attrition
 
 
-	BLOCKADE_TARGET_STRENGTH_PER_TRADED_UNIT = 0.5	#1			# Each unit of imports/exports in the market area increases required blockade strength by this (only for world market hubs)
+	#CONVOY_RAIDING_STRENGTH_MULT = 0.3						# How strong each Convoy raiding point is ( num flotillas * ce offense )
+	#CONVOY_RAIDING_COOLDOWN_DAYS_MIN = 10					# Min days until the next convoy raiding in the sea node
+	#CONVOY_RAIDING_COOLDOWN_DAYS_MAX = 30					# Max days until the next convoy raiding in the sea node
+	#CONVOY_RAIDING_DAMAGE_MIN_RANDOM_FACTOR = 0.5			# Actual convoy raiding damage is scaled between CONVOY_RAIDING_DAMAGE_MIN_RANDOM_FACTOR and CONVOY_RAIDING_DAMAGE_MAX_RANDOM_FACTOR to provide some random variability
+	#CONVOY_RAIDING_DAMAGE_MAX_RANDOM_FACTOR = 1.0			# Actual convoy raiding damage is scaled between CONVOY_RAIDING_DAMAGE_MIN_RANDOM_FACTOR and CONVOY_RAIDING_DAMAGE_MAX_RANDOM_FACTOR to provide some random variability
+	CONVOY_RAIDING_DEFENSE_MULT = 0.3 #0.15					# How much is Convoy raiding strength reduced by patrolling flotillas  ( num flotillas * ce defense )
+	CONVOY_RAIDING_MAX_DEFENSE = 0.95						# Example: the defender can never block more than 90% of the convoy damage they're currently taking
+
+	## Convoy recovery rate after being raided is based on a global and a local rate, using whichever is lower
+	CONVOY_RAIDING_GLOBAL_RECOVERY_RATE = 0.004 #0.001		# The rate at which damaged convoys are replaced each day, relative to total number of produced convoys in the raided country
+	CONVOY_RAIDING_LOCAL_RECOVERY_RATE = 0.02 #0.01			# The rate at which damaged convoys are replaced each day, relative to total number of convoys passing through the sea node
+	#CONVOY_RAIDING_RECOVERY_RATE_PEACETIME_FACTOR = 4		# While a country is at peace, convoys will be restored this much faster
 																																			  
 }	
 
