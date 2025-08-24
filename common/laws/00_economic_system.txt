@@ -629,8 +629,6 @@ law_command_economy = {
 		country_free_charters_add = 2
 		country_max_companies_add = 2
 		country_leverage_resistance_mult = 0.25
-
-		country_disable_privatization_bool = yes
 	}
 	
 	ai_will_do = {
