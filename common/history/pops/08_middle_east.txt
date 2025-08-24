@@ -1679,19 +1679,24 @@
 				culture = caucasian
 				religion = sunni
 				size = 27000
-
+			}
+			create_pop = {
+				culture = caucasian
+				religion = shiite
+				size = 17000
 			}
 			create_pop = {
 				culture = caucasian
 				size = 4500
 			}
 			create_pop = {
-				culture = kurdish
-				size = 15000
+				culture = caucasian
+				religion = oriental_orthodox
+				size = 39500
 			}
 			create_pop = {
-				culture = caucasian
-				size = 28500
+				culture = kurdish
+				size = 22000
 			}
 			create_pop = {
 				culture = greek
@@ -1700,26 +1705,14 @@
 			create_pop = {
 				pop_type = slaves
 				culture = caucasian
+				religion = sunni
 				size = 2300
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = caucasian
+				religion = orthodox
 				size = 1400
-			}
-		}
-		region_state:RUS = {
-			create_pop = {
-				culture = caucasian
-				size = 17000
-			}
-			create_pop = {
-				culture = kurdish
-				size = 7000
-			}
-			create_pop = {
-				culture = caucasian
-				size = 11000
 			}
 		}
 	}
