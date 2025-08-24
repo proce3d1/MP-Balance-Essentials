@@ -12,7 +12,12 @@
 			}
 			is_revolutionary = no
 		}
-		country_rank >= rank_value:unrecognized_major_power
+		limit = {
+			OR = {
+				country_rank >= rank_value:unrecognized_major_power
+				is_ai = no # minor power players can form power blocs now
+			}
+		}
 		# NOT = { has_law = law_type:law_isolationism } # Japan can form one now
 	}
 }
