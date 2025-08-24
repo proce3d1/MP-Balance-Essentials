@@ -166,7 +166,7 @@ STATE_KORDOFAN = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 20
     }
 }
 
@@ -184,7 +184,7 @@ STATE_DARFUR = {
     arable_resources = { "bg_livestock_ranches" }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 10
+        undiscovered_amount = 30
     }
 }
 
@@ -327,7 +327,7 @@ STATE_CONSTANTINE = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 20
     }
     naval_exit_id = 3032
 }
@@ -391,7 +391,7 @@ STATE_TRIPOLI = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 30
+        undiscovered_amount = 50
     }
     naval_exit_id = 3033
 }
@@ -427,7 +427,7 @@ STATE_LIBYAN_DESERT = {
     arable_resources = { "bg_livestock_ranches" }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 30
+        undiscovered_amount = 50
     }
 }
 
@@ -448,7 +448,7 @@ STATE_SAHARA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 20
     }
 }
 
@@ -467,7 +467,7 @@ STATE_EAST_SAHARA = {
     arable_resources = { "bg_livestock_ranches" }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 20
     }
 }
 
@@ -495,7 +495,7 @@ STATE_MAURITANIA = {
     id = 197
     subsistence_building = "building_subsistence_pastures"
     provinces = { "x0D57A1" "x0EF47B" "x13CA97" "x153541" "x17D963" "x1A4167" "x1C026D" "x1E38D7" "x1EF394" "x1F8376" "x21A0F5" "x26AAF6" "x2A22CB" "x2CBC0B" "x313645" "x32772F" "x329F39" "x3548BF" "x3A6183" "x3BA23E" "x465B23" "x46C022" "x49B20E" "x4F74DF" "x58E2C6" "x5F17D5" "x5F1D19" "x6566A0" "x6796ED" "x6D5D50" "x6DFD32" "x7030C0" "x727FA1" "x74063E" "x799C35" "x824A63" "x891E75" "x8E8C95" "x8EDE46" "x9A8160" "x9DAADE" "xA5D3E6" "xABD39E" "xAC39A0" "xB03040" "xB070C0" "xB0CEA1" "xB0EE2C" "xB274BE" "xB47854" "xB55389" "xB6F68E" "xBE4407" "xC41F5C" "xC492B5" "xCBCD11" "xD10873" "xD1C794" "xD2ED35" "xD34BB3" "xDC457A" "xDF05DC" "xE7FC7D" "xEF3040" "xF0F041" "xF1E6C3" "xFB39E4" "xFBDBB8" "xFF05E2" }
-	prime_land = { "xB070C0" "x8E8C95" "xB03040" "x313645" }														
+    prime_land = { "xB070C0" "x8E8C95" "xB03040" "x313645" }
     traits = { "state_trait_malaria" "state_trait_sahel" }
     city = "x2CBC0B"
     port = "x32772F"
@@ -529,7 +529,7 @@ STATE_INNER_MAURITANIA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 20
     }
 }
 
@@ -546,7 +546,7 @@ STATE_EASTERN_MALI = {
     arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_cotton_plantations" "bg_opium_plantations" "bg_tobacco_plantations" }
     capped_resources = {
         bg_monuments = 1
-		bg_gold_mining = 4
+   		bg_gold_mining = 4	# new
     }
 }
 
@@ -582,7 +582,7 @@ STATE_TIMBUKTU = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 5
+        undiscovered_amount = 20
     }
 }
 
@@ -605,7 +605,7 @@ STATE_NIGER = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 30
+        undiscovered_amount = 50
     }
 }
 
@@ -623,7 +623,7 @@ STATE_CHAD = {
     arable_resources = { "bg_livestock_ranches" }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 10
+        undiscovered_amount = 30
     }
 }
 

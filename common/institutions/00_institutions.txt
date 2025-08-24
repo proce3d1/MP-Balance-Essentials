@@ -45,6 +45,6 @@ institution_home_affairs = {
 	modifier = {
 		country_revolution_progress_mult = -0.1
 		country_secession_progress_mult = -0.1
-		country_authority_add = 30
+		# country_authority_add = 30
 	}
 }

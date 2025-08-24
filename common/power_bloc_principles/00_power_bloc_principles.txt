@@ -1072,7 +1072,7 @@ principle_colonial_offices_3 = {
 	institution_modifier = {
 		# Modifiers from previous level(s)
 		state_colony_growth_creation_factor = 0.05
-		country_infamy_generation_against_unrecognized_mult = -0.15
+		country_infamy_generation_against_unrecognized_mult = -0.1
 	}
 
 	ai_weight = {
@@ -1147,13 +1147,13 @@ principle_foreign_investment_3 = {
 	# Does not generate a tooltip, so a dummy modifier is required to show this effect
 	allows_foreign_investment_in_lower_rank = yes
 
-	state_aristocrats_investment_pool_efficiency_mult = 0.15
-	state_farmers_investment_pool_efficiency_mult = 0.15
-	state_capitalists_investment_pool_efficiency_mult = 0.15
+
 	member_modifier = {
 		# Modifiers from previous level(s)
 		country_nationalization_cost_non_members_mult = -0.5
-
+		state_aristocrats_investment_pool_efficiency_mult = 0.15
+		state_farmers_investment_pool_efficiency_mult = 0.15
+		state_capitalists_investment_pool_efficiency_mult = 0.15
 		# This modifier is just here to generate a tooltip. It doesn't actually do anything on its own
 		country_higher_leverage_from_economic_dependence_bool = yes
 	}
@@ -1202,7 +1202,7 @@ principle_creative_legislature_2 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
 		country_law_enactment_stall_mult = -0.33
-		country_legitimacy_add = 5
+		country_legitimacy_base_add = 5
 
 		# Political Movements are happier about enactments they approve of, and less angry about enactments they disapprove of
 		political_movement_radicalism_from_enactment_disapproval_mult = -0.25
@@ -1221,7 +1221,7 @@ principle_creative_legislature_3 = {
 	member_modifier = {
 		# Modifiers from previous level(s)
 		country_law_enactment_stall_mult = -0.33
-		country_legitimacy_add = 10
+		country_legitimacy_base_add = 10
 
 		political_movement_radicalism_from_enactment_disapproval_mult = -0.25
 		political_movement_radicalism_from_enactment_approval_mult = 0.25
