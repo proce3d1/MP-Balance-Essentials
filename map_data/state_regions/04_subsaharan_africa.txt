@@ -20,7 +20,7 @@
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 22
+        undiscovered_amount = 22	# 5
     }
     naval_exit_id = 3091
 }
@@ -173,22 +173,22 @@ STATE_HAUSALAND = {
     farm = "x6F05D2"
     mine = "x96C7B6"
     wood = "x8E8AC1"
-    arable_land = 140
+    arable_land = 140	# 110
     arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_logging = 23
-		bg_coal_mining = 40
-		bg_iron_mining = 40
-		bg_lead_mining = 40
-		bg_sulfur_mining = 20
+		bg_coal_mining = 40	# new
+		bg_iron_mining = 40	# new
+		bg_lead_mining = 40	# new
+		bg_sulfur_mining = 20	# new
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 30
+        undiscovered_amount = 30	# 20
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 40
+        undiscovered_amount = 40	# 10
     }
 }
 
@@ -207,12 +207,12 @@ STATE_BENIN = {
     capped_resources = {
         bg_coal_mining = 48
         bg_iron_mining = 36
-        bg_logging = 12
-        bg_fishing = 10
+        bg_logging = 12	# 9
+        bg_fishing = 10	# 3
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 26
+        undiscovered_amount = 26	# 16
     }
     naval_exit_id = 3091
 }
@@ -280,7 +280,7 @@ STATE_OUTER_HAUSALAND = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 22
+        undiscovered_amount = 22	# 5
     }
 }
 
@@ -296,7 +296,7 @@ STATE_BORNU = {
     arable_land = 60
     arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" }
     capped_resources = {
-        bg_logging = 12
+        bg_logging = 12	# 5
     }
 }
 
@@ -309,7 +309,7 @@ STATE_NIGERIA = {
     farm = "xB99D24"
     mine = "x0031D6"
     wood = "xA591CC"
-    arable_land = 80
+    arable_land = 80	# 60
     arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
         bg_iron_mining = 45
@@ -318,7 +318,7 @@ STATE_NIGERIA = {
     }
     resource = {
         type = "bg_rubber"
-        undiscovered_amount = 33
+        undiscovered_amount = 33	# 24
     }
 }
 
@@ -331,23 +331,23 @@ STATE_EAST_HAUSALAND = {
     farm = "x52057E"
     mine = "xECD153"
     wood = "x933DAA"
-    arable_land = 160
+    arable_land = 160	# 140
     arable_resources = { "bg_millet_farms" "bg_livestock_ranches" "bg_coffee_plantations" "bg_cotton_plantations" "bg_dye_plantations" "bg_tobacco_plantations" "bg_sugar_plantations" "bg_banana_plantations" }
     capped_resources = {
-        bg_coal_mining = 80
-		bg_iron_mining = 50
-		bg_sulfur_mining = 40
-		bg_gold_fields = 6
-        bg_logging = 22
+        bg_coal_mining = 80	# 72
+		bg_iron_mining = 50	# new
+		bg_sulfur_mining = 40	# new
+		bg_gold_fields = 6	# new
+        bg_logging = 22	# 18
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 40
+        undiscovered_amount = 40	# 5
     }
 	
 	resource = {
         type = "bg_rubber"
-        undiscovered_amount = 30
+        undiscovered_amount = 30	# new
     }
 	
 }
@@ -582,7 +582,7 @@ STATE_OROMIA = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 32
+        undiscovered_amount = 32	# 10
     }
 }
 
@@ -883,7 +883,7 @@ STATE_CONGO = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 32
+        undiscovered_amount = 32	# 5
     }
     naval_exit_id = 3104
 }
@@ -1093,7 +1093,7 @@ STATE_GABON = {
     }
     resource = {
         type = "bg_oil_extraction"
-        undiscovered_amount = 32
+        undiscovered_amount = 32	# 5
     }
     naval_exit_id = 3091
 }
@@ -1237,8 +1237,7 @@ STATE_VRYSTAAT = {
     capped_resources = {
         bg_coal_mining = 60
         bg_iron_mining = 30
-        bg_logging = 12
-		# bg_gold_fields = 7
+        bg_logging = 12	# 7
     }
     resource = {
         type = "bg_gold_fields"
@@ -1262,7 +1261,6 @@ STATE_TRANSVAAL = {
         bg_coal_mining = 104
         bg_iron_mining = 60
         bg_logging = 5
-		# bg_gold_fields = 10
     }
     resource = {
         type = "bg_gold_fields"
