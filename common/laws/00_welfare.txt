@@ -90,8 +90,7 @@ law_old_age_pension = {
 
 	institution = institution_social_security
 	institution_modifier = {
-		state_dependent_wage_mult = 0.2
-		state_working_adult_ratio_add = 0.01
+		state_dependent_wage_mult = 0.25
 		state_dependent_political_participation_add = 0.02
 		state_food_security_add = 0.01
 		country_weekly_innovation_max_add = 4
