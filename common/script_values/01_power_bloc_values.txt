@@ -466,9 +466,9 @@ power_bloc_mandate_progress_per_insignificant_power_member = {
 
 power_bloc_mandate_progress_by_rank = {
 	value = {
-		value = 10	# 6
+		value = 14	# 6
 		subtract = power_bloc_rank
-		min = 6	# 1
+		min = 10	# 1
 		desc = "POWER_BLOC_MANDATE_PROGRESS_BASE"
 	}
 

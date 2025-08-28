@@ -514,17 +514,20 @@ law_cooperative_ownership = {
 	}
 	
 	modifier = {
-		state_shopkeepers_investment_pool_efficiency_mult = 0.25	
+		state_shopkeepers_investment_pool_efficiency_mult = 0.75	
 		state_farmers_investment_pool_efficiency_mult = 0.25
 		country_private_construction_allocation_mult = 0.35
 		country_government_dividends_reinvestment_add = 1.0
-		country_free_charters_add = 1
+		country_free_charters_add = 4
+		country_max_companies_add = 2
+		country_max_weekly_construction_progress_add = 10
 		building_group_bg_manufacturing_allowed_collectivization_add = 1.0
 		building_group_bg_mining_allowed_collectivization_add = 1.0
 		building_group_bg_extraction_allowed_collectivization_add = 1.0
 		building_group_bg_power_allowed_collectivization_add = 1.0
 		building_group_bg_private_infrastructure_allowed_collectivization_add = 1.0
 		building_group_bg_arts_allowed_collectivization_add = 1.0
+		building_economy_of_scale_level_cap_add = 25
 		
 
 		country_foreign_collectivization_bool = yes
@@ -621,11 +624,13 @@ law_command_economy = {
 		building_nationalization_cost_mult = -0.5
 		building_nationalization_radicals_mult = -0.75
 		country_government_dividends_efficiency_add = 0.4
-		country_private_construction_allocation_mult = 0.1
-		country_free_charters_add = 1
+		country_government_dividends_reinvestment_add = 0.10
+		state_bureaucrats_investment_pool_contribution_add = 0.1
+		country_private_construction_allocation_mult = 0.35
+		country_free_charters_add = 2
+		country_max_companies_add = 2
 		country_leverage_resistance_mult = 0.25
-
-		country_disable_privatization_bool = yes
+		building_economy_of_scale_level_cap_add = 25
 	}
 	
 	ai_will_do = {

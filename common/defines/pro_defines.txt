@@ -22,6 +22,8 @@ NEconomy = {
 	COMPANY_PROSPERITY_POPULARITY_MULTIPLIER = 0.1	# 0.2				# Companies gain this much target prosperity, scaled by the popularity of its executive
 
 	PRESTIGE_GOODS_INPUT_THROUGHPUT_BONUS = 0.1	# 0.2		# Bonus to throughput, scaled against proportion of input goods base value that is prestige goods
+
+	OVERSEAS_INFRASTRUCTURE_CONVOY_COST_MULTIPLIER = 1.8 # 2    # Convoy cost for each infrastructure usage in overseas state for port connection shipping lanes
 }
 
 NMilitary = {
