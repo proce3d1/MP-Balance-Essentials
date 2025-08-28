@@ -1009,6 +1009,12 @@ principle_colonial_offices_1 = {
 		country_can_impose_same_lawgroup_colonization_in_power_bloc_bool = yes
 	}
 
+	institution = institution_colonial_affairs
+	institution_modifier = {
+		# Members get higher colony growth for each level of institution
+		state_colony_growth_creation_factor = 0.1
+	}
+
 	ai_weight = {
 		value = 200 # High base weight if the leader has colonies
 
@@ -1044,7 +1050,7 @@ principle_colonial_offices_2 = {
 	institution = institution_colonial_affairs
 	institution_modifier = {
 		# Members get higher colony growth for each level of institution
-		state_colony_growth_creation_factor = 0.05
+		state_colony_growth_creation_factor = 0.1
 		country_infamy_generation_against_unrecognized_mult = -0.05
 	}
 
@@ -1061,7 +1067,11 @@ principle_colonial_offices_3 = {
 		# Cheaper and faster colonial institution
 		country_institution_size_change_speed_institution_colonial_affairs_mult = 0.5
 		country_institution_cost_institution_colonial_affairs_mult = -0.5
-		country_disallow_law_no_colonial_affairs_bool = yes
+		country_disallow_law_no_colonial_affairs_bool = yes		
+		building_group_bg_plantations_unincorporated_throughput_add = 0.2
+		building_group_bg_rubber_unincorporated_throughput_add = 0.2
+		building_group_bg_logging_unincorporated_throughput_add = 0.2
+		building_group_bg_mining_unincorporated_throughput_add = 0.2
 	}
 
 	leader_modifier = {
@@ -1070,9 +1080,9 @@ principle_colonial_offices_3 = {
 
 	institution = institution_colonial_affairs
 	institution_modifier = {
-		# Modifiers from previous level(s)
-		state_colony_growth_creation_factor = 0.05
-		country_infamy_generation_against_unrecognized_mult = -0.1
+		# Members get higher colony growth for each level of institution
+		state_colony_growth_creation_factor = 0.1
+		country_infamy_generation_against_unrecognized_mult = -0.05
 	}
 
 	ai_weight = {
