@@ -3,6 +3,7 @@
 		effect_starting_technology_tier_3_tech = yes
 		effect_starting_politics_conservative = yes
 		add_technology_researched = empiricism
+
 		# --- Buffs ---
 		add_technology_researched = mass_communication
 		# -------------
@@ -17,10 +18,11 @@
 		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_no_schools
 		activate_law = law_type:law_no_police
-		
-										   
-											  
-		
+									  
+		set_import_tariff_level = { 
+			goods = g:manowars
+			level = high_subventions
+		}		
 		set_import_tariff_level = { 
 			goods = g:artillery
 			level = high_subventions
@@ -29,12 +31,16 @@
 			goods = g:small_arms
 			level = high_subventions
 		}	
-		
-		ig:ig_armed_forces = { # Barragan was head of state, on paper, but Antonio Lopez de Santa Anna had his finger in every political pie
+		set_import_tariff_level = { 
+			goods = g:paper
+			level = low_subventions
+		}
+
+		ig:ig_armed_forces ?= { # Barragan was head of state, on paper, but Antonio Lopez de Santa Anna had his finger in every political pie
 			add_ruling_interest_group = yes
 		}
 
-		ig:ig_landowners = {
+		ig:ig_landowners ?= {
 			add_ruling_interest_group = yes
 		}
 

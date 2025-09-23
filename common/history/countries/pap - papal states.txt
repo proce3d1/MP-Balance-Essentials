@@ -3,9 +3,9 @@
 		effect_starting_technology_tier_3_tech = yes
 		effect_starting_politics_conservative = yes
 		
-		### Buff ###
+		# --- Buffs ---
 		add_technology_researched = empiricism		
-		############
+		# -------------	
 
         set_ruling_interest_groups = {
         	ig_devout

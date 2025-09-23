@@ -13,14 +13,13 @@
 		activate_law = law_type:law_serfdom
 		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_appointed_bureaucrats
-		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_subjecthood
 		activate_law = law_type:law_traditionalism
 		activate_law = law_type:law_censorship	
 		activate_law = law_type:law_closed_borders
 		activate_law = law_type:law_canton_system
 		activate_law = law_type:law_freedom_of_conscience
-
-								  
+				  
 		set_tax_level = low
 
 		set_variable = {

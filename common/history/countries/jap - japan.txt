@@ -54,6 +54,5 @@
 			name = hokkaido_colonization_modifier
 			days = very_long_modifier_time
 		}
-
 	}
 }

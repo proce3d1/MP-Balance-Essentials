@@ -2,10 +2,11 @@
 	c:PRU ?= {
 		effect_starting_technology_tier_1_tech = yes
 		effect_starting_politics_conservative = yes
-
-        	# add_technology_researched = shell_gun
+		
+		# --- Buffs ---
 		add_technology_researched = field_works
-
+		# -------------
+	
 		add_taxed_goods = g:liquor
 		add_taxed_goods = g:luxury_furniture
 		add_taxed_goods = g:wine
@@ -25,6 +26,7 @@
 		activate_law = law_type:law_per_capita_based_taxation
 		activate_law = law_type:law_professional_army
 		activate_law = law_type:law_censorship
+		activate_law = law_type:law_combination_acts
 
 		
 		set_institution_investment_level = {
@@ -37,11 +39,11 @@
 			level = 1
 		}
 		
-		ig:ig_landowners = { 
+		ig:ig_landowners ?= { 
 			add_ruling_interest_group = yes
 		}
 
-		ig:ig_armed_forces = {
+		ig:ig_armed_forces ?= {
 			add_ruling_interest_group = yes
 		}
 
