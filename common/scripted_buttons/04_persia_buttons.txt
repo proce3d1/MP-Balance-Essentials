@@ -196,6 +196,26 @@
 					add_claim = root
 				}
 			}
+			# new claim
+			if = {
+				limit = {
+					s:STATE_FERGANA = {
+						any_scope_state = {
+							NOT = {
+								has_claim_by = root
+							}
+						}
+					}
+					NOT = {
+						country_or_subject_owns_entire_state_region = STATE_FERGANA
+					}
+				}
+				s:STATE_FERGANA = {
+					add_claim = root
+				}
+			}
+			# end new claim
+
 			add_modifier = {
 				name = modifier_herat_inspiration
 				days = long_modifier_time
