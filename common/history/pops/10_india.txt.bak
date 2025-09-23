@@ -1465,7 +1465,7 @@ POPS = {
 			create_pop = {
 				culture = afro_antillean
 				religion = catholic
-				size = 2801
+				size = 801
 			}
 		}
 	}
@@ -2433,4 +2433,3 @@ POPS = {
 		}
 	}
 }
-east_german

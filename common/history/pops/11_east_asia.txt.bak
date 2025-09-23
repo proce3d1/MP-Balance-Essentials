@@ -1461,10 +1461,6 @@
 		}
 		region_state:SIA = {
 			create_pop = {
-				culture = malay
-				size = 184400
-			}
-			create_pop = {
 				culture = burmese
 				size = 36000
 			}
@@ -1485,7 +1481,6 @@
 				culture = tai
 				size = 44020
 			}
-
 		}
 	}
 	s:STATE_KACHIN = {

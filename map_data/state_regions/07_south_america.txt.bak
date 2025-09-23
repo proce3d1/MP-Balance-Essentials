@@ -1117,7 +1117,7 @@ STATE_RIO_DE_JANEIRO = {
     }
     resource = {
         type = "bg_rubber"
-        discovered_amount = 32	# 7
+        discovered_amount = 32
     }
     naval_exit_id = 3064
 }

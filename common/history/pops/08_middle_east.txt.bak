@@ -1697,7 +1697,6 @@
 				culture = caucasian
 				religion = sunni
 				size = 27000
-
 			}
 			create_pop = {
 				culture = caucasian
@@ -1739,22 +1738,11 @@
 		region_state:TUR = {
 			create_pop = {
 				culture = turkish
-				size = 865092
+				size = 1206365
 			}
 			create_pop = {
 				culture = kurdish
-				size = 100023
-			}
-			# Alevis, Bektashis, Zazaki and the more heterodox end of Anatolian folk Islam
-			create_pop = {
-				culture = turkish
-				size = 341273
-				religion = shiite
-			}
-			create_pop = {
-				culture = kurdish
-				size = 24447
-				religion = shiite
+				size = 124470
 			}
 			create_pop = {
 				culture = greek

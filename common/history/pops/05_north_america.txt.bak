@@ -1322,13 +1322,7 @@
 		region_state:HBC = {
 			create_pop = {
 				culture = native_north_american
-				size = 5500
-			}
-		}
-		region_state:ATB = {
-			create_pop = {
-				culture = native_north_american
-				size = 6500
+				size = 12000
 			}
 		}
 	}

@@ -758,7 +758,7 @@
 		}
 	}
 	s:STATE_SOUTHERN_TRANSYLVANIA = {
-		region_state:TRS = {
+		region_state:AUS = {
 			create_pop = {
 				culture = hungarian
 				religion = protestant
@@ -783,22 +783,20 @@
 			}
 			create_pop = {
 				culture = south_german
-				religion = catholic
-				size = 12000
+				size = 1792
 			}
 			create_pop = {
 				culture = ashkenazi
 				size = 32800
 			}
 			create_pop = {
-				culture = south_german
-				religion = protestant
-				size = 77788
+				culture = north_german
+				size = 87996
 			}
 		}
 	}
 	s:STATE_NORTHERN_TRANSYLVANIA = {
-		region_state:TRS = {
+		region_state:AUS = {
 			create_pop = {
 				culture = hungarian
 				religion = protestant
@@ -815,12 +813,10 @@
 			}
 			create_pop = {
 				culture = south_german
-				religion = catholic
 				size = 3008
 			}
 			create_pop = {
-				culture = south_german
-				religion = protestant
+				culture = north_german
 				size = 164000
 			}
 			create_pop = {
@@ -837,7 +833,7 @@
 			}
 		}
 	}
-	s:STATE_BUKOVINA = {
+	s:STATE_MOLDAVIA = {
 		region_state:AUS = {
 			create_pop = {
 				culture = polish
@@ -868,8 +864,6 @@
 				size = 32000
 			}
 		}
-	}
-	s:STATE_MOLDAVIA = {
 		region_state:MOL = { # Ballpark estimate: 1,358,409 total for 1836, guessing that its recorded 1859 census marked a 7.77% growth over 1836 or that 1836 is 92.79% of the 1859 census, drawn from a trendline of Transylvanian censuses 1784-1850
 			create_pop = {
 				culture = romanian
