@@ -1,4 +1,4 @@
-
+﻿
 NPolitics = {
 
 	LAW_ENACTMENT_MIN_TOTAL_DAYS = 14			# Vanilla = 1, Minimum number of total days that an enactment checkpoint can take [>=1]

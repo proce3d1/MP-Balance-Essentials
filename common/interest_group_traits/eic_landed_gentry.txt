@@ -1,4 +1,4 @@
-ig_trait_summon_no_zamindars = {
+﻿ig_trait_summon_no_zamindars = {
 	icon = "gfx/interface/icons/ig_trait_icons/noble_privileges.dds"
 	max_approval = unhappy
 	

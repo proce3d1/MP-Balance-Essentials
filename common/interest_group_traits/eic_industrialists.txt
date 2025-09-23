@@ -1,4 +1,4 @@
-ig_trait_wounded_honor = {
+﻿ig_trait_wounded_honor = {
 	icon = "gfx/interface/icons/ig_trait_icons/xenophobia.dds"
 	max_approval = unhappy
 	

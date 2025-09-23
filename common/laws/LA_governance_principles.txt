@@ -26,7 +26,7 @@
 		country_legitimacy_headofstate_add = 10
 		country_legitimacy_govt_total_votes_add = 10
 		country_legitimacy_ideological_incoherence_mult = 0.2
-		country_authority_add = 50
+		country_authority_add = 50	# 100
 	}
 
 	on_activate = {
@@ -56,12 +56,39 @@
 				add_ideology = ideology_republican
 			}
 		}
+				crown_land_republic_effect = yes
+		if = {
+			limit = {
+				has_law = law_type:law_neo_absolutism
+			}
+			deactivate_law = law_type:law_neo_absolutism
+			activate_law = law_type:law_autocracy
+		}
 	}
 	
 	ai_will_do = {
 		exists = ruler
-		ruler = {
-			has_ideology = ideology:ideology_republican_leader
+		OR = {
+			ruler = {
+				OR = {
+					has_ideology = ideology:ideology_republican_leader
+					has_ideology = ideology:ideology_radical
+					has_ideology = ideology:ideology_positivist
+					has_socialist_ideology = yes
+				}
+			}
+			any_interest_group = {
+				is_in_government = yes
+				is_powerful = yes
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_republican_leader
+						has_ideology = ideology:ideology_radical
+						has_ideology = ideology:ideology_positivist
+						has_socialist_ideology = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -88,14 +115,14 @@
 				has_strategy = ai_strategy_progressive_agenda
 				power_bloc ?= { has_identity = identity:identity_ideological_union }
 				scope:target_country = { # Is their law different enough from what we want to impose?
-					NOT = { has_law = law_type:law_parliamentary_republic }
+					NOT = { has_law_or_variant = law_type:law_parliamentary_republic }
 				}				
 			}
 			
 			add = base_impose_law_weight
 			if = {
 				limit = { 
-					scope:target_country = { has_law = law_type:law_council_republic } 
+					scope:target_country = { has_law_or_variant = law_type:law_council_republic }
 					NOT = { has_strategy = ai_strategy_egalitarian_agenda }
 				}
 				multiply = 5
@@ -120,7 +147,6 @@
 		}
 	}	
 }
-
 
 law_parliamentary_republic = {
 	group = lawgroup_governance_principles
@@ -158,7 +184,7 @@ law_parliamentary_republic = {
 	modifier = {
 		country_legitimacy_govt_total_votes_add = 20
 		country_law_enactment_stall_mult = -0.20
-		country_legitimacy_govt_size_add = 3
+		country_legitimacy_govt_size_add = 3	# 1
 		country_law_enactment_max_setbacks_add = 1
 	}
 
@@ -186,12 +212,39 @@ law_parliamentary_republic = {
 				add_ideology = ideology_republican
 			}
 		}
+		crown_land_republic_effect = yes
+		if = {
+			limit = {
+				has_law = law_type:law_neo_absolutism
+			}
+			deactivate_law = law_type:law_neo_absolutism
+			activate_law = law_type:law_autocracy
+		}
 	}
 
 	ai_will_do = {
 		exists = ruler
-		ruler = {
-			has_ideology = ideology:ideology_republican_leader
+		OR = {
+			ruler = {
+				OR = {
+					has_ideology = ideology:ideology_republican_leader
+					has_ideology = ideology:ideology_radical
+					has_ideology = ideology:ideology_positivist
+					has_socialist_ideology = yes
+				}
+			}
+			any_interest_group = {
+				is_in_government = yes
+				is_powerful = yes
+				leader = {
+					OR = {
+						has_ideology = ideology:ideology_republican_leader
+						has_ideology = ideology:ideology_radical
+						has_ideology = ideology:ideology_positivist
+						has_socialist_ideology = yes
+					}
+				}
+			}
 		}
 	}
 
@@ -213,14 +266,14 @@ law_parliamentary_republic = {
 				has_strategy = ai_strategy_progressive_agenda
 				power_bloc ?= { has_identity = identity:identity_ideological_union }
 				scope:target_country = { # Is their law different enough from what we want to impose?
-					NOT = { has_law = law_type:law_presidential_republic }
+					NOT = { has_law_or_variant = law_type:law_presidential_republic }
 				}
 			}
 
 			add = base_impose_law_weight
 			if = {
 				limit = {
-					scope:target_country = { has_law = law_type:law_council_republic }
+					scope:target_country = { has_law_or_variant = law_type:law_council_republic }
 					NOT = { has_strategy = ai_strategy_egalitarian_agenda }
 				}
 				multiply = 5
@@ -298,7 +351,7 @@ law_council_republic = {
 
 						owner = {
 							country_has_primary_culture = cu:russian
-							has_law = law_type:law_council_republic
+							has_law_or_variant = law_type:law_council_republic
 						}
 					}
 
@@ -308,6 +361,14 @@ law_council_republic = {
 			        }
 				}
 			}
+		}
+		crown_land_republic_effect = yes
+		if = {
+			limit = {
+				has_law = law_type:law_neo_absolutism
+			}
+			deactivate_law = law_type:law_neo_absolutism
+			activate_law = law_type:law_autocracy
 		}
 	}
 
@@ -326,20 +387,16 @@ law_council_republic = {
 
 	modifier = {
 		country_legitimacy_govt_total_votes_add = 10
-		country_legitimacy_govt_size_add = 3
+		country_legitimacy_govt_size_add = 3	# 1
 		country_legitimacy_ideological_incoherence_mult = -0.1
-		interest_group_ig_trade_unions_pol_str_mult = 0.50
+		interest_group_ig_trade_unions_pol_str_mult = 0.50	# 0.25
 		country_free_charters_add = 3
 	}
 
 	ai_will_do = {
 		exists = ruler
 		ruler = {
-			OR = {
-				has_ideology = ideology:ideology_communist
-				has_ideology = ideology:ideology_anarchist
-				has_ideology = ideology:ideology_vanguardist
-			}
+			has_socialist_ideology = yes
 		}
 	}
 
