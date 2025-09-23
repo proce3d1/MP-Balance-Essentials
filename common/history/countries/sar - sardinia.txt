@@ -1,7 +1,7 @@
 ﻿COUNTRIES = {
 	c:SAR ?= {
 
-		ig:ig_devout = {
+		ig:ig_devout ?= {
 			add_ruling_interest_group = yes
 		}
 		
@@ -39,7 +39,7 @@
 			level = 2
 		}
 
-		ig:ig_landowners = {
+		ig:ig_landowners ?= {
 			add_ruling_interest_group = yes
 		}
 	}
