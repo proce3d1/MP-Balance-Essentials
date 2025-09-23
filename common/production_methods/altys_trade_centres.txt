@@ -1,4 +1,4 @@
-
+﻿
 pm_trade_center = {
 	texture = "gfx/interface/icons/production_method_icons/trade_center.dds"
 	replacement_if_valid = pm_trade_center_principle_external_trade_2

@@ -558,13 +558,13 @@ central_archives = {
 					is_country_type = unrecognized
 				}
 				NAND = {
-					has_law = law_type:law_protectionism
+					has_law_or_variant = law_type:law_protectionism
 					OR = {
-						has_law = law_type:law_interventionism
-						has_law = law_type:law_command_economy
-						has_law = law_type:law_laissez_faire
+						has_law_or_variant = law_type:law_interventionism
+						has_law_or_variant = law_type:law_command_economy
+						has_law_or_variant = law_type:law_laissez_faire
 					}
-					has_law = law_type:law_compulsory_primary_school
+					has_law_or_variant = law_type:law_compulsory_primary_school
 				}
 			}
 			create_political_movement = { type = movement_modernizer }
@@ -725,6 +725,19 @@ nationalism = {
 				}
 				any_country = {
 					has_journal_entry = je_risorgimento
+				}
+			}
+			multiply = 4
+		}
+
+		if = { # Important for Hungary and the Balkan states
+			limit = {
+				OR = {
+					country_has_primary_culture = cu:croat
+					country_has_primary_culture = cu:serb
+					country_has_primary_culture = cu:slovene
+					country_has_primary_culture = cu:bosniak
+					country_has_primary_culture = cu:hungarian
 				}
 			}
 			multiply = 4
@@ -1017,7 +1030,7 @@ socialism = {
 				NOT = { has_variable = socialism_researched }
 			}
 			set_variable = socialism_researched
-			ig:ig_trade_unions = {
+			ig:ig_trade_unions ?= {
 				add_ideology = ideology_socialist
 			}
 		}
@@ -1060,7 +1073,7 @@ corporatism = {
 				NOT = { has_variable = corporatism_researched }
 			}
 			set_variable = corporatism_researched
-			ig:ig_devout = {
+			ig:ig_devout ?= {
 				remove_ideology = ideology_pious
 				add_ideology = ideology_corporatist
 			}
@@ -1107,6 +1120,7 @@ pan-nationalism = {
 	modifier = {
 		country_authority_mult = 0.1
 		country_authority_add = 100
+		country_support_separatism_strength_mult = 0.25
 	}
 
 	unlocking_technologies = {
@@ -1124,6 +1138,10 @@ pan-nationalism = {
 					country_has_primary_culture = cu:south_german
 					country_has_primary_culture = cu:north_italian
 					country_has_primary_culture = cu:south_italian
+					country_has_primary_culture = cu:croat
+					country_has_primary_culture = cu:serb
+					country_has_primary_culture = cu:slovene
+					country_has_primary_culture = cu:bosniak
 				}
 			}
 			add = 5
@@ -1488,6 +1506,7 @@ mass_surveillance = {
 
 	modifier = {
 		state_tax_capacity_add = 25
+		country_support_separatism_resistance_mult = 0.25
 	}
 
 	unlocking_technologies = {
@@ -1529,6 +1548,7 @@ mass_propaganda = {
 		country_authority_mult = 0.1
 		state_expected_sol_from_literacy = 1
 		country_agitator_slots_add = 1
+		country_support_separatism_strength_mult = 0.25
 	}
 
 	unlocking_technologies = {

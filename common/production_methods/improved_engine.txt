@@ -1,4 +1,4 @@
-pm_steam_engines = {
+﻿pm_steam_engines = {
 	texture = "gfx/interface/icons/production_method_icons/steamworks.dds"
 
 	state_modifiers = {

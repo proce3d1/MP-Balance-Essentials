@@ -31,7 +31,7 @@ state_trait_bengal_delta = {
 	icon = "gfx/interface/icons/state_trait_icons/river.dds"
 
 	modifier = {
-		building_group_bg_agriculture_throughput_add = 0.05 	# 0.25
+		building_group_bg_agriculture_throughput_add = 0.05	# 0.25
 		building_group_bg_plantations_throughput_add = 0.05	# 0.25
 	}
 }
