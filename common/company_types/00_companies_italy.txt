@@ -40,7 +40,7 @@ company_ilva = {
 	}
 
 	possible = {
-		has_technology_researched = arc_welding
+		has_technology_researched = bessemer_process	# arc_welding
 		any_scope_state = {
 			state_region = s:STATE_PIEDMONT
 			is_incorporated = yes

@@ -2807,7 +2807,7 @@ MLT = { # Malta
 	
 	tier = city_state
 	
-	cultures = { maltese south_italian }
+	cultures = { maltese british }
 	
 	capital = STATE_MALTA
 }

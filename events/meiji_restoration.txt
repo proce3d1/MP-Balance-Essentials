@@ -496,6 +496,14 @@ meiji.2 = {
 				add_claim = ROOT
 			}
 		}
+		if = {
+			limit = {
+				NOT = { owns_entire_state_region = STATE_FORMOSA  }
+			}
+			s:STATE_FORMOSA  = {
+				add_claim = ROOT
+			}
+		}
 	}
 	#option = {
 	#	name = meiji.2.b

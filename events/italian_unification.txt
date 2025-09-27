@@ -37,6 +37,7 @@ italian_unification.1 = {
 		add_modifier = {
 			name = italian_unifier_prestige
 			days = long_modifier_time
+			is_decaying = yes
 		}
 	}
 	option = {
@@ -48,6 +49,7 @@ italian_unification.1 = {
 			add_modifier = {
 				name = italian_unifiers_ig
 				days = long_modifier_time
+				is_decaying = yes
 			}
 		}
 	}
