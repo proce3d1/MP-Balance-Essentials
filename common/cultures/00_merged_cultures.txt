@@ -122,7 +122,7 @@ finnic= {
 	religion = protestant
 	heritage = heritage_nordic
 	language = language_finnic
-	traits = { finnic scandinavian_culture_group european_heritage }
+	traditions = { }
 	male_common_first_names = {
 		Aatto
 		Abraham
@@ -303,7 +303,6 @@ minority_iberian={
 		Joan
 		Jordi
 		Josep
-		Jose
 		Juan
 		Llorenc
 		Lluis
@@ -1243,7 +1242,6 @@ indigenous_south_american={
 		Simon_2
 		Tupac
 		Ulises
-		Victor_2
 	}
 	female_common_first_names = {
 		Angelica

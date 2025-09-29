@@ -1,4 +1,4 @@
-state_birth_rate_mult={
+﻿state_birth_rate_mult={
 	decimals=1	#0
 	color=good
 	percent=yes

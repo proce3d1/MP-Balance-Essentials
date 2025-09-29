@@ -1,4 +1,4 @@
-state_bureaucrats_investment_pool_contribution_add={
+﻿state_bureaucrats_investment_pool_contribution_add={
 	decimals=0
 	color=good
 	percent=yes

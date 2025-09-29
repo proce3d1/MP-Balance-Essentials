@@ -1,3 +1,5 @@
+﻿namespace = communism
+
 # Startup event 1
 communism.10 = {
     type = country_event

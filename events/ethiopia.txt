@@ -21,14 +21,15 @@ ethiopia.1 = {
 
 	trigger = {
 		NOT = { has_global_variable = tewodros_var }
-		country_has_primary_culture = cu:minority_ethiopian
-		has_law = law_type:law_monarchy
+		country_has_primary_culture = cu:ethiopian
+		has_law_or_variant = law_type:law_monarchy
 		OR = {
 			is_player = yes
 			NOT = {
 				any_country = {
-					country_has_primary_culture = cu:minority_ethiopian
+					country_has_primary_culture = cu:ethiopian
 					is_player = yes
+					NOT = { has_variable = tewdoros_refused }
 				}
 			}
 		}
@@ -42,33 +43,23 @@ ethiopia.1 = {
 		name = ethiopia.1.a
 		default_option = yes
 		create_character = {
-			first_name = Tewodros
-			last_name = Solomon
-			historical = yes
-			ruler = yes
-			noble = yes
-			age = 45
-			dna = dna_emperor_tewodros_02
-			interest_group = ig_landowners
-			culture = cu:minority_ethiopian
-			religion = rel:oriental_orthodox
-			ideology = ideology_royalist
-			traits = {
-				romantic
-				expert_offensive_planner
-			}
+			template = ETH_tewodros_solomon
 			on_created = {
 				add_modifier = {
 					name = tewodros_modifier
 				}
 			}
 		}
+		add_radicals = {
+			value = medium_radicals
+		}
 	}
 	option = {
 		name = ethiopia.1.b
+		add_loyalists = {
+			value = medium_radicals
+		}		
 		remove_global_variable = tewodros_var
-		add_radicals = {
-			value = small_radicals
-		}
+		set_variable = tewdoros_refused
 	}
 }

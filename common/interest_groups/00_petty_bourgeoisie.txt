@@ -174,7 +174,6 @@
 			change_character_religion = rel:shiite
 		}
 	}
-	on_character_ig_membership = {}
 
 	pop_potential = {
 		custom_tooltip = {

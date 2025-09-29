@@ -69,7 +69,7 @@
 				size = 124800
 			}
 			create_pop = {
-				culture = east_germann
+				culture = east_german
 				size = 9600
 			}
 		}
@@ -145,7 +145,7 @@
 				size = 21014
 			}
 			create_pop = {
-				culture = east_germann
+				culture = east_german
 				size = 1187
 			}
 			create_pop = {

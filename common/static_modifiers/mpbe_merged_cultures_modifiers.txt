@@ -1,0 +1,607 @@
+﻿## Scandinavian
+
+scandinavian_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_scandinavian_cultural_acceptance_add = 1
+}
+
+scandinavian_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_scandinavian_cultural_acceptance_add = 1
+}
+
+scandinavian_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_scandinavian_add = 1
+}
+
+scandinavian_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_scandinavian_add = 1
+}
+
+scandinavian_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_scandinavian_standard_of_living_add = 1
+}
+
+scandinavian_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_scandinavian_standard_of_living_add = 1
+}
+
+## Finnic
+
+finnic_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_finnic_cultural_acceptance_add = 1
+}
+
+finnic_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_finnic_cultural_acceptance_add = 1
+}
+
+finnic_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_finnic_add = 1
+}
+
+finnic_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_finnic_add = 1
+}
+
+finnic_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_finnic_standard_of_living_add = 1
+}
+
+finnic_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_finnic_standard_of_living_add = 1
+}
+
+## Minority Iberian
+
+minority_iberian_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_minority_iberian_cultural_acceptance_add = 1
+}
+
+minority_iberian_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_minority_iberian_cultural_acceptance_add = 1
+}
+
+minority_iberian_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_minority_iberian_add = 1
+}
+
+minority_iberian_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_minority_iberian_add = 1
+}
+
+minority_iberian_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_minority_iberian_standard_of_living_add = 1
+}
+
+minority_iberian_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_minority_iberian_standard_of_living_add = 1
+}
+
+## Baltic
+
+baltic_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_baltic_cultural_acceptance_add = 1
+}
+
+baltic_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_baltic_cultural_acceptance_add = 1
+}
+
+baltic_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_baltic_add = 1
+}
+
+baltic_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_baltic_add = 1
+}
+
+baltic_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_baltic_standard_of_living_add = 1
+}
+
+baltic_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_baltic_standard_of_living_add = 1
+}
+
+## Caucasian
+
+caucasian_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_caucasian_cultural_acceptance_add = 1
+}
+
+caucasian_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_caucasian_cultural_acceptance_add = 1
+}
+
+caucasian_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_caucasian_add = 1
+}
+
+caucasian_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_caucasian_add = 1
+}
+
+caucasian_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_caucasian_standard_of_living_add = 1
+}
+
+caucasian_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_caucasian_standard_of_living_add = 1
+}
+
+## Minority Arabic
+
+minority_arabic_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_minority_arabic_cultural_acceptance_add = 1
+}
+
+minority_arabic_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_minority_arabic_cultural_acceptance_add = 1
+}
+
+minority_arabic_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_minority_arabic_add = 1
+}
+
+minority_arabic_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_minority_arabic_add = 1
+}
+
+minority_arabic_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_minority_arabic_standard_of_living_add = 1
+}
+
+minority_arabic_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_minority_arabic_standard_of_living_add = 1
+}
+
+## Minority Central Asian
+
+minority_central_asian_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_minority_central_asian_cultural_acceptance_add = 1
+}
+
+minority_central_asian_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_minority_central_asian_cultural_acceptance_add = 1
+}
+
+minority_central_asian_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_minority_central_asian_add = 1
+}
+
+minority_central_asian_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_minority_central_asian_add = 1
+}
+
+minority_central_asian_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_minority_central_asian_standard_of_living_add = 1
+}
+
+minority_central_asian_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_minority_central_asian_standard_of_living_add = 1
+}
+
+## Minority Indian
+
+minority_indian_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_minority_indian_cultural_acceptance_add = 1
+}
+
+minority_indian_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_minority_indian_cultural_acceptance_add = 1
+}
+
+minority_indian_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_minority_indian_add = 1
+}
+
+minority_indian_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_minority_indian_add = 1
+}
+
+minority_indian_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_minority_indian_standard_of_living_add = 1
+}
+
+minority_indian_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_minority_indian_standard_of_living_add = 1
+}
+
+## Tai
+
+tai_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_tai_cultural_acceptance_add = 1
+}
+
+tai_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_tai_cultural_acceptance_add = 1
+}
+
+tai_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_tai_add = 1
+}
+
+tai_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_tai_add = 1
+}
+
+tai_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_tai_standard_of_living_add = 1
+}
+
+tai_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_tai_standard_of_living_add = 1
+}
+
+## Mon Khmer
+
+mon_khmer_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_mon_khmer_cultural_acceptance_add = 1
+}
+
+mon_khmer_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_mon_khmer_cultural_acceptance_add = 1
+}
+
+mon_khmer_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_mon_khmer_add = 1
+}
+
+mon_khmer_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_mon_khmer_add = 1
+}
+
+mon_khmer_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_mon_khmer_standard_of_living_add = 1
+}
+
+mon_khmer_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_mon_khmer_standard_of_living_add = 1
+}
+
+## Minority East Asian
+
+minority_east_asian_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_minority_east_asian_cultural_acceptance_add = 1
+}
+
+minority_east_asian_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_minority_east_asian_cultural_acceptance_add = 1
+}
+
+minority_east_asian_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_minority_east_asian_add = 1
+}
+
+minority_east_asian_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_minority_east_asian_add = 1
+}
+
+minority_east_asian_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_minority_east_asian_standard_of_living_add = 1
+}
+
+minority_east_asian_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_minority_east_asian_standard_of_living_add = 1
+}
+
+## Native Mesoamerican
+
+native_mesoamerican_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_native_mesoamerican_cultural_acceptance_add = 1
+}
+
+native_mesoamerican_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_native_mesoamerican_cultural_acceptance_add = 1
+}
+
+native_mesoamerican_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_native_mesoamerican_add = 1
+}
+
+native_mesoamerican_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_native_mesoamerican_add = 1
+}
+
+native_mesoamerican_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_native_mesoamerican_standard_of_living_add = 1
+}
+
+native_mesoamerican_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_native_mesoamerican_standard_of_living_add = 1
+}
+
+## Indigenous South American
+
+indigenous_south_american_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_indigenous_south_american_cultural_acceptance_add = 1
+}
+
+indigenous_south_american_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_indigenous_south_american_cultural_acceptance_add = 1
+}
+
+indigenous_south_american_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_indigenous_south_american_add = 1
+}
+
+indigenous_south_american_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_indigenous_south_american_add = 1
+}
+
+indigenous_south_american_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_indigenous_south_american_standard_of_living_add = 1
+}
+
+indigenous_south_american_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_indigenous_south_american_standard_of_living_add = 1
+}
+
+## Native North American
+
+native_north_american_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_native_north_american_cultural_acceptance_add = 1
+}
+
+native_north_american_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_native_north_american_cultural_acceptance_add = 1
+}
+
+native_north_american_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_native_north_american_add = 1
+}
+
+native_north_american_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_native_north_american_add = 1
+}
+
+native_north_american_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_native_north_american_standard_of_living_add = 1
+}
+
+native_north_american_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_native_north_american_standard_of_living_add = 1
+}
+
+## Minority West African
+
+minority_west_african_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_minority_west_african_cultural_acceptance_add = 1
+}
+
+minority_west_african_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_minority_west_african_cultural_acceptance_add = 1
+}
+
+minority_west_african_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_minority_west_african_add = 1
+}
+
+minority_west_african_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_minority_west_african_add = 1
+}
+
+minority_west_african_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_minority_west_african_standard_of_living_add = 1
+}
+
+minority_west_african_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_minority_west_african_standard_of_living_add = 1
+}
+
+## Minority Central African
+
+minority_central_african_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_minority_central_african_cultural_acceptance_add = 1
+}
+
+minority_central_african_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_minority_central_african_cultural_acceptance_add = 1
+}
+
+minority_central_african_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_minority_central_african_add = 1
+}
+
+minority_central_african_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_minority_central_african_add = 1
+}
+
+minority_central_african_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_minority_central_african_standard_of_living_add = 1
+}
+
+minority_central_african_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_minority_central_african_standard_of_living_add = 1
+}
+
+## Ethiopian
+
+ethiopian_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_ethiopian_cultural_acceptance_add = 1
+}
+
+ethiopian_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_ethiopian_cultural_acceptance_add = 1
+}
+
+ethiopian_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_ethiopian_add = 1
+}
+
+ethiopian_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_ethiopian_add = 1
+}
+
+ethiopian_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_ethiopian_standard_of_living_add = 1
+}
+
+ethiopian_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_ethiopian_standard_of_living_add = 1
+}
+
+## Minority East African
+
+minority_east_african_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_minority_east_african_cultural_acceptance_add = 1
+}
+
+minority_east_african_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_minority_east_african_cultural_acceptance_add = 1
+}
+
+minority_east_african_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_minority_east_african_add = 1
+}
+
+minority_east_african_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_minority_east_african_add = 1
+}
+
+minority_east_african_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_minority_east_african_standard_of_living_add = 1
+}
+
+minority_east_african_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_minority_east_african_standard_of_living_add = 1
+}
+
+## Southern African
+
+southern_african_cultural_acceptance_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_southern_african_cultural_acceptance_add = 1
+}
+
+southern_african_cultural_acceptance_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_southern_african_cultural_acceptance_add = 1
+}
+
+southern_african_fervor_target_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	country_fervor_target_southern_african_add = 1
+}
+
+southern_african_fervor_target_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	country_fervor_target_southern_african_add = 1
+}
+
+southern_african_standard_of_living_modifier_positive = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds"
+	state_southern_african_standard_of_living_add = 1
+}
+
+southern_african_standard_of_living_modifier_negative = {
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds"
+	state_southern_african_standard_of_living_add = 1
+}

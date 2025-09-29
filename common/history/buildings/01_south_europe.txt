@@ -3537,8 +3537,8 @@
 				activate_production_methods={ "pm_basic_port" }
 			}
 		}
-		region_state:RUS={
-		}
+		# region_state:RUS={
+		# }
 	}
 	s:STATE_ALBANIA={
 		region_state:TUR={
