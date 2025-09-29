@@ -866,7 +866,7 @@ HAR = {
 	
 	tier = principality
 	
-	cultures = { somali amhara minority_arabic }
+	cultures = { amhara }
 	religion = sunni
 	capital = STATE_OROMIA
 }

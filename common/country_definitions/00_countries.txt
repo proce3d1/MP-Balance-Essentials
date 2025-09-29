@@ -99,17 +99,25 @@ AUS = {
 	
 	cultures = { south_german }
 	capital = STATE_AUSTRIA
+
+	primary_unit_color = { 211 220 240 }
+	secondary_unit_color  = { 94 120 165 }
+	tertiary_unit_color = { 20 20 20 }
 }
 
 USA = {
 	color = { 66  94  193 }
-	
+
 	country_type = recognized
-	
+
 	tier = empire
-	
+
 	cultures = { yankee dixie }
 	capital = STATE_DISTRICT_OF_COLUMBIA
+
+	primary_unit_color = { 20 20 120 }
+	secondary_unit_color  = { 150 190 210 }
+	tertiary_unit_color = { 5 5 90 }
 }
 
 CSA = {
@@ -211,14 +219,14 @@ ITA = {
 }
 
 KUK = {
-	color = { 124 40 30 }
-	
+	color = { 190 90 95 }
+
 	country_type = recognized
 
 	tier = empire
-	
+
 	capital = STATE_CENTRAL_HUNGARY
-	cultures = { hungarian romanian croat czech slovak slovene }
+	cultures = { south_german hungarian romanian croat czech slovak slovene }
 }
 
 DEN = {
@@ -810,13 +818,17 @@ EST = {
 
 HUN = {
 	color = { 152  85  92 }
-	
+
 	country_type = recognized
 
 	tier = kingdom
-	
+
 	cultures = { hungarian }
 	capital = STATE_CENTRAL_HUNGARY
+
+	primary_unit_color = { 170 117 83 }
+	secondary_unit_color  = { 198 196 207 }
+	tertiary_unit_color = { 20 20 20 }
 }
 
 LIT = {
@@ -859,7 +871,7 @@ GAL = {
 
 	tier = principality
 	
-	cultures = { ukrainian polish }
+	cultures = { polish ukrainian }
 	capital = STATE_EAST_GALICIA
 }
 
@@ -871,7 +883,7 @@ SLV = {
 	tier = principality
 	
 	cultures = { slovak }
-	capital = STATE_WEST_SLOVAKIA
+	capital = STATE_SLOVAKIA
 }
 
 SWI = {
@@ -888,12 +900,12 @@ SWI = {
 
 TRS = {
 	color = { 211  207  173 }
-	
+
 	country_type = recognized
 
-	tier = principality 
-	
-	cultures = { szekely romanian hungarian }
+	tier = principality
+
+	cultures = { szekely hungarian romanian south_german }
 	capital = STATE_SOUTHERN_TRANSYLVANIA
 }
 
@@ -945,13 +957,13 @@ BOS = {
 
 BUL = {
 	color = { 116  107  140 }
-	
+
 	country_type = recognized
 
 	tier = kingdom
-	
-	cultures = { bulgarian }	
-	capital = STATE_NORTHERN_THRACE
+
+	cultures = { bulgarian }
+	capital = STATE_BULGARIA
 }
 
 CRE = {
@@ -967,12 +979,12 @@ CRE = {
 }
 
 CRO = {
-	color = { 174  227  95 }
-	
+	color = { 255  126  242 }
+
 	country_type = recognized
 
 	tier = kingdom
-	
+
 	cultures = { croat }
 	capital = STATE_CROATIA
 	is_named_from_capital = yes
@@ -1058,7 +1070,7 @@ SER = {
 	tier = kingdom
 	
 	cultures = { serb }
-	capital = STATE_NORTHERN_SERBIA
+	capital = STATE_WESTERN_SERBIA
 }
 
 SLO = {
@@ -1097,14 +1109,14 @@ WAL = {
 }
 
 YUG = {
-	color = { 37 128 174 }
-	
+	color = { 50 60 100 }
+
 	country_type = recognized
 
 	tier = empire
-	
-	capital = STATE_NORTHERN_SERBIA 
-	cultures = { serb croat slovene bosniak }
+
+	capital = STATE_WESTERN_SERBIA
+	cultures = { serb croat slovene bosniak bulgarian }
 }
 
 ABU = {
@@ -1278,7 +1290,7 @@ OMA = {
 	tier = principality
 	
 	cultures = { bedouin minority_arabic }
-	religion = shiite
+	religion = ibadi
 	capital = STATE_OMAN
 	is_named_from_capital = yes
 }
@@ -1673,13 +1685,13 @@ PAN = {
 
 SIK = {
 	color = { 139  138  160 }
-	
+
 	country_type = unrecognized
-	
+
 	tier = principality
-	
+
 	cultures = { tibetan }
-	capital = STATE_HIMALAYAS
+	capital = STATE_EASTERN_HIMALAYAS
 }
 
 SIN = {
@@ -1732,13 +1744,13 @@ BAL = {
 
 BHU = {
 	color = { 93  180  76 }
-	
+
 	country_type = unrecognized
-	
+
 	tier = principality
-	
+
 	cultures = { tibetan }
-	capital = STATE_HIMALAYAS
+	capital = STATE_EASTERN_HIMALAYAS
 }
 
 LAN = {
@@ -1806,7 +1818,7 @@ DAI = {
 	religion = confucian
 	
 	cultures = { vietnamese }
-	capital = STATE_TONKIN
+	capital = STATE_ANNAM
 }
 
 JAV = {
@@ -1979,7 +1991,7 @@ CAL = {
 }
 
 CAN = {
-	color = { 94  117  55 }
+	color = { 113 53 63 }
 	
 	country_type = colonial
 	
@@ -2413,7 +2425,7 @@ ICL = {
 
 	tier = principality
 	
-	cultures = { icelandic }
+	cultures = { icelandic scandinavian }
 	capital = STATE_ICELAND
 	is_named_from_capital = yes
 }
@@ -2436,7 +2448,7 @@ UBD = {
 
 	tier = grand_principality
 	
-	cultures = { latvian estonian lithuanian finnic }
+	cultures = { finnic baltic}
 	capital = STATE_RIGA
 }
 
@@ -2481,7 +2493,7 @@ JAN = {
 	tier = city_state
 
 	capital = STATE_NORTHERN_NORWAY
-	cultures = { norwegian scandinavian}
+	cultures = { norwegian scandinavian }
 }
 
 BIC = {
@@ -2807,7 +2819,7 @@ MLT = { # Malta
 	
 	tier = city_state
 	
-	cultures = { maltese south_italian }
+	cultures = { british }
 	
 	capital = STATE_MALTA
 }
@@ -4080,7 +4092,7 @@ TJI = {
 	
 	country_type = recognized
 
-	tier = principality
+	tier = grand_principality
 	
 	cultures = { tajik minority_central_asian }
 	capital = STATE_TAJIKISTAN
@@ -4091,7 +4103,7 @@ UZB = {
 	
 	country_type = recognized
 
-	tier = principality
+	tier = grand_principality
 	
 	cultures = { uzbek }
 	capital = STATE_FERGANA
@@ -4102,7 +4114,7 @@ KYR = {
 	
 	country_type = recognized
 
-	tier = principality
+	tier = grand_principality
 	
 	cultures = { kirgiz minority_central_asian }
 	capital = STATE_KIRGHIZIA
@@ -5000,4 +5012,67 @@ IDS = {
 	
 	cultures = { panjabi sindi minority_indian }
 	capital = STATE_PUNJAB
+}
+
+MPH = {
+	color = { 111 3 252 }
+
+	country_type = unrecognized
+
+	tier = principality
+
+	cultures = { lao }
+	capital = STATE_LAOS
+}
+
+KLO = {
+	color = { 3 165 252 }
+
+	country_type = decentralized
+
+	religion = animist
+
+	tier = principality
+
+	cultures = { khmer }
+	capital = STATE_CAMBODIA
+}
+
+DGR = {
+	color = { 235 222 52 }
+
+	country_type = decentralized
+
+	religion = animist
+
+	tier = principality
+
+	cultures = { champa }
+	capital = STATE_ANNAM
+}
+
+SCT = {
+	color = { 50 162 210 }
+
+	country_type = decentralized
+
+	religion = animist
+
+	tier = principality
+
+	cultures = { lao }
+	capital = STATE_TONKIN
+}
+
+BNT = {
+	color = { 59 104 94 }
+
+	country_type = recognized
+
+	religion = catholic
+
+	tier = principality
+
+	cultures = { south_german serb }
+	capital = STATE_DELVIDEK
 }

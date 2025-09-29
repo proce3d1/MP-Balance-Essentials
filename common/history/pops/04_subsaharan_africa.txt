@@ -1430,6 +1430,7 @@
 				size = 25000
 			}
 		}
+		region_state:BGM = {
 			create_pop = {
 				culture = ethiopian
 				size = 435200
@@ -1443,7 +1444,9 @@
 				culture = ethiopian
 				religion = sunni
 				size = 136000
+			}
 		}
+		region_state:AWS = {
 			create_pop = {
 				culture = ethiopian
 				religion = jewish
