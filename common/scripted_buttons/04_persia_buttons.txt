@@ -196,6 +196,28 @@
 					add_claim = root
 				}
 			}
+			if = {
+				limit = {
+					s:STATE_FERGANA = {
+						NOT = {
+							any_scope_state = {
+								owner = {
+									is_country_type = decentralized
+								}
+							}
+							any_scope_state = {
+								has_claim_by = root
+							}
+						}
+					}
+					NOT = {
+						country_or_subject_owns_entire_state_region = STATE_FERGANA
+					}
+				}
+				s:STATE_FERGANA = {
+					add_claim = root
+				}
+			}
 			add_modifier = {
 				name = modifier_herat_inspiration
 				days = long_modifier_time
@@ -308,7 +330,7 @@ persian_baluchistan_button = {
 			add_loyalists = {
 				culture = cu:persian
 				value = small_radicals
-			}
+			}		
 			s:STATE_TURKMENIA = {
 				add_claim = c:PER
 			}

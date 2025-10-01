@@ -74,6 +74,9 @@
 			add_journal_entry = {
 				type = je_divided_monarchists
 			}
+#			add_journal_entry = {
+#				type = je_conquest_of_algeria
+#			}
 		}
 		
 		add_company = company_type:company_dmc

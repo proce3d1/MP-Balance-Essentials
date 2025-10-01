@@ -62,6 +62,7 @@ law_interventionism = {
 	disallowing_laws = {
 		law_serfdom
 		law_anarchy
+		law_women_in_the_fields
 	}
 	
 	on_activate = {
@@ -134,6 +135,7 @@ law_agrarianism = {
 	
 	disallowing_laws = {
 		law_anarchy
+		law_women_in_the_fields
 	}	
 	
 	unlocking_technologies = {
@@ -320,6 +322,11 @@ law_extraction_economy = {
 		colonization
 	}
 
+	disallowing_laws = {
+		law_anarchy
+		law_women_in_the_fields
+	}
+
 	can_enact = {
 		is_subject = yes
 	}
@@ -418,6 +425,7 @@ law_laissez_faire = {
 		law_isolationism
 		law_anarchy
 		law_guild_system
+		law_women_in_the_fields
 	}
 	
 	unlocking_technologies = {
@@ -434,7 +442,7 @@ law_laissez_faire = {
 		country_private_construction_allocation_mult = 0.75
 		country_government_dividends_reinvestment_add = 1.0		
 		country_free_charters_add = 2
-		country_max_companies_add = 2
+		country_max_companies_add = 1
 		country_disable_nationalization_bool = yes
 		country_force_privatization_bool = yes
 		country_forbid_monopoly_bool = yes
@@ -491,6 +499,7 @@ law_cooperative_ownership = {
 	
 	disallowing_laws = {
 		law_serfdom
+		law_women_in_the_fields
 	}
 	
 	unlocking_laws = {
@@ -577,6 +586,7 @@ law_command_economy = {
 	disallowing_laws = {
 		law_serfdom
 		law_anarchy
+		law_women_in_the_fields
 	}
 	
 	unlocking_technologies = {
@@ -614,14 +624,14 @@ law_command_economy = {
 
 		country_leverage_resistance_mult = 0.25
 		building_economy_of_scale_level_cap_add = 25
-		# country_disable_privatization_bool = yes
+		# country_disable_non_company_privatization_bool = yes
 	}
 	
 	ai_will_do = {
 		OR = {
-			has_law = law_type:law_technocracy
+			has_law_or_variant = law_type:law_technocracy
 			AND = {
-				has_law = law_type:law_council_republic
+				has_law_or_variant = law_type:law_council_republic
 				ruler ?= {
 					has_ideology = ideology:ideology_vanguardist
 					has_ideology = ideology:ideology_communist

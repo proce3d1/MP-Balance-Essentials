@@ -1,0 +1,207 @@
+﻿namespace = formation
+
+# Iberia
+formation.5 = {
+	type = country_event
+	placement = ROOT
+
+	title = formation.5.t
+	desc = formation.5.d
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				desc = formation.5.f
+				trigger = {
+					has_law = law_type:law_monarchy
+				}
+			}
+			triggered_desc = {
+				desc = formation.5.f2
+				trigger = {
+					always = yes
+				}
+			}
+		}
+	}
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = {
+		c:IBE ?= THIS
+		NOT = { has_global_variable = has_formed_ibe }
+	}
+
+	immediate = {
+		set_global_variable = has_formed_ibe
+		save_scope_as = formation_country
+		every_country = {
+			limit = {
+				has_diplomatic_relevance = ROOT
+			}
+			post_notification = unification_notification_ibe
+		}
+	}
+
+	option = {
+		name = formation.5.a
+		default_option = yes
+		add_modifier = {
+			name = iberian_unifier
+			days = very_long_modifier_time
+			is_decaying = yes
+		}
+		unification_claims_effect = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Scandinavia
+formation.10 = {
+	type = country_event
+	placement = ROOT
+
+	title = formation.10.t
+	desc = formation.10.d
+	flavor = formation.10.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = {
+		c:SCA ?= THIS
+		NOT = { has_global_variable = has_formed_sca }
+	}
+
+	immediate = {
+		set_global_variable = has_formed_sca
+		save_scope_as = formation_country
+		cu:norwegian = {
+			save_scope_as = unification_culture
+		}
+		cu:icelandic = {
+			save_scope_as = unification_culture_2
+		}
+		cu:danish = {
+			save_scope_as = unification_culture_3
+		}
+		cu:swedish = {
+			save_scope_as = unification_culture_4
+		}
+		cu:finnish = {
+			save_scope_as = finns_scope
+		}
+		every_country = {
+			limit = {
+				has_diplomatic_relevance = ROOT
+			}
+			post_notification = unification_notification_four_culture
+		}
+	}
+
+	option = {
+		name = formation.5.a
+		default_option = yes
+		add_modifier = {
+			name = scandinavian_unifier
+			days = very_long_modifier_time
+			is_decaying = yes
+		}
+		unification_claims_effect = yes
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+	option = {
+		name = formation.10.a
+		trigger = {
+			owns_entire_state_region = STATE_OSTROBOTHNIA
+			owns_entire_state_region = STATE_UUSIMAA
+		}
+		default_option = yes
+		add_modifier = {
+			name = unification_prestige
+			days = very_long_modifier_time
+		}
+		add_primary_culture = cu:finnish
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# United Netherlands
+formation.19 = {
+	type = country_event
+	placement = ROOT
+
+	title = formation.19.t
+	desc = formation.19.d
+	flavor = formation.19.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	trigger = {
+		c:UNL ?= THIS
+		NOT = { has_global_variable = has_formed_unl }
+	}
+
+	immediate = {
+		set_global_variable = has_formed_unl
+		save_scope_as = formation_country
+		ruler = { save_scope_as = ruler_scope }
+		cu:dutch = {
+			save_scope_as = unification_culture
+		}
+		cu:flemish = {
+			save_scope_as = unification_culture_2
+		}
+		cu:wallonian = {
+			save_scope_as = unification_culture_3
+		}
+		every_country = {
+			limit = {
+				has_diplomatic_relevance = ROOT
+			}
+			post_notification = unification_notification_three_culture
+		}
+	}
+
+	option = {
+		name = formation.19.a
+		default_option = yes
+		add_modifier = {
+			name = beneluxian_unifier
+			days = very_long_modifier_time
+			is_decaying = yes
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+

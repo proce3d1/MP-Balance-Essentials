@@ -107,10 +107,6 @@ law_wage_subsidies = {
 		labor_movement
 	}
 
-	modifier = {
-		country_institution_social_security_max_investment_add = 2
-	}
-
 	institution = institution_social_security
 
 	ai_enact_weight_modifier = { #Petitions
@@ -132,10 +128,6 @@ law_old_age_pension = {
 
 	unlocking_technologies = {
 		human_rights
-	}
-
-	modifier = {
-		country_institution_social_security_max_investment_add = 2
 	}
 
 	institution = institution_social_security

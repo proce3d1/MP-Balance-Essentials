@@ -304,13 +304,62 @@
 	}
 	s:STATE_ULSTER = {
 		region_state:GBR = {
+			### Aristocrats
+			create_pop = {
+				culture = scottish  # Presbyterians and Methodists
+				pop_type = aristocrats
+				size = 15000
+			}
+			create_pop = {
+				culture = irish  # Catholics
+				pop_type = aristocrats
+				size = 10000
+			}
+
+			### Farmers
+			create_pop = {
+				culture = scottish  # Presbyterians and Methodists
+				pop_type = farmers
+				size = 15000
+			}
+
+			### Officers
+			create_pop = {
+				culture = british # Anglicans
+				pop_type = officers
+				size = 2000
+			}
+			create_pop = {
+				culture = scottish  # Presbyterians and Methodists
+				pop_type = officers
+				size = 2500
+			}
+
+			### Soldiers
+			create_pop = {
+				culture = british # Anglicans
+				pop_type = soldiers
+				size = 20000
+			}
+			create_pop = {
+				culture = scottish  # Presbyterians and Methodists
+				pop_type = soldiers
+				size = 20000
+			}
 			create_pop = {
 				culture = irish # Catholics
-				size = 1183122
+				pop_type = soldiers
+				size = 25000
+			}
+
+			### Whoever
+			create_pop = {
+				culture = irish # Catholics
+				size = 1173122
 			}
 			create_pop = {
 				culture = british # Anglicans
-				size = 407111
+				size = 385111
 			}
 			create_pop = {
 				culture = irish # Anglicans
@@ -319,7 +368,7 @@
 			}
 			create_pop = {
 				culture = scottish  # Presbyterians and Methodists
-				size = 575084
+				size = 510084
 			}
 			create_pop = {
 				culture = irish  # Presbyterians and Methodists
@@ -330,13 +379,32 @@
 	}
 	s:STATE_MUNSTER = {
 		region_state:GBR = {
+			### Officers
+			create_pop = {
+				culture = british # Anglicans
+				pop_type = officers
+				size = 1400
+			}
+
+			### Soldiers
+			create_pop = {
+				culture = british # Anglicans
+				pop_type = soldiers
+				size = 8000
+			}
 			create_pop = {
 				culture = irish # Catholics
-				size = 2214388
+				pop_type = soldiers
+				size = 8000
+			}
+
+			create_pop = {
+				culture = irish # Catholics
+				size = 2206388
 			}
 			create_pop = {
 				culture = british # Anglicans
-				size = 71856
+				size = 62456
 			}
 			create_pop = {
 				culture = irish # Anglicans
@@ -356,13 +424,33 @@
 	}
 	s:STATE_LEINSTER = {
 		region_state:GBR = {
+			### Officers
+			create_pop = {
+				culture = british # Anglicans
+				pop_type = officers
+				size = 4500
+			}
+
+			### Soldiers
+			create_pop = {
+				culture = british # Anglicans
+				pop_type = soldiers
+				size = 26000
+			}
 			create_pop = {
 				culture = irish # Catholics
-				size = 1677581
+				pop_type = soldiers
+				size = 30000
+			}
+
+			### Whoever
+			create_pop = {
+				culture = irish # Catholics
+				size = 1647581
 			}
 			create_pop = {
 				culture = british # Anglicans
-				size = 160989
+				size = 130489
 			}
 			create_pop = {
 				culture = irish # Anglicans
@@ -391,13 +479,34 @@
 	}
 	s:STATE_CONNAUGHT = {
 		region_state:GBR = {
+
+			### Officers
+			create_pop = {
+				culture = british # Anglicans
+				pop_type = officers
+				size = 700
+			}
+
+			### Soldiers
+			create_pop = {
+				culture = british # Anglicans
+				pop_type = soldiers
+				size = 6000
+			}
+			create_pop = {
+				culture = irish  # Catholics
+				pop_type = soldiers
+				size = 7000
+			}
+
+			### Whoever
 			create_pop = {
 				culture = irish # Catholics
-				size = 1319428
+				size = 1312428
 			}
 			create_pop = {
 				culture = british # Anglicans
-				size = 28463
+				size = 21763
 			}
 			create_pop = {
 				culture = irish # Anglicans

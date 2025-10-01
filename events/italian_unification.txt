@@ -37,6 +37,7 @@ italian_unification.1 = {
 		add_modifier = {
 			name = italian_unifier_prestige
 			days = long_modifier_time
+			is_decaying = yes
 		}
 	}
 	option = {
@@ -48,6 +49,7 @@ italian_unification.1 = {
 			add_modifier = {
 				name = italian_unifiers_ig
 				days = long_modifier_time
+				is_decaying = yes
 			}
 		}
 	}
@@ -73,11 +75,23 @@ italian_unification.2 = {
 	duration = 1
 
 	trigger = {
-		any_state = {
+		is_unification_candidate = ITA
+		NOT = {
+			any_diplomatically_relevant_country = {
+				NOT = { this = root }
+				is_unification_candidate = ITA
+			}
+		}
+		any_neighbouring_state = {
 			owner = {
 				OR = {
 					country_has_primary_culture = cu:north_italian
 					country_has_primary_culture = cu:south_italian
+				}
+				NOR = {
+					c:AUS ?= this
+					c:KUK ?= this
+					c:HRE ?= this
 				}
 				OR = {
 					is_subject = no
@@ -87,18 +101,27 @@ italian_unification.2 = {
 				country_rank <= rank_value:minor_power
 				relations:root >= relations_threshold:amicable
 				is_player = no
+				custom_tooltip = {
+					text = risorgimento_unifying_stance_tt
+					has_variable = risorgimento_unifying_stance
+				}
 				NOT = { has_variable = italian_minor_dont_annex }
 			}
 		}
 	}
 
 	immediate = {
-		random_state = {
+		random_neighbouring_state = {
 			limit = {
 				owner = {
 					OR = {
 						country_has_primary_culture = cu:north_italian
 						country_has_primary_culture = cu:south_italian
+					}
+					NOR = {
+						c:AUS ?= this
+						c:KUK ?= this
+						c:HRE ?= this
 					}
 					OR = {
 						is_subject = no
@@ -108,6 +131,10 @@ italian_unification.2 = {
 					country_rank <= rank_value:minor_power
 					relations:root >= relations_threshold:amicable
 					is_player = no
+					custom_tooltip = {
+						text = risorgimento_unifying_stance_tt
+						has_variable = risorgimento_unifying_stance
+					}
 					NOT = { has_variable = italian_minor_dont_annex }
 				}
 			}
@@ -128,18 +155,6 @@ italian_unification.2 = {
 		create_incident = {
 			country = scope:italian_annex_country
 			value = 10
-		}
-		hidden_effect = { # remove all Italian radicals in country that's being annexed pre-annexation, to prevent chain annexations
-			scope:italian_annex_country = {
-				add_radicals = {
-					value = -1
-					culture = cu:north_italian
-				}
-				add_radicals = {
-					value = -1
-					culture = cu:south_italian
-				}				
-			}
 		}
 		annex_with_incorporation = scope:italian_annex_country
 		ai_chance = {
@@ -164,7 +179,7 @@ italian_unification.2 = {
 	}
 }
 
-# Owned by Pan-Nationalist Radicals
+# Taken Over by Pan-Nationalist Radicals
 italian_unification.4 = {
 	type = country_event
 	placement = ROOT
@@ -209,11 +224,16 @@ italian_unification.4 = {
 
 	trigger = {
 		NOT = { has_variable = italian_unification_5_happened_here }
-		exists = var:italian_states_radicals_total_bar
-		var:italian_states_radicals_total_bar >= 25
-		NOR = {
-			has_revolution = yes
-			is_revolutionary = yes
+		capital = {
+			radical_fraction = {
+				value >= 0.10
+			}
+		}
+		any_civil_war = {
+			this.political_movement ?= {
+				is_political_movement_type = movement_italian_national
+			}
+			is_civil_war_type = revolution
 		}
 		any_country = {
 			NOT = {
@@ -226,11 +246,17 @@ italian_unification.4 = {
 				country_has_primary_culture = cu:north_italian
 				country_has_primary_culture = cu:south_italian
 			}
+			NOR = {
+				c:AUS ?= this
+				c:KUK ?= this
+				c:HRE ?= this
+			}
 		}
 	}
 
 	immediate = {
 		set_variable = risorgimento_unifying_stance
+		set_strategy = ai_strategy_unify_italy
 		if = {
 			limit = {
 				has_variable = risorgimento_anti_unifying_stance
@@ -245,6 +271,11 @@ italian_unification.4 = {
 				OR = {
 					country_has_primary_culture = cu:north_italian
 					country_has_primary_culture = cu:south_italian
+				}
+				NOR = {
+					c:AUS ?= this
+					c:KUK ?= this
+					c:HRE ?= this
 				}
 				is_adjacent_to_country = ROOT
 				NOT = {
@@ -270,6 +301,11 @@ italian_unification.4 = {
 						country_has_primary_culture = cu:north_italian
 						country_has_primary_culture = cu:south_italian
 					}
+					NOR = {
+						c:AUS ?= this
+						c:KUK ?= this
+						c:HRE ?= this
+					}
 					NOT = {
 						is_subject = yes
 					}
@@ -293,6 +329,11 @@ italian_unification.4 = {
 					OR = {
 						country_has_primary_culture = cu:north_italian
 						country_has_primary_culture = cu:south_italian
+					}
+					NOR = {
+						c:AUS ?= this
+						c:KUK ?= this
+						c:HRE ?= this
 					}
 					NOT = {
 						is_subject = yes
@@ -341,7 +382,7 @@ italian_unification.4 = {
 		set_variable = owned_by_pan_nationalist_radicals
 		if = {
 			limit = {
-				has_law = law_type:law_hereditary_bureaucrats
+				has_law_or_variant = law_type:law_hereditary_bureaucrats
 			}
 			activate_law = law_type:law_appointed_bureaucrats
 		}
@@ -549,6 +590,11 @@ italian_unification.7 = {
 				OR = {
 					country_has_primary_culture = cu:north_italian
 					country_has_primary_culture = cu:south_italian
+				}
+				NOR = {
+					c:AUS ?= this
+					c:KUK ?= this
+					c:HRE ?= this
 				}
 			}
 			activate_law = law_type:law_presidential_republic
@@ -815,7 +861,19 @@ italian_unification.10 = {
 	option = {
 		name = italian_unification.10.a
 		ai_chance = {
-			base = 50
+			base = 40
+			modifier = {
+				trigger = {
+					c:SAR ?= this
+				}
+				add = 50
+			}
+			modifier = {
+				trigger = {
+					c:SIC ?= this
+				}
+				add = -35
+			}
 		}
 		default_option = yes
 		custom_tooltip = {
@@ -826,6 +884,7 @@ italian_unification.10 = {
 			limit = {
 				OR = {
 					has_ideology = ideology:ideology_patriotic
+					has_ideology = ideology:ideology_military_absolutist
 					has_ideology = ideology:ideology_liberal
 					has_ideology = ideology:ideology_liberal_modern
 					leader = {
@@ -891,23 +950,43 @@ italian_unification.10 = {
 			base = 15
 			modifier = {
 				trigger = {
-					has_law = law_type:law_theocracy
+					has_law_or_variant = law_type:law_theocracy
 				}
 				add = 50
 			}
 			modifier = {
 				trigger = {
-					has_law = law_type:law_traditionalism
+					has_law_or_variant = law_type:law_traditionalism
 				}
 				add = 50
 			}
 			modifier = {
 				trigger = {
-					ig:ig_intelligentsia = {
+					ig:ig_intelligentsia ?= {
 						is_in_government = yes
 					}
 				}
 				add = -25
+			}
+			modifier = {
+				trigger = {
+					ig:ig_landowners ?= {
+						is_in_government = yes
+					}
+				}
+				add = 15
+			}
+			modifier = {
+				trigger = {
+					c:SAR ?= this
+				}
+				add = -50
+			}
+			modifier = {
+				trigger = {
+					c:SIC ?= this
+				}
+				add = 50
 			}
 		}
 		every_interest_group = {

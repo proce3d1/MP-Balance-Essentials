@@ -33,9 +33,11 @@ base_values = {
 	state_upper_strata_expected_sol_add = 15
 	state_expected_sol_from_literacy = 5
 	
+	state_machinists_investment_pool_contribution_add = 0.10
 	state_farmers_investment_pool_contribution_add = 0.10
+	state_engineers_investment_pool_contribution_add = 0.15
+	state_bureaucrats_investment_pool_contribution_add = 0.20	# 0.15
 	state_shopkeepers_investment_pool_contribution_add = 0.20
-	state_bureaucrats_investment_pool_contribution_add = 0.20
 	state_clergymen_investment_pool_contribution_add = 0.20
 	state_aristocrats_investment_pool_contribution_add = 0.15	# 0.20
 	state_capitalists_investment_pool_contribution_add = 0.25	# 0.30
@@ -373,6 +375,8 @@ military_wages_very_high = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_coins_negative.dds
 	country_military_wages_mult = 0.3
 	interest_group_ig_armed_forces_approval_add = 2														   
+	# country_prestige_from_army_power_projection_mult = 0.2
+	# country_prestige_from_navy_power_projection_mult = 0.2
 	unit_morale_recovery_mult = 0.2						  							  							  								 
 	unit_experience_gain_mult = 0.3
 	}
@@ -399,6 +403,13 @@ ruler_left_interest_group = {
 	interest_group_approval_add = -5
 }
 
+# Unscaled modifier applied to all insurrectionary countries
+uprising = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	building_training_rate_mult = 2.0
+}
+
+# Scaled modifier for insurrectionary country conscription rate, based on CIVIL_WAR_CONSCRIPTION_RATE defines
 uprising_conscription = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	state_conscription_rate_add = 1.0
@@ -406,6 +417,7 @@ uprising_conscription = {
 	building_training_rate_add = 1000
 }
 
+# Below modifiers generate sell orders of military goods in insurrectionary capitals, based on pre-civil war market conditions
 uprising_arms_cache_small_arms = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
 	state_sell_orders_small_arms_add = 1
@@ -464,7 +476,7 @@ insufficient_urbanization = {
 	building_throughput_add = -0.05
 }
 
-# Excess convoys increases trade competitiveness by +25% at 2x production to usage
+# Excess convoys decreases convoy raiding damage taken by -50% at 2x production to usage
 surplus_convoys = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_convoy_damage_taken_mult = -0.01	# -0.5
@@ -941,6 +953,6 @@ successfully_met_foreign_imposition_legitimacy = {
 }
 
 movement_suppressed_after_civil_war = {
-	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds"
+	icon = "gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds"
 	political_movement_radicalism_add = -1
 }

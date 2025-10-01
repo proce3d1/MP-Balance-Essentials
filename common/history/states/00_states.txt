@@ -700,6 +700,7 @@ STATES = {
 		}
 
 		add_homeland = cu:dixie
+		add_homeland = cu:yankee
 	}
 	s:STATE_WEST_VIRGINIA = {
 		create_state = {
@@ -708,6 +709,7 @@ STATES = {
 		}
 
 		add_homeland = cu:dixie
+		add_homeland = cu:yankee
 	}
 	s:STATE_MARYLAND = {
 		create_state = {
@@ -716,6 +718,7 @@ STATES = {
 		}
 
 		add_homeland = cu:dixie
+		add_homeland = cu:yankee
 	}
 
 	s:STATE_DELAWARE = {
@@ -725,6 +728,7 @@ STATES = {
 		}
 
 		add_homeland = cu:dixie
+		add_homeland = cu:yankee
 	}
 
 	s:STATE_PENNSYLVANIA = {
@@ -899,6 +903,7 @@ STATES = {
 		add_homeland = cu:athabaskan
 		add_homeland = cu:salish
 		add_homeland = cu:native_north_american
+		add_claim = c:ORG
 	}
 	s:STATE_ALBERTA = {
 		create_state = {
@@ -8243,7 +8248,6 @@ STATES = {
 		}
 		
 		add_homeland = cu:byelorussian
-		add_homeland = cu:russian
 	}
 	s:STATE_GREATER_POLAND = {
 		create_state = {

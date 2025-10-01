@@ -135,6 +135,34 @@
 		}	
 	}
 	
+	c:HUN = {
+		create_political_lobby = {
+			type = lobby_pro_overlord
+			target = c:AUS
+			add_interest_group = ig:ig_devout
+		}
+		create_political_lobby = {
+			type = lobby_anti_overlord
+			target = c:AUS
+			add_interest_group = ig:ig_intelligentsia
+			add_interest_group = ig:ig_petty_bourgeoisie
+		}
+	}
+
+	c:TRS = {
+		create_political_lobby = {
+			type = lobby_pro_country
+			target = c:HUN
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_petty_bourgeoisie
+		}
+		create_political_lobby = {
+			type = lobby_anti_country
+			target = c:HUN
+			add_interest_group = ig:ig_rural_folk
+		}
+	}
+
 	c:JAB = {
 		create_political_lobby = {  
 			type = lobby_pro_country  
@@ -196,6 +224,12 @@
 			target = c:FRA
 			add_interest_group = ig:ig_intelligentsia
 		}	
+		create_political_lobby = {
+			type = lobby_anti_overlord
+			target = c:TUR
+			add_interest_group = ig:ig_intelligentsia
+			add_interest_group = ig:ig_petty_bourgeoisie
+		}
 	}
 	
 	c:MON = {
@@ -327,6 +361,12 @@
 			target = c:AUS
 			add_interest_group = ig:ig_landowners
 		}	
+		create_political_lobby = {
+			type = lobby_anti_overlord
+			target = c:TUR
+			add_interest_group = ig:ig_landowners
+			add_interest_group = ig:ig_rural_folk
+		}
 	}
 	
 	c:SPA = {
@@ -410,6 +450,12 @@
 			target = c:FRA
 			add_interest_group = ig:ig_intelligentsia
 		}	
+		create_political_lobby = {
+			type = lobby_anti_overlord
+			target = c:TUR
+			add_interest_group = ig:ig_intelligentsia
+			add_interest_group = ig:ig_petty_bourgeoisie
+		}
 	}
 
 	c:KAB = {
