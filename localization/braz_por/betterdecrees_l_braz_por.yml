@@ -30,6 +30,8 @@ decree_emergency_relief_desc:0 "Promover apoio de caridade e cuidar dos mais inf
  decree_worker_exploitation_desc:0 "Explorar os trabalhadores locais para melhorar a produtividade da indústria"
  decree_penal_colony:0 "Transferências de colônias penais"
  decree_penal_colony_desc:0 "Envie criadores de problemas e descontentes para povoar nossas colônias em crescimento"
+decree_bd_grant_autonomy:0 "Grant Local Autonomy"
+decree_bd_grant_autonomy_desc:0 "Without constant interference, communities adapt. Sometimes efficiently, sometimes chaotically"
 
 decree_violent_hostility:0 "Conversão Cultural"
 decree_violent_hostility_desc:0 "Iniciar um programa de alta intensidade para converter a cultura das populações discriminadas para uma aceita."

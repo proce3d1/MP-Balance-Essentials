@@ -30,7 +30,8 @@ decree_emergency_relief_desc:0 "Promuj pomoc charytatywną i opiekę nad najubo�
  decree_worker_exploitation_desc:0 "Wykorzystaj lokalnych pracowników, aby poprawić produktywność przemysłu"
  decree_penal_colony:0 "Transfery kolonii karnych"
  decree_penal_colony_desc:0 "Wyślij wichrzycieli i niezadowolenie, aby zaludnili nasze rosnące kolonie"
-
+decree_bd_grant_autonomy:0 "Grant Local Autonomy"
+decree_bd_grant_autonomy_desc:0 "Without constant interference, communities adapt. Sometimes efficiently, sometimes chaotically"
 
 building_group_bg_monuments_throughput_add:0 "Przepustowość pomników"
 

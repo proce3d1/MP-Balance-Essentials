@@ -1,37 +1,81 @@
 ﻿l_french:
 
-decree_road_maintenance:0 "Gestion efficace"
-decree_road_maintenance_desc:0 "Encourager une administration publique efficace"
- decree_greener_grass_campaign:0 "Campagne pour une herbe plus verte"
- decree_greener_grass_campaign_desc:0 "Promouvoir l'État comme un endroit souhaitable pour migrer vers"
- decree_promote_social_mobility:0 "Programme d'innovation et d'éducation"
- decree_promote_social_mobility_desc:0 "Encourager la population à rechercher des qualifications professionnelles plus élevées et à innover dans les nouvelles technologies et les activités artistiques"
- decree_promote_national_values:0 "Propagande des valeurs nationales"
- decree_promote_national_values_desc:0 "Augmenter l'assimilation culturelle et les taux de conversion religieuse avec une campagne de propagande"
- decree_encourage_construction:0 "Encourager le secteur de la construction"
- decree_encourage_construction_desc:0 "Augmenter le débit du secteur de la construction"
-decree_emergency_relief:0 "Bien-être et secours"
-decree_emergency_relief_desc:0 "Promouvoir le soutien caritatif et les soins aux plus malheureux de l'État"
- decree_encourage_manufacturing_industry:0 "Encourager l'industrie manufacturière"
- decree_encourage_manufacturing_industry_desc:0 "Augmenter le débit du secteur manufacturier"
- decree_encourage_agricultural_industry:0 "Encourager l'industrie agricole"
- decree_encourage_agricultural_industry_desc:0 "Augmenter le débit du secteur agricole et des plantations"
- decree_encourage_resource_industry:0 "Encourager l'industrie des ressources"
- decree_encourage_resource_industry_desc:0 "Augmenter le débit du secteur des ressources"
- decree_encourage_urban_services:0 "Encourager les services urbains"
- decree_encourage_urban_services_desc:0 "Augmenter le débit des services urbains. Comprend le commerce, le centre urbain, les ports, le rail, les monuments, les canaux et les centrales électriques"
- decree_enlistment_efforts:1 "Programme de formation militaire"
- decree_enlistment_efforts_desc:1 "Encourager le recrutement et la formation des troupes locales par des incitations financières et une formation de haute qualité pour créer une force militaire d'élite"
- decree_violent_suppression:0 "Répression violente"
- decree_violent_suppression_desc:0 "Utilisez la garde nationale de la nation pour contrôler les foules en colère"
- decree_promote_health:0 "Programmes de santé publique"
- decree_promote_health_desc:0 "Initier des programmes de santé publique ciblés sur les familles et les infirmes"
- decree_worker_exploitation:0 "Exploitation des travailleurs"
- decree_worker_exploitation_desc:0 "Exploiter les travailleurs locaux pour améliorer la productivité de l'industrie"
- decree_penal_colony:0 "Transferts de la colonie pénitentiaire"
- decree_penal_colony_desc:0 "Envoyez les fauteurs de troubles et les mécontents pour peupler nos colonies en croissance"
+	decree_road_maintenance:0 "Administration efficace"
+	decree_road_maintenance_desc:0 "Encourager une collecte des impôts et une administration efficace"
 
-building_group_bg_monuments_throughput_add:0 "Débit des monuments"
+	decree_greener_grass_campaign:0 "Campagne pour une herbe plus verte"
+	decree_greener_grass_campaign_desc:0 "Promouvoir cet état comme un lieu de migration souhaitable"
 
-building_group_bg_canals_throughput_add:0 "Débit des canaux"
+	decree_promote_social_mobility:0 "Encourager l'innovation"
+	decree_promote_social_mobility_desc:0 "Encourager la population à obtenir des qualifications professionnelles plus élevées et à innover dans les nouvelles technologies et les activités artistiques"
 
+	decree_promote_national_values:0 "Promouvoir les valeurs"
+	decree_promote_national_values_desc:0 "Augmenter les taux d'assimilation culturelle et de conversion religieuse par une campagne de propagande"
+
+	decree_encourage_construction:0 "Encourager la construction"
+	decree_encourage_construction_desc:0 "Augmenter la production du secteur de la construction"
+
+	decree_emergency_relief:0 "Secours d'urgence"
+	decree_emergency_relief_desc:0 "Promouvoir le soutien caritatif et les soins aux plus démunis"
+
+	bd_any_starving_pops_tt:0 "Tout [concept_pop] est en [concept_starvation]"
+
+	decree_encourage_manufacturing_industry:0 "Encourager l'industrie manufacturière"
+	decree_encourage_manufacturing_industry_desc:0 "Augmenter le rendement du secteur manufacturier"
+
+	decree_encourage_agricultural_industry:0 "Encourager l'industrie agricole"
+	decree_encourage_agricultural_industry_desc:0 "Augmenter le rendement du secteur agricole et des plantations"
+
+	decree_encourage_resource_industry:0 "Encourager l'extraction des ressources"
+	decree_encourage_resource_industry_desc:0 "Augmenter le rendement du secteur des ressources"
+
+	decree_encourage_urban_services:0 "Encourager les services urbains"
+	decree_encourage_urban_services_desc:0 "Augmenter la production des services urbains. Comprend le commerce, le centre urbain, les ports, le rail, les monuments, les canaux et les centrales électriques"
+
+	decree_enlistment_efforts:1 "Formation militaire"
+	decree_enlistment_efforts_desc:1 "Amélioration du recrutement et de la formation des troupes locales par des incitations financières et une formation de haute qualité, afin de créer une force militaire d'élite"
+
+	decree_violent_suppression:0 "Reppression violente"
+	decree_violent_suppression_desc:0 "Utiliser la garde nationale pour contrôler les foules en colère"
+
+	decree_promote_health:0 "Programme de santé publique"
+	decree_promote_health_desc:0 "Lancer des programmes de santé publique ciblant les familles et les infirmes"
+
+	decree_worker_exploitation:0 "Exploitation des travailleurs"
+	decree_worker_exploitation_desc:0 "Exploiter les travailleurs locaux pour améliorer la productivité"
+
+	decree_penal_colony:0 "Transferts de colonies pénitentiaires"
+	decree_penal_colony_desc:0 "Expulser les fauteurs de troubles et les mécontents dans nos colonies en pleine croissance"
+
+	decree_violent_hostility:0 "Encourager la ségrégation violente"
+	decree_violent_hostility_desc:0 "Apporter un soutien public aux initiatives visant à éradiquer les groupes de personnes considérés comme n'appartenant pas à la communauté."
+
+decree_bd_grant_autonomy:0 "Grant Local Autonomy"
+decree_bd_grant_autonomy_desc:0 "Without constant interference, communities adapt. Sometimes efficiently, sometimes chaotically"
+
+	violent_hostility_decree_eligble_tt:0 "Une [concept_culture] est présente alors qu'elle ne se trouve pas dans leur [concept_homeland]#b et#! n'est pas l'une de nos [concept_primary_cultures]."
+
+	decree_conservation:0 "Préservation et conservation des terres"
+	decree_conservation_desc:0 "Imposer l'utilisation de ressources minimisants les pratiques polluantes de l'industrie et remise en valeur des terres par la création de parcs nationaux."
+
+#The government should be in charge of ensuring the conservation of resources for future generations
+#from conquerer of nature to citizen of it
+#maybe event creating arable land? connection to national parks
+
+	decree_disenfranchise:0 "Répression politique"
+	decree_disenfranchise_desc:0 "Répression de l'engagement et de l'influence politiques."
+
+#decree_red_tape:0 "Cut Red Tape" #change
+#decree_red_tape:0 "By authority of the state, the state shall have less authority over business."
+
+building_group_bg_monuments_throughput_add:0 "Monuments [concept_throughput]"
+building_group_bg_canals_throughput_add:0 "Canaux [concept_throughput]"
+
+building_group_bg_monuments_throughput_add_desc:0 "Un bonus ou une pénalité à la fois à l'entrée et à la sortie des monuments"
+building_group_bg_canals_throughput_add_desc:0 "Un bonus ou une pénalité à la fois à l'entrée et à la sortie des canaux"
+
+state_radicals_from_sol_change_mult:0 "$concept_radicals$ des changements de [concept_sol]"
+state_radicals_from_sol_change_mult_desc:0 "Un bonus ou une pénalité au nombre de [Concept('concept_pop', '$concept_pops$')] qui deviendront [concept_radical] à partir des changements de [concept_sol]"
+
+state_loyalists_from_sol_change_mult:0 "$concept_loyalists$ des changements de [concept_sol]"
+state_loyalists_from_sol_change_mult_desc:0 "Un bonus ou une pénalité au nombre de [Concept('concept_pop', '$concept_pops$')] qui deviendront concept_loyalist à partir des changements de [concept_sol]"

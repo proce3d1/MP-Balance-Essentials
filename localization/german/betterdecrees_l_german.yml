@@ -30,7 +30,8 @@ decree_emergency_relief_desc:0 "Fördern Sie wohltätige Unterstützung und Für
  decree_worker_exploitation_desc:0 "Nutzen Sie die lokalen Arbeitskräfte aus, um die Produktivität der Branche zu steigern"
  decree_penal_colony:0 "Strafkolonie-Transfers"
  decree_penal_colony_desc:0 "Schicken Sie Unruhestifter und Unzufriedene los, um unsere wachsenden Kolonien zu bevölkern"
-
+decree_bd_grant_autonomy:0 "Grant Local Autonomy"
+decree_bd_grant_autonomy_desc:0 "Without constant interference, communities adapt. Sometimes efficiently, sometimes chaotically"
 
 building_group_bg_monuments_throughput_add:0 "Durchsatz an Denkmälern"
 

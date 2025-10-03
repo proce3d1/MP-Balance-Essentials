@@ -31,6 +31,9 @@ decree_emergency_relief_desc:0 "Содействовать благотвори�
  decree_penal_colony:0 "Переводы в исправительные колонии"
  decree_penal_colony_desc:0 "Отправьте нарушителей спокойствия и недовольных, чтобы они заселили наши растущие колонии."
 
+decree_bd_grant_autonomy:0 "Grant Local Autonomy"
+decree_bd_grant_autonomy_desc:0 "Without constant interference, communities adapt. Sometimes efficiently, sometimes chaotically"
+
 building_group_bg_monuments_throughput_add:0 "Памятники"
 
 building_group_bg_canals_throughput_add:0 "Каналы Пропускная способность"

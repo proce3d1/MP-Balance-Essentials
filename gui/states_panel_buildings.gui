@@ -311,7 +311,7 @@ types state_panel_types {
 					visible = "[GreaterThan_int32(StatesPanel.AccessBuilding('building_trade_center').GetExpansionLevel, '(int32)0')]"
 				}
 
-				header_building_item = {
+				expanded_building_grid_header_trade_building_item = {
 					visible = "[GreaterThan_int32(Building.GetExpansionLevel, '(int32)0')]"
 					datacontext = "[StatesPanel.AccessBuilding('building_trade_center')]"
 

@@ -113,10 +113,10 @@ je_german_unification_idea = {
 
 	is_shown_in_lobby = {
 		AND = {
-		OR = {
-			country_has_primary_culture = cu:north_german
-			country_has_primary_culture = cu:south_german
-		}
+			OR = {
+				country_has_primary_culture = cu:north_german
+				country_has_primary_culture = cu:south_german
+			}
 			NOR = {
 				c:PRU = THIS
 				c:AUS = THIS
@@ -308,10 +308,7 @@ je_north_german_unification = {
 	}
 
 	on_monthly_pulse = {
-		events = {
-			german_unification.3 # Bismarck
-		}
-	
+
 		effect = {
 			if = { 
 				limit = { NOT = { has_variable = je_unification_progress } } 
@@ -326,75 +323,82 @@ je_north_german_unification = {
 	}
 
 	on_fail = {
-		add_journal_entry = { type = je_north_german_fed_pu} # North German Confederation By Customs Union
+		if = {
+			limit = { c:PRU ?= this } 
+				add_journal_entry = { type = je_north_german_fed_pu} # North German Confederation By Customs Union
+		}
 		remove_variable = je_unification_progress
-		hidden_effect = { 
-			s:STATE_SAXONY = {
-				add_claim = ROOT
-			}
-			s:STATE_HESSE = {
-				add_claim = ROOT
-			}
-			s:STATE_HANNOVER = {
-				add_claim = ROOT
-			}
-			s:STATE_BRUNSWICK = {
-				add_claim = ROOT
-			}		
-			s:STATE_ELBE = {
-				add_claim = ROOT
-			}
-			s:STATE_HESSE = {
-				add_claim = ROOT
-			}
-			s:STATE_SCHLESWIG_HOLSTEIN = {
-				add_claim = ROOT
-			}
-			s:STATE_POMERANIA = {
-				add_claim = ROOT
-			}
-			s:STATE_MECKLENBURG = {
-				add_claim = ROOT 
-			}
-			s:STATE_BRANDENBURG = {
-				add_claim = ROOT
-			}
-			s:STATE_ANHALT = {
-				add_claim = ROOT
-			}
-			s:STATE_SAXONY = {
-				add_claim = ROOT
-			}
-			s:STATE_ANHALT = {
-				add_claim = ROOT
-			}
-			s:STATE_POSEN = {
-				add_claim = ROOT
-			}
-			s:STATE_LOWER_SILESIA = {
-				add_claim = ROOT
-			}
-			s:STATE_UPPER_SILESIA = {
-				add_claim = ROOT
-			}
-			s:STATE_WEST_PRUSSIA = {
-				add_claim = ROOT
-			}
-			s:STATE_NORTH_RHINE = {
-				add_claim = ROOT
-			}
-			s:STATE_WESTPHALIA = {
-				add_claim = ROOT
-			}		
-			s:STATE_RUHR = {
-				add_claim = ROOT
-			}
-			s:STATE_RHINELAND = {
-				add_claim = ROOT
-			}
-			s:STATE_EAST_PRUSSIA = {
-				add_claim = ROOT
-			}
+		hidden_effect = {
+			if = {
+				limit = { c:PRU ?= this } 
+			
+				s:STATE_SAXONY = {
+					add_claim = ROOT
+				}
+				s:STATE_HESSE = {
+					add_claim = ROOT
+				}
+				s:STATE_HANNOVER = {
+					add_claim = ROOT
+				}
+				s:STATE_BRUNSWICK = {
+					add_claim = ROOT
+				}		
+				s:STATE_ELBE = {
+					add_claim = ROOT
+				}
+				s:STATE_HESSE = {
+					add_claim = ROOT
+				}
+				s:STATE_SCHLESWIG_HOLSTEIN = {
+					add_claim = ROOT
+				}
+				s:STATE_POMERANIA = {
+					add_claim = ROOT
+				}
+				s:STATE_MECKLENBURG = {
+					add_claim = ROOT 
+				}
+				s:STATE_BRANDENBURG = {
+					add_claim = ROOT
+				}
+				s:STATE_ANHALT = {
+					add_claim = ROOT
+				}
+				s:STATE_SAXONY = {
+					add_claim = ROOT
+				}
+				s:STATE_ANHALT = {
+					add_claim = ROOT
+				}
+				s:STATE_POSEN = {
+					add_claim = ROOT
+				}
+				s:STATE_LOWER_SILESIA = {
+					add_claim = ROOT
+				}
+				s:STATE_UPPER_SILESIA = {
+					add_claim = ROOT
+				}
+				s:STATE_WEST_PRUSSIA = {
+					add_claim = ROOT
+				}
+				s:STATE_NORTH_RHINE = {
+					add_claim = ROOT
+				}
+				s:STATE_WESTPHALIA = {
+					add_claim = ROOT
+				}		
+				s:STATE_RUHR = {
+					add_claim = ROOT
+				}
+				s:STATE_RHINELAND = {
+					add_claim = ROOT
+				}
+				s:STATE_EAST_PRUSSIA = {
+					add_claim = ROOT
+				}
+			]
 		}	
 		
 	}

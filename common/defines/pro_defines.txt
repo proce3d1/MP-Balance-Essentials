@@ -15,9 +15,9 @@ NEconomy = {
 
 	GOODS_LEADERBOARD_SIZE = 20					# How many spots there are on each goods leaderboard, default: 10
 	
-	REINVESTMENT_EFFICIENCY_MAX = 2.0			# 3.0	# Maximum conversion of reinvestment to investment pool
-	REINVESTMENT_BASE_EFFICIENCY_THRESHOLD = 30000000	# 50000000 # Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0
-	# REINVESTMENT_SUBSISTENCE_FRACTION_REDUCTION = 0.5	# Reinvestment from pops in ownership buildings is multiplied by ( 1 - this * the share of levels owned that are subsistence buildings
+	REINVESTMENT_EFFICIENCY_MAX = 3.0					# Maximum conversion of reinvestment to investment pool
+	REINVESTMENT_BASE_EFFICIENCY_THRESHOLD = 50000000 	# Below this amount of GDP, increase reinvestment multiplier on a linear scale up to REINVESTMENT_EFFICIENCY_MAX at 0
+	REINVESTMENT_SUBSISTENCE_FRACTION_REDUCTION = 0.5	# 0.5	# Reinvestment from pops in ownership buildings is multiplied by ( 1 - this * the share of levels owned that are subsistence buildings
 
 	COMPANY_PROSPERITY_POPULARITY_MULTIPLIER = 0.1	# 0.2				# Companies gain this much target prosperity, scaled by the popularity of its executive
 

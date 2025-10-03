@@ -30,7 +30,8 @@ decree_emergency_relief_desc:0 "주에서 가장 불행한 사람들을 위한 �
  decree_worker_exploitation_desc:0 "산업 생산성 향상을 위해 현지 근로자 착취"
  decree_penal_colony:0 "형벌 식민지 이전"
  decree_penal_colony_desc:0 "성장하는 식민지를 채우기 위해 문제를 일으키는 사람과 불만을 품는 사람을 보내십시오."
-
+decree_bd_grant_autonomy:0 "Grant Local Autonomy"
+decree_bd_grant_autonomy_desc:0 "Without constant interference, communities adapt. Sometimes efficiently, sometimes chaotically"
 
 building_group_bg_monuments_throughput_add:0 "기념물 처리량"
 

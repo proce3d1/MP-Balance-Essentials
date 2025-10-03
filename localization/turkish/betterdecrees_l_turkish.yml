@@ -31,7 +31,8 @@ decree_emergency_relief_desc:0 "Devletin en talihsizleri için hayırsever deste
  decree_penal_colony:0 "Ceza Kolonisi Transferleri"
  decree_penal_colony_desc:0 "Büyüyen kolonilerimizi doldurmak için sorun çıkaranları ve hoşnutsuzları gönderin"
 
-
+decree_bd_grant_autonomy:0 "Grant Local Autonomy"
+decree_bd_grant_autonomy_desc:0 "Without constant interference, communities adapt. Sometimes efficiently, sometimes chaotically"
 building_group_bg_monuments_throughput_add:0 "Anıt Verimi"
 
 building_group_bg_canals_throughput_add:0 "Kanal Verimi"

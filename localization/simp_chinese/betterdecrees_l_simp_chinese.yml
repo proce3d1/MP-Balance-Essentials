@@ -31,7 +31,8 @@
  decree_penal_colony_desc:0 "赶走麻烦制造者和不满者，让我们不断壮大的殖民地充满活力"
  decree_disenfranchise:0 "镇压公民"
  decree_disenfranchise_desc:0 "抑制公民的政治集会和影响"
-
+decree_bd_grant_autonomy:0 "Grant Local Autonomy"
+decree_bd_grant_autonomy_desc:0 "Without constant interference, communities adapt. Sometimes efficiently, sometimes chaotically"
 
 building_group_bg_monuments_throughput_add:0 "纪念碑吞吐量"
 

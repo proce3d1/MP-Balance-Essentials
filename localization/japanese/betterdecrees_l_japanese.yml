@@ -30,7 +30,8 @@ decree_emergency_relief_desc:0 "州で最も不幸な人々への慈善支援と
  decree_worker_exploitation_desc:0 "地元の労働者を活用して業界の生産性を向上させる"
  decree_penal_colony:0 "流刑地への移送"
  decree_penal_colony_desc:0 "トラブルメーカーや不満を抱く者を追い出し、成長を続ける植民地に住まわせる"
-
+decree_bd_grant_autonomy:0 "Grant Local Autonomy"
+decree_bd_grant_autonomy_desc:0 "Without constant interference, communities adapt. Sometimes efficiently, sometimes chaotically"
 
 building_group_bg_monuments_throughput_add:0 "記念碑のスループット"
 

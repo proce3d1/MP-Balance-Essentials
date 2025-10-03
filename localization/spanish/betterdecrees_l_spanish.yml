@@ -30,7 +30,8 @@ decree_emergency_relief_desc:0 "Promover el apoyo caritativo y el cuidado de los
  decree_worker_exploitation_desc:0 "Explotar a los trabajadores locales para mejorar la productividad de la industria."
  decree_penal_colony:0 "Traslados a colonias penales"
  decree_penal_colony_desc:0 "Envía a los alborotadores y descontentos a poblar nuestras crecientes colonias."
-
+decree_bd_grant_autonomy:0 "Grant Local Autonomy"
+decree_bd_grant_autonomy_desc:0 "Without constant interference, communities adapt. Sometimes efficiently, sometimes chaotically"
 
 building_group_bg_monuments_throughput_add:0 "Rendimiento de monumentos"
 
